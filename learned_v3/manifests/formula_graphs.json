@@ -1,0 +1,117 @@
+{
+  "status": "PASS",
+  "formula_count": 19605,
+  "node_count": 275722,
+  "directed_edge_count": 512234,
+  "node_vocab_size": 46,
+  "topology": "prefix AST converted to bidirectional parent-child edges",
+  "edge_direction": {
+    "0": "parent_to_child",
+    "1": "child_to_parent"
+  },
+  "files": {
+    "graph_ptr": {
+      "file": "graph_ptr.npy",
+      "shape": [
+        19606
+      ],
+      "dtype": "int64",
+      "bytes": 156976,
+      "sha256": "ad4662a87743adfab99448cdbf2a60e8d048ca8f6207f228ca5ed276d3d27e72"
+    },
+    "edge_ptr": {
+      "file": "edge_ptr.npy",
+      "shape": [
+        19606
+      ],
+      "dtype": "int64",
+      "bytes": 156976,
+      "sha256": "e1c292e3842f67fba1cedff35a2c2a95ce1441a11cf85b0a5df4cbaf3d8fa5ec"
+    },
+    "node_type": {
+      "file": "node_type.npy",
+      "shape": [
+        275722
+      ],
+      "dtype": "uint8",
+      "bytes": 275850,
+      "sha256": "276544a7c25e35aa89e1f4f1e8d1dbaca381b53d07eea2f37d35687a1b443fca"
+    },
+    "node_constant": {
+      "file": "node_constant.npy",
+      "shape": [
+        275722
+      ],
+      "dtype": "float32",
+      "bytes": 1103016,
+      "sha256": "119e1aefd4958aebe29f9e63680757e107ba40106e682dcdf392b27ea1d7b0a2"
+    },
+    "node_variable_slot": {
+      "file": "node_variable_slot.npy",
+      "shape": [
+        275722
+      ],
+      "dtype": "int8",
+      "bytes": 275850,
+      "sha256": "8d69295af3a862a0ede9989a70d3f2105411a07ef751e025aa369aa6a6577892"
+    },
+    "node_depth": {
+      "file": "node_depth.npy",
+      "shape": [
+        275722
+      ],
+      "dtype": "uint8",
+      "bytes": 275850,
+      "sha256": "1c053ef1627dbfcb0b8a0ba84a849cb3e1352757d94f6f1739c07effb9c2d6d0"
+    },
+    "edge_source": {
+      "file": "edge_source.npy",
+      "shape": [
+        512234
+      ],
+      "dtype": "int32",
+      "bytes": 2049064,
+      "sha256": "7506c430140f2428bf0a9d7d21849504c3ab02d709ba407b18032de35bd34886"
+    },
+    "edge_target": {
+      "file": "edge_target.npy",
+      "shape": [
+        512234
+      ],
+      "dtype": "int32",
+      "bytes": 2049064,
+      "sha256": "4850cb625a3bc406467240976ea07d0bc9be82df7822f98302a27305076861dd"
+    },
+    "edge_direction": {
+      "file": "edge_direction.npy",
+      "shape": [
+        512234
+      ],
+      "dtype": "uint8",
+      "bytes": 512362,
+      "sha256": "0ef9c6fdefa8c72e6059324aa4aefbca7108058220592565e1117d68fbae59f5"
+    },
+    "edge_child_position": {
+      "file": "edge_child_position.npy",
+      "shape": [
+        512234
+      ],
+      "dtype": "uint8",
+      "bytes": 512362,
+      "sha256": "fad1d23c5136cd3d02066741e8dc6e40e20047a84278284e00800c05e491e0e5"
+    }
+  },
+  "metadata": {
+    "file": "formula_metadata.jsonl.gz",
+    "rows": 19605,
+    "bytes": 1416804,
+    "sha256": "a5eaaca2b27dbd4f30521d24b824f066f3d4998962bafa9a922f40b4664a94af",
+    "uncompressed_content_sha256": "654d58285fc70e119d49e4144681b3bbcb1bdf286d2accca2d9a55bcb5775e5f"
+  },
+  "audits": {
+    "formula_assignment_identity_match": true,
+    "all_prefix_child_slots_consumed": true,
+    "every_formula_is_a_tree": true,
+    "mmap_allow_pickle_false": true
+  }
+}

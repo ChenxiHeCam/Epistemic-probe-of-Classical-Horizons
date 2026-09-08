@@ -1,0 +1,138 @@
+{
+  "status": "held-out simulation-calibrated boundary interval",
+  "calibration_datasets": 899,
+  "test_datasets": 900,
+  "nominal_coverage": 0.9,
+  "radius_fraction_of_x_range_by_sample_size": {
+    "40": 0.21862223624703636,
+    "80": 0.16866376609881306,
+    "160": 0.11968405906158566
+  },
+  "overall": {
+    "n": 900,
+    "retained": 900,
+    "abstention_rate": 0.0,
+    "coverage": 0.9133333333333333,
+    "coverage_wilson95": [
+      0.8931504365035117,
+      0.9300026469571301
+    ]
+  },
+  "by_family": {
+    "step": {
+      "n": 180,
+      "retained": 180,
+      "abstention_rate": 0.0,
+      "coverage": 0.9388888888888889,
+      "coverage_wilson95": [
+        0.8938978709273628,
+        0.965537643123864
+      ]
+    },
+    "saturation": {
+      "n": 180,
+      "retained": 180,
+      "abstention_rate": 0.0,
+      "coverage": 0.8944444444444445,
+      "coverage_wilson95": [
+        0.841026520679669,
+        0.9313775489106741
+      ]
+    },
+    "kink": {
+      "n": 180,
+      "retained": 180,
+      "abstention_rate": 0.0,
+      "coverage": 0.9444444444444444,
+      "coverage_wilson95": [
+        0.9007673885684612,
+        0.9695470560403759
+      ]
+    },
+    "smooth_turnover": {
+      "n": 180,
+      "retained": 180,
+      "abstention_rate": 0.0,
+      "coverage": 0.8777777777777778,
+      "coverage_wilson95": [
+        0.8218820800159556,
+        0.9178851979015561
+      ]
+    },
+    "smooth_crossover": {
+      "n": 180,
+      "retained": 180,
+      "abstention_rate": 0.0,
+      "coverage": 0.9111111111111111,
+      "coverage_wilson95": [
+        0.8604949853903026,
+        0.9445458758728718
+      ]
+    }
+  },
+  "by_noise": {
+    "0.01": {
+      "n": 300,
+      "retained": 300,
+      "abstention_rate": 0.0,
+      "coverage": 0.9266666666666666,
+      "coverage_wilson95": [
+        0.8914679042010732,
+        0.9510763688675256
+      ]
+    },
+    "0.05": {
+      "n": 300,
+      "retained": 300,
+      "abstention_rate": 0.0,
+      "coverage": 0.92,
+      "coverage_wilson95": [
+        0.883725988586447,
+        0.9456535302154552
+      ]
+    },
+    "0.1": {
+      "n": 300,
+      "retained": 300,
+      "abstention_rate": 0.0,
+      "coverage": 0.8933333333333333,
+      "coverage_wilson95": [
+        0.8532958822657974,
+        0.9234246194693172
+      ]
+    }
+  },
+  "by_sample_size": {
+    "40": {
+      "n": 300,
+      "retained": 300,
+      "abstention_rate": 0.0,
+      "coverage": 0.9,
+      "coverage_wilson95": [
+        0.8608327216490343,
+        0.9290525343527771
+      ]
+    },
+    "80": {
+      "n": 300,
+      "retained": 300,
+      "abstention_rate": 0.0,
+      "coverage": 0.9266666666666666,
+      "coverage_wilson95": [
+        0.8914679042010732,
+        0.9510763688675256
+      ]
+    },
+    "160": {
+      "n": 300,
+      "retained": 300,
+      "abstention_rate": 0.0,
+      "coverage": 0.9133333333333333,
+      "coverage_wilson95": [
+        0.8760432544899761,
+        0.940171510045229
+      ]
+    }
+  },
+  "limitation": "Coverage is marginal over the declared synthetic mechanism distribution, not guaranteed for a new mechanism."
+}

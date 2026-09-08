@@ -1,0 +1,32 @@
+{
+  "schema_version": "3.0-addendum",
+  "frozen_at": "2026-09-07T14:44:17.2837806+08:00",
+  "status": "frozen_before_any_v3_temporal_evaluation",
+  "purpose": "Architecture-matched untrained control for the frozen large-scale EPOCH learned experiment.",
+  "models": [
+    {
+      "knowledge_cutoff": 1899,
+      "config": "train_pre1900.json",
+      "random_seed": 20260907,
+      "optimizer_steps": 0
+    },
+    {
+      "knowledge_cutoff": 1950,
+      "config": "train_pre1950_joint.json",
+      "random_seed": 20260907,
+      "optimizer_steps": 0
+    }
+  ],
+  "architecture": "identical to the 20,908,547-parameter v3 model, including the Set Transformer point branch, graph branch and one RBF-KAN-style local update",
+  "evaluation": "use the byte-identical frozen evaluate_epoch_horizon_v3.py and the same data, four score components, empirical-CDF calibration, aggregation, AUROC comparisons and grouped bootstrap settings as the trained checkpoints",
+  "primary_interpretation": "A trained-minus-random AUROC comparison is a descriptive representation-learning control. The paired 1901-1950 score collapse under random features tests how much clock advancement follows merely from enlarging the reference memory.",
+  "selection_rule": "The random seed, architecture and evaluator are fixed before any v3 future score is opened; no alternative random seed will replace this result.",
+  "claim_boundary": "This addendum is an untrained-feature control, not a KAN ablation and not a new confirmatory primary endpoint.",
+  "hashes": {
+    "make_random_epoch_checkpoint_v3.py": "754f97a130dafe61de35129106a5ca4fe27801e8e0f383f01dcdc153af5947ac",
+    "evaluate_epoch_horizon_v3.py": "cd41f713180cd6146b8d2da22373f437a41661da78e4dfbd631335654aad6d8c",
+    "compare_epoch_clock_v3.py": "df7750993c1390c581c7071da0c43a0597a4c04bcdb9d2f86c471bf40df9f46c",
+    "train_pre1900.json": "a0d97c2c70432276719689b6a2eff4079430eacc845c34407d5a8ff4fdb044d0",
+    "train_pre1950_joint.json": "ac43432bb53d4a1c64374ae32ddb0814cce9f9eae7cbf154e34d6d485663259b"
+  }
+}

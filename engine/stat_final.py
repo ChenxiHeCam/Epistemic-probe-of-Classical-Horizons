@@ -1,9 +1,8 @@
 """Statistical component (leakage-free) final numbers on all real cases + 3 real controls,
 with classical-only, size-matched calibration."""
-import os
 import sys,json,warnings,numpy as np; warnings.filterwarnings('ignore')
 from scipy.optimize import curve_fit
-SC=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','data','')
+SC='C:/Users/1/AppData/Local/Temp/claude/D--Physics-Fundation-model/ddaebe6b-abe2-4e50-9eb7-f5879d2c4910/scratchpad/'
 D=np.load(SC+'classical_pointclouds.npz',allow_pickle=True); Xc=D['X']
 rng=np.random.default_rng(11)
 POW=lambda x,a,b,c:a*np.abs(x)**b+c
@@ -105,11 +104,30 @@ for l,fns in [(0,CLASS),(1,BREAK)]:
             v=score(xx,yy)
             if v is not None: sc.append(v); lab.append(l)
 print('\nsuite (n=%d) statistical AUROC = %.3f'%(len(lab),roc_auc_score(np.array(lab),np.array(sc))))
-# 200 real pre-1900 classical relations, pre-generated from the source knowledge base
-# with a fixed seed and shipped as data/classical_relations_1d.npz
-NPZ=np.load(SC+'classical_relations_1d.npz',allow_pickle=True)
-rng2=np.random.default_rng(7)
-neg=[(np.asarray(_x,float),np.asarray(_y,float)*(1+0.01*rng2.standard_normal(len(_y)))) for _x,_y in zip(NPZ['x'],NPZ['y'])]
+import re as _re
+exec(open(SC+'build_classical_corpus.py',encoding='utf-8').read().split('if __name__')[0])
+sys.path.insert(0,'D:/Physics Fundation model/sr_model/data'); import gen_dataside as GD
+MASTER='D:/Physics Fundation model/dataset_20260531/_extract_master/master_20260616/master_nodes.jsonl'
+rng2=np.random.default_rng(7); neg=[]; seen=0
+for ln in open(MASTER,encoding='utf-8'):
+    if len(neg)>=200: break
+    try: r=json.loads(ln)
+    except: continue
+    if (r.get('domain') or '').strip() not in KEEP: continue
+    if DROP_KW.search(r.get('expr','') or ''): continue
+    vs=r.get('variables') or []
+    if len(vs)!=2: continue
+    seen+=1
+    if seen%2: continue
+    try: pc=GD.make_one(r['expr'],rng2,hint=vs[0].get('sym'))
+    except: pc=None
+    if not pc: continue
+    Xv=np.asarray(pc['X'],float); yv=np.asarray(pc['y'],float)
+    if Xv.ndim!=2 or Xv.shape[0]<40: continue
+    cors=[abs(np.corrcoef(Xv[:,i],yv)[0,1]) if np.std(Xv[:,i])>0 else 0 for i in range(Xv.shape[1])]
+    i=int(np.argmax(cors))
+    if cors[i]<0.2: continue
+    neg.append((Xv[:,i],yv*(1+0.01*rng2.standard_normal(len(yv)))))
 POS=[(BREAK[0],(0.05,15)),(BREAK[0],(0.05,9)),(BREAK[1],(0.02,0.995)),(BREAK[2],(0.02,0.995)),
  (lambda b:1/np.sqrt(np.clip(1-b**2,1e-4,1)),(0.02,0.99)),(BREAK[3],(0.08,20)),(BREAK[4],(0.0,4.0)),
  (BREAK[5],(0.2,3.0)),(BREAK[0],(0.02,20)),(BREAK[6],(2.0,15))]

@@ -1,0 +1,734 @@
+{
+  "status": "populated fail-closed pre-1900 registry; exact named-law matches only",
+  "cutoff_year": 1899,
+  "policy": "Every admitted record has an explicit ID, source-law family, first-valid year and citation. Unnamed and merely keyword-clean records are excluded.",
+  "laws": [
+    {
+      "family_id": "ampere_electrodynamics",
+      "law_name": "Ampere law",
+      "first_valid_year": 1826,
+      "citation": "A.-M. Ampère, Théorie des phénomènes électro-dynamiques (1826).",
+      "record_ids": [
+        "ORPH_bc0e43a8805",
+        "V5_1380308df71a5",
+        "V5_6ecd34044c531",
+        "V5_e9ffd13736417"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "archimedes_buoyancy",
+      "law_name": "Archimedes principle",
+      "first_valid_year": -250,
+      "citation": "Archimedes, On Floating Bodies, Book I (c. 250 BCE).",
+      "record_ids": [
+        "ORPH_3c7315f95e2"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "bernoulli_fluid",
+      "law_name": "Bernoulli equation",
+      "first_valid_year": 1738,
+      "citation": "D. Bernoulli, Hydrodynamica (1738).",
+      "record_ids": [
+        "ORPH_28b65b9ea2b",
+        "ORPH_f98bf2b6c3b",
+        "RDS_f6d45ec9321",
+        "V5_53e03e5d87c94"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "carnot_engine",
+      "law_name": "Carnot efficiency",
+      "first_valid_year": 1824,
+      "citation": "S. Carnot, Réflexions sur la puissance motrice du feu (1824).",
+      "record_ids": [
+        "HKV2TH_4f8f58d1e20",
+        "HKV2TH_b8c3713bbe5",
+        "ORPH_8513d2ade7b",
+        "ORPH_bfdabf2ea7e",
+        "ORPH_e9105eaa82e",
+        "ORPH_f0d8898222e",
+        "RDS_72e41fc590d",
+        "RDS_f4e7d7c50fc",
+        "V5_3ad2160980338",
+        "V5_ff216c7ad60d1"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "classical_elastic_waves",
+      "law_name": "Classical elastic-wave speeds",
+      "first_valid_year": 1828,
+      "citation": "S.-D. Poisson, Memoire sur l'equilibre et le mouvement des corps elastiques (1828).",
+      "record_ids": [
+        "C8d77eab08a81",
+        "ORPH_c9adb4fff8e",
+        "RDS_04114b0eb8b",
+        "RDS_560d589d1db"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "classical_interference",
+      "law_name": "Classical optical interference",
+      "first_valid_year": 1802,
+      "citation": "T. Young, The Bakerian Lecture: On the theory of light and colours, Philos. Trans. R. Soc. 92 (1802).",
+      "record_ids": [
+        "RDS_837401e1a89"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "classical_resonance",
+      "law_name": "Classical harmonic resonance",
+      "first_valid_year": 1687,
+      "citation": "I. Newton, Principia (1687), Book II; developed in eighteenth- and nineteenth-century vibration theory.",
+      "record_ids": [
+        "ORPH_684f4b508dc",
+        "ORPH_9ab752f83f1",
+        "ORPH_d2b8e0038ec",
+        "RDS_10182f1eb06",
+        "RDS_d12257ca031",
+        "V5_25f98ac93885e",
+        "V5_4bbc43e2d933b",
+        "V5_4e5c1ff25e89a",
+        "V5_60ea1bc88672e",
+        "V5_6dcdf3cdf7bb0",
+        "V5_a3dacfa1fc80b"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "classical_torsion",
+      "law_name": "Classical elastic torsion",
+      "first_valid_year": 1855,
+      "citation": "A.-J.-C. B. de Saint-Venant, Memoire sur la torsion des prismes (1855).",
+      "record_ids": [
+        "RDS_4e9dac3f1dc",
+        "V5_2b34fa8dab222"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "classical_wave_equation",
+      "law_name": "Classical wave equation and standing-wave solutions",
+      "first_valid_year": 1747,
+      "citation": "J. le Rond d'Alembert, Recherches sur la courbe que forme une corde tendue mise en vibration (1747).",
+      "record_ids": [
+        "HKDS_ab1f2e85286c9",
+        "RDS_fceca7266e5",
+        "V5_0a0e1dc4677e3"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "clausius_clapeyron",
+      "law_name": "Clausius-Clapeyron relation",
+      "first_valid_year": 1850,
+      "citation": "R. Clausius, Annalen der Physik 155 (1850), extending B. Clapeyron (1834).",
+      "record_ids": [
+        "C83a114c87c33",
+        "ORPH_0279f23303b",
+        "ORPH_b0f85812030",
+        "ORPH_b2fe5987123"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "clausius_kinetic_gas",
+      "law_name": "Kinetic-theory mean-free-path and transport relations",
+      "first_valid_year": 1858,
+      "citation": "R. Clausius, Annalen der Physik 105 (1858); J. C. Maxwell, Philos. Mag. 19 (1860).",
+      "record_ids": [
+        "ORPH_5d7d519c9f5"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "clausius_mossotti",
+      "law_name": "Clausius-Mossotti dielectric relation",
+      "first_valid_year": 1879,
+      "citation": "O. F. Mossotti, Discussione analitica (1850); R. Clausius, Die mechanische Waermetheorie, Vol. II (1879).",
+      "record_ids": [
+        "ORPH_0004becbe1f"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "clausius_virial",
+      "law_name": "Virial theorem",
+      "first_valid_year": 1870,
+      "citation": "R. Clausius, Ueber einen auf die Waerme anwendbaren mechanischen Satz, Annalen der Physik 141 (1870).",
+      "record_ids": [
+        "ORPH_03384bc7bb9",
+        "ORPH_a080033ad29",
+        "ORPH_c3727704b56",
+        "ORPH_c8a1cc1a4bd",
+        "ORPH_c8ef22ea7db",
+        "RDS_2cc11348a98"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "continuity_mass_flow",
+      "law_name": "Classical continuity equation",
+      "first_valid_year": 1757,
+      "citation": "L. Euler, Principes generaux du mouvement des fluides, Memoires de l'Academie de Berlin 11 (1757).",
+      "record_ids": [
+        "ORPH_99042372248",
+        "V5_96fbfeb7601f0",
+        "V5_c3ed43157ff2c"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "coulomb_electrostatics",
+      "law_name": "Coulomb law",
+      "first_valid_year": 1785,
+      "citation": "C.-A. de Coulomb, Mémoires de l'Académie royale des sciences (1785).",
+      "record_ids": [
+        "RDS_589a7e73078"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "doppler_acoustics",
+      "law_name": "Doppler effect",
+      "first_valid_year": 1842,
+      "citation": "C. Doppler, Über das farbige Licht der Doppelsterne (1842).",
+      "record_ids": [
+        "ORPH_a1f7be398dd",
+        "RDS_5270f230c75",
+        "RDS_72c939afbf3",
+        "RDS_c15ca686db1",
+        "RDS_db8de52b775",
+        "V5_00df6f286a8b9",
+        "V5_04434c1001325",
+        "V5_21731738df295",
+        "V5_30efda0dafa96",
+        "V5_36f21d3d187d6",
+        "V5_559503e7ebe81",
+        "V5_5ba8bbf3c390d",
+        "V5_77b852866b732",
+        "V5_7896378476990",
+        "V5_897f1cfa3de5e",
+        "V5_a00dc8c46187d",
+        "V5_b43ed7d73eeaf",
+        "V5_cc5d655b19c6b",
+        "V5_d056ea65c000f",
+        "V5_e945ae325d12d",
+        "V5_eff4ad6da58a6",
+        "WF_399c90aed90"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "euler_bernoulli_beam",
+      "law_name": "Euler-Bernoulli beam theory",
+      "first_valid_year": 1750,
+      "citation": "L. Euler, Sur la force des colonnes, Memoires de l'Academie de Berlin 13 (1759), work presented 1750s.",
+      "record_ids": [
+        "ORPH_56bab2c9e02",
+        "V5_282e0bd06f2e7",
+        "V5_38b44a85f4d2a",
+        "V5_e2e3327e528c3"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "euler_buckling",
+      "law_name": "Euler elastic buckling law",
+      "first_valid_year": 1744,
+      "citation": "L. Euler, Methodus inveniendi lineas curvas maximi minimive proprietate gaudentes (1744).",
+      "record_ids": [
+        "V5_56397c180dba5"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "first_law_thermodynamics",
+      "law_name": "First law of thermodynamics",
+      "first_valid_year": 1847,
+      "citation": "H. von Helmholtz, Ueber die Erhaltung der Kraft (1847); J. P. Joule, Philos. Mag. 26 (1845).",
+      "record_ids": [
+        "V5_16812e053b57c",
+        "V5_1f585b2bc595d",
+        "V5_afe235ea9fe11",
+        "V5_c0fc061284737",
+        "V5_ea79d259b6c1b",
+        "V5_ec6f4212ed40c",
+        "V5_ee13f8c56501a"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "fourier_heat",
+      "law_name": "Fourier heat-conduction law",
+      "first_valid_year": 1822,
+      "citation": "J. Fourier, Théorie analytique de la chaleur (1822).",
+      "record_ids": [
+        "ORPH_02dcdfd92be",
+        "V5_0b258e92090ab",
+        "V5_7ebebb60d4dc8"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "fresnel_optics",
+      "law_name": "Fresnel reflection equations",
+      "first_valid_year": 1823,
+      "citation": "A.-J. Fresnel, Memoire sur la loi des modifications que la reflexion imprime a la lumiere polarisee (1823).",
+      "record_ids": [
+        "HKDS_14e2e2bc9bbc2",
+        "HKDS_1915c427f9622",
+        "HKDS_1d1f107250a0d",
+        "HKDS_1dda04c0f9c4b",
+        "HKDS_3aaa56e4b3962",
+        "HKDS_4f7cf46adcd17",
+        "HKDS_518e10b6c1e3e",
+        "HKDS_5c43e8716e8c2",
+        "HKDS_6824f8f0138a0",
+        "HKDS_8a3edb6d1c3d5",
+        "HKDS_8b3b9c826db64",
+        "HKDS_aa17437f9ac46",
+        "HKDS_b75bc32c33a7a",
+        "HKDS_b97330415bb04",
+        "HKDS_bd61137d96779",
+        "HKDS_c5d5fba019343",
+        "HKDS_e7c110468bec8",
+        "HKDS_ed7ed34f32138",
+        "HKDS_f9976a67cfaca",
+        "ORPH_53f2f5d02b3",
+        "ORPH_cd91ea34e9c",
+        "ORPH_dcff1a6c9a2",
+        "RDS_5fc608a5c7a",
+        "V5_0570957797e07",
+        "V5_4119187e79fb1",
+        "V5_6806775092ecf",
+        "V5_f66d0f158b4d9",
+        "V5_ff14bfcc6c8fe"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "gibbs_thermodynamics",
+      "law_name": "Gibbs thermodynamic relations",
+      "first_valid_year": 1876,
+      "citation": "J. W. Gibbs, On the Equilibrium of Heterogeneous Substances, Trans. Conn. Acad. 3 (1876–1878).",
+      "record_ids": [
+        "ORPH_29a837705ca",
+        "ORPH_aaecc9b76b0",
+        "RDS_af097fac334",
+        "RDS_f49df7ee268",
+        "V5_0fa036ea74c32",
+        "V5_32dc296b40b20",
+        "V5_6495f63bfe553",
+        "V5_86b3b53d26bf5",
+        "V5_b2856b9c30bc1",
+        "V5_d68d08884efb1",
+        "V5_edc9eaac0f88e",
+        "V5_fc3dff5036a91"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "gibbs_thomson",
+      "law_name": "Gibbs-Thomson curvature relation",
+      "first_valid_year": 1888,
+      "citation": "J. W. Gibbs, Trans. Connecticut Academy 3 (1878); J. J. Thomson, Applications of Dynamics to Physics and Chemistry (1888).",
+      "record_ids": [
+        "ORPH_5d9c803fafe"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "gyroscope_precession",
+      "law_name": "Classical rigid-body gyroscopic precession",
+      "first_valid_year": 1765,
+      "citation": "L. Euler, Theoria motus corporum solidorum seu rigidorum (1765).",
+      "record_ids": [
+        "ORPH_30790eb6c30",
+        "ORPH_60933f495b4",
+        "ORPH_6ea3f4abda9",
+        "V5_535f4a44b9b0b"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "hamiltonian_mechanics",
+      "law_name": "Hamilton equations",
+      "first_valid_year": 1835,
+      "citation": "W. R. Hamilton, On a General Method in Dynamics, Philos. Trans. R. Soc. (1834–1835).",
+      "record_ids": [
+        "ORPH_bae29072b17",
+        "ORPH_f966c69a44d",
+        "V5_733a982ffb551",
+        "V5_b9caed50cb556",
+        "V5_f726dee6b7da1"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "helmholtz_free_energy",
+      "law_name": "Helmholtz free energy",
+      "first_valid_year": 1882,
+      "citation": "H. von Helmholtz, Die Thermodynamik chemischer Vorgaenge, Sitzungsberichte Preuss. Akad. Wiss. (1882).",
+      "record_ids": [
+        "ORPH_0845d1ac9d7",
+        "ORPH_289f1aeef56",
+        "V5_2d35ba56c6692",
+        "V5_f9f0bb8c4d515"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "henry_solubility",
+      "law_name": "Henry law",
+      "first_valid_year": 1803,
+      "citation": "W. Henry, Philos. Trans. R. Soc. 93 (1803).",
+      "record_ids": [
+        "V5_173dc2308f065"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "ideal_gas",
+      "law_name": "Ideal-gas equation of state",
+      "first_valid_year": 1834,
+      "citation": "E. Clapeyron, Memoire sur la puissance motrice de la chaleur, J. Ecole Polytechnique 14 (1834).",
+      "record_ids": [
+        "C8bf0de813e9b",
+        "V5_1f3226ff0d423",
+        "V5_3fd4f24e4b35b",
+        "V5_88cab26217bbf"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "kelvin_helmholtz",
+      "law_name": "Kelvin-Helmholtz instability",
+      "first_valid_year": 1871,
+      "citation": "H. von Helmholtz, Monatsberichte Berliner Akademie (1868); W. Thomson, Philos. Mag. 42 (1871).",
+      "record_ids": [
+        "HKDS_c945cb34919c8"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "kepler_orbits",
+      "law_name": "Kepler third law",
+      "first_valid_year": 1619,
+      "citation": "J. Kepler, Harmonices Mundi, Book V (1619).",
+      "record_ids": [
+        "NEW638093d86fdd",
+        "ORPH_0c6dffd6663",
+        "ORPH_18334548e7b",
+        "ORPH_251a0b7b54a",
+        "RDS_4b65789a5e0",
+        "RDS_bcfc47afdc6",
+        "RDS_f9cda172303",
+        "V5_43d7f0d1c7334",
+        "V5_81d3fc6ed943c",
+        "V5_9a1c29f93d53c",
+        "V5_ac6113b5cdbb5",
+        "V5_ddca4663ce06e",
+        "V5_e2b6d4db1745e"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "lagrangian_mechanics",
+      "law_name": "Euler-Lagrange equation",
+      "first_valid_year": 1788,
+      "citation": "J.-L. Lagrange, Mécanique analytique (1788).",
+      "record_ids": [
+        "V5_3d3d5ffdaf570",
+        "V5_3e2d2638265e0",
+        "V5_4fae8167fabb5",
+        "V5_bace5db1dc594"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "larmor_precession",
+      "law_name": "Larmor precession",
+      "first_valid_year": 1897,
+      "citation": "J. Larmor, Philos. Trans. R. Soc. A 190 (1897).",
+      "record_ids": [
+        "RDS_47cb1a0cf3e"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "larmor_radiation",
+      "law_name": "Larmor radiation formula",
+      "first_valid_year": 1897,
+      "citation": "J. Larmor, Philos. Trans. R. Soc. A 190 (1897).",
+      "record_ids": [
+        "V5_15fd4da23359e"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "mass_action_equilibrium",
+      "law_name": "Law of mass action and chemical equilibrium",
+      "first_valid_year": 1867,
+      "citation": "C. M. Guldberg and P. Waage, Etudes sur les affinites chimiques (1867).",
+      "record_ids": [
+        "HKV2TH_8ddfdbe8eb9",
+        "ORPH_93ee4854fe7",
+        "V5_90e22a32fb231",
+        "V5_95b2ebdd041c9",
+        "V5_deb56d5f2f16f",
+        "V5_f7df786856fc4"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "maxwell_boltzmann",
+      "law_name": "Maxwell-Boltzmann distribution",
+      "first_valid_year": 1868,
+      "citation": "J. C. Maxwell (1860); L. Boltzmann, Sitzungsberichte Akad. Wiss. Wien 58 (1868).",
+      "record_ids": [
+        "HKV2TH_549db2332b4",
+        "ORPH_2642f4bde4b",
+        "ORPH_d9c17944cdb",
+        "RDS_184e8bead95",
+        "RDS_9d75186182d",
+        "V5_28b7b30488bb7"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "maxwell_electromagnetism",
+      "law_name": "Maxwell equations",
+      "first_valid_year": 1865,
+      "citation": "J. C. Maxwell, A Dynamical Theory of the Electromagnetic Field, Philos. Trans. R. Soc. 155 (1865).",
+      "record_ids": [
+        "HKV2ER2_2b0d6b316c9",
+        "ORPH_f805e06157b",
+        "WF_7b40dc90f29"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "navier_stokes",
+      "law_name": "Navier-Stokes equations",
+      "first_valid_year": 1845,
+      "citation": "C.-L. Navier (1822); G. G. Stokes, Trans. Cambridge Philos. Soc. 8 (1845).",
+      "record_ids": [
+        "ORPH_0deeeddc3ec",
+        "ORPH_3b8d4cc0391",
+        "V5_c67aad4841cee"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "newton_cooling",
+      "law_name": "Newton law of cooling",
+      "first_valid_year": 1701,
+      "citation": "I. Newton, Scala graduum caloris, Philos. Trans. R. Soc. 22 (1701).",
+      "record_ids": [
+        "ORPH_4e038fe15cd",
+        "ORPH_926fe8df555"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "newtonian_dynamics",
+      "law_name": "Newton laws and gravitation",
+      "first_valid_year": 1687,
+      "citation": "I. Newton, Philosophiae Naturalis Principia Mathematica (1687).",
+      "record_ids": [
+        "ORPH_228d0f1ccf3",
+        "ORPH_38f350c9c83",
+        "ORPH_52254cbf2ab",
+        "ORPH_f16d470f38a",
+        "RDS_c0098f560ce",
+        "RDS_d6edbd9b8aa",
+        "V5_1e845e6543a4b",
+        "V5_91fa2c7645d4c",
+        "V5_af781f075f454",
+        "V5_d4dcd952334bc",
+        "V5_df94f101558f2"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "poynting_energy_flux",
+      "law_name": "Poynting electromagnetic energy flux",
+      "first_valid_year": 1884,
+      "citation": "J. H. Poynting, Philos. Trans. R. Soc. 175 (1884).",
+      "record_ids": [
+        "WF_bae7127135c"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "radiation_pressure_classical",
+      "law_name": "Classical electromagnetic radiation pressure",
+      "first_valid_year": 1873,
+      "citation": "J. C. Maxwell, A Treatise on Electricity and Magnetism, Vol. II (1873).",
+      "record_ids": [
+        "ORPH_8e817240a4e",
+        "V5_ad76666a701e6"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "rayleigh_acoustics",
+      "law_name": "Classical acoustic impedance and sound relations",
+      "first_valid_year": 1877,
+      "citation": "J. W. Strutt (Lord Rayleigh), The Theory of Sound, Vol. I (1877).",
+      "record_ids": [
+        "C81121673a0d9",
+        "HKDS_023d55d937b11",
+        "HKDS_110dd56bf7931",
+        "HKDS_169fb2b118cb3",
+        "HKDS_16dd6d642e97c",
+        "HKDS_1e41a6a0fd3e5",
+        "HKDS_2e3b5c182d4ab",
+        "HKDS_2ece7fe4bf97e",
+        "HKDS_346c74a1ce2ee",
+        "HKDS_356d3d9160c81",
+        "HKDS_365c3fd1060af",
+        "HKDS_38680acdc490d",
+        "HKDS_3e3ffdf083c0a",
+        "HKDS_67ae362f401cf",
+        "HKDS_6bdbc4f819165",
+        "HKDS_6e8a4cf167b60",
+        "HKDS_70895fa56a191",
+        "HKDS_7192b9619e393",
+        "HKDS_7f800b920456d",
+        "HKDS_baea35428cbe7",
+        "HKDS_bd8a8a7f2cdbb",
+        "HKDS_c0447995887f4",
+        "HKDS_c4299b5ecb523",
+        "HKDS_c57c3ba34c0b8",
+        "HKDS_cfa7707ae4a9f",
+        "HKDS_d1f03b5c6a94a",
+        "HKDS_e448407b9baae",
+        "HKDS_ed463ba968668",
+        "HKV2AA_e3636ce3f93",
+        "ORPH_d2ba16d8671",
+        "ORPH_dfecc5f57ae",
+        "ORPH_f4a139c2eab",
+        "RDS_8e09b836050",
+        "SEED_1ec7457fa5c",
+        "V5_b5fac8649cb10"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "reynolds_number",
+      "law_name": "Reynolds number",
+      "first_valid_year": 1883,
+      "citation": "O. Reynolds, Philos. Trans. R. Soc. 174 (1883).",
+      "record_ids": [
+        "C8f30053eb31e",
+        "HKV2TH_285099f46ef",
+        "ORPH_99e4253e06f",
+        "ORPH_b335c4ad343",
+        "RDS_37aed38a697"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "roche_limit",
+      "law_name": "Roche tidal limit",
+      "first_valid_year": 1848,
+      "citation": "E. Roche, La figure d'une masse fluide soumise a l'attraction d'un point eloigne, Academie de Montpellier (1848).",
+      "record_ids": [
+        "NEW3ed2973bd0bb",
+        "NEW41e957a5ad0d",
+        "ORPH_0158adc92c4",
+        "ORPH_67ccdc86bb1",
+        "ORPH_e9851cf9c74"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "simple_pendulum",
+      "law_name": "Classical pendulum equation",
+      "first_valid_year": 1673,
+      "citation": "C. Huygens, Horologium Oscillatorium (1673).",
+      "record_ids": [
+        "RDS_bd961a52b32"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "snell_refraction",
+      "law_name": "Snell law of refraction",
+      "first_valid_year": 1621,
+      "citation": "W. Snellius, law recorded in manuscript c. 1621; published by C. Huygens, Traite de la Lumiere (1690).",
+      "record_ids": [
+        "RDS_310ff07218f",
+        "RDS_757079dc2ee"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "stefan_boltzmann",
+      "law_name": "Stefan-Boltzmann law",
+      "first_valid_year": 1884,
+      "citation": "J. Stefan, Sitzungsberichte Akad. Wiss. Wien 79 (1879); L. Boltzmann 84 (1884).",
+      "record_ids": [
+        "ORPH_43109a53f63",
+        "ORPH_706c5d3b735",
+        "ORPH_9c44b531adc",
+        "RDS_310d3c70f52",
+        "RDS_449bba907a7",
+        "RDS_c9a0386bc33"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "stokes_drag",
+      "law_name": "Stokes drag law",
+      "first_valid_year": 1851,
+      "citation": "G. G. Stokes, Trans. Cambridge Philos. Soc. 9 (1851).",
+      "record_ids": [
+        "ORPH_b0c96bb4635",
+        "RDS_b6b934f62e3",
+        "V5_87d988133972d"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "thin_lens_optics",
+      "law_name": "Gaussian thin-lens and lensmaker relations",
+      "first_valid_year": 1841,
+      "citation": "C. F. Gauss, Dioptrische Untersuchungen (1841).",
+      "record_ids": [
+        "V5_5038890d827c6"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "van_der_waals_eos",
+      "law_name": "van der Waals equation",
+      "first_valid_year": 1873,
+      "citation": "J. D. van der Waals, Over de Continuïteit van den Gas- en Vloeistoftoestand (1873).",
+      "record_ids": [
+        "V5_d39134bf2e06c"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    },
+    {
+      "family_id": "young_laplace",
+      "law_name": "Young-Laplace capillary-pressure equation",
+      "first_valid_year": 1805,
+      "citation": "T. Young, Philos. Trans. R. Soc. 95 (1805); P.-S. Laplace, Mecanique celeste, Supplement to Book X (1805).",
+      "record_ids": [
+        "ORPH_4ed8c72dda6",
+        "ORPH_afe2a6883e8",
+        "ORPH_be944a71c1c"
+      ],
+      "audit_notes": "Admitted by exact normalized master-name match, or by complete ancestry to exact-named seeds from one family, using PAPER3_ABDUCTION/pre1900_source_registry_v1.json; no keyword or domain heuristic fallback."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "seed": 20260908,
+  "families": 11,
+  "records": 88,
+  "records_per_family": 8,
+  "points_per_record": 120,
+  "theory_only_cases": 2,
+  "files": {
+    "case_study_expansion_registry.json": {
+      "sha256": "d111fb696d20eafb18829e3ff89e72dc5723080019fb549ba397d9dfe19868b9",
+      "bytes": 11176
+    },
+    "case_study_expansion_pointclouds.npz": {
+      "sha256": "7711f6dda7651cf2aa3299ea544c3e747c2602762b02bae25de5b8d9a2753af2",
+      "bytes": 127868
+    },
+    "case_study_expansion_records.jsonl": {
+      "sha256": "623fed73df16a8c997ee748a4e082ee51810b0c6eed035572681bd911f1c3e6e",
+      "bytes": 23493
+    }
+  },
+  "original_benchmark_mutated": false,
+  "claim_boundary": "post-score development cases; descriptive component scores only"
+}

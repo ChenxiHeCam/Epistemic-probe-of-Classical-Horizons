@@ -1,0 +1,35 @@
+{
+  "schema_version": "2.0",
+  "suite_id": "epoch_two_horizon_test",
+  "checkpoints": ["epoch_pre1900_main", "epoch_pre1950_joint"],
+  "frozen_assets": {
+    "pointcloud_views": "/root/autodl-tmp/epoch_horizons/v2/pointcloud_views",
+    "temporal_formula_benchmarks": "/root/autodl-tmp/epoch_horizons/v2/temporal_benchmarks",
+    "evaluation_only_real_measurements": "/root/autodl-tmp/epoch_horizons/v2/evaluation_assets",
+    "training_exclusion_for_evaluation_assets": true
+  },
+  "frozen_test_order": [
+    "pre1900_internal_known",
+    "pre1950_internal_known",
+    "curated_1901_1950",
+    "curated_post1950",
+    "real_measurement_development"
+  ],
+  "matrix": {
+    "epoch_pre1900_main": {
+      "known_negative": ["pre1900_internal_known"],
+      "future_positive": ["pre1950_internal_known", "curated_1901_1950", "curated_post1950"]
+    },
+    "epoch_pre1950_joint": {
+      "known_negative": ["pre1900_internal_known", "pre1950_internal_known"],
+      "future_positive": ["curated_post1950"]
+    }
+  },
+  "report": {
+    "primary": "AUROC",
+    "unit": "formula family / leakage group, never individual noise repeats",
+    "paired_comparison": "same test family scored by both frozen checkpoints",
+    "expected_clock_check": "1901-1950 scores should collapse after promotion from the 1899 to 1950 horizon",
+    "real_measurements": "development-only and reported separately from formula-level temporal transfer"
+  }
+}

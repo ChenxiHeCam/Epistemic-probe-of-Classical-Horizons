@@ -1,0 +1,82 @@
+{
+  "status": "PASS",
+  "scope": "mechanical Nature Communications format envelope",
+  "metrics": {
+    "title": "Auditing predictive boundaries from historically restricted physical knowledge",
+    "title_words": 8,
+    "abstract_words": 163,
+    "main_text_words": 3129,
+    "methods_words": 1478,
+    "references": 16,
+    "cited_reference_numbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "main_figure_files": [
+      "Figure_1_concept_revised.png",
+      "figure_breakdowns.png",
+      "figure_controls.png",
+      "figure_rigor.png",
+      "figure_limit.png",
+      "figure_revision_evidence.png",
+      "figure_case_study_composite.png",
+      "figure_learned_pre1900_v3.png"
+    ],
+    "main_figures": 8,
+    "main_tables": 1,
+    "display_items": 9,
+    "figure_legend_words": {
+      "1": 71,
+      "2": 62,
+      "3": 64,
+      "4": 77,
+      "5": 65,
+      "6": 183,
+      "7": 98,
+      "8": 89
+    },
+    "composite_png_pixels": [
+      4252,
+      2970
+    ],
+    "composite_png_mode": "RGB",
+    "composite_png_dpi": [
+      599.9988,
+      599.9988
+    ],
+    "composite_width_mm": 180.00169333672
+  },
+  "checks": {
+    "title_at_most_15_words": true,
+    "abstract_at_most_200_words": true,
+    "main_text_at_most_5000_words": true,
+    "methods_below_3000_words": true,
+    "display_items_at_most_10": true,
+    "figure_legends_at_most_350_words": true,
+    "nature_section_names_not_numbered": true,
+    "numbered_references_present": true,
+    "all_citations_have_references": true,
+    "all_references_are_cited": true,
+    "target_journal_named_in_cover": true,
+    "former_target_absent_from_cover": true,
+    "composite_png_is_rgb": true,
+    "composite_png_at_least_300_dpi": true,
+    "composite_width_is_180mm": true,
+    "vector_masters_exist": true
+  },
+  "remaining_submission_action": "Insert the permanent versioned data and code accession links before submission."
+}

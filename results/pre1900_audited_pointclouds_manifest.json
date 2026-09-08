@@ -1,0 +1,25 @@
+{
+  "status": "source-audited pre-1900 point-cloud subset; no post-1900 or heuristic-only rows admitted",
+  "records": 268,
+  "families": 51,
+  "records_by_split": {
+    "train": 205,
+    "validation": 17,
+    "test": 46
+  },
+  "families_by_split": {
+    "train": 40,
+    "validation": 4,
+    "test": 7
+  },
+  "family_split_policy": "shared deterministic 80/10/10 mapping over all families in pre1900_source_registry_v1.json",
+  "registry_sha256": "f464ef0cb8694ffd06e4199e55958dbfe95d432a5551eac33f0541299149c1fb",
+  "source_archive_sha256": "62b2bf940bf3c5cdddfd372a47c097b884b3f773c93b5b4f38e3eccfe6df1e97",
+  "output_sha256": "6c6d1c81ca9cb8cbf13c1a5ed16d014f773f3c1e7cd02bdd5eba8b6658d49124",
+  "shape": [
+    268,
+    128,
+    2
+  ],
+  "training_warning": "This high-precision subset is suitable for leakage-free experiments but is too small to support a strong foundation-model claim without adding more source-audited families."
+}

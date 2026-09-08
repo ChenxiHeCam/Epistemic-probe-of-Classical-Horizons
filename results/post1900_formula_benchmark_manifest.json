@@ -1,0 +1,39 @@
+{
+  "status": "PASS",
+  "seed": 20260906,
+  "families": 55,
+  "records": 440,
+  "records_per_family": 8,
+  "points_per_record": 120,
+  "year_min": 1901,
+  "year_max": 1996,
+  "shape_class_counts": {
+    "smooth_composite": 31,
+    "declared_dictionary_overlap": 12,
+    "threshold_or_piecewise": 5,
+    "special_function_or_integral": 1,
+    "nonmonotone_or_oscillatory": 6
+  },
+  "duplicate_functional_signatures_retained_as_hard_temporal_cases": {
+    "power_times_inverse_temperature_exponential": 2,
+    "linear": 2,
+    "inverse_root_exponential": 2,
+    "inverse": 2
+  },
+  "files": {
+    "post1900_formula_registry.json": {
+      "sha256": "d6670ee4034be3f286f6626d593207eb7a4d5d61a15eda3998952240f9c8d7c6",
+      "bytes": 35070
+    },
+    "post1900_formula_pointclouds.npz": {
+      "sha256": "12cfb0c5c2d35245d0a4162a2f23126b272a89032d8912ef2bef672cbea26be0",
+      "bytes": 393479
+    },
+    "post1900_formula_records.jsonl": {
+      "sha256": "43386dc527ce730e44d3b74e6c1a9a9cccf985c597e671d5d41f4c2bf3bf956d",
+      "bytes": 121189
+    }
+  },
+  "leakage_control": "No benchmark record is used to train or calibrate either frozen EPOCH component.",
+  "claim_boundary": "Formula-level temporal transfer; not real-measurement discovery and not publication-year classification."
+}

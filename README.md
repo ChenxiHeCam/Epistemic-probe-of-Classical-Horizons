@@ -1,53 +1,93 @@
-# EPOCH: Epistemic Probe Of Classical Horizons
+# EPOCH: Epistemic Probe of Classical Horizons
 
-Code, model weights and data for **"Recognizing the boundary of known physics."**
+This repository accompanies **“Auditing predictive boundaries from
+historically restricted physical knowledge.”** EPOCH asks whether observations
+remain predictable from a declared historical knowledge horizon, where that
+predictive compatibility ends, and whether a successor theory removes the
+discrepancy.
 
-EPOCH is an engine restricted to physics as it stood before 1900. Given nothing but unlabelled numeric measurements, it decides whether established theory accounts for the data and, where it does not, localizes the point at which it ceases to. On real historical data it flags the four foundational breakdowns of modern physics (the quantum onset in the COBE-FIRAS blackbody spectrum, the relativistic speed limit in Bertozzi's electron measurements, the Debye collapse of specific heat, and the superconducting transition in Kamerlingh Onnes's 1911 mercury data) and clears three real classical controls (Solar-System orbits, the Galilean moons, Boyle's 1662 pressure-volume table).
+EPOCH combines three complementary components:
+
+1. a positive-only learned representation of admitted physical relations;
+2. data-anchored extrapolation from an observed incumbent regime; and
+3. theory-conditioned residual tests against a declared physical prediction.
+
+The learned query path receives only an unordered numeric point cloud. The
+pre-1900 formula graph is a training-only teacher; post-1900 formulas, dates,
+law names, units and anomaly templates are absent at inference.
+
+## Current results
+
+- The 20,908,547-parameter dual encoder was trained on 880,896 point clouds
+  from 3,441 pre-1900 formula reductions. Its query-time point student has
+  9,868,672 parameters.
+- Against held-out pre-1900 groups, the frozen learned score ranks 38 physical
+  law families from 1901–1950 with AUROC 0.921 and all 55 post-1900 families
+  with AUROC 0.925. The same architecture before optimization reaches 0.649.
+- A sampling- and noise-matched diagnostic gives AUROC 0.857; the independent
+  frozen four-form component gives AUROC 0.888 on the 55-family audit.
+- In the paired historical clock experiment, all five old-horizon predictions
+  are rejected and four of five discrepancies become compatible after the
+  historically successful successor prediction is admitted.
+- Size-conditional boundary intervals attain 91.3% empirical coverage at 90%
+  nominal coverage on held-out simulations.
+
+Results are reduced at the source-law family or physical-mechanism level. The
+machine-readable outputs, registrations and hashes used in the manuscript are
+included under `results/` and `learned_v3/`.
 
 ## Repository layout
 
-```
-engine/            the EPOCH engine
-  stat_final.py            statistical detector: all real cases, controls, suite and blind corpus
-  blind_test.py            blind evaluation on the unfiltered corpus (200 classical + 30 breakdowns)
-  combine_final_v3.py      leakage-free learned component (generic-deformation probe) + combination
-  probe_1900.py            deformation probe on the 1900-pure encoder
-  train_1900_v2.py         training of the 1900-pure set-transformer encoder (with units channel)
-  build_classical_corpus.py  classical-domain filter and SI-unit parser (provenance script)
-  gen_classical_pointclouds.py  point-cloud generation from the classical corpus (provenance script)
-  ensemble_engine.py       rank-averaged ensemble utilities
-  symbolic_extrap.py       classical-form fitting and extrapolation utilities
-models/
-  encoders.py              set-transformer data encoder architecture
-casestudies/       one script per real-data case study (FIRAS, Bertozzi, NIST specific heat,
-                   Onnes, Millikan, Kepler, Galilean moons, Boyle) plus baselines and CI/FPR analyses
-figure_scripts/    scripts that generate every figure in the paper
-figures/           the generated figures
-data/
-  firas_monopole.txt             COBE-FIRAS monopole spectrum (NASA LAMBDA)
-  boyle_1662.json                Boyle's original 1662 pressure-volume table (25 points)
-  nist_cp_coef.json              NIST cryogenic specific-heat reference coefficients (6 materials)
-  classical_relations_1d.npz     the 200 real pre-1900 classical relations of the blind corpus
-  classical_pointclouds.npz      training point clouds from the pre-1900 classical corpus
-  classical_dims.jsonl           172,406 classical dimensional signatures
-  encoder_1900.pt                trained 1900-pure encoder weights
+```text
+learned_v3/      v3 architecture, training, evaluation and portable inference
+models/          compact 1899-horizon student weights and inference memory
+engine/          statistical calibration, temporal audits and validators
+casestudies/     historical and robustness experiments
+data/            public inputs and generated evaluation point clouds
+results/         frozen numerical outputs and evidence manifests
+figures/         publication figures and their generating scripts
+paper/           current manuscript and Supplementary Information sources
 ```
 
-## Reproducing the headline results
+Files retained from the original 2026-08 release support the legacy detector;
+the current headline learned result is identified by the `epoch_1899_*` assets
+and the v3 registrations.
 
+## Portable learned inference
+
+Install the runtime dependencies and score the included temporal benchmark:
+
+```bash
+python -m pip install -r requirements.txt
+python learned_v3/inference.py \
+  --input data/post1900_formula_pointclouds.npz \
+  --output output/portable_post1900_scores.json
 ```
-python engine/stat_final.py        # real breakdowns 0.95/0.95/0.66/0.66, controls 0.02/0.38/0.00, suite, blind corpus
-python engine/blind_test.py        # blind evaluation: AUROC 0.88, recall 0.90, FPR 0.24
-python engine/combine_final_v3.py  # learned component AUROC 0.83 vs statistical 0.62 on the held-out suite
-python casestudies/firas_rigor.py  # per-case analyses (similarly for the other case studies)
+
+For a single dataset, pass a two-column CSV or whitespace-delimited text file.
+The script applies the frozen per-cloud normalization and deterministic
+64-point sampling before returning all four calibrated coordinates and their
+unweighted ensemble.
+
+Verify the byte identity of every file in the release:
+
+```bash
+python verify_release.py
 ```
 
-Scripts read their inputs from `data/` by relative path and can be run from any working directory.
+## Model and data records
 
-## Notes on provenance
+The compact query model and its pre-1900 inference memory are stored in
+`models/`, together with SHA-256 sidecars. The full training checkpoint and
+large point-cloud/AST archives are distributed through the versioned archive:
 
-The 200 classical relations of the blind corpus and the training point clouds were generated by forward-evaluating formulas from a large knowledge base of historical physics; the knowledge base itself is not redistributed. The generated datasets are shipped in full in `data/`, and the provenance scripts (`build_classical_corpus.py`, `gen_classical_pointclouds.py`) document exactly how they were produced. Bertozzi, Onnes and Millikan values were digitized from the original publications; the digitized tables appear in the Supplementary Information and in `casestudies/`.
+- GitHub: https://github.com/ChenxiHeCam/Epistemic-probe-of-Classical-Horizons
+- Zenodo: https://doi.org/10.5281/zenodo.22138621
+
+The archive DOI currently resolves to the first public release; the manuscript
+release is deposited as a new version so that its Git commit, model hashes and
+data manifests remain permanently linked.
 
 ## License
 
-MIT. See LICENSE.
+MIT. See `LICENSE`.

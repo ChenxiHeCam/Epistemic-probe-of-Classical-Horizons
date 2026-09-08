@@ -200,4 +200,6 @@ print('\n=== real cases, v3 combined ===')
 for name,x,y,tr in [('FIRAS',nu,I,'break'),('specific heat Cu',Tc,Cp,'break'),('Bertozzi',KEb,b2,'break'),('Onnes',To,Ro,'break'),('Kepler control',ak,Pk,'classical'),
                     ('Boyle 1662 control',boyle[:,0],boyle[:,1],'classical'),('Galilean moons control',gm_a,gm_P,'classical')]:
     v=comb_score(x,y); mode='combined' if len(x)>=20 else 'stat-only(size-matched cal)'
+    if v is None:
+        print('  %-18s score=n/a   (below the minimum point count for both components)  expected=%s'%(name,tr)); continue
     print('  %-18s score=%.2f  (%s)  expected=%s'%(name,v,mode,tr))

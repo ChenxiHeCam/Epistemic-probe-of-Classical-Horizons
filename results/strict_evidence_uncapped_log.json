@@ -1,0 +1,64 @@
+{
+  "calibration": {
+    "requested": 400,
+    "full_n": 392,
+    "small_n": 392,
+    "seed": 11,
+    "combiner": "uncapped_log",
+    "q95_full": 3.456867080447532,
+    "q99_full": 14.116947995422105,
+    "q95_small": 18.66990236489222,
+    "q99_small": 29.909752434518325
+  },
+  "cases": [
+    {
+      "case": "FIRAS",
+      "n": 43,
+      "raw_score": 5.336860175758494,
+      "percentile_score": 0.9719387755102041,
+      "tail_pvalue": 0.030534351145038167,
+      "screen_at_0.5": true,
+      "reject_at_5pct": true,
+      "reject_at_1pct": false,
+      "bh_qvalue": 0.061068702290076333,
+      "reject_fdr_5pct": false
+    },
+    {
+      "case": "specific_heat_Cu",
+      "n": 120,
+      "raw_score": 7.147014183083681,
+      "percentile_score": 0.9795918367346939,
+      "tail_pvalue": 0.022900763358778626,
+      "screen_at_0.5": true,
+      "reject_at_5pct": true,
+      "reject_at_1pct": false,
+      "bh_qvalue": 0.061068702290076333,
+      "reject_fdr_5pct": false
+    },
+    {
+      "case": "Bertozzi",
+      "n": 5,
+      "raw_score": 4.119344299873669,
+      "percentile_score": 0.826530612244898,
+      "tail_pvalue": 0.17557251908396945,
+      "screen_at_0.5": true,
+      "reject_at_5pct": false,
+      "reject_at_1pct": false,
+      "bh_qvalue": 0.17557251908396945,
+      "reject_fdr_5pct": false
+    },
+    {
+      "case": "Onnes",
+      "n": 9,
+      "raw_score": 4.195402289653943,
+      "percentile_score": 0.8290816326530612,
+      "tail_pvalue": 0.17302798982188294,
+      "screen_at_0.5": true,
+      "reject_at_5pct": false,
+      "reject_at_1pct": false,
+      "bh_qvalue": 0.17557251908396945,
+      "reject_fdr_5pct": false
+    }
+  ],
+  "interpretation": "The 0.5 percentile rule is exploratory screening. Confirmatory decisions use the finite-sample upper-tail p-value and a pre-specified alpha/FDR rule."
+}

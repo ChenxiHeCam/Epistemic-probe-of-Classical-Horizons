@@ -1,0 +1,84 @@
+{
+  "status": "retrospective wrong-shape control; not a historical-theory benchmark",
+  "question": "Does a prespecified low-dimensional distractor erase old-horizon mismatch?",
+  "cases": [
+    {
+      "case": "FIRAS",
+      "distractor": "affine distractor",
+      "statistic": 3841298.103488812,
+      "pvalue": 0.000999000999000999,
+      "bootstrap_valid": 1000,
+      "parameters": {
+        "intercept": 312.14451918473486,
+        "slope": -16.392335765016117
+      },
+      "assumptions": "Two-parameter monotone/affine wrong-shape control.",
+      "remains_rejected_5pct": true,
+      "bh_qvalue": 0.0011467889908256881,
+      "remains_rejected_fdr5": true
+    },
+    {
+      "case": "Bertozzi",
+      "distractor": "quadratic-through-origin distractor",
+      "statistic": 7116.667912482444,
+      "pvalue": 0.000999000999000999,
+      "bootstrap_valid": 1000,
+      "parameters": {
+        "amplitude": 0.004855177007784155
+      },
+      "assumptions": "Non-saturating wrong-shape control.",
+      "remains_rejected_5pct": true,
+      "bh_qvalue": 0.0011467889908256881,
+      "remains_rejected_fdr5": true
+    },
+    {
+      "case": "specific_heat_Cu",
+      "distractor": "power-law distractor",
+      "statistic": 20320.335109240747,
+      "pvalue": 0.000999000999000999,
+      "bootstrap_valid": 1000,
+      "parameters": {
+        "log_amplitude": -4.763992783173376,
+        "exponent": 2.1561514631481216
+      },
+      "assumptions": "Two-parameter global power-law wrong-shape control.",
+      "remains_rejected_5pct": true,
+      "bh_qvalue": 0.0011467889908256881,
+      "remains_rejected_fdr5": true
+    },
+    {
+      "case": "Onnes",
+      "distractor": "smooth-quadratic distractor",
+      "statistic": 8888.966625395173,
+      "pvalue": 0.000999000999000999,
+      "bootstrap_valid": 1000,
+      "parameters": {
+        "quadratic": [
+          0.00021691472862607375,
+          -0.0017721754720392898,
+          0.0036284704721340827
+        ]
+      },
+      "assumptions": "Three-parameter smooth control cannot encode a discontinuity.",
+      "remains_rejected_5pct": true,
+      "bh_qvalue": 0.0011467889908256881,
+      "remains_rejected_fdr5": true
+    },
+    {
+      "case": "Millikan",
+      "distractor": "inverse-frequency distractor",
+      "statistic": 3742.2500060449365,
+      "pvalue": 0.0011467889908256881,
+      "bootstrap_valid": 871,
+      "parameters": {
+        "log_amplitude": -0.06720283316915165,
+        "log_offset": 11.066481764973256,
+        "constant": 1.3549991838807847
+      },
+      "assumptions": "Constrained decreasing inverse-frequency wrong-shape control.",
+      "remains_rejected_5pct": true,
+      "bh_qvalue": 0.0011467889908256881,
+      "remains_rejected_fdr5": true
+    }
+  ]
+}

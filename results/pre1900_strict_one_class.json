@@ -1,0 +1,158 @@
+{
+  "status": "classical-only source-audited sanity evaluation",
+  "audited_reference": {
+    "records": 268,
+    "families": 51,
+    "records_by_split": {
+      "test": 46,
+      "train": 205,
+      "validation": 17
+    },
+    "data_sha256": "6c6d1c81ca9cb8cbf13c1a5ed16d014f773f3c1e7cd02bdd5eba8b6658d49124"
+  },
+  "benchmark": {
+    "n": 192,
+    "classical_families": [
+      "linear",
+      "quadratic",
+      "power_1p5",
+      "inverse",
+      "inverse_square",
+      "exponential_decay",
+      "exponential_growth",
+      "square_root",
+      "power_2p5",
+      "affine_decline",
+      "quartic",
+      "offset_inverse"
+    ],
+    "breakdown_families": [
+      "saturation",
+      "step",
+      "kink",
+      "smooth_rolloff",
+      "smooth_crossover",
+      "threshold",
+      "turnover",
+      "oscillation",
+      "resonance",
+      "discontinuous_drop",
+      "log_correction",
+      "bounded_growth"
+    ]
+  },
+  "variants": {
+    "with_units": {
+      "checkpoint": "encoder_pre1900_strict_with_units.pt",
+      "checkpoint_sha256": "2d3438a8cbb11efb35f4b44e5d7a6dde98400a99c428f3790d5d5e22ddf605f6",
+      "uses_dimension_metadata": true,
+      "synthetic": {
+        "knn": {
+          "auroc": 0.4490017361111111,
+          "family_clustered_95_ci": [
+            0.1758382161458333,
+            0.7070529513888889
+          ]
+        },
+        "shrinkage_mahalanobis": {
+          "auroc": 0.4317491319444444,
+          "family_clustered_95_ci": [
+            0.1673177083333333,
+            0.6910101996527775
+          ]
+        }
+      },
+      "frozen_from_small_validation": {
+        "threshold": 0.5115249156951904,
+        "validation_n": 17,
+        "test_classical_n": 46,
+        "breakdown_n": 96,
+        "test_classical_fpr": 0.08695652173913043,
+        "synthetic_breakdown_tpr": 0.03125,
+        "warning": "Only 17 validation records from 4 families; this operating point is exploratory."
+      },
+      "heldout_historical_classical_vs_synthetic_breakdown": {
+        "knn_auroc": 0.8414855072463768,
+        "family_clustered_95_ci": [
+          0.7468104026404376,
+          0.9832607886904762
+        ]
+      }
+    },
+    "zero_units": {
+      "checkpoint": "encoder_pre1900_strict_zero_units.pt",
+      "checkpoint_sha256": "9ca8e661427a8bf538eea3c3acf9f9c34f2dcf867d5fe545c10cf7e29cf0df84",
+      "uses_dimension_metadata": false,
+      "synthetic": {
+        "knn": {
+          "auroc": 0.8544921875,
+          "family_clustered_95_ci": [
+            0.6976725260416666,
+            0.9778672960069444
+          ]
+        },
+        "shrinkage_mahalanobis": {
+          "auroc": 0.8953993055555555,
+          "family_clustered_95_ci": [
+            0.7447211371527778,
+            0.9900173611111112
+          ]
+        }
+      },
+      "frozen_from_small_validation": {
+        "threshold": 0.2520315945148468,
+        "validation_n": 17,
+        "test_classical_n": 46,
+        "breakdown_n": 96,
+        "test_classical_fpr": 0.043478260869565216,
+        "synthetic_breakdown_tpr": 0.28125,
+        "warning": "Only 17 validation records from 4 families; this operating point is exploratory."
+      },
+      "heldout_historical_classical_vs_synthetic_breakdown": {
+        "knn_auroc": 0.7959692028985508,
+        "family_clustered_95_ci": [
+          0.6726174301242236,
+          0.9448529411764706
+        ]
+      }
+    },
+    "random_zero_units": {
+      "checkpoint": null,
+      "checkpoint_sha256": null,
+      "uses_dimension_metadata": false,
+      "synthetic": {
+        "knn": {
+          "auroc": 0.3291015625,
+          "family_clustered_95_ci": [
+            0.12638617621527776,
+            0.567605251736111
+          ]
+        },
+        "shrinkage_mahalanobis": {
+          "auroc": 0.28765190972222227,
+          "family_clustered_95_ci": [
+            0.1082763671875,
+            0.4976453993055554
+          ]
+        }
+      },
+      "frozen_from_small_validation": {
+        "threshold": 0.000247204297920689,
+        "validation_n": 17,
+        "test_classical_n": 46,
+        "breakdown_n": 96,
+        "test_classical_fpr": 0.17391304347826086,
+        "synthetic_breakdown_tpr": 0.9375,
+        "warning": "Only 17 validation records from 4 families; this operating point is exploratory."
+      },
+      "heldout_historical_classical_vs_synthetic_breakdown": {
+        "knn_auroc": 0.9671648550724639,
+        "family_clustered_95_ci": [
+          0.8520588235294118,
+          0.9994453125
+        ]
+      }
+    }
+  },
+  "claim_boundary": "No breakdown examples enter training. Results measure small-corpus one-class transfer; they do not establish a foundation-model-scale learned claim."
+}

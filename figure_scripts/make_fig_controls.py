@@ -5,7 +5,6 @@
     vs the statistical detector on the held-out suite (n=180).
 Layout pass: 12-column GridSpec - a/b/c on the top row, d (7 cols) and e (5 cols) filling the bottom row,
 so there is no empty cell. Typography identical to Figs 2, 4, 5."""
-import os
 import numpy as np, json, matplotlib
 matplotlib.use('Agg'); import matplotlib.pyplot as plt
 from matplotlib import rcParams
@@ -38,7 +37,7 @@ def leg(A,**kw):
     kw.setdefault('edgecolor','none'); kw.setdefault('framealpha',0.88)
     return A.legend(**kw)
 # ---------------------------------------------------------------------------------------------------------
-SC=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','data','')
+SC='C:/Users/1/AppData/Local/Temp/claude/D--Physics-Fundation-model/ddaebe6b-abe2-4e50-9eb7-f5879d2c4910/scratchpad/'
 
 fig=plt.figure(figsize=(7.2,5.2))
 gs=fig.add_gridspec(2,12,wspace=2.9,hspace=0.52,left=0.075,right=0.985,top=0.925,bottom=0.085)

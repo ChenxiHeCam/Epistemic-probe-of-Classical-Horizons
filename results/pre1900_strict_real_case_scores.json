@@ -1,0 +1,53 @@
+{
+  "status": "descriptive real-case scoring; not confirmatory",
+  "checkpoint": "encoder_pre1900_strict_zero_units.pt",
+  "reference": {
+    "train_records": 205,
+    "validation_records": 17,
+    "threshold_knn": 0.2520315945148468,
+    "threshold_mahalanobis": 34.52223852438729
+  },
+  "results": {
+    "FIRAS_blackbody": {
+      "n": 43,
+      "knn_score": 0.1497592180967331,
+      "knn_conformal_p": 0.3333333333333333,
+      "knn_alert_at_exploratory_validation_95pct": false,
+      "mahalanobis_score": 90.05500207710041,
+      "mahalanobis_conformal_p": 0.05555555555555555,
+      "mahalanobis_alert_at_exploratory_validation_95pct": true
+    },
+    "copper_specific_heat": {
+      "n": 120,
+      "knn_score": 0.24432125687599182,
+      "knn_conformal_p": 0.1111111111111111,
+      "knn_alert_at_exploratory_validation_95pct": false,
+      "mahalanobis_score": 102.10483098280038,
+      "mahalanobis_conformal_p": 0.05555555555555555,
+      "mahalanobis_alert_at_exploratory_validation_95pct": true
+    },
+    "Boyle_1662_control": {
+      "n": 25,
+      "knn_score": 0.07357354462146759,
+      "knn_conformal_p": 0.5,
+      "knn_alert_at_exploratory_validation_95pct": false,
+      "mahalanobis_score": 40.81733173332534,
+      "mahalanobis_conformal_p": 0.05555555555555555,
+      "mahalanobis_alert_at_exploratory_validation_95pct": true
+    },
+    "Michelson_1879_control": {
+      "n": 100,
+      "knn_score": 0.3667384088039398,
+      "knn_conformal_p": 0.05555555555555555,
+      "knn_alert_at_exploratory_validation_95pct": true,
+      "mahalanobis_score": 56.38048725626031,
+      "mahalanobis_conformal_p": 0.05555555555555555,
+      "mahalanobis_alert_at_exploratory_validation_95pct": true
+    }
+  },
+  "limitations": [
+    "Only 17 validation records from 4 families; the smallest attainable conformal p-value is 1/18.",
+    "FIRAS and the specific-heat curve differ from the formula-derived training measurement process.",
+    "Bertozzi and Onnes are omitted because they have fewer than 20 points."
+  ]
+}

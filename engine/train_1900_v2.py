@@ -3,11 +3,10 @@ MULTI-TASK objective = contrastive (scale-augmented views of the same relation) 
 the formula's functional-form signature (exp/log/trig/sqrt/pow/div/n_terms/hyperbolic) from z_d. The
 signature supervision teaches z_d to encode functional form richly (the ingredient that makes the large
 pre-trained model strong), while all data is pre-1900 classical -> strictly leakage-free. GPU <=70%."""
-import os
 import sys,numpy as np,torch,torch.nn as nn
-sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0,'D:/Physics Fundation model/sr_model')
 from models.encoders import DataEncoder
-SC=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','data','')
+SC='C:/Users/1/AppData/Local/Temp/claude/D--Physics-Fundation-model/ddaebe6b-abe2-4e50-9eb7-f5879d2c4910/scratchpad/'
 if torch.cuda.is_available(): torch.cuda.set_per_process_memory_fraction(0.70); DEV='cuda'
 else: DEV='cpu'
 MAXV=16; Dd=256; DIML=6

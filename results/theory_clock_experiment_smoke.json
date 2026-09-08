@@ -1,0 +1,159 @@
+{
+  "status": "development experiment; digitized/reference-data error models require sensitivity analysis",
+  "test": "same-grid parametric-bootstrap goodness of fit under old and advanced horizons",
+  "cases": [
+    {
+      "case": "FIRAS",
+      "n": 43,
+      "provenance": "COBE-FIRAS table with published pointwise errors",
+      "old_horizon": {
+        "model": "Rayleigh-Jeans shape",
+        "statistic": 26492678.616864763,
+        "pvalue": 0.004975124378109453,
+        "bootstrap_valid": 200,
+        "parameters": {
+          "amplitude": 0.08471472800145405
+        },
+        "assumptions": "Published pointwise sigma plus a 0.1% independent systematic floor; covariance unavailable locally.",
+        "bh_qvalue": 0.004975124378109453
+      },
+      "advanced_horizon": {
+        "model": "Planck spectral shape",
+        "statistic": 6.581070800155607,
+        "pvalue": 1.0,
+        "bootstrap_valid": 200,
+        "parameters": {
+          "log_amplitude": 3.6820957520027378,
+          "inverse_temperature_scale": 0.5279900623670764
+        },
+        "assumptions": "Successor functional form fixed; amplitude and temperature scale are nuisance fits.",
+        "bh_qvalue": 1.0
+      },
+      "score_collapse_ratio": 4025587.8444946,
+      "paired_success": true,
+      "paired_success_fdr5": true
+    },
+    {
+      "case": "Bertozzi",
+      "n": 5,
+      "provenance": "five digitized values; conservative beta^2 error floor",
+      "old_horizon": {
+        "model": "Newtonian kinetic energy",
+        "statistic": 9106418.292282198,
+        "pvalue": 0.004975124378109453,
+        "bootstrap_valid": 200,
+        "parameters": {},
+        "assumptions": "Electron rest energy fixed at 0.511 MeV; 0.02 beta^2 digitization/error floor.",
+        "bh_qvalue": 0.004975124378109453
+      },
+      "advanced_horizon": {
+        "model": "Relativistic kinetic energy",
+        "statistic": 9.504941879477755,
+        "pvalue": 0.05970149253731343,
+        "bootstrap_valid": 200,
+        "parameters": {},
+        "assumptions": "No fitted physical parameter; electron rest energy fixed at 0.511 MeV.",
+        "bh_qvalue": 0.14925373134328357
+      },
+      "score_collapse_ratio": 958071.9595923027,
+      "paired_success": true,
+      "paired_success_fdr5": true
+    },
+    {
+      "case": "specific_heat_Cu",
+      "n": 120,
+      "provenance": "NIST reference polynomial; analysed in log space",
+      "old_horizon": {
+        "model": "Dulong-Petit constant",
+        "statistic": 788194.0267333202,
+        "pvalue": 0.004975124378109453,
+        "bootstrap_valid": 200,
+        "parameters": {
+          "log_plateau": 5.821464972549456
+        },
+        "assumptions": "Plateau nuisance fitted only on the upper temperature quartile.",
+        "bh_qvalue": 0.004975124378109453
+      },
+      "advanced_horizon": {
+        "model": "Debye plus electronic term",
+        "statistic": 203.99785945848075,
+        "pvalue": 0.004975124378109453,
+        "bootstrap_valid": 200,
+        "parameters": {
+          "plateau": 415.5712761001397,
+          "theta_K": 330.15020037836643,
+          "gamma": 0.007189921761192953
+        },
+        "assumptions": "NIST reference curve treated with a 5% relative error floor; not a raw-measurement covariance.",
+        "bh_qvalue": 0.02487562189054726
+      },
+      "score_collapse_ratio": 3863.7367510894874,
+      "paired_success": false,
+      "paired_success_fdr5": false
+    },
+    {
+      "case": "Onnes",
+      "n": 9,
+      "provenance": "digitized values; first four observations are censoring limits",
+      "old_horizon": {
+        "model": "smooth normal-state resistance",
+        "statistic": 8984340377.479723,
+        "pvalue": 0.004975124378109453,
+        "bootstrap_valid": 200,
+        "parameters": {
+          "slope": 0.1663778162911604,
+          "intercept": -0.589757365684572
+        },
+        "assumptions": "Normal trend fitted above 4.21 K; sub-transition values are upper limits represented at the limit.",
+        "bh_qvalue": 0.004975124378109453
+      },
+      "advanced_horizon": {
+        "model": "superconducting transition",
+        "statistic": 0.12324282688234534,
+        "pvalue": 1.0,
+        "bootstrap_valid": 200,
+        "parameters": {
+          "Tc_K": 4.2,
+          "normal_slope": 0.1663778162911604,
+          "normal_intercept": -0.589757365684572
+        },
+        "assumptions": "Tc and censoring limit fixed from the historical record; normal trend is a nuisance fit.",
+        "bh_qvalue": 1.0
+      },
+      "score_collapse_ratio": 72899499344.14186,
+      "paired_success": true,
+      "paired_success_fdr5": true
+    },
+    {
+      "case": "Millikan",
+      "n": 4,
+      "provenance": "four sodium stopping-potential values",
+      "old_horizon": {
+        "model": "frequency-independent energy",
+        "statistic": 3742.2500000000005,
+        "pvalue": 0.004975124378109453,
+        "bootstrap_valid": 200,
+        "parameters": {
+          "constant_V": 1.355
+        },
+        "assumptions": "0.02 V pointwise error from the case-study protocol.",
+        "bh_qvalue": 0.004975124378109453
+      },
+      "advanced_horizon": {
+        "model": "linear photoelectric relation",
+        "statistic": 0.18791416133394073,
+        "pvalue": 0.8955223880597015,
+        "bootstrap_valid": 200,
+        "parameters": {
+          "slope_V_per_1e14Hz": 0.4124734311597085,
+          "intercept_V": -1.8107335841507635
+        },
+        "assumptions": "Successor shape fixed to a line; slope and work-function intercept are nuisance fits.",
+        "bh_qvalue": 1.0
+      },
+      "score_collapse_ratio": 19914.67792227579,
+      "paired_success": true,
+      "paired_success_fdr5": true
+    }
+  ]
+}

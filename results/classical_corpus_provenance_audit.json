@@ -1,0 +1,924 @@
+{
+  "corpus_records": 50898,
+  "unique_archive_ids": 50898,
+  "matched_to_master": 50898,
+  "missing_master_records": 0,
+  "records_without_year_metadata": 50898,
+  "records_without_source_metadata": 50898,
+  "obvious_post1900_keyword_hits": 1686,
+  "obvious_post1900_fraction": 0.033125073676765295,
+  "modern_examples": [
+    {
+      "id": "NEWd54ec83ca73f",
+      "term": "Eddington",
+      "name": "Eddington luminosity",
+      "expr": "L_Edd = 4*pi*G*M_star*c/kappa",
+      "domain": "astrophysics",
+      "origin": "final_base"
+    },
+    {
+      "id": "NEWd68636e92bd6",
+      "term": "Bondi",
+      "name": "Bondi accretion",
+      "expr": "M_dot = 4 * pi * rho * v * r^2",
+      "domain": "astrophysics",
+      "origin": "final_base"
+    },
+    {
+      "id": "NEW0906df30bc62",
+      "term": "Nuclear",
+      "name": "Nuclear timescale",
+      "expr": "t_nuc = E_nuc / L_star",
+      "domain": "astrophysics",
+      "origin": "final_base"
+    },
+    {
+      "id": "NEW9a58d85fee73",
+      "term": "Bondi",
+      "name": "Bondi radius",
+      "expr": "r_B = G*M/c_s**2",
+      "domain": "astrophysics",
+      "origin": "final_base"
+    },
+    {
+      "id": "NEWff3c5e98e0b2",
+      "term": "Prandtl",
+      "name": "Prandtl number",
+      "expr": "Pr = nu/kappa_diff",
+      "domain": "fluid dynamics",
+      "origin": "final_base"
+    },
+    {
+      "id": "NEW50a317a171c0",
+      "term": "nuclear",
+      "name": "Luminosity from nuclear burning",
+      "expr": "L_nuc = epsilon_nuc * M_core",
+      "domain": "astrophysics",
+      "origin": "final_base"
+    },
+    {
+      "id": "NEW32f532d3cb08",
+      "term": "Eddington",
+      "name": "Milne-Eddington atmosphere",
+      "expr": "S = a + b*tau",
+      "domain": "astrophysics",
+      "origin": "final_base"
+    },
+    {
+      "id": "NEWdf76b7010007",
+      "term": "Bondi",
+      "name": "Bondi-Hoyle accretion",
+      "expr": "M_dot = pi*rho*v_inf*R_a^2",
+      "domain": "astrophysics",
+      "origin": "final_base"
+    },
+    {
+      "id": "NEWd67f3c1c8ef2",
+      "term": "Eddington",
+      "name": "Eddington approximation",
+      "expr": "F = (c/4)*a*T**4",
+      "domain": "astrophysics",
+      "origin": "final_base"
+    },
+    {
+      "id": "NEW453742d3ba2e",
+      "term": "Nuclear",
+      "name": "Nuclear burning timescale",
+      "expr": "tau_nuc = epsilon_nuc / L",
+      "domain": "astrophysics",
+      "origin": "final_base"
+    },
+    {
+      "id": "NEW721e917df9de",
+      "term": "Nuclear",
+      "name": "Nuclear burning timescale",
+      "expr": "t_nuc = epsilon_nuc / L",
+      "domain": "astrophysics",
+      "origin": "final_base"
+    },
+    {
+      "id": "NEW2700c56559f6",
+      "term": "Bondi",
+      "name": "Bondi radius",
+      "expr": "r_B = 2*G*M_central / c_s^2",
+      "domain": "astrophysics",
+      "origin": "final_base"
+    },
+    {
+      "id": "NEW1716519ec930",
+      "term": "Eddington",
+      "name": "Eddington luminosity",
+      "expr": "L_edd = (4*pi*G*c*m_p)/sigma_T",
+      "domain": "astrophysics",
+      "origin": "final_base"
+    },
+    {
+      "id": "CHEMcc63a0d7dd91",
+      "term": "nuclear",
+      "name": "Luminosity from nuclear reactions",
+      "expr": "L = epsilon * M",
+      "domain": "astrophysics",
+      "origin": "final_base"
+    },
+    {
+      "id": "NEWf9b178a5632a",
+      "term": "Nuclear",
+      "name": "Nuclear timescale",
+      "expr": "t_nuc = (M*c**2)/L",
+      "domain": "astrophysics",
+      "origin": "final_base"
+    },
+    {
+      "id": "NEW75bea812a8ae",
+      "term": "Chandrasekhar",
+      "name": "Chandrasekhar's delta_C",
+      "expr": "delta_C = (2/3)*sqrt(2/G)*M/R^3",
+      "domain": "astrophysics",
+      "origin": "final_base"
+    },
+    {
+      "id": "NEW1e7db9c280d8",
+      "term": "Bondi",
+      "name": "Bondi radius",
+      "expr": "r_B = 2*G*M_star/c_s_ism**2",
+      "domain": "astrophysics",
+      "origin": "final_base"
+    },
+    {
+      "id": "C8adca21e7f37",
+      "term": "fermi",
+      "name": "",
+      "expr": "f_fermi_le - 2*f_langevin + f_momentum",
+      "domain": "statistical mechanics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C85bf61a3a4b6",
+      "term": "debye",
+      "name": "",
+      "expr": "f_debye_he - f_kirchhof = 0",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8377263a88d8",
+      "term": "landau",
+      "name": "",
+      "expr": "-f_landau_d + f_pulsar_t",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C80681704e83f",
+      "term": "fermi",
+      "name": "",
+      "expr": "-dp_f_bernoull_dX*f_bernoull - f_bernoull + log(f_point_ch + 1) - f_fermi_le + f_bernoull",
+      "domain": "fluid dynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C89b6c230490b",
+      "term": "landau",
+      "name": "",
+      "expr": "-f_lagrangi - f_path_int + f_landau_d + f_thermoel",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8f808420487b",
+      "term": "einstein",
+      "name": "",
+      "expr": "f_einstein + f_band_str - 2*f_entropy_",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8692b51a7c93",
+      "term": "pauli",
+      "name": "",
+      "expr": "f_canonica - f_pauli_su",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8d64b1631af0",
+      "term": "landau",
+      "name": "",
+      "expr": "-f_gibbs_he + f_thermoel + 2*f_four_mom - f_landau_d - f_gibbs_he",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C81c08b6c6674",
+      "term": "landau",
+      "name": "",
+      "expr": "f_gibbs_re - f_landau_h",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8163c599e108",
+      "term": "landau",
+      "name": "",
+      "expr": "-dX_df_landau_d/(f_landau_d + 1) - f_landau_d + f_pulsar_t",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C886152a7854b",
+      "term": "landau",
+      "name": "",
+      "expr": "p*x - (2*f_white_dw - f_landau_h)",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C889d9a606c12",
+      "term": "hubble",
+      "name": "",
+      "expr": "-f_hubble_p + f_precessi + f_hubble_p - f_hydrogen",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8c806f8fb313",
+      "term": "einstein",
+      "name": "",
+      "expr": "-f_electric + f_einstein",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C89e305bf6f75",
+      "term": "landau",
+      "name": "",
+      "expr": "-f_hermite_ + 2*f_landau_h - f_reynolds",
+      "domain": "fluid dynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8440453299d4",
+      "term": "hubble",
+      "name": "",
+      "expr": "-f_hubble_p - f_pulsar_t + 2*f_sound_wa",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C881f06c6cf31",
+      "term": "landau",
+      "name": "",
+      "expr": "-df_landau_d_dg*t*exp(f_landau_d*t) - f_landau_d + f_pulsar_t",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8c8ce9ad6d1c",
+      "term": "landau",
+      "name": "",
+      "expr": "-f_hermite_ + 2*f_landau_h + f_n_type_f - 2*f_reynolds",
+      "domain": "fluid dynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8177fe9086d9",
+      "term": "landau",
+      "name": "",
+      "expr": "-dX_df_landau_d/(f_landau_d + 1) - f_landau_d + f_pulsar_t + f_einstein - f_landau_d",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C83ee74a07ce4",
+      "term": "debye",
+      "name": "",
+      "expr": "T_1*v - f_debye_he",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C88a38e18c44c",
+      "term": "einstein",
+      "name": "",
+      "expr": "-f_einstein + 2*f_weiss_mo + f_total_in",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8c33d6604ab9",
+      "term": "landau",
+      "name": "",
+      "expr": "-f_propagat - f_lagrangi - f_path_int + f_landau_d",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8c3b23a7c732",
+      "term": "landau",
+      "name": "",
+      "expr": "f_white_dw - f_landau_h - f_hydrogen",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8771383c307b",
+      "term": "hubble",
+      "name": "",
+      "expr": "-f_hubble_p - f_pulsar_t + 3*f_sound_wa - f_black_bo",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C89ef49aa76ba",
+      "term": "landau",
+      "name": "",
+      "expr": "-f_gibbs_re + f_landau_d",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C818740404591",
+      "term": "landau",
+      "name": "",
+      "expr": "f_landau_h - f_laminar_",
+      "domain": "fluid dynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C860f93a9ff1d",
+      "term": "bondi",
+      "name": "",
+      "expr": "pi1 = -dMdot_bondi_dM_star/Mdot_bondi**2",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8844bebdc3b0",
+      "term": "fermi",
+      "name": "",
+      "expr": "f_bernoull - f_fermi_le",
+      "domain": "fluid dynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C82e421ed649a",
+      "term": "landau",
+      "name": "",
+      "expr": "-f_electron + 2*f_landau_d - f_weak_int - (f_landau_d - f_type_ii_)",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8948d1f639a5",
+      "term": "landau",
+      "name": "",
+      "expr": "f_white_dw - f_landau_c",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C82c2a2b0e721",
+      "term": "landau",
+      "name": "",
+      "expr": "f_landau_s - T_1*a/t",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C86b8122ce7f6",
+      "term": "landau",
+      "name": "",
+      "expr": "sqrt((-dX_df_landau_d/(f_landau_d + 1) - f_landau_d + f_pulsar_t)**2) - f_poisson_ + f_pulsar_t",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8520ad9f0a72",
+      "term": "bondi",
+      "name": "",
+      "expr": "4*pi*G**2*M_star*rho_ism/c_s_ism**3 + 4*pi*G**2*M_star**2*drho_ism_dM_star/c_s_ism**3 + dMdot_bondi_dG - 8*pi*G*M_star**2*rho_ism/c_s_ism**3",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8d0478547bb9",
+      "term": "einstein",
+      "name": "",
+      "expr": "-f_einstein + 3*f_freundli - f_hall_mob - f_reynolds",
+      "domain": "fluid dynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8646fed64802",
+      "term": "landau",
+      "name": "",
+      "expr": "2*f_gibbs_re - f_landau_h - f_gross_pi",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C888ef4104d31",
+      "term": "landau",
+      "name": "",
+      "expr": "f_exergy_d - f_landau_c",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C83753d865c02",
+      "term": "landau",
+      "name": "",
+      "expr": "-X + tanh(f_exergy_d) + f_scanning - f_landau_h + f_exergy_d - (f_exergy_d - f_scanning)",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C84d46511d417",
+      "term": "fermi",
+      "name": "",
+      "expr": "f_bernoull - f_joule_th - f_endoreve + f_fermi_le",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C83f5825b4f75",
+      "term": "landau",
+      "name": "",
+      "expr": "f_scanning - f_landau_h - f_gibbs_du - f_mass_con",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8313d8f5e4c2",
+      "term": "landau",
+      "name": "",
+      "expr": "-f_hc1_type - f_path_int + f_landau_d + f_thermoel",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C82618e1a3769",
+      "term": "einstein",
+      "name": "",
+      "expr": "-f_alpha_de - f_einstein + 2*f_radiatio",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C82ec8ee1157e",
+      "term": "fermi",
+      "name": "",
+      "expr": "df_fermi_le_dX/(f_fermi_le + 1) - f_fermi_le + f_pendulum",
+      "domain": "statistical mechanics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8c25401ebb35",
+      "term": "debye",
+      "name": "",
+      "expr": "-f_deep_ine - f_debye_he + 3*f_gibbs_du - f_onsager_",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8e83ef5a8008",
+      "term": "landau",
+      "name": "",
+      "expr": "k_B*(T_temp + 2*b_landau*(sqrt(2)*sqrt(a_landau*(-M_molar*v_rms**2/(3*R) + T_c)/b_landau)/2)**2/a_landau) - 2*J_ising/log(1 + sqrt(2))",
+      "domain": "statistical mechanics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8168b47b4782",
+      "term": "debye",
+      "name": "",
+      "expr": "f_lattice_ + f_debye_he - f_scalar_f + X",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C81a080c38457",
+      "term": "hubble",
+      "name": "",
+      "expr": "-f_hubble_p + f_pulsar_t - f_complete + f_pulsar_t",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C86b60d99f176",
+      "term": "landau",
+      "name": "",
+      "expr": "log(f_landau_s + 1) - f_thermoel - f_electros = 0",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8a52d0db51e2",
+      "term": "landau",
+      "name": "",
+      "expr": "-f_landau_d + f_cosmic_m",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C880ad9d31157",
+      "term": "bcs",
+      "name": "",
+      "expr": "f_bcs_tc_f - f_propagat - f_tensor_c",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C822b0443fc7c",
+      "term": "landau",
+      "name": "",
+      "expr": "f_heat_cap - f_joule_th - f_landau_h",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8a28aa8b915f",
+      "term": "Bondi",
+      "name": "",
+      "expr": "M_dot = (1/4)*Mdot_Bondi",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8841f48afd78",
+      "term": "Bondi",
+      "name": "",
+      "expr": "Mdot_Bondi = 4*pi*G**2*M**2*rho/c_s**3",
+      "domain": "astrophysics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8a12ac6d1012",
+      "term": "landau",
+      "name": "",
+      "expr": "tanh(f_exergy_d) + f_scanning - f_landau_h",
+      "domain": "thermodynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C883075ed5230",
+      "term": "hubble",
+      "name": "",
+      "expr": "2*df_lubricat_dX*f_lubricat + 2*f_lubricat*df_lubricat_dX + f_hubble_p - f_scalar_f",
+      "domain": "fluid dynamics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "C8c6b76f1569a",
+      "term": "landau",
+      "name": "",
+      "expr": "f_hamilton - f_landau_s + f_electros = 0",
+      "domain": "classical mechanics",
+      "origin": "combo_8m_old"
+    },
+    {
+      "id": "ORPH_f1f4b85222a",
+      "term": "Bondi",
+      "name": "Mdot_Bondi _eq_ 4*pi*G^2*M^2*rho_inf/c_s^3",
+      "expr": "Mdot_Bondi = 4*pi*G^2*M^2*rho_inf/c_s^3",
+      "domain": "astrophysics",
+      "origin": "haiku_seeds"
+    },
+    {
+      "id": "HKV2TH_493f416dac5",
+      "term": "Nusselt",
+      "name": "Convection coefficient from Nusselt",
+      "expr": "h_conv = Nu*k/L",
+      "domain": "thermodynamics",
+      "origin": "haiku_seeds"
+    },
+    {
+      "id": "HKV2TH_22ea5dd927d",
+      "term": "Nusselt",
+      "name": "Nusselt Rayleigh correlation",
+      "expr": "Nu = C*Ra^n",
+      "domain": "thermodynamics",
+      "origin": "haiku_seeds"
+    },
+    {
+      "id": "HKV2BAO_6ee29bcdc9c",
+      "term": "relativ",
+      "name": "relative_solvent_accessibility",
+      "expr": "accessibility_score = SASA_buried/SASA_exposed",
+      "domain": "acoustics",
+      "origin": "haiku_seeds"
+    },
+    {
+      "id": "HKV2BAO_f76e65bdd54",
+      "term": "relativ",
+      "name": "relative_binding_free_energy",
+      "expr": "thermodynamic_specificity = Delta_G_specific - Delta_G_nonspecific",
+      "domain": "acoustics",
+      "origin": "haiku_seeds"
+    },
+    {
+      "id": "RDS_561fabfd8a9",
+      "term": "bondi",
+      "name": "",
+      "expr": "dM_star_dMdot_bondi = dM_star/dMdot_bondi",
+      "domain": "astrophysics",
+      "origin": "scanner_mined"
+    },
+    {
+      "id": "RDS_986c7c40aa9",
+      "term": "einstein",
+      "name": "",
+      "expr": "f_magnetic - f_microcan - f_einstein + 2*f_nucleati - f_magnetic",
+      "domain": "statistical mechanics",
+      "origin": "scanner_mined"
+    },
+    {
+      "id": "RDS_86877cb828f",
+      "term": "fermi",
+      "name": "",
+      "expr": "f = 1/(f_fermi_le + 1) - f_laminar_",
+      "domain": "fluid dynamics",
+      "origin": "scanner_mined"
+    },
+    {
+      "id": "RDS_1e6cd1cd92b",
+      "term": "Bondi",
+      "name": "",
+      "expr": "M_dot_Bondi = 4*pi*rho_inf*(G*M)^2/c_s^4",
+      "domain": "astrophysics",
+      "origin": "scanner_mined"
+    },
+    {
+      "id": "RDS_36f90b96e86",
+      "term": "hubble",
+      "name": "",
+      "expr": "T_1*v - f_hubble_p + f_lubricat",
+      "domain": "fluid dynamics",
+      "origin": "scanner_mined"
+    },
+    {
+      "id": "RDS_87cae5f9fb4",
+      "term": "hubble",
+      "name": "",
+      "expr": "f_hubble_p = f_airy_dis + f_debye_he",
+      "domain": "astrophysics",
+      "origin": "scanner_mined"
+    },
+    {
+      "id": "RDS_3607831e074",
+      "term": "bcs",
+      "name": "",
+      "expr": "f_isco_sch - 3*f_bcs_tc_f",
+      "domain": "astrophysics",
+      "origin": "scanner_mined"
+    },
+    {
+      "id": "RDS_88a046b7c5e",
+      "term": "bcs",
+      "name": "",
+      "expr": "f_isco_sch - 3*f_bcs_tc_f + f_electrom",
+      "domain": "astrophysics",
+      "origin": "scanner_mined"
+    },
+    {
+      "id": "RDS_cfb656ef7ac",
+      "term": "bcs",
+      "name": "",
+      "expr": "f_isco_sch - 3*f_bcs_tc_f + f_electrom + 2*f_weak_int",
+      "domain": "astrophysics",
+      "origin": "scanner_mined"
+    },
+    {
+      "id": "RDS_21d506116f6",
+      "term": "Bondi",
+      "name": "",
+      "expr": "L_Bondi = eta*Mdot*c**2",
+      "domain": "astrophysics",
+      "origin": "scanner_mined"
+    },
+    {
+      "id": "RDS_0f9c992b1b4",
+      "term": "hubble",
+      "name": "",
+      "expr": "-f_hubble_p + f_hydrogen",
+      "domain": "astrophysics",
+      "origin": "scanner_mined"
+    },
+    {
+      "id": "RDS_b93ebdd906c",
+      "term": "einstein",
+      "name": "",
+      "expr": "-X + f_einstein + f_peak",
+      "domain": "optics",
+      "origin": "scanner_mined"
+    },
+    {
+      "id": "RDS_c5157700020",
+      "term": "Landau",
+      "name": "",
+      "expr": "chi_Landau = -chi_P/3",
+      "domain": "electromagnetism",
+      "origin": "scanner_mined"
+    },
+    {
+      "id": "RDS_28a55b6a6e1",
+      "term": "landau",
+      "name": "",
+      "expr": "U_wall*y/h + f_landau_c",
+      "domain": "fluid dynamics",
+      "origin": "scanner_mined"
+    },
+    {
+      "id": "RDS_b2d4f7e1feb",
+      "term": "einstein",
+      "name": "",
+      "expr": "C_V_einstein*ln_W/(3*N_atoms) = S_ent",
+      "domain": "statistical mechanics",
+      "origin": "scanner_mined"
+    },
+    {
+      "id": "RDS_d768057ce04",
+      "term": "landau",
+      "name": "",
+      "expr": "f_landau_s - f_gibbs_he + f_type_ii_",
+      "domain": "thermodynamics",
+      "origin": "scanner_mined"
+    },
+    {
+      "id": "RDS_e5fffbd28ca",
+      "term": "landau",
+      "name": "",
+      "expr": "-f_back_emf + f_landau_c",
+      "domain": "electromagnetism",
+      "origin": "scanner_mined"
+    },
+    {
+      "id": "RDS_18edfba8e74",
+      "term": "Bondi",
+      "name": "",
+      "expr": "M_dot_Bondi = 4 * pi * G**2 * M**2 * rho_inf / c_s**3",
+      "domain": "astrophysics",
+      "origin": "scanner_mined"
+    },
+    {
+      "id": "V5_40da099921464",
+      "term": "Debye",
+      "name": "",
+      "expr": "S_Debye = 12*pi**4*R/5 * (T/Theta_D)**3",
+      "domain": "thermodynamics",
+      "origin": "combo_v5"
+    },
+    {
+      "id": "V5_7210d35a01f12",
+      "term": "landau",
+      "name": "",
+      "expr": "f_landau_d - f_gibbs_re",
+      "domain": "thermodynamics",
+      "origin": "combo_v5"
+    },
+    {
+      "id": "V5_8624ab9d11f46",
+      "term": "Debye",
+      "name": "",
+      "expr": "Cv = 12*pi**4*R*(T/Debye_temperature)**3/5",
+      "domain": "thermodynamics",
+      "origin": "combo_v5"
+    },
+    {
+      "id": "V5_237f9da8c1098",
+      "term": "Bondi",
+      "name": "",
+      "expr": "M_accrete = 4*pi*rho_ext*c_s*r_Bondi**2",
+      "domain": "astrophysics",
+      "origin": "combo_v5"
+    },
+    {
+      "id": "V5_868c775b850f5",
+      "term": "Bondi",
+      "name": "",
+      "expr": "M_dot_Bondi = pi * rho_inf * v_inf / (a**4)",
+      "domain": "astrophysics",
+      "origin": "combo_v5"
+    },
+    {
+      "id": "V5_70079c2c2cc19",
+      "term": "einstein",
+      "name": "",
+      "expr": "C_V_einstein - 5*R/2 = d_comov/c",
+      "domain": "thermodynamics",
+      "origin": "combo_v5"
+    }
+  ],
+  "exact_normalized_name_duplicates": {
+    "unique_groups": 4017,
+    "duplicate_groups": 917,
+    "records_in_duplicate_groups": 7190,
+    "largest_group": 261
+  },
+  "exact_normalized_expression_duplicates": {
+    "unique_groups": 39021,
+    "duplicate_groups": 4381,
+    "records_in_duplicate_groups": 16258,
+    "largest_group": 997
+  },
+  "structural_template_duplicates": {
+    "unique_groups": 28762,
+    "duplicate_groups": 4590,
+    "records_in_duplicate_groups": 26726,
+    "largest_group": 997
+  },
+  "domains": [
+    [
+      "thermodynamics",
+      10204
+    ],
+    [
+      "astrophysics",
+      6951
+    ],
+    [
+      "mechanics",
+      6563
+    ],
+    [
+      "statmech_advanced",
+      5788
+    ],
+    [
+      "fluid dynamics",
+      4866
+    ],
+    [
+      "electromagnetism",
+      4646
+    ],
+    [
+      "optics",
+      2973
+    ],
+    [
+      "statistical mechanics",
+      2489
+    ],
+    [
+      "classical mechanics",
+      2455
+    ],
+    [
+      "acoustics_advanced",
+      1508
+    ],
+    [
+      "acoustics",
+      1189
+    ],
+    [
+      "celestial mechanics",
+      799
+    ],
+    [
+      "wave physics",
+      234
+    ],
+    [
+      "continuum mechanics",
+      174
+    ],
+    [
+      "gravitation",
+      54
+    ],
+    [
+      "hydrodynamics",
+      5
+    ]
+  ],
+  "origins": [
+    [
+      "combo_v5",
+      19795
+    ],
+    [
+      "combo_8m_old",
+      11400
+    ],
+    [
+      "scanner_mined",
+      9411
+    ],
+    [
+      "dsinject",
+      7296
+    ],
+    [
+      "haiku_seeds",
+      2767
+    ],
+    [
+      "final_base",
+      229
+    ]
+  ],
+  "audit_limit": "Keyword hits are a lower bound. Absence of a hit does not establish a pre-1900 date. The corpus cannot be certified period-pure without source-level dates and citations.",
+  "master_sha256": "1f4bd636b1b314a2feed14e696a349ec48c940f8ff8a6bde620fb72cb31402e8"
+}

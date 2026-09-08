@@ -1,0 +1,220 @@
+{
+  "status": "development candidate; must be frozen before sealed evaluation",
+  "task_object": {
+    "admissible_models": [
+      "constant",
+      "affine",
+      "power",
+      "exponential"
+    ],
+    "fitted_parameters": "all parameters of each candidate form; multiple fixed initializations",
+    "observation_model": "source point cloud resampled to the target n with independent 1% multiplicative Gaussian noise",
+    "fitting_data": "both predeclared endpoint interiors are tried; 60% at n<12, otherwise 35%",
+    "adaptive_procedure": [
+      "sort by x",
+      "try low-to-high and high-to-low endpoint directions",
+      "fit every admissible form and initialization on each candidate interior",
+      "retain the direction whose selected form has the larger interior R2",
+      "compute conformal-residual and log-extrapolation ratios",
+      "combine without clipping"
+    ],
+    "calibration_scope": "the complete direction, model, parameter-fit and scoring procedure is rerun for every calibration and test dataset",
+    "failure_criterion": "score strictly above the size-matched q95 primary or q99 secondary calibration threshold",
+    "semantic_scope": "incompatibility with this four-form extrapolation task, not rejection of classical physics in general"
+  },
+  "score": "0.5*(log1p(conformal_ratio/3)+log1p(boundary_ratio/4))",
+  "calibration": {
+    "5": {
+      "valid_n": 785,
+      "q95": 13.866819826975346,
+      "q99": 35.083921338178314
+    },
+    "9": {
+      "valid_n": 785,
+      "q95": 17.56535608088071,
+      "q99": 28.64388299810601
+    },
+    "43": {
+      "valid_n": 785,
+      "q95": 7.093750131281067,
+      "q99": 48.025594867717544
+    },
+    "120": {
+      "valid_n": 785,
+      "q95": 3.391320707553498,
+      "q99": 14.201822917642659
+    }
+  },
+  "real_cases": [
+    {
+      "case": "FIRAS",
+      "n": 43,
+      "score": 5.336860175758494,
+      "pvalue": 0.06743002544529263,
+      "reject_5pct": false,
+      "reject_1pct": false,
+      "bh_qvalue": 0.13486005089058525,
+      "reject_bh_5pct": false
+    },
+    {
+      "case": "specific_heat_Cu",
+      "n": 120,
+      "score": 7.147014183083681,
+      "pvalue": 0.021628498727735368,
+      "reject_5pct": true,
+      "reject_1pct": false,
+      "bh_qvalue": 0.08651399491094147,
+      "reject_bh_5pct": false
+    },
+    {
+      "case": "Bertozzi",
+      "n": 5,
+      "score": 4.119344299873669,
+      "pvalue": 0.2430025445292621,
+      "reject_5pct": false,
+      "reject_1pct": false,
+      "bh_qvalue": 0.2430025445292621,
+      "reject_bh_5pct": false
+    },
+    {
+      "case": "Onnes",
+      "n": 9,
+      "score": 4.195402289653943,
+      "pvalue": 0.11450381679389313,
+      "reject_5pct": false,
+      "reject_1pct": false,
+      "bh_qvalue": 0.15267175572519084,
+      "reject_bh_5pct": false
+    }
+  ],
+  "synthetic_mechanism_benchmark": {
+    "sample_size": 120,
+    "repeats_per_family": 8,
+    "classical_families": [
+      "linear",
+      "quadratic",
+      "power_1p5",
+      "inverse",
+      "inverse_square",
+      "exponential_decay",
+      "exponential_growth",
+      "square_root",
+      "power_2p5",
+      "affine_decline",
+      "quartic",
+      "offset_inverse"
+    ],
+    "breakdown_families": [
+      "saturation",
+      "step",
+      "kink",
+      "smooth_rolloff",
+      "smooth_crossover",
+      "threshold",
+      "turnover",
+      "oscillation",
+      "resonance",
+      "discontinuous_drop",
+      "log_correction",
+      "bounded_growth"
+    ],
+    "thresholds": {
+      "5pct": 3.391320707553498,
+      "1pct": 14.201822917642659
+    },
+    "operating_points": {
+      "5pct": {
+        "tpr": 0.2708333333333333,
+        "tpr_mechanism_bootstrap_95ci": [
+          0.07291666666666667,
+          0.5
+        ],
+        "fpr": 0.0,
+        "fpr_family_bootstrap_95ci": [
+          0.0,
+          0.0
+        ],
+        "breakdown_by_family": {
+          "saturation": 0.625,
+          "step": 0.0,
+          "kink": 0.0,
+          "smooth_rolloff": 1.0,
+          "smooth_crossover": 0.0,
+          "threshold": 0.25,
+          "turnover": 0.0,
+          "oscillation": 0.375,
+          "resonance": 0.0,
+          "discontinuous_drop": 1.0,
+          "log_correction": 0.0,
+          "bounded_growth": 0.0
+        },
+        "classical_by_family": {
+          "linear": 0.0,
+          "quadratic": 0.0,
+          "power_1p5": 0.0,
+          "inverse": 0.0,
+          "inverse_square": 0.0,
+          "exponential_decay": 0.0,
+          "exponential_growth": 0.0,
+          "square_root": 0.0,
+          "power_2p5": 0.0,
+          "affine_decline": 0.0,
+          "quartic": 0.0,
+          "offset_inverse": 0.0
+        }
+      },
+      "1pct": {
+        "tpr": 0.0,
+        "tpr_mechanism_bootstrap_95ci": [
+          0.0,
+          0.0
+        ],
+        "fpr": 0.0,
+        "fpr_family_bootstrap_95ci": [
+          0.0,
+          0.0
+        ],
+        "breakdown_by_family": {
+          "saturation": 0.0,
+          "step": 0.0,
+          "kink": 0.0,
+          "smooth_rolloff": 0.0,
+          "smooth_crossover": 0.0,
+          "threshold": 0.0,
+          "turnover": 0.0,
+          "oscillation": 0.0,
+          "resonance": 0.0,
+          "discontinuous_drop": 0.0,
+          "log_correction": 0.0,
+          "bounded_growth": 0.0
+        },
+        "classical_by_family": {
+          "linear": 0.0,
+          "quadratic": 0.0,
+          "power_1p5": 0.0,
+          "inverse": 0.0,
+          "inverse_square": 0.0,
+          "exponential_decay": 0.0,
+          "exponential_growth": 0.0,
+          "square_root": 0.0,
+          "power_2p5": 0.0,
+          "affine_decline": 0.0,
+          "quartic": 0.0,
+          "offset_inverse": 0.0
+        }
+      }
+    },
+    "fit_failure_or_abstention": {
+      "classical": {
+        "n": 96,
+        "failed_or_abstained": 0,
+        "rate": 0.0
+      },
+      "breakdown": {
+        "n": 96,
+        "failed_or_abstained": 0,
+        "rate": 0.0
+      }
+    }
+  }
+}

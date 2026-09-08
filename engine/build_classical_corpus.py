@@ -1,10 +1,10 @@
-"""Stage 1 of scaling the IMPLICIT dimensional channel on OUR real training corpus.
-Source: a knowledge base of historical physics formulas (5.62M nodes; not redistributed),
-the SAME KG master the manifold/PISR trained on. Filter to PRE-1900 CLASSICAL domains (user-confirmed
-whitelist), parse each variable's si_unit into a dimension vector [M,L,T,I,Theta,mol], and save each
-formula's set of variable dimension-vectors. This is the era-pure classical basis for the dimensional
-channel (NOT the modern _haiku_v2 side corpus)."""
-import os
+"""LEGACY heuristic corpus builder; not a certified pre-1900 filter.
+
+This script filters domains and expression keywords only.  It does not verify a
+record's name, date, primary source, or source-law family.  The resulting corpus
+must not be described as era-pure.  New training should use
+``build_pre1900_corpus_strict.py`` with an audited allow-list registry.
+"""
 import json,re,collections,sys
 KEEP={'thermodynamics','fluid dynamics','electromagnetism','optics','statistical mechanics',
  'statmech_advanced','mechanics','classical mechanics','astrophysics','acoustics_advanced','acoustics',
@@ -67,8 +67,9 @@ if __name__=='__main__' and '--test' in sys.argv:
         print('%-14s -> %s'%(u,parse_unit(u)))
     sys.exit()
 # ---- stream master, filter classical, parse units ----
-F='data/master_nodes.jsonl'  # source knowledge base (not redistributed; see README)
-out=open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','data',''),'w')
+F='dataset_20260531/_extract_master/master_20260616/master_nodes.jsonl'
+import os; os.chdir('D:/Physics Fundation model')
+out=open('C:/Users/1/AppData/Local/Temp/claude/D--Physics-Fundation-model/ddaebe6b-abe2-4e50-9eb7-f5879d2c4910/scratchpad/classical_dims.jsonl','w')
 kept=0; seen=0; parse_fail=0; dropped_dom=0; dropped_kw=0
 uniq=set()
 for ln in open(F,encoding='utf-8'):

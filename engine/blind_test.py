@@ -5,8 +5,10 @@ breakdowns (blackbody, relativity, photoelectric, specific-heat Debye, supercond
 ground truth = needs-new. The SAME detector with a PRE-SET decision rule is applied uniformly to every
 dataset without looking at labels; we then report the confusion matrix, precision/recall/FPR, and AUROC."""
 import sys,os,json,warnings,numpy as np; warnings.filterwarnings('ignore')
-sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-SC=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','data','')
+sys.path.insert(0,'D:/Physics Fundation model/sr_model/data')
+import gen_dataside as GD
+SC='C:/Users/1/AppData/Local/Temp/claude/D--Physics-Fundation-model/ddaebe6b-abe2-4e50-9eb7-f5879d2c4910/scratchpad/'
+exec(open(SC+'build_classical_corpus.py',encoding='utf-8').read().split('if __name__')[0])  # KEEP, DROP_KW, parse_unit
 from scipy.optimize import curve_fit
 # ---- detector (pre-registered rule; thresholds fixed in advance) ----
 FORMS={'const':(lambda x,a:a+0*x,[1]),'lin':(lambda x,a,b:a*x+b,[1,0]),
@@ -39,12 +41,33 @@ def detect(x,y):
     flag = (conf>CONF_T) or (bd>BD_T)
     score = 0.5*(min(conf/CONF_T,3)+min(bd/BD_T,3))    # continuous score for AUROC
     return dict(flag=flag,score=score,conf=conf,bd=bd)
-# ---- NEGATIVE arm: 200 real pre-1900 classical relations (pre-generated from the source
-# knowledge base with a fixed seed; shipped as data/classical_relations_1d.npz) ----
-NPZ=np.load(SC+'classical_relations_1d.npz',allow_pickle=True)
-neg=[]
-for _x,_y in zip(NPZ['x'],NPZ['y']):
-    res=detect(np.asarray(_x,float),np.asarray(_y,float))
+# ---- NEGATIVE arm: real classical formulas -> 1-D relations ----
+def one_d(pc):
+    X=np.asarray(pc['X'],float); y=np.asarray(pc['y'],float)
+    if X.ndim!=2 or X.shape[0]<40: return None
+    cors=[abs(np.corrcoef(X[:,i],y)[0,1]) if np.std(X[:,i])>0 else 0 for i in range(X.shape[1])]
+    i=int(np.argmax(cors));
+    if cors[i]<0.2: return None
+    return X[:,i],y
+MASTER='D:/Physics Fundation model/dataset_20260531/_extract_master/master_20260616/master_nodes.jsonl'
+rng=np.random.default_rng(7)
+neg=[]; seen=0
+for ln in open(MASTER,encoding='utf-8'):
+    if len(neg)>=200: break
+    try: r=json.loads(ln)
+    except: continue
+    if (r.get('domain') or '').strip() not in KEEP: continue
+    if DROP_KW.search(r.get('expr','') or ''): continue
+    vs=r.get('variables') or []
+    if len(vs)!=2: continue                    # exactly 1 input + 1 output -> clean 1-D classical relation
+    seen+=1
+    if seen%2: continue                        # subsample for spread across the corpus
+    try: pc=GD.make_one(r['expr'],rng,hint=vs[0].get('sym'))
+    except: pc=None
+    if not pc: continue
+    d=one_d(pc)
+    if d is None: continue
+    res=detect(*d)
     if res is None: continue
     neg.append(res)
 # ---- POSITIVE arm: known + simulated breakdowns (1-D) ----

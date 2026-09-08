@@ -1,10 +1,11 @@
-"""Figure 2 - the four foundational breakdowns, each recovered from REAL data using only pre-1900 knowledge.
+"""Figure 2 - four retrospective historical demonstrations with explicit evidence status.
 (a) COBE-FIRAS blackbody, (b) Bertozzi relativistic electrons, (c) NIST specific heat (6 materials),
 (d) Onnes 1911 mercury superconductivity. Fixes applied per referee reports:
  - Bertozzi: TRUE classical 1/2 m v^2 law  beta^2 = 2*KE/(m_e c^2) = 3.914*KE  (15 MeV -> beta^2=58.7, v=7.7c).
  - Superconductivity: classical prediction drawn as a FLAT residual floor (Drude/Matthiessen), not a sloped line.
  - specific heat overlays all six NIST materials; error bars / read-from-figure notes added; log insets for gaps.
 Typography/layout pass: unified Nature-style rcParams shared verbatim across Figs 2-5."""
+from pathlib import Path
 import numpy as np, json, matplotlib
 matplotlib.use('Agg'); import matplotlib.pyplot as plt
 from matplotlib import rcParams
@@ -26,6 +27,8 @@ rcParams.update({
  'lines.solid_capstyle':'round','figure.facecolor':'white','savefig.facecolor':'white',
  'figure.dpi':300,'savefig.dpi':300})
 BL='#0072B2'; RD='#D55E00'; PU='#8a6db1'; GY='#7f8c8d'; K='#000000'
+ROOT=Path(__file__).resolve().parents[1]
+OUT=ROOT/'figures'
 def plab(A,l,x=-0.135,y=1.13):
     A.text(x,y,l,transform=A.transAxes,fontsize=11,fontweight='bold',va='top',ha='left')
 def badge(A,txt,color=RD,xy=(0.985,0.03),ha='right',va='bottom',fs=7.0):
@@ -51,17 +54,16 @@ def load2(fn):
 fig,ax=plt.subplots(2,2,figsize=(7.2,6.0))
 
 # ---- a: FIRAS blackbody (RJ parabola through origin; log-y inset shows the over-prediction) ----
-nu,I=load2('firas_monopole.txt'); A=ax[0,0]; o=np.argsort(nu); x=nu[o]; y=I[o]; lo=x<4
+nu,I=load2(ROOT/'data'/'firas_monopole.txt'); A=ax[0,0]; o=np.argsort(nu); x=nu[o]; y=I[o]; lo=x<4
 aRJ=np.sum(y[lo]*x[lo]**2)/np.sum(x[lo]**4)
-A.axvspan(6,x.max(),color=RD,alpha=0.06,lw=0)
 xx=np.linspace(0,x.max(),200)
 A.plot(xx,aRJ*xx**2,color=BL,lw=1.8,label='classical Rayleigh$-$Jeans $\\propto\\nu^{2}$',zorder=2)
-A.scatter(x,y,s=11,c=K,zorder=3,label='COBE-FIRAS (real)')
+A.scatter(x,y,s=11,c=K,zorder=3,label='COBE-FIRAS (published spectrum)')
 A.set_ylim(-48,700); A.set_yticks([0,200,400,600]); A.set_xlim(-0.5,22)
 A.text(6.2,600,'classical over-predicts\n$\\sim\\!5\\times10^{2}$–$3\\times10^{3}\\times$',
        color=RD,fontsize=7.4,va='top',ha='left',linespacing=1.4)
 A.set_title('Blackbody $\\rightarrow$ quantum radiation',pad=6); plab(A,'a')
-badge(A,'engine score 0.95',xy=(0.985,0.03),ha='right',va='bottom')
+badge(A,'exploratory 0.95\nno incumbent interior: no boundary',xy=(0.985,0.03),ha='right',va='bottom',fs=6.3)
 A.set_xlabel('frequency $\\nu$ (cm$^{-1}$)'); A.set_ylabel('intensity (MJy sr$^{-1}$)')
 leg(A,loc='upper right',bbox_to_anchor=(1.0,1.02))
 axins=A.inset_axes([0.575,0.40,0.395,0.245])
@@ -76,20 +78,20 @@ axins.grid(False); axins.set_title('log scale',fontsize=6.0,pad=1.5)
 B=ax[0,1]; KE=np.array([.5,1,1.5,4.5,15]); b2=np.array([.752,.828,.922,.974,1.0])
 kk=np.linspace(.25,15,80); beta2_classical=2*kk/0.511   # 1/2 m v^2 -> beta^2 = 2 KE/(m_e c^2)
 B.plot(kk,beta2_classical,color=BL,lw=1.8,label='classical $\\frac{1}{2}mv^{2}$ ($\\beta^{2}\\!=\\!2KE/m_ec^{2}$)',zorder=2)
-B.scatter(KE,b2,s=22,c=K,zorder=3,label='Bertozzi 1964 (real)')
+B.scatter(KE,b2,s=22,c=K,zorder=3,label='Bertozzi 1964 (digitized values)')
 B.axhline(1,color=GY,ls=(0,(1,2)),lw=1.0,zorder=1)
 B.text(6.2,1.09,'light barrier $\\beta^{2}=1$',fontsize=7.4,color=GY)
 B.set_ylim(0,3.45); B.set_xlim(-0.4,15.6)
 B.text(1.9,2.35,'classical $\\rightarrow\\beta^{2}\\!=\\!59$,\n$v=7.7c$ at 15 MeV',
        color=RD,fontsize=7.4,va='top',ha='left',linespacing=1.4)
 B.set_title('Fast electrons $\\rightarrow$ relativity',pad=6); plab(B,'b')
-badge(B,'engine score 0.66')
+badge(B,'exploratory 0.66\nno incumbent interior: no boundary',fs=6.3)
 B.set_xlabel('kinetic energy (MeV)'); B.set_ylabel('$\\beta^{2}=v^{2}/c^{2}$')
 leg(B,loc='upper right',bbox_to_anchor=(1.0,1.02))
 
 # ---- c: specific heat, six NIST materials, each NORMALIZED to its own Dulong-Petit plateau ----
 C=ax[1,0]; C.set_xscale('log')
-mats=json.load(open('nist_cp_coef.json'))  # [name,coef,[lo,hi],...]
+mats=json.load(open(ROOT/'data'/'nist_cp_coef.json'))  # [name,coef,[lo,hi],...]
 def cp(coef,T): L=np.log10(T); return 10**np.clip(sum(cc*L**k for k,cc in enumerate(coef)),-30,30)
 C.axvspan(4,40,color=RD,alpha=0.06,lw=0)
 _grey_done=False
@@ -97,16 +99,16 @@ for i,row in enumerate(mats):
     name,coef,rng=row[0],row[1],row[2]; lo,hi=rng
     T=np.logspace(np.log10(max(lo,4)),np.log10(hi),160); Cp=cp(coef,T); plateau=np.median(Cp[T>0.7*hi])
     r=Cp/plateau
-    if name.startswith('Copper'): C.plot(T,r,color=K,lw=1.8,zorder=4,label='OFHC copper (NIST)')
+    if name.startswith('Copper'): C.plot(T,r,color=K,lw=1.8,zorder=4,label='OFHC copper (NIST reference curve)')
     else:
         lab='5 other NIST materials (Al, Pt, SS, Be)' if not _grey_done else None
         C.plot(T,r,color=GY,lw=0.9,alpha=0.65,zorder=2,label=lab); _grey_done=True
 C.plot([4,300],[1,1],color=BL,lw=1.6,ls=(0,(5,2)),zorder=3,label='classical Dulong$-$Petit (const.)')
 C.set_ylim(0,1.42); C.set_yticks([0,0.2,0.4,0.6,0.8,1.0]); C.set_xlim(3.6,340)
-C.text(4.4,0.70,'all 6 collapse at low $T$\n(Cu over-predicts\n$\\sim\\!3.7\\times10^{3}$ at 4 K)',
+C.text(4.4,0.70,'reference curves fall at low $T$\n(Cu over-predicts\n$\\sim\\!3.7\\times10^{3}$ at 4 K)',
        color=RD,fontsize=7.4,va='top',ha='left',linespacing=1.4)
 C.set_title('Specific heat $\\rightarrow$ quantum thermodynamics',pad=6); plab(C,'c')
-badge(C,'engine score 0.95')
+badge(C,'exploratory 0.95\nlocalization candidate',fs=6.3)
 C.set_xlabel('temperature $T$ (K)'); C.set_ylabel('$C_p / C_p^{\\,\\mathrm{Dulong-Petit}}$')
 leg(C,loc='upper left',bbox_to_anchor=(0.0,1.02))
 
@@ -126,10 +128,14 @@ D.set_ylim(-0.010,0.215); D.set_yticks([0,0.04,0.08,0.12,0.16]); D.set_xlim(3.98
 D.text(4.015,0.082,'$T_c=4.2$ K: classical\npredicts finite resistance;\nreal $R\\to0$ ($>\\!10^{4}\\times$)',
        color=RD,fontsize=7.0,va='top',ha='left',linespacing=1.4)
 D.set_title('Superconductivity $\\rightarrow$ resistance collapse',pad=6); plab(D,'d')
-badge(D,'engine score 0.66')
+badge(D,'exploratory 0.66\nlocalization candidate; censored',fs=6.3)
 D.set_xlabel('temperature $T$ (K)'); D.set_ylabel('resistance $R$ ($\\Omega$)')
 leg(D,loc='upper left',bbox_to_anchor=(-0.005,1.015))
 
 plt.tight_layout(pad=0.7,w_pad=2.0,h_pad=2.2)
-plt.savefig('figure_breakdowns.png',bbox_inches='tight')
-print('saved figure_breakdowns.png')
+OUT.mkdir(exist_ok=True)
+plt.savefig(OUT/'figure_breakdowns.png',bbox_inches='tight')
+manuscript_out=ROOT/'manuscript'/'figures'
+manuscript_out.mkdir(exist_ok=True)
+plt.savefig(manuscript_out/'figure_breakdowns.png',bbox_inches='tight')
+print(OUT/'figure_breakdowns.png')

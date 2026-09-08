@@ -2,10 +2,10 @@
 learning on classical point clouds only, never seeing a post-1900 form). z_d(full) + linear probe ->
 breakdown vs classical. Because the encoder is period-pure, this is a genuine 1900-oracle learned engine."""
 import sys,os,warnings; warnings.filterwarnings('ignore')
-sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0,'D:/Physics Fundation model/sr_model')
 import numpy as np, torch
 from models.encoders import DataEncoder
-SC=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','data','')
+SC='C:/Users/1/AppData/Local/Temp/claude/D--Physics-Fundation-model/ddaebe6b-abe2-4e50-9eb7-f5879d2c4910/scratchpad/'
 DEV='cpu'; MAXV=16; DIML=6
 ck=torch.load(SC+'encoder_1900.pt',map_location=DEV)
 enc=DataEncoder(max_vars=MAXV,d=256,n_isab=6,dim_len=ck.get('dim_len',DIML),n_tokens=16,log_feats=True,class_feats=True,robust_norm=True).to(DEV)

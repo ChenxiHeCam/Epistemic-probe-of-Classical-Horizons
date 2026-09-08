@@ -1,0 +1,19 @@
+{
+  "script": "engine/combine_final_v2.py",
+  "run_date": "2026-09-04",
+  "classical_reference_latents": 2000,
+  "latent_dimension": 256,
+  "held_out_suite_n": 180,
+  "held_out_auroc": {
+    "statistical": 0.695,
+    "learned_one_class_knn": 0.453,
+    "combined_equal_weight": 0.570
+  },
+  "formula_derived_corpus": {
+    "classical_negative_n": 200,
+    "synthetic_positive_n": 30,
+    "combined_auroc": 0.913,
+    "note": "No confirmatory operating-point FPR was printed by this script."
+  },
+  "interpretation": "The classical-only learned score does not outperform the statistical comparator on the held-out suite. The deformation-supervised v3 AUROC of 0.83 must be reported separately as morphology-supervised."
+}

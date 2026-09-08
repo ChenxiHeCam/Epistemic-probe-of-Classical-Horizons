@@ -1,0 +1,270 @@
+{
+  "status": "completed frozen forward-inference development audit",
+  "selection_timing": "selected after the original 55-family benchmark was scored",
+  "no_training_audit": {
+    "training_steps": 0,
+    "weights_updated": false,
+    "thresholds_updated": false,
+    "fusion_weight_fitted": false,
+    "original_55_family_result_mutated": false
+  },
+  "provenance": {
+    "registry_sha256": "d111fb696d20eafb18829e3ff89e72dc5723080019fb549ba397d9dfe19868b9",
+    "archive_sha256": "7711f6dda7651cf2aa3299ea544c3e747c2602762b02bae25de5b8d9a2753af2",
+    "compact_encoder_sha256": "9ca8e661427a8bf538eea3c3acf9f9c34f2dcf867d5fe545c10cf7e29cf0df84",
+    "original_55_family_evaluation_sha256": "683ad1677690145380366e6e1a5b669aba944e7dbeddcb1833ad1753578918ab",
+    "statistical_n120_calibration_sha256": "03ef7b6c85596f6d01f49eb06028df4e57f123a56011c1eca4bc492c40d5aa52"
+  },
+  "benchmark": {
+    "families": 11,
+    "records": 88,
+    "records_per_family": 8,
+    "points_per_record": 120,
+    "negative_reference": "the same 11 cited held-out pre-1900 families as the frozen 55-family audit",
+    "statistical_calibration_scores": 785
+  },
+  "case_rows": [
+    {
+      "family_id": "franck_hertz_excitation",
+      "short_name": "Franck--Hertz",
+      "first_valid_year": 1914,
+      "shape_class": "repeated_thresholds",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "learned_compact_score": 0.03884979337453842,
+      "learned_percentile_vs_11_heldout_pre1900": 0.7916666666666666,
+      "learned_percentile_vs_40_training_family_calibration": 0.8414634146341463,
+      "statistical_score": 0.9662578748006733,
+      "statistical_percentile_vs_11_heldout_pre1900": 0.875,
+      "statistical_percentile_vs_785_size_matched_calibration": 0.7792620865139949,
+      "theory_clock_residual_drop_log10": 1.4345644626914615,
+      "statistical_record_abstentions": 0,
+      "interpretive_note": "stylized instrument-convolved mechanism simulator; not digitized historical data"
+    },
+    {
+      "family_id": "bec_condensate_fraction",
+      "short_name": "BEC fraction",
+      "first_valid_year": 1925,
+      "shape_class": "threshold_or_piecewise",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "learned_compact_score": 0.008767219260334969,
+      "learned_percentile_vs_11_heldout_pre1900": 0.125,
+      "learned_percentile_vs_40_training_family_calibration": 0.08536585365853659,
+      "statistical_score": 3.2578271771147618,
+      "statistical_percentile_vs_11_heldout_pre1900": 0.9583333333333334,
+      "statistical_percentile_vs_785_size_matched_calibration": 0.9459287531806616,
+      "theory_clock_residual_drop_log10": 2.040999909289929,
+      "statistical_record_abstentions": 0,
+      "interpretive_note": "homogeneous ideal-gas formula stress test; not a trapped-gas measurement"
+    },
+    {
+      "family_id": "cherenkov_threshold",
+      "short_name": "Cherenkov threshold",
+      "first_valid_year": 1937,
+      "shape_class": "threshold_or_piecewise",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "learned_compact_score": 0.0346679612994194,
+      "learned_percentile_vs_11_heldout_pre1900": 0.7083333333333334,
+      "learned_percentile_vs_40_training_family_calibration": 0.7926829268292683,
+      "statistical_score": 4.310840593803028,
+      "statistical_percentile_vs_11_heldout_pre1900": 0.9583333333333334,
+      "statistical_percentile_vs_785_size_matched_calibration": 0.9650127226463104,
+      "theory_clock_residual_drop_log10": 2.161255523050335,
+      "statistical_record_abstentions": 0,
+      "interpretive_note": "fixed-frequency nondispersive threshold factor"
+    },
+    {
+      "family_id": "casimir_parallel_plates",
+      "short_name": "Casimir plates",
+      "first_valid_year": 1948,
+      "shape_class": "declared_dictionary_overlap",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "learned_compact_score": 0.059174880385398865,
+      "learned_percentile_vs_11_heldout_pre1900": 0.875,
+      "learned_percentile_vs_40_training_family_calibration": 0.8658536585365854,
+      "statistical_score": 1.7752859480525531,
+      "statistical_percentile_vs_11_heldout_pre1900": 0.9583333333333334,
+      "statistical_percentile_vs_785_size_matched_calibration": 0.8924936386768448,
+      "theory_clock_residual_drop_log10": 1.9340335000478865,
+      "statistical_record_abstentions": 0,
+      "interpretive_note": "ideal perfect-conductor zero-temperature formula"
+    },
+    {
+      "family_id": "parity_beta_asymmetry",
+      "short_name": "Parity asymmetry",
+      "first_valid_year": 1957,
+      "shape_class": "smooth_composite",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "learned_compact_score": 0.00842586625367403,
+      "learned_percentile_vs_11_heldout_pre1900": 0.125,
+      "learned_percentile_vs_40_training_family_calibration": 0.08536585365853659,
+      "statistical_score": 2.6115549214368396,
+      "statistical_percentile_vs_11_heldout_pre1900": 0.9583333333333334,
+      "statistical_percentile_vs_785_size_matched_calibration": 0.9357506361323156,
+      "theory_clock_residual_drop_log10": 1.992125424600877,
+      "statistical_record_abstentions": 0,
+      "interpretive_note": "ideal acceptance-free angular law; not Wu event-level data"
+    },
+    {
+      "family_id": "anderson_localized_envelope",
+      "short_name": "Anderson envelope",
+      "first_valid_year": 1958,
+      "shape_class": "nonmonotone_or_oscillatory",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "learned_compact_score": 0.053290557116270065,
+      "learned_percentile_vs_11_heldout_pre1900": 0.875,
+      "learned_percentile_vs_40_training_family_calibration": 0.8658536585365854,
+      "statistical_score": 3.429436433120815,
+      "statistical_percentile_vs_11_heldout_pre1900": 0.9583333333333334,
+      "statistical_percentile_vs_785_size_matched_calibration": 0.9497455470737913,
+      "theory_clock_residual_drop_log10": 1.9809910337430456,
+      "statistical_record_abstentions": 0,
+      "interpretive_note": "phenomenological localized-envelope simulator, not a mobility-edge solution"
+    },
+    {
+      "family_id": "pound_rebka_redshift",
+      "short_name": "Pound--Rebka",
+      "first_valid_year": 1960,
+      "shape_class": "declared_dictionary_overlap",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "learned_compact_score": 0.019163530319929123,
+      "learned_percentile_vs_11_heldout_pre1900": 0.375,
+      "learned_percentile_vs_40_training_family_calibration": 0.3048780487804878,
+      "statistical_score": 0.3057252415273658,
+      "statistical_percentile_vs_11_heldout_pre1900": 0.125,
+      "statistical_percentile_vs_785_size_matched_calibration": 0.2767175572519084,
+      "theory_clock_residual_drop_log10": 2.1919224376931705,
+      "statistical_record_abstentions": 0,
+      "interpretive_note": "dimensionless weak-field law with rescaled coefficient"
+    },
+    {
+      "family_id": "fano_asymmetric_resonance",
+      "short_name": "Fano resonance",
+      "first_valid_year": 1961,
+      "shape_class": "nonmonotone_or_oscillatory",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "learned_compact_score": 0.09964337944984436,
+      "learned_percentile_vs_11_heldout_pre1900": 0.9583333333333334,
+      "learned_percentile_vs_40_training_family_calibration": 0.8658536585365854,
+      "statistical_score": 3.0783050292840617,
+      "statistical_percentile_vs_11_heldout_pre1900": 0.9583333333333334,
+      "statistical_percentile_vs_785_size_matched_calibration": 0.9446564885496184,
+      "theory_clock_residual_drop_log10": 2.0735359228855366,
+      "statistical_record_abstentions": 0,
+      "interpretive_note": "canonical Fano profile"
+    },
+    {
+      "family_id": "aspect_polarization_correlation",
+      "short_name": "Bell--Aspect",
+      "first_valid_year": 1982,
+      "shape_class": "nonmonotone_or_oscillatory",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "learned_compact_score": 0.08148231357336044,
+      "learned_percentile_vs_11_heldout_pre1900": 0.9583333333333334,
+      "learned_percentile_vs_40_training_family_calibration": 0.8658536585365854,
+      "statistical_score": 3.477299120341814,
+      "statistical_percentile_vs_11_heldout_pre1900": 0.9583333333333334,
+      "statistical_percentile_vs_785_size_matched_calibration": 0.9497455470737913,
+      "theory_clock_residual_drop_log10": 1.4220570204201601,
+      "statistical_record_abstentions": 0,
+      "interpretive_note": "ideal correlation curve; inequality inference requires trial counts"
+    },
+    {
+      "family_id": "accelerating_universe_residual",
+      "short_name": "Cosmic acceleration",
+      "first_valid_year": 1998,
+      "shape_class": "smooth_composite",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "learned_compact_score": 0.018016424030065536,
+      "learned_percentile_vs_11_heldout_pre1900": 0.375,
+      "learned_percentile_vs_40_training_family_calibration": 0.2804878048780488,
+      "statistical_score": 0.4141103183891443,
+      "statistical_percentile_vs_11_heldout_pre1900": 0.20833333333333334,
+      "statistical_percentile_vs_785_size_matched_calibration": 0.42938931297709926,
+      "theory_clock_residual_drop_log10": 2.2450944223834384,
+      "statistical_record_abstentions": 0,
+      "interpretive_note": "ideal homogeneous-cosmology curve; real-data inference needs covariance and selection effects"
+    },
+    {
+      "family_id": "gw150914_leading_chirp",
+      "short_name": "GW chirp",
+      "first_valid_year": 2016,
+      "shape_class": "declared_dictionary_overlap",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "learned_compact_score": 0.14387065172195435,
+      "learned_percentile_vs_11_heldout_pre1900": 0.9583333333333334,
+      "learned_percentile_vs_40_training_family_calibration": 0.9634146341463414,
+      "statistical_score": 0.30268769296192133,
+      "statistical_percentile_vs_11_heldout_pre1900": 0.125,
+      "statistical_percentile_vs_785_size_matched_calibration": 0.2741730279898219,
+      "theory_clock_residual_drop_log10": 2.278630370438099,
+      "statistical_record_abstentions": 0,
+      "interpretive_note": "leading-order chirp reduction; not detector strain or a full GR waveform"
+    }
+  ],
+  "theory_only_not_forced_through_pointcloud_encoder": [
+    {
+      "case_id": "lamb_shift",
+      "year": 1947,
+      "reason_not_pointcloud": "the decisive historical object is a sparse nonzero level splitting/degeneracy test",
+      "route": "theory_conditioned",
+      "source_url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.72.241"
+    },
+    {
+      "case_id": "electron_anomalous_magnetic_moment",
+      "year": 1948,
+      "reason_not_pointcloud": "the decisive object is a coefficient/scalar departure from Dirac g=2",
+      "route": "theory_conditioned",
+      "source_url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.73.416"
+    }
+  ],
+  "interpretation": {
+    "primary_status": "descriptive post-score expansion; not a new AUROC denominator",
+    "learned_and_statistical": "both components were run on every eligible point cloud without retraining or score fusion",
+    "theory_clock_residual_drop": "simulator sanity check only; the successor curve generated each record",
+    "why_theory_only_abstains": "a scalar coefficient or sparse level splitting is not converted into an artificial 120-point curve merely to satisfy the learned input contract"
+  }
+}

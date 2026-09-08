@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://epoch.local/schemas/epoch-test-object-v1.json",
+  "title": "EPOCH test object v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "test_id",
+    "status",
+    "knowledge_horizon",
+    "evidence_type",
+    "route",
+    "model_set",
+    "fitted_parameters",
+    "observation_model",
+    "fit_subset",
+    "adaptive_procedure",
+    "statistic",
+    "decision_rule",
+    "semantic_output",
+    "boundary_identifiable",
+    "provenance"
+  ],
+  "properties": {
+    "test_id": {"type": "string", "minLength": 1},
+    "status": {
+      "enum": ["retrospective_development", "prospectively_frozen", "sealed_evaluation"]
+    },
+    "knowledge_horizon": {"type": "string", "minLength": 1},
+    "evidence_type": {
+      "enum": [
+        "raw_measurement",
+        "processed_measurement",
+        "digitized_historical_figure",
+        "reference_fit_curve",
+        "formula_forward_evaluation",
+        "synthetic_simulation"
+      ]
+    },
+    "route": {"enum": ["data_anchored", "theory_conditioned", "abstain"]},
+    "model_set": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "fitted_parameters": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "observation_model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["description", "covariance_status", "censoring"],
+      "properties": {
+        "description": {"type": "string", "minLength": 1},
+        "covariance_status": {"type": "string", "minLength": 1},
+        "censoring": {"type": "string", "minLength": 1}
+      }
+    },
+    "fit_subset": {"type": "string", "minLength": 1},
+    "adaptive_procedure": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "statistic": {"type": "string", "minLength": 1},
+    "decision_rule": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["alpha", "tail", "multiplicity", "calibration_scope"],
+      "properties": {
+        "alpha": {"type": "number", "exclusiveMinimum": 0, "exclusiveMaximum": 1},
+        "tail": {"enum": ["upper", "lower", "two_sided"]},
+        "multiplicity": {"type": "string", "minLength": 1},
+        "calibration_scope": {"type": "string", "minLength": 1}
+      }
+    },
+    "semantic_output": {
+      "enum": [
+        "compatible_over_measured_range",
+        "localized_model_incompatibility",
+        "model_incompatibility_boundary_not_identifiable",
+        "insufficient_evidence_abstain"
+      ]
+    },
+    "boundary_identifiable": {"type": "boolean"},
+    "abstention_reason": {"type": ["string", "null"]},
+    "provenance": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["description"],
+      "properties": {
+        "description": {"type": "string", "minLength": 1},
+        "file_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"semantic_output": {"const": "localized_model_incompatibility"}}},
+      "then": {"properties": {"boundary_identifiable": {"const": true}}}
+    },
+    {
+      "if": {"properties": {"semantic_output": {"const": "model_incompatibility_boundary_not_identifiable"}}},
+      "then": {"properties": {"boundary_identifiable": {"const": false}}}
+    }
+  ]
+}

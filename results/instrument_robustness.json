@@ -1,0 +1,558 @@
+{
+  "status": "synthetic instrument hard-negative stress test",
+  "thresholds": {
+    "5pct": 3.391320707553498,
+    "1pct": 14.201822917642659
+  },
+  "severity_definition": {
+    "calibration_drift": "up to 20% end-to-end multiplicative drift",
+    "sensor_saturation": "clip down to the 60th response percentile",
+    "censoring": "raise values below up to the 45th response percentile to a floor",
+    "x_axis_error": "up to 8% of x-range Gaussian error",
+    "outliers": "up to 8% of points displaced by six response standard deviations",
+    "correlated_noise": "AR(1) coefficient up to 0.95",
+    "heteroscedasticity": "noise scale grows up to nine-fold across x"
+  },
+  "summary": [
+    {
+      "corruption": "clean",
+      "severity": 0.0,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "calibration_drift",
+      "severity": 0.0,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "calibration_drift",
+      "severity": 0.25,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "calibration_drift",
+      "severity": 0.5,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "calibration_drift",
+      "severity": 0.75,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "calibration_drift",
+      "severity": 1.0,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "sensor_saturation",
+      "severity": 0.0,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "sensor_saturation",
+      "severity": 0.25,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.09166666666666666,
+      "fpr5_wilson_95ci": [
+        0.0519566467894248,
+        0.15670990790625097
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "sensor_saturation",
+      "severity": 0.5,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.4083333333333333,
+      "fpr5_wilson_95ci": [
+        0.3245599028350716,
+        0.4977938135251822
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "sensor_saturation",
+      "severity": 0.75,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.31666666666666665,
+      "fpr5_wilson_95ci": [
+        0.2402270792621595,
+        0.4044803534583481
+      ],
+      "fpr_at_nominal_1pct": 0.18333333333333332,
+      "fpr1_wilson_95ci": [
+        0.12430210244218537,
+        0.26201073589323665
+      ]
+    },
+    {
+      "corruption": "sensor_saturation",
+      "severity": 1.0,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.4,
+      "fpr5_wilson_95ci": [
+        0.3167626523940113,
+        0.4894414018171747
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "censoring",
+      "severity": 0.0,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "censoring",
+      "severity": 0.25,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "censoring",
+      "severity": 0.5,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "censoring",
+      "severity": 0.75,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.175,
+      "fpr5_wilson_95ci": [
+        0.11740448670592563,
+        0.25275868948042857
+      ],
+      "fpr_at_nominal_1pct": 0.16666666666666666,
+      "fpr1_wilson_95ci": [
+        0.11055912012704824,
+        0.24345439391023813
+      ]
+    },
+    {
+      "corruption": "censoring",
+      "severity": 1.0,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.6333333333333333,
+      "fpr5_wilson_95ci": [
+        0.5442225769899933,
+        0.7141720173950921
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "x_axis_error",
+      "severity": 0.0,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "x_axis_error",
+      "severity": 0.25,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "x_axis_error",
+      "severity": 0.5,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.008333333333333333,
+      "fpr5_wilson_95ci": [
+        0.001472517830674952,
+        0.045697415374322405
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "x_axis_error",
+      "severity": 0.75,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.041666666666666664,
+      "fpr5_wilson_95ci": [
+        0.017926452505837805,
+        0.0938421292954309
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "x_axis_error",
+      "severity": 1.0,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.09166666666666666,
+      "fpr5_wilson_95ci": [
+        0.0519566467894248,
+        0.15670990790625097
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "outliers",
+      "severity": 0.0,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.025,
+      "fpr5_wilson_95ci": [
+        0.00853802009878548,
+        0.07093123740434756
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "outliers",
+      "severity": 0.25,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.05,
+      "fpr5_wilson_95ci": [
+        0.023114049304474235,
+        0.10480419464586234
+      ],
+      "fpr_at_nominal_1pct": 0.016666666666666666,
+      "fpr1_wilson_95ci": [
+        0.004582468541151394,
+        0.058737126812913806
+      ]
+    },
+    {
+      "corruption": "outliers",
+      "severity": 0.5,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.08333333333333333,
+      "fpr5_wilson_95ci": [
+        0.045893154816730314,
+        0.14662373772987763
+      ],
+      "fpr_at_nominal_1pct": 0.008333333333333333,
+      "fpr1_wilson_95ci": [
+        0.001472517830674952,
+        0.045697415374322405
+      ]
+    },
+    {
+      "corruption": "outliers",
+      "severity": 0.75,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.10833333333333334,
+      "fpr5_wilson_95ci": [
+        0.0644107989410726,
+        0.1765550800527389
+      ],
+      "fpr_at_nominal_1pct": 0.03333333333333333,
+      "fpr1_wilson_95ci": [
+        0.013037340166920576,
+        0.0825815794852803
+      ]
+    },
+    {
+      "corruption": "outliers",
+      "severity": 1.0,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.10833333333333334,
+      "fpr5_wilson_95ci": [
+        0.0644107989410726,
+        0.1765550800527389
+      ],
+      "fpr_at_nominal_1pct": 0.05,
+      "fpr1_wilson_95ci": [
+        0.023114049304474235,
+        0.10480419464586234
+      ]
+    },
+    {
+      "corruption": "correlated_noise",
+      "severity": 0.0,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "correlated_noise",
+      "severity": 0.25,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "correlated_noise",
+      "severity": 0.5,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "correlated_noise",
+      "severity": 0.75,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "correlated_noise",
+      "severity": 1.0,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.025,
+      "fpr5_wilson_95ci": [
+        0.00853802009878548,
+        0.07093123740434756
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "heteroscedasticity",
+      "severity": 0.0,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "heteroscedasticity",
+      "severity": 0.25,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "heteroscedasticity",
+      "severity": 0.5,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "heteroscedasticity",
+      "severity": 0.75,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    },
+    {
+      "corruption": "heteroscedasticity",
+      "severity": 1.0,
+      "n": 120,
+      "fpr_at_nominal_5pct": 0.0,
+      "fpr5_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ],
+      "fpr_at_nominal_1pct": 0.0,
+      "fpr1_wilson_95ci": [
+        0.0,
+        0.031020271055929513
+      ]
+    }
+  ]
+}

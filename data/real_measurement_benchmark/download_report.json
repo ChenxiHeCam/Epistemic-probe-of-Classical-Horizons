@@ -1,0 +1,354 @@
+[
+  {
+    "id": "DZIUBA1",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/DZIUBA1.DAT",
+    "status": "downloaded",
+    "bytes": 20044,
+    "sha256": "ccec9e416d96a843e173f2d6f102658a95a023101a850f07bac574c906dd9b47",
+    "error": null
+  },
+  {
+    "id": "LEW",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/LEW.DAT",
+    "status": "downloaded",
+    "bytes": 1973,
+    "sha256": "1ee0e741449ac2c79cf56997f2861b553d234899ff3ac4ae195d915c939f90d2",
+    "error": null
+  },
+  {
+    "id": "MARSHAK",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/MARSHAK.DAT",
+    "status": "downloaded",
+    "bytes": 1840,
+    "sha256": "27e6ba2a56ab345c9e5c804a8b66c72dfb1ae2745a549592a456cbc41cd83624",
+    "error": null
+  },
+  {
+    "id": "MAVRO",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/MAVRO.DAT",
+    "status": "downloaded",
+    "bytes": 1388,
+    "sha256": "9728e314cfe20b0951fa2e5ee8d72cb595c21747189bfeb9efe346fcd1a78d06",
+    "error": null
+  },
+  {
+    "id": "MORALES",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/MORALES.DAT",
+    "status": "downloaded",
+    "bytes": 4736,
+    "sha256": "c22cbd3782efadbaac1789bbc2d7cc5bbb2a54a181cccc91be209d391af7dbe5",
+    "error": null
+  },
+  {
+    "id": "SIMIU",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/SIMIU.DAT",
+    "status": "downloaded",
+    "bytes": 7761,
+    "sha256": "23dafe3f6d9474876d6fddddded1ce4de40b5aa32423a3356069d9802ea4c77a",
+    "error": null
+  },
+  {
+    "id": "SOULEN0",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/SOULEN0.DAT",
+    "status": "downloaded",
+    "bytes": 4480,
+    "sha256": "6ca58a18b4d10e25d5ab26bb8532e2ea5551701f00811b10e0350fcfde16dcb1",
+    "error": null
+  },
+  {
+    "id": "SOULEN",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/SOULEN.DAT",
+    "status": "downloaded",
+    "bytes": 4525,
+    "sha256": "e82672946aa2f86319d751f9ec513be3f446994929e4869a26bcebc31ab14678",
+    "error": null
+  },
+  {
+    "id": "VANGEL1",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/VANGEL1.DAT",
+    "status": "downloaded",
+    "bytes": 531,
+    "sha256": "11688c388b3554bdac164d7f00afa9bf2fbc0cc615bd48485ac8ef87306778a2",
+    "error": null
+  },
+  {
+    "id": "ZARR13",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/ZARR13.DAT",
+    "status": "downloaded",
+    "bytes": 2280,
+    "sha256": "2c4fac895d0691d9601d8427e7a9a2c756941438af375dbd36b0a63629110ed2",
+    "error": null
+  },
+  {
+    "id": "ZARR14",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/ZARR14.DAT",
+    "status": "downloaded",
+    "bytes": 1752,
+    "sha256": "d790df6d2857f4db53d180a27987e09da633bcef41aae2048dacedd4e8818883",
+    "error": null
+  },
+  {
+    "id": "ZARR15",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/ZARR15.DAT",
+    "status": "downloaded",
+    "bytes": 2409,
+    "sha256": "3a9155f47da631c1118209f56024a21fa652019bcc69799a9587e428a92fd0ac",
+    "error": null
+  },
+  {
+    "id": "BAKER",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/BAKER.DAT",
+    "status": "downloaded",
+    "bytes": 6955,
+    "sha256": "453996cff4858260c50c13c8970070a7753c570476ea78d364c66273ce989b59",
+    "error": null
+  },
+  {
+    "id": "LUTHER",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/LUTHER.DAT",
+    "status": "downloaded",
+    "bytes": 6449,
+    "sha256": "6b38849061d6fb0ec72311476544cd02d2d5d0e7f44c250896f789e107d66162",
+    "error": null
+  },
+  {
+    "id": "NBSPOW1",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/NBSPOW1.DAT",
+    "status": "downloaded",
+    "bytes": 9653,
+    "sha256": "821d2b2b3b176424f5b3ba9cfdabecfe734953b83083e633f4c5de4d1316e285",
+    "error": null
+  },
+  {
+    "id": "NBSPOW2",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/NBSPOW2.DAT",
+    "status": "downloaded",
+    "bytes": 36640,
+    "sha256": "673508fd57ad4f8b8f959fe7e00b266f2012a12a695501fcaed1773fca8da16c",
+    "error": null
+  },
+  {
+    "id": "NBSPOW3",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/NBSPOW3.DAT",
+    "status": "downloaded",
+    "bytes": 31275,
+    "sha256": "df1cec555dd28179d2cbddfd1b4bdf1af71545a5f5bfd25afa1a82cebcde9b50",
+    "error": null
+  },
+  {
+    "id": "NEGIZ3",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/NEGIZ3.DAT",
+    "status": "downloaded",
+    "bytes": 21825,
+    "sha256": "34a084c5096dce8314d2dc217a6d4dd62ab851949fbb4eca4502c5084f6f77b8",
+    "error": null
+  },
+  {
+    "id": "NEGIZ4",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/NEGIZ4.DAT",
+    "status": "downloaded",
+    "bytes": 46855,
+    "sha256": "1a4811911eefbc3ce273f22fd65d14f89c899a695ab122766e03ec63936d15c7",
+    "error": null
+  },
+  {
+    "id": "CHWIRUT1",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/CHWIRUT1.DAT",
+    "status": "downloaded",
+    "bytes": 5398,
+    "sha256": "ecc4ee3cbbbf1500fae64765bf257027ffb4ecc7889c5a7ac974e51af646841b",
+    "error": null
+  },
+  {
+    "id": "CHWIRUT2",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/CHWIRUT2.DAT",
+    "status": "downloaded",
+    "bytes": 1808,
+    "sha256": "9e6654466ffdaf2b1a3760652000b5a08fb6fc3eaab6fb3a8ae735a2aa6e32e5",
+    "error": null
+  },
+  {
+    "id": "ECKERLE4",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/ECKERLE4.DAT",
+    "status": "downloaded",
+    "bytes": 2147,
+    "sha256": "b57f7c8a9e59951f03ae23ea6cb0d4083553e70572ccb608e0c6ef9a1525ac8d",
+    "error": null
+  },
+  {
+    "id": "HAHN1",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/HAHN1.DAT",
+    "status": "downloaded",
+    "bytes": 4544,
+    "sha256": "8be597779666a8f2601dbf28086990c7f42ff7e97c69177a8affa3c57d5afc60",
+    "error": null
+  },
+  {
+    "id": "KIRBY2",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/KIRBY2.DAT",
+    "status": "downloaded",
+    "bytes": 3347,
+    "sha256": "663680af98a99ddce101457b663fbfe9a49c0554ad8a9b6557d3af978b26c33c",
+    "error": null
+  },
+  {
+    "id": "NELSON",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/NELSON.DAT",
+    "status": "downloaded",
+    "bytes": 5522,
+    "sha256": "eae4c2ab700377901c0857cabf528c9772c4b9477c8065a8743af92dd1dac4f5",
+    "error": null
+  },
+  {
+    "id": "ROSZMAN1",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/ROSZMAN1.DAT",
+    "status": "downloaded",
+    "bytes": 437,
+    "sha256": "a425252202dd16cc1d2fcc9d07f064c80177aa874555d58fe46e1d16cc36d9cf",
+    "error": null
+  },
+  {
+    "id": "SWANSON1",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/SWANSON1.DAT",
+    "status": "downloaded",
+    "bytes": 5509,
+    "sha256": "f34e04c81668903e83c86b2b3b91263a5ba4bfd7554b58132b6dd8630a6753cb",
+    "error": null
+  },
+  {
+    "id": "THURBER",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/THURBER.DAT",
+    "status": "downloaded",
+    "bytes": 1498,
+    "sha256": "be9fe9b8c6cb40b947b84cec0d45b952bed574bcde05d322fba4b45ab9bd06df",
+    "error": null
+  },
+  {
+    "id": "BENNETT5",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/BENNETT5.DAT",
+    "status": "downloaded",
+    "bytes": 7503,
+    "sha256": "993369c420082be86acd5a61fdbce8465de5c7d53e2b38576513442dd09a1e54",
+    "error": null
+  },
+  {
+    "id": "BENNETT6",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/BENNETT6.DAT",
+    "status": "downloaded",
+    "bytes": 211740,
+    "sha256": "8375c6a3942b8685e193af17dec58141137e6de04d4fb6fedb065d17435d34dc",
+    "error": null
+  },
+  {
+    "id": "BENNETT7",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/BENNETT7.DAT",
+    "status": "downloaded",
+    "bytes": 57516,
+    "sha256": "67e4a9fa49ec67c432eda40b2dc2a1a0869ab3387d0cbb7811ee614c395225af",
+    "error": null
+  },
+  {
+    "id": "BERGER1",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/BERGER1.DAT",
+    "status": "downloaded",
+    "bytes": 2938,
+    "sha256": "a87e31e81c2c91c83e26b75bf8bd5c9a448c4eaf6f4bf3fc20ee899254d6fb30",
+    "error": null
+  },
+  {
+    "id": "CALIBRATIONLINE",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/CALIBRATIONLINE.DAT",
+    "status": "downloaded",
+    "bytes": 3348,
+    "sha256": "b9a7277c2f2e6ac9e9d96402dbd7683704263180c8a99d8925fe44fb0b219ddc",
+    "error": null
+  },
+  {
+    "id": "DEVANEY",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/DEVANEY.DAT",
+    "status": "downloaded",
+    "bytes": 3983,
+    "sha256": "6410d4c09388f4a71285ac4de19880437ceaec8998ceb0f0516f7cc46c36c303",
+    "error": null
+  },
+  {
+    "id": "KIM",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/KIM.DAT",
+    "status": "downloaded",
+    "bytes": 1559,
+    "sha256": "b7041cf88fe6f38a7f0ac5b45ff34b0ca1c718b052eb1f0e89a4c4c1b87bc274",
+    "error": null
+  },
+  {
+    "id": "LASHMORE",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/LASHMORE.DAT",
+    "status": "downloaded",
+    "bytes": 18166,
+    "sha256": "19a14b45ef9da4381e7b26deae2b31fda15837a0f8a89a98aa53f5190813a329",
+    "error": null
+  },
+  {
+    "id": "MICHELSO",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/MICHELSO.DAT",
+    "status": "downloaded",
+    "bytes": 5166,
+    "sha256": "f38ceb2ad7596dfed4e29db95c73abb790a60850f8916ef6fe6d970f537c8900",
+    "error": null
+  },
+  {
+    "id": "NATR511",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/NATR511.DAT",
+    "status": "downloaded",
+    "bytes": 1079,
+    "sha256": "26414d7ed3cd38a9a1d4b564a1474615194027a27de3666f2a3d4587fd575d1a",
+    "error": null
+  },
+  {
+    "id": "NORRIS6",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/NORRIS6.DAT",
+    "status": "downloaded",
+    "bytes": 10477,
+    "sha256": "7b10cc3f062669adeb3bbcfa550a9be281118b817bce52f0ec7c49d04291c9c3",
+    "error": null
+  },
+  {
+    "id": "PONTIUS",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/PONTIUS.DAT",
+    "status": "downloaded",
+    "bytes": 1778,
+    "sha256": "7854389f4b3058fc1d1f03250843d2c2ef00e09162939339769e9cb9ab1e8d8c",
+    "error": null
+  },
+  {
+    "id": "MILLIKAN",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/MILLIKAN.DAT",
+    "status": "downloaded",
+    "bytes": 8173,
+    "sha256": "458a61ab366740966d56c497611ebaad62966977b96d07f0763f1b4fd30a77d8",
+    "error": null
+  },
+  {
+    "id": "WATTODR3",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/WATTODR3.DAT",
+    "status": "downloaded",
+    "bytes": 1883,
+    "sha256": "9feff04e4d8956b3afa278783e62a154a04a91ef262501449f05fc3af251617d",
+    "error": null
+  },
+  {
+    "id": "CLARK2",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/CLARK2.DAT",
+    "status": "downloaded",
+    "bytes": 330694,
+    "sha256": "9a3686e454b9e6131086160a9e3912a1bd94ecd609acc779e999873ed9b28dca",
+    "error": null
+  },
+  {
+    "id": "CLARK3",
+    "url": "https://itl.nist.gov/div898/software/dataplot/data/CLARK3.DAT",
+    "status": "downloaded",
+    "bytes": 66738,
+    "sha256": "070c81697e52464ba8d7136cb6fd338a839e7a12d073d52c49e215c9c5e8705e",
+    "error": null
+  }
+]

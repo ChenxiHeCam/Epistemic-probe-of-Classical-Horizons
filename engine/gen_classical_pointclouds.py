@@ -1,13 +1,17 @@
-"""Step 1 of the 1900-pure encoder retrain: generate a training set of point clouds from PRE-1900
-CLASSICAL formulas only (KG master, classical-domain whitelist), each as a clean 1-D (x,y) relation.
-The encoder trained on these has never seen a post-1900 functional form -> a strict 1900-oracle engine."""
+"""LEGACY point-cloud generator from a heuristic 'classical-domain' filter.
+
+The upstream filter does not establish publication date or provenance, so the
+output is not 1900-pure.  Retained only for reproduction of the old checkpoint.
+Use an audited allow-list snapshot from ``build_pre1900_corpus_strict.py`` for a
+new period-restricted encoder.
+"""
 import sys,os,json,warnings; warnings.filterwarnings('ignore')
-sys.path.insert(0,os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0,'D:/Physics Fundation model/sr_model/data')
 import numpy as np, gen_dataside as GD
-SC=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..','data','')
-exec(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),'build_classical_corpus.py'),encoding='utf-8').read().split('if __name__')[0])  # KEEP, DROP_KW
+SC='C:/Users/1/AppData/Local/Temp/claude/D--Physics-Fundation-model/ddaebe6b-abe2-4e50-9eb7-f5879d2c4910/scratchpad/'
+exec(open(SC+'build_classical_corpus.py',encoding='utf-8').read().split('if __name__')[0])  # KEEP, DROP_KW
 import re
-MASTER='data/master_nodes.jsonl'  # source knowledge base (not redistributed); output shipped as data/classical_pointclouds.npz
+MASTER='D:/Physics Fundation model/dataset_20260531/_extract_master/master_20260616/master_nodes.jsonl'
 N_TARGET=300000; NP=128
 rng=np.random.default_rng(3)
 def sig(expr):

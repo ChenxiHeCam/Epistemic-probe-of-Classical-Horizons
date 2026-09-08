@@ -1,0 +1,64 @@
+{
+  "calibration": {
+    "requested": 400,
+    "full_n": 392,
+    "small_n": 392,
+    "seed": 11,
+    "combiner": "legacy",
+    "q95_full": 2.9959532525893433,
+    "q99_full": 3.0,
+    "q95_small": 3.0,
+    "q99_small": 3.0
+  },
+  "cases": [
+    {
+      "case": "FIRAS",
+      "n": 43,
+      "raw_score": 3.0,
+      "percentile_score": 0.9489795918367347,
+      "tail_pvalue": 0.05343511450381679,
+      "screen_at_0.5": true,
+      "reject_at_5pct": false,
+      "reject_at_1pct": false,
+      "bh_qvalue": 0.10687022900763359,
+      "reject_fdr_5pct": false
+    },
+    {
+      "case": "specific_heat_Cu",
+      "n": 120,
+      "raw_score": 3.0,
+      "percentile_score": 0.9489795918367347,
+      "tail_pvalue": 0.05343511450381679,
+      "screen_at_0.5": true,
+      "reject_at_5pct": false,
+      "reject_at_1pct": false,
+      "bh_qvalue": 0.10687022900763359,
+      "reject_fdr_5pct": false
+    },
+    {
+      "case": "Bertozzi",
+      "n": 5,
+      "raw_score": 3.0,
+      "percentile_score": 0.6556122448979592,
+      "tail_pvalue": 0.3460559796437659,
+      "screen_at_0.5": true,
+      "reject_at_5pct": false,
+      "reject_at_1pct": false,
+      "bh_qvalue": 0.3460559796437659,
+      "reject_fdr_5pct": false
+    },
+    {
+      "case": "Onnes",
+      "n": 9,
+      "raw_score": 3.0,
+      "percentile_score": 0.6556122448979592,
+      "tail_pvalue": 0.3460559796437659,
+      "screen_at_0.5": true,
+      "reject_at_5pct": false,
+      "reject_at_1pct": false,
+      "bh_qvalue": 0.3460559796437659,
+      "reject_fdr_5pct": false
+    }
+  ],
+  "interpretation": "The 0.5 percentile rule is exploratory screening. Confirmatory decisions use the finite-sample upper-tail p-value and a pre-specified alpha/FDR rule."
+}
