@@ -2,11 +2,11 @@
   "status": "PASS",
   "scope": "mechanical Nature Communications format envelope",
   "metrics": {
-    "title": "Auditing predictive boundaries from historically restricted physical knowledge",
-    "title_words": 8,
-    "abstract_words": 163,
-    "main_text_words": 3129,
-    "methods_words": 1478,
+    "title": "Recognizing the predictive boundary of historically restricted physical knowledge",
+    "title_words": 9,
+    "abstract_words": 191,
+    "main_text_words": 3537,
+    "methods_words": 1895,
     "references": 16,
     "cited_reference_numbers": [
       1,
@@ -27,27 +27,23 @@
       16
     ],
     "main_figure_files": [
-      "Figure_1_concept_revised.png",
-      "figure_breakdowns.png",
-      "figure_controls.png",
-      "figure_rigor.png",
-      "figure_limit.png",
-      "figure_revision_evidence.png",
+      "Figure_1_concept.png",
       "figure_case_study_composite.png",
-      "figure_learned_pre1900_v3.png"
+      "figure_learned_pre1900_v3.png",
+      "figure_cases.png",
+      "figure_component_calibration.png",
+      "figure_real_measurement_cases.png"
     ],
-    "main_figures": 8,
+    "main_figures": 6,
     "main_tables": 1,
-    "display_items": 9,
+    "display_items": 7,
     "figure_legend_words": {
-      "1": 71,
-      "2": 62,
-      "3": 64,
-      "4": 77,
-      "5": 65,
-      "6": 183,
-      "7": 98,
-      "8": 89
+      "1": 150,
+      "2": 98,
+      "3": 89,
+      "4": 115,
+      "5": 163,
+      "6": 70
     },
     "composite_png_pixels": [
       4252,

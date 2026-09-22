@@ -1,0 +1,689 @@
+{
+  "status": "frozen forward-inference audit on unmodified NIST measurement series",
+  "reporting_scope": "raw component scores only; no alert threshold is applied and no detection or false-positive count is formed from these series",
+  "no_training_audit": {
+    "training_steps": 0,
+    "weights_updated": false,
+    "thresholds_updated": false,
+    "fusion_weight_fitted": false,
+    "existing_results_mutated": false
+  },
+  "provenance": {
+    "registry_sha256": "ed2a2ac481a3ecf64feb819ee5bd4358bcfc9902d247dd72688b302cd5e4003b",
+    "archive_sha256": "5f3b57f9c239d4660369eda89f45520b51575720edb30c94c8ba9f55f5da2214",
+    "encoder_sha256": "9ca8e661427a8bf538eea3c3acf9f9c34f2dcf867d5fe545c10cf7e29cf0df84",
+    "pre1900_reference_data_sha256": "6c6d1c81ca9cb8cbf13c1a5ed16d014f773f3c1e7cd02bdd5eba8b6658d49124",
+    "view_score_table": "real_measurement_case_view_scores.csv"
+  },
+  "design": {
+    "datasets": 16,
+    "measurement_views_per_series": 8,
+    "released_view_scores": 128,
+    "mechanism_groups": 14,
+    "post_1900_mechanism_groups": 5,
+    "classical_or_metrology_groups": 9,
+    "inferential_unit": "mechanism group",
+    "label_basis": "horizon class declared from the measured phenomenon and its primary source, never from an EPOCH score",
+    "learned_view_function": "rescale-only real_views; no synthetic noise added to a measurement",
+    "statistical_size_matching": "each series subsampled to the largest frozen calibration size it supports"
+  },
+  "ranking": {
+    "statistic": "grouped AUROC, threshold-free, resampled over mechanism groups",
+    "learned_group_auroc": 0.6222222222222222,
+    "learned_group_auroc_95ci": [
+      0.288888888888889,
+      0.888888888888889
+    ],
+    "statistical_group_auroc": 0.7777777777777778,
+    "statistical_group_auroc_95ci": [
+      0.3777777777777778,
+      1.0
+    ]
+  },
+  "group_scores": {
+    "bose_gas_density": {
+      "horizon_class": "post_1900_mechanism",
+      "datasets": [
+        "CLARK3"
+      ],
+      "learned_group_score": 0.10611062124371529,
+      "statistical_group_score": 13.980083655680726
+    },
+    "circular_interference": {
+      "horizon_class": "classical_or_metrology",
+      "datasets": [
+        "ECKERLE4"
+      ],
+      "learned_group_score": 0.06302008405327797,
+      "statistical_group_score": 1.9464221590603463
+    },
+    "cryogenic_thermal_expansion": {
+      "horizon_class": "post_1900_mechanism",
+      "datasets": [
+        "HAHN1"
+      ],
+      "learned_group_score": 0.15863168239593506,
+      "statistical_group_score": 2.59127168969938
+    },
+    "linewidth_standard": {
+      "horizon_class": "classical_or_metrology",
+      "datasets": [
+        "KIRBY2"
+      ],
+      "learned_group_score": 0.029564738273620605,
+      "statistical_group_score": 3.2040907446864564
+    },
+    "load_cell_elasticity": {
+      "horizon_class": "classical_or_metrology",
+      "datasets": [
+        "PONTIUS"
+      ],
+      "learned_group_score": 0.018845357932150364,
+      "statistical_group_score": 0.05029163425605928
+    },
+    "optical_linewidth_calibration": {
+      "horizon_class": "classical_or_metrology",
+      "datasets": [
+        "CALIBRATIONLINE"
+      ],
+      "learned_group_score": 0.006876093102619052,
+      "statistical_group_score": 0.39093568952261737
+    },
+    "polymer_impedance": {
+      "horizon_class": "classical_or_metrology",
+      "datasets": [
+        "WATTODR3"
+      ],
+      "learned_group_score": 0.42046235501766205,
+      "statistical_group_score": 0.8690387660772898
+    },
+    "radiographic_defect_calibration": {
+      "horizon_class": "classical_or_metrology",
+      "datasets": [
+        "BERGER1"
+      ],
+      "learned_group_score": 0.01604408025741577,
+      "statistical_group_score": 0.5655945635301218
+    },
+    "rydberg_series": {
+      "horizon_class": "classical_or_metrology",
+      "datasets": [
+        "ROSZMAN1"
+      ],
+      "learned_group_score": 0.1588369384407997,
+      "statistical_group_score": 0.1417565904838786
+    },
+    "semiconductor_magnetotransport": {
+      "horizon_class": "post_1900_mechanism",
+      "datasets": [
+        "KIM"
+      ],
+      "learned_group_score": 0.12074467539787292,
+      "statistical_group_score": 4.488929040824265
+    },
+    "semiconductor_mobility": {
+      "horizon_class": "post_1900_mechanism",
+      "datasets": [
+        "THURBER"
+      ],
+      "learned_group_score": 0.10357759520411491,
+      "statistical_group_score": 3.8084964785834265
+    },
+    "standard_resistor_drift": {
+      "horizon_class": "classical_or_metrology",
+      "datasets": [
+        "DZIUBA1"
+      ],
+      "learned_group_score": 0.41921770572662354,
+      "statistical_group_score": 0.027357111540364375
+    },
+    "superconducting_flux_creep": {
+      "horizon_class": "post_1900_mechanism",
+      "datasets": [
+        "BENNETT5",
+        "BENNETT6",
+        "BENNETT7"
+      ],
+      "learned_group_score": 0.05074648559093475,
+      "statistical_group_score": 0.0035261572279108445
+    },
+    "ultrasonic_attenuation": {
+      "horizon_class": "classical_or_metrology",
+      "datasets": [
+        "CHWIRUT1"
+      ],
+      "learned_group_score": 0.05958494916558266,
+      "statistical_group_score": 0.7210941427151343
+    }
+  },
+  "series_scores": [
+    {
+      "dataset": "HAHN1",
+      "mechanism_group": "cryogenic_thermal_expansion",
+      "horizon_class": "post_1900_mechanism",
+      "points_used": 236,
+      "incumbent_1899": "temperature-independent expansion coefficient from classical equipartition of lattice modes",
+      "relative_response_variation": 0.40494769114285334,
+      "learned_route": "generic_learned_component",
+      "learned_view_scores": [
+        0.15351273119449615,
+        0.1487143486738205,
+        0.14801199734210968,
+        0.1869346797466278,
+        0.14041489362716675,
+        0.16375063359737396,
+        0.1763942390680313,
+        0.19150790572166443
+      ],
+      "learned_score": 0.15863168239593506,
+      "statistical_matched_n": 120,
+      "statistical_view_scores": [
+        2.7086439342781268,
+        0.4485027346212056,
+        0.3910445341831742,
+        2.627195982920961,
+        3.0412797195988572,
+        2.5553473964777993,
+        2.792497648335997,
+        0.23008905592524237
+      ],
+      "statistical_score": 2.59127168969938,
+      "statistical_view_failures": 0
+    },
+    {
+      "dataset": "BENNETT5",
+      "mechanism_group": "superconducting_flux_creep",
+      "horizon_class": "post_1900_mechanism",
+      "points_used": 154,
+      "incumbent_1899": "no persistent screening currents; classical Ohmic decay of an induced magnetization",
+      "relative_response_variation": 0.017488304005061867,
+      "learned_route": "generic_learned_component",
+      "learned_view_scores": [
+        0.03887840360403061,
+        0.04772736504673958,
+        0.05298880487680435,
+        0.04975394159555435,
+        0.029121195897459984,
+        0.04071123152971268,
+        0.05566105991601944,
+        0.057171065360307693
+      ],
+      "learned_score": 0.048740653321146965,
+      "statistical_matched_n": 120,
+      "statistical_view_scores": [
+        0.000685613613370365,
+        0.0012366561521779786,
+        0.0006684313324801323,
+        0.001608665240983743,
+        0.0017553941989475316,
+        0.0014113107155811987,
+        0.0009974589288269224,
+        0.0011402102240015484
+      ],
+      "statistical_score": 0.0011884331880897634,
+      "statistical_view_failures": 0
+    },
+    {
+      "dataset": "BENNETT6",
+      "mechanism_group": "superconducting_flux_creep",
+      "horizon_class": "post_1900_mechanism",
+      "points_used": 744,
+      "incumbent_1899": "no persistent screening currents; classical Ohmic decay of an induced magnetization",
+      "relative_response_variation": 0.04295240733170341,
+      "learned_route": "generic_learned_component",
+      "learned_view_scores": [
+        0.06621678918600082,
+        0.05268171429634094,
+        0.05288603901863098,
+        0.07379555702209473,
+        0.06378865987062454,
+        0.05915002152323723,
+        0.04560372978448868,
+        0.053541235625743866
+      ],
+      "learned_score": 0.05634562857449055,
+      "statistical_matched_n": 120,
+      "statistical_view_scores": [
+        0.004327214741247712,
+        0.001808932227115843,
+        0.0010434752915951435,
+        0.00170459125280811,
+        0.017346047272471247,
+        0.004518940318779956,
+        0.002725099714573977,
+        0.01288979885198261
+      ],
+      "statistical_score": 0.0035261572279108445,
+      "statistical_view_failures": 0
+    },
+    {
+      "dataset": "BENNETT7",
+      "mechanism_group": "superconducting_flux_creep",
+      "horizon_class": "post_1900_mechanism",
+      "points_used": 2000,
+      "incumbent_1899": "no persistent screening currents; classical Ohmic decay of an induced magnetization",
+      "relative_response_variation": 0.03839178929904327,
+      "learned_route": "generic_learned_component",
+      "learned_view_scores": [
+        0.05139288306236267,
+        0.029309909790754318,
+        0.050100088119506836,
+        0.023828983306884766,
+        0.061113882809877396,
+        0.05156351253390312,
+        0.0480690598487854,
+        0.05431317165493965
+      ],
+      "learned_score": 0.05074648559093475,
+      "statistical_matched_n": 120,
+      "statistical_view_scores": [
+        0.050159038517490005,
+        0.042255893573148906,
+        0.06227075384374747,
+        0.05928773446572224,
+        0.02453147231224235,
+        0.054765239509200286,
+        0.018479547873346144,
+        0.03404102872968945
+      ],
+      "statistical_score": 0.04620746604531946,
+      "statistical_view_failures": 0
+    },
+    {
+      "dataset": "CLARK3",
+      "mechanism_group": "bose_gas_density",
+      "horizon_class": "post_1900_mechanism",
+      "points_used": 2000,
+      "incumbent_1899": "Maxwell-Boltzmann density profile of a classical gas",
+      "relative_response_variation": 2.0547023871805354,
+      "learned_route": "generic_learned_component",
+      "learned_view_scores": [
+        0.0467524528503418,
+        0.12296082824468613,
+        0.10196161270141602,
+        0.15307290852069855,
+        0.11025962978601456,
+        0.04207613319158554,
+        0.1602119356393814,
+        0.07770397514104843
+      ],
+      "learned_score": 0.10611062124371529,
+      "statistical_matched_n": 120,
+      "statistical_view_scores": [
+        12.789615791707508,
+        16.06314622440601,
+        14.548952245044743,
+        13.049008583753304,
+        12.81927563197265,
+        13.411215066316707,
+        14.778621566578389,
+        15.040178060355322
+      ],
+      "statistical_score": 13.980083655680726,
+      "statistical_view_failures": 0
+    },
+    {
+      "dataset": "ROSZMAN1",
+      "mechanism_group": "rydberg_series",
+      "horizon_class": "classical_or_metrology",
+      "points_used": 25,
+      "incumbent_1899": "empirical Rydberg series with a fitted series constant (Rydberg 1888)",
+      "relative_response_variation": 0.6698232459426838,
+      "learned_route": "generic_learned_component",
+      "learned_view_scores": [
+        0.15818102657794952,
+        0.15686824917793274,
+        0.15772375464439392,
+        0.15818405151367188,
+        0.15972889959812164,
+        0.16959738731384277,
+        0.15948982536792755,
+        0.17075300216674805
+      ],
+      "learned_score": 0.1588369384407997,
+      "statistical_matched_n": 9,
+      "statistical_view_scores": [
+        0.09767912177815836,
+        0.06217501065240558,
+        0.16783344654228777,
+        0.06312967117428049,
+        1.8936513409218454,
+        1.0318621965068853,
+        0.11567973442546942,
+        1.4739559096380568
+      ],
+      "statistical_score": 0.1417565904838786,
+      "statistical_view_failures": 0
+    },
+    {
+      "dataset": "KIM",
+      "mechanism_group": "semiconductor_magnetotransport",
+      "horizon_class": "post_1900_mechanism",
+      "points_used": 21,
+      "incumbent_1899": "single-carrier Drude magnetoconductivity",
+      "relative_response_variation": 0.6839779086076696,
+      "learned_route": "generic_learned_component",
+      "learned_view_scores": [
+        0.12771576642990112,
+        0.12607376277446747,
+        0.10999144613742828,
+        0.08261488378047943,
+        0.11801532655954361,
+        0.11498992145061493,
+        0.12347402423620224,
+        0.1369207203388214
+      ],
+      "learned_score": 0.12074467539787292,
+      "statistical_matched_n": 9,
+      "statistical_view_scores": [
+        5.664021154528703,
+        3.212405829208772,
+        4.563235633876219,
+        4.594464802082975,
+        3.1847108214617506,
+        4.41462244777231,
+        2.897942618046303,
+        4.915688074416577
+      ],
+      "statistical_score": 4.488929040824265,
+      "statistical_view_failures": 0
+    },
+    {
+      "dataset": "THURBER",
+      "mechanism_group": "semiconductor_mobility",
+      "horizon_class": "post_1900_mechanism",
+      "points_used": 37,
+      "incumbent_1899": "classical free-electron transport with density-independent mobility",
+      "relative_response_variation": 0.7107545792025056,
+      "learned_route": "generic_learned_component",
+      "learned_view_scores": [
+        0.10022958368062973,
+        0.11079487949609756,
+        0.10967104136943817,
+        0.11179038137197495,
+        0.08937500417232513,
+        0.09901364147663116,
+        0.08173756301403046,
+        0.1069256067276001
+      ],
+      "learned_score": 0.10357759520411491,
+      "statistical_matched_n": 9,
+      "statistical_view_scores": [
+        2.362219317974829,
+        1.874684226241206,
+        4.571247146198955,
+        11.71130631382072,
+        3.8576453780622293,
+        3.061893986433147,
+        3.759347579104624,
+        4.788243538233228
+      ],
+      "statistical_score": 3.8084964785834265,
+      "statistical_view_failures": 0
+    },
+    {
+      "dataset": "CHWIRUT1",
+      "mechanism_group": "ultrasonic_attenuation",
+      "horizon_class": "classical_or_metrology",
+      "points_used": 214,
+      "incumbent_1899": "attenuated elastic-wave propagation with geometric spreading",
+      "relative_response_variation": 0.7806752772034466,
+      "learned_route": "generic_learned_component",
+      "learned_view_scores": [
+        0.0879928469657898,
+        0.07290542125701904,
+        0.11486931145191193,
+        0.050343967974185944,
+        0.01624806597828865,
+        0.02828230895102024,
+        0.06882593035697937,
+        0.034262508153915405
+      ],
+      "learned_score": 0.05958494916558266,
+      "statistical_matched_n": 120,
+      "statistical_view_scores": [
+        0.4192021904361558,
+        1.0810520963079673,
+        1.5098300648733467,
+        1.1239250772081886,
+        0.4596974606112605,
+        0.6750063023863832,
+        0.3880704887403712,
+        0.7671819830438853
+      ],
+      "statistical_score": 0.7210941427151343,
+      "statistical_view_failures": 0
+    },
+    {
+      "dataset": "ECKERLE4",
+      "mechanism_group": "circular_interference",
+      "horizon_class": "classical_or_metrology",
+      "points_used": 35,
+      "incumbent_1899": "classical wave-optical interference in a circular aperture",
+      "relative_response_variation": 1.5743021897778697,
+      "learned_route": "generic_learned_component",
+      "learned_view_scores": [
+        0.06609994173049927,
+        0.06512011587619781,
+        0.062255002558231354,
+        0.06190670281648636,
+        0.0612049400806427,
+        0.06378516554832458,
+        0.06586604565382004,
+        0.06171179935336113
+      ],
+      "learned_score": 0.06302008405327797,
+      "statistical_matched_n": 9,
+      "statistical_view_scores": [
+        5.762395097290804,
+        1.160137063224677,
+        3.0276983472777568,
+        1.2384090450013376,
+        1.3864159249454957,
+        2.3342503137151365,
+        1.5585940044055562,
+        3.679203650187531
+      ],
+      "statistical_score": 1.9464221590603463,
+      "statistical_view_failures": 0
+    },
+    {
+      "dataset": "PONTIUS",
+      "mechanism_group": "load_cell_elasticity",
+      "horizon_class": "classical_or_metrology",
+      "points_used": 40,
+      "incumbent_1899": "Hookean elastic response with a small quadratic correction",
+      "relative_response_variation": 0.5462192775945003,
+      "learned_route": "generic_learned_component",
+      "learned_view_scores": [
+        0.019012700766324997,
+        0.01625647023320198,
+        0.013846921734511852,
+        0.01502408366650343,
+        0.01995599828660488,
+        0.01867801509797573,
+        0.020706702023744583,
+        0.01926044188439846
+      ],
+      "learned_score": 0.018845357932150364,
+      "statistical_matched_n": 9,
+      "statistical_view_scores": [
+        0.05685960976594257,
+        0.06536757816578964,
+        0.011622080380600145,
+        0.16426047814956546,
+        0.04372365874617599,
+        0.04352127812067923,
+        0.07596730054231662,
+        0.00912392326146719
+      ],
+      "statistical_score": 0.05029163425605928,
+      "statistical_view_failures": 0
+    },
+    {
+      "dataset": "KIRBY2",
+      "mechanism_group": "linewidth_standard",
+      "horizon_class": "classical_or_metrology",
+      "points_used": 151,
+      "incumbent_1899": "smooth monotone instrument response",
+      "relative_response_variation": 0.6225070177307944,
+      "learned_route": "generic_learned_component",
+      "learned_view_scores": [
+        0.03081563673913479,
+        0.04139919951558113,
+        0.028313839808106422,
+        0.06273038685321808,
+        0.02205073833465576,
+        0.02289697527885437,
+        0.023593377321958542,
+        0.035968415439128876
+      ],
+      "learned_score": 0.029564738273620605,
+      "statistical_matched_n": 120,
+      "statistical_view_scores": [
+        3.197319255652614,
+        3.342692696878114,
+        3.0904880253671903,
+        3.28924700240686,
+        3.462505119414078,
+        2.957342330115047,
+        3.2108622337202983,
+        3.1220947391607377
+      ],
+      "statistical_score": 3.2040907446864564,
+      "statistical_view_failures": 0
+    },
+    {
+      "dataset": "BERGER1",
+      "mechanism_group": "radiographic_defect_calibration",
+      "horizon_class": "classical_or_metrology",
+      "points_used": 107,
+      "incumbent_1899": "smooth monotone instrument response",
+      "relative_response_variation": 0.5513183050808531,
+      "learned_route": "generic_learned_component",
+      "learned_view_scores": [
+        0.018171316012740135,
+        0.01730564795434475,
+        0.020014440640807152,
+        0.012808198109269142,
+        0.013908523134887218,
+        0.013212025165557861,
+        0.014782512560486794,
+        0.02281903102993965
+      ],
+      "learned_score": 0.01604408025741577,
+      "statistical_matched_n": 43,
+      "statistical_view_scores": [
+        0.4211491155134468,
+        0.9911943330140998,
+        1.026710811322078,
+        0.2018059326170853,
+        0.2912202737135685,
+        17.481703466487716,
+        0.3655738941144461,
+        0.710040011546797
+      ],
+      "statistical_score": 0.5655945635301218,
+      "statistical_view_failures": 0
+    },
+    {
+      "dataset": "CALIBRATIONLINE",
+      "mechanism_group": "optical_linewidth_calibration",
+      "horizon_class": "classical_or_metrology",
+      "points_used": 40,
+      "incumbent_1899": "smooth monotone instrument response",
+      "relative_response_variation": 0.42552354356147587,
+      "learned_route": "generic_learned_component",
+      "learned_view_scores": [
+        0.0032614469528198242,
+        0.004430490545928478,
+        0.007206618785858154,
+        0.006937980651855469,
+        0.007368254475295544,
+        0.0070095122791826725,
+        0.004279708955436945,
+        0.006814205553382635
+      ],
+      "learned_score": 0.006876093102619052,
+      "statistical_matched_n": 9,
+      "statistical_view_scores": [
+        0.9571820780785659,
+        0.40080623538211013,
+        0.3810651436631246,
+        0.1616111508724376,
+        0.350195951861173,
+        1.2278095692213025,
+        0.8435009899551115,
+        0.20099340678428673
+      ],
+      "statistical_score": 0.39093568952261737,
+      "statistical_view_failures": 0
+    },
+    {
+      "dataset": "WATTODR3",
+      "mechanism_group": "polymer_impedance",
+      "horizon_class": "classical_or_metrology",
+      "points_used": 23,
+      "incumbent_1899": "classical dielectric relaxation of a polymer",
+      "relative_response_variation": 0.13931942775928888,
+      "learned_route": "generic_learned_component",
+      "learned_view_scores": [
+        0.4128779470920563,
+        0.4206452965736389,
+        0.42152634263038635,
+        0.424302339553833,
+        0.427251398563385,
+        0.41490650177001953,
+        0.4202794134616852,
+        0.4134923815727234
+      ],
+      "learned_score": 0.42046235501766205,
+      "statistical_matched_n": 9,
+      "statistical_view_scores": [
+        0.471825882213941,
+        1.4373897097824568,
+        0.9438065418678458,
+        1.6876205124783619,
+        1.2051208182931354,
+        0.5694112465520693,
+        0.7733925763278842,
+        0.7942709902867339
+      ],
+      "statistical_score": 0.8690387660772898,
+      "statistical_view_failures": 0
+    },
+    {
+      "dataset": "DZIUBA1",
+      "mechanism_group": "standard_resistor_drift",
+      "horizon_class": "classical_or_metrology",
+      "points_used": 1000,
+      "incumbent_1899": "slow monotone instrument drift about a stable reference value",
+      "relative_response_variation": 0.0022651872232338026,
+      "learned_route": "generic_learned_component",
+      "learned_view_scores": [
+        0.5043632984161377,
+        0.4572542607784271,
+        0.3638853132724762,
+        0.4353824257850647,
+        0.4138150215148926,
+        0.41100558638572693,
+        0.4125414788722992,
+        0.4246203899383545
+      ],
+      "learned_score": 0.41921770572662354,
+      "statistical_matched_n": 120,
+      "statistical_view_scores": [
+        0.03135183114535063,
+        0.027115550173206708,
+        0.04817847811869888,
+        0.035787942426561664,
+        0.02207762492583974,
+        0.02434476883056439,
+        0.027598672907522038,
+        0.02329421887465828
+      ],
+      "statistical_score": 0.027357111540364375,
+      "statistical_view_failures": 0
+    }
+  ]
+}
