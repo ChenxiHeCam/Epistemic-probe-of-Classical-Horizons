@@ -40,23 +40,23 @@
 \linenumbers
 
 \begin{abstract}
-Scientific models have finite domains, established only in hindsight once a
-successor theory explains the failure. Here we show that the predictive
-boundary of a body of physical knowledge can be tested from that knowledge
-alone. Only relations recorded before a chosen date, the knowledge horizon, are
-admitted, with no later formula and no example of a departure, and we ask
-whether relations that knowledge cannot account for rank above those it can. At
-an 1899 horizon, a neural encoder trained on pre-1900 laws alone, given only a
-point cloud without formula, units or labels, ranks 55 twentieth-century law
-families above nine held-out pre-1900 groups with an area under the ROC curve
-(AUROC) of 0.925, against 0.649 before optimization. A second test, fixed in
-advance, extrapolates one of four simple forms fitted to part of each curve and
-reaches 0.888 against 11 held-out pre-1900 families without a learned
-representation. When a named pre-1900 law, the incumbent, is tested against
-five historical measurements, the discrepancy collapses under the successful
-successor prediction in four cases and under none of ten wrong-shape or
-wrong-mechanism alternatives. The same construction applies to any period with
-a dated corpus, an admitted prediction and a calibration set.
+Scientific models have finite domains, established only once a successor
+theory explains the failure. Here we show that the predictive boundary of a
+body of physical knowledge can be tested from that knowledge alone. Only
+relations recorded before a chosen date, the knowledge horizon, are admitted,
+with no later formula and no example of a departure, and we ask whether
+relations it cannot account for rank above those it can. At an 1899 horizon, a
+neural encoder trained on pre-1900 laws alone, given only a point cloud without
+formula, units or labels, ranks 55 twentieth-century law families above nine
+held-out pre-1900 groups with area under the ROC curve (AUROC) 0.925, against
+0.649 before optimization. A second test, fixed in advance, extrapolates one of
+four simple forms fitted to part of each curve and reaches 0.888 against 11
+held-out pre-1900 families without a learned representation. When a named
+pre-1900 law, the incumbent, is tested against five historical measurements,
+the discrepancy collapses under the successful successor prediction in four
+cases and under none of ten wrong-shape or wrong-mechanism alternatives. The
+same construction can be applied to any period with a dated corpus, an admitted
+prediction, an observation model and a calibration set.
 \end{abstract}
 
 \section{Introduction}
@@ -124,8 +124,9 @@ historical datasets we find that the discrepancy with the pre-1900 prediction
 collapses under the successor prediction in four of the five and under no
 wrong-shape or wrong-mechanism alternative. EPOCH therefore tests the
 predictive domain of a declared body of knowledge without being told where that
-domain ends, and the same construction applies to any period with a dated
-corpus, an admitted prediction and a calibration set.
+domain ends, and the same construction can be applied to any period for which a
+dated corpus, an admitted prediction, an observation model and a calibration
+set exist.
 
 \section{Results}
 
@@ -164,16 +165,16 @@ the verdict is abstention.
 We calibrate each component against its own reference distribution: the
 four-form and learned components against their scores on pre-1900 data, and the
 theory-conditioned component against a null distribution simulated from the
-incumbent prediction. We report the three separately. The four-form component
-receives a point cloud and nothing else. It fits the best of four generic forms
+incumbent prediction. The four-form component receives a point cloud, the $(x, y)$ pairs of one relation with formula, units
+and labels removed, and nothing else. It fits the best of four generic forms
 (power, exponential, linear and constant) on the interior and extrapolates the
 fit to the frontier, the remainder of the data. Two statistics measure the
 failure of the extrapolation. The split-conformal nonconformity is the mean
 absolute frontier residual divided by the 90th percentile of the interior
 absolute residuals, that is, a frontier residual scaled by the spread of the
 residuals where the fit is trusted. The extrapolation-residual ratio is the
-median absolute log-residual at the frontier divided by its interior value. Both
-denominators carry a one-percent relative floor (Methods).
+median absolute log-residual at the frontier divided by its interior value. Each
+denominator carries a small floor (Methods).
 
 The theory-conditioned component computes the residuals of the measurements
 from the incumbent prediction, scaled by the declared measurement errors, and
@@ -183,7 +184,7 @@ a neural encoder trained only on point clouds from relations recorded before the
 horizon, with no example of a departure; its score is the distance of a new
 point cloud's embedding from the embeddings of the training relations.
 Table~\ref{tab:principal} collects the principal quantitative results reported
-below, and Methods opens with the terms used.
+below.
 
 \begin{table}[t]
 \centering
@@ -256,8 +257,10 @@ and nothing else, with no formula, graph, units, date, source or anomaly label.
 Every scoring choice was frozen before any score on later physics was computed
 (Methods). We report the area under the ROC curve (AUROC), the probability that
 a randomly chosen later family scores above a randomly chosen pre-1900 group,
-so that 0.5 is chance and 1 is complete separation; brackets give 95\%
-bootstrap intervals over families or groups (Methods).
+with ties counted as one half, so that 0.5 is chance and 1 is complete
+separation; unless stated otherwise,
+brackets give 95\% bootstrap intervals resampled over families or groups
+(Methods).
 
 Against nine held-out pre-1900 groups, each a set of law families sharing one
 mechanism, the learned score separates the 38 families dated 1901--1950, each
@@ -316,9 +319,9 @@ near-future families and 0.857 [0.741, 0.945] for all 55, against 0.516 and
 0.545 before optimization (Fig.~\ref{fig:learned}a,b). Within the curated
 benchmark, pre-1900 training therefore contributes beyond the difference in
 generating process. In contrast, the generator-gated set draws the later
-formulas themselves from the internal archive by the same generator as the
-pre-1900 corpus, here 1901--1950 formulas (Supplementary Note~16). On that set
-the trained model gives 0.536 [0.424, 0.643] against 0.594 [0.436, 0.756]
+formulas themselves, 1901--1950 formulas in this test, from the internal
+archive by the same generator as the pre-1900 corpus (Supplementary Note~16).
+On that set the trained model gives 0.536 [0.424, 0.643] against 0.594 [0.436, 0.756]
 before optimization, so the curated and native results are not interchangeable.
 
 For the compact encoder, evaluated on a separate 192-dataset benchmark of 12
@@ -469,8 +472,8 @@ We scored each dataset twice on the same grid and under the same error model,
 first under its old incumbent prediction and then under the historically
 successful successor, the prediction of the theory that replaced the incumbent;
 we call this advancing the horizon. The old horizon is rejected in all five
-cases (bootstrap $p = 0.001$, the finite-sample fraction of null replicates at
-least as discrepant; Fig.~\ref{fig:calibration}a). The advanced horizon
+cases (bootstrap $p = 0.001$, the add-one fraction of null replicates at least
+as discrepant, defined in Methods; Fig.~\ref{fig:calibration}a). The advanced horizon
 clears four of the five: FIRAS under Planck's law~\cite{planck1901}
 ($p = 1.000$), Bertozzi under relativistic kinetic
 energy~\cite{einstein1905relativity} ($p = 0.089$), Onnes under a
@@ -512,7 +515,8 @@ successful successor prediction and under none of the tested alternatives.
 
 \subsection{Measured series at the same horizon}
 
-We applied the frozen components to sixteen unmodified NIST measurement series.
+We applied the frozen components to sixteen NIST measurement series taken
+unmodified from the source files (Methods).
 A mechanism group is the set of series produced by one physical mechanism, a
 metrological group records a calibration artefact or instrument transfer curve,
 and groups are the units over which the AUROC is computed and resampled. For
@@ -583,11 +587,11 @@ heteroscedasticity (Fig.~\ref{fig:calibration}b). The reported output therefore
 includes a separate field stating whether saturation and censoring were tested,
 and they are tested explicitly for plateau and threshold cases.
 
-Boundary intervals are calibrated in the same way, and we find that ordinary
-measurement bootstrap intervals cover only 53.9\% of true onsets at a nominal
-90\% level, and 8.5\% for steps. Interval radii calibrated separately at each sample size on
-899 independent simulations raise held-out coverage to 91.3\% [89.3\%, 93.0\%]
-across 900 simulations, with family-wise coverage from 87.8\% for smooth
+We calibrate boundary intervals in the same way. Ordinary measurement bootstrap
+intervals cover only 53.9\% of true onsets at a nominal 90\% level, and 8.5\%
+for steps. Interval radii calibrated separately at each sample size on 899
+independent simulations raise held-out coverage to 91.3\% [89.3\%, 93.0\%]
+(Wilson interval) across 900 simulations, with family-wise coverage from 87.8\% for smooth
 turnovers to 94.4\% for kinks (Fig.~\ref{fig:calibration}c). The reported
 boundary is therefore an interval.
 
@@ -637,7 +641,7 @@ floor has to be declared with the incumbent. For a closed-form theory, advancing
 the horizon amounts to replacing the incumbent prediction and recalibrating its
 null distribution, and simulator-based references give the corresponding
 construction where no closed form exists. A conclusion about a named physical
-theory therefore requires that the admissible laws and the observation model
+theory requires that the admissible laws and the observation model
 encode that theory's prediction for the measured quantity (Methods).
 
 Shape novelty and predictive failure are not the same quantity. Later affine,
@@ -653,7 +657,7 @@ creep~\cite{anderson1964fluxcreep}, which no pre-1900 theory accounts for, is
 close to logarithmic in time and sits at the bottom of the four-form ranking.
 Keeping the component scores separate is what preserves this distinction
 between an unusual shape and the failure of a named prediction, and we expect
-it to matter most where a successor law keeps the incumbent's functional form.
+it to matter most where the departure keeps an ordinary functional form.
 
 The negative class of the 1899 experiment is small: nine held-out pre-1900
 groups carry the primary learned comparison and set the width of its interval,
@@ -703,9 +707,8 @@ constant forms on the interior, extrapolates to the frontier and reports the
 split-conformal nonconformity (the mean absolute frontier residual divided by
 the 90th percentile of the interior absolute residuals) and the
 extrapolation-residual ratio (the median absolute log-residual at the frontier
-divided by its interior value), both with a one-percent relative floor in the
-denominator; called the data-anchored or statistical component in the code and
-SI.
+divided by its interior value), each with a floor in its denominator; called
+the data-anchored or statistical component in the code and SI.
 \textit{Theory-conditioned component}: computes the residuals of the
 measurements from the incumbent prediction, scaled by the declared measurement
 errors, and compares their size with a null distribution simulated from that
@@ -773,9 +776,10 @@ nonconformity~\cite{vovk2005} is the mean absolute frontier residual divided by
 the 90th percentile of the interior absolute residuals, and the
 extrapolation-residual ratio
 compares the median log-residual at the frontier with its interior value. Each
-form is fitted from several initializations, and both denominators carry a
-one-percent relative floor so that a near-perfect interior fit cannot produce an
-unbounded ratio. A capped variant, which averages rescaled components clipped
+form is fitted from several initializations, and each denominator carries a
+floor, one percent of the median interior response magnitude for the
+nonconformity and 0.01 for the median interior log-residual, so that a
+near-perfect interior fit cannot produce an unbounded ratio. A capped variant, which averages rescaled components clipped
 at 3, is retained for comparison with earlier results. Relations with fewer than
 20 points are calibrated against size-matched simulations.
 
@@ -811,7 +815,8 @@ prototypes, and shrinkage-Mahalanobis
 distance~\cite{mahalanobis1936,ledoit2004} to those prototypes. Clouds are
 reduced by median to formulas and then to law families or frozen relation
 groups, and family- and group-level AUROCs use 2,000 grouped-bootstrap
-replicates. The same network before optimization passes through the identical
+replicates; unless stated otherwise, bracketed intervals in this paper are 95\%
+bootstrap intervals resampled at that level. The same network before optimization passes through the identical
 pipeline. Code, configuration, score construction, seed and checkpoint rule were
 frozen before the first score on later physics was computed.
 
