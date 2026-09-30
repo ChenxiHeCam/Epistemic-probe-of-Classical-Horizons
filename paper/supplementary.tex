@@ -49,15 +49,15 @@ The historical experiments are retrospective rather than pre-registered. The ana
 
 Every test must instantiate \(\mathcal{T}=(\mathcal{M},\Theta,P_\varepsilon,I,A,S,\alpha)\): admissible models, fitted parameters, observation/censoring model, fitting-eligible data, the complete adaptive algorithm, the final statistic and the error rate. Direction choice, window search, model selection and parameter fitting are part of \(A\) and must be rerun inside every null/calibration replicate. The four allowed semantic outputs are \emph{compatible over the measured range}, \emph{localized model incompatibility}, \emph{whole-range model incompatibility without an identifiable boundary} and \emph{insufficient evidence / abstain}. ``Established theory fails'' is permissible only if the declared model set is an adequate encoding of that theory's relevant prediction; failure of the four-form dictionary alone does not license that interpretation.
 
-\section{Supplementary Note 2: The breakdown ratio (definition + invariances)}
+\section{Supplementary Note 2: The extrapolation-residual ratio (definition and invariances)}
 
 For data $(x,y)$, the best classical form $f$ from the dictionary is fitted on the interior and extrapolated to the frontier. With log-residuals $r(x)=\lvert\log(\lvert y\rvert/\lvert f(x)\rvert)\rvert$, the statistic is
 
 \[
-\text{breakdown ratio}=\frac{\operatorname{median}_{\text{frontier}} r}{\operatorname{median}_{\text{interior}} r}.
+\text{extrapolation-residual ratio}=\frac{\operatorname{median}_{\text{frontier}} r}{\operatorname{median}_{\text{interior}} r}.
 \]
 
-Empirical invariance tests show that the ratio is unchanged under $y\to a\,y$ (amplitude) and $x\to b\,x$ (units), and remains robust to additive noise up to 5--10\%. The ratio is an ordinal breakdown indicator. Reported magnitudes, including the FIRAS over-prediction factor, therefore include a window-dependence range and bootstrap confidence interval.
+Empirical invariance tests show that the ratio is unchanged under $y\to a\,y$ (amplitude) and $x\to b\,x$ (units), and remains robust to additive noise up to 5--10\%. The companion statistic, called the split-conformal nonconformity in the main text, is the mean absolute frontier residual divided by the 90th percentile of the interior residuals, with the same one-percent relative floor; it is a scaled frontier residual and carries no coverage guarantee of its own. The ratio is an ordinal breakdown indicator. Reported magnitudes, including the FIRAS over-prediction factor, therefore include a window-dependence range and bootstrap confidence interval.
 
 \section{Supplementary Note 3: Detector benchmark and anti-circularity ablation}
 
@@ -444,11 +444,11 @@ Grouped by mechanism, the learned score gives AUROC 0.622 [0.289, 0.889] and the
 
 Copper thermal expansion is the highest-ranked post-1900 group under the learned score. The measured coefficient rises from 0.591 at 24~K to 21.09 at 852~K; classical equipartition of lattice modes gives a temperature-independent coefficient, and the observed fall towards zero below the Debye temperature is the departure. The cold Bose-gas density profile is the highest-ranked group under the four-form score, at 13.980 against a median of 0.566 across the classical and metrological groups.
 
-Circular-interference transmittance is the shape control. Its transmittance rises by three and a half orders of magnitude to a sharp resonance at 451 nm and falls again within 20 nm, the most unusual morphology among the sixteen series, and it is fully accounted for by classical wave optics. Both components place it low, at 0.0630 and 1.946. A curve is therefore not scored as outside the horizon because its shape is unfamiliar.
+Circular-interference transmittance is the shape control. Its transmittance rises by three and a half orders of magnitude to a sharp resonance at 451 nm and falls again within 20 nm, the most unusual morphology among the sixteen series, and it is fully accounted for by classical wave optics. Its learned score is 0.0630 and its four-form score 1.946, below the frozen four-form threshold of 3.391320708 but above the classical median of 0.566. An unfamiliar shape therefore does not by itself place a curve outside the horizon on the learned score.
 
-Superconducting magnetization relaxation is the converse. The phenomenon has no pre-1900 account, but $M(t)$ against log time is close to a straight line over the sampled decade, and the three files take the three lowest four-form scores in the collection. The same pattern appears in the Pound--Rebka and Millikan relations: a physically decisive discrepancy can retain a generic shape, and the incumbent-conditioned test rather than either shape coordinate then carries the evidence.
+Superconducting magnetization relaxation is the converse. The phenomenon has no pre-1900 account, but $M(t)$ against log time is close to a straight line over the sampled decade, and the three files take the lowest, second-lowest and fourth-lowest four-form scores in the collection. The same pattern appears in the Pound--Rebka and Millikan relations: a physically decisive discrepancy can retain a generic shape, and the theory-conditioned component, not either shape score, then carries the evidence.
 
-The two highest learned scores over the whole collection belong to a five-year standard-resistor record and a 23-point polymer-impedance curve. A Rydberg series, inside the horizon since 1888, ranks above four of the five post-1900 groups. On measured data the leading axis of variation is the observation process rather than the period of the underlying physics, which is the effect the simulated instrument tests of Supplementary Note 12 isolate as saturation and censoring.
+The two highest learned scores over the whole collection belong to a five-year standard-resistor record and a 23-point polymer-impedance curve. A Rydberg series, inside the horizon since 1888, ranks above every post-1900 group on the learned score (0.1588 against a highest post-1900 group value of 0.1586). On measured data this pattern is consistent with the observation process setting the largest learned-score differences; whether it is the effect that the simulated instrument tests of Supplementary Note 12 isolate as saturation and censoring for the four-form detector has not been tested.
 
 \subsection{Scope}
 
