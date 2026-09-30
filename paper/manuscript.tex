@@ -40,28 +40,23 @@
 \linenumbers
 
 \begin{abstract}
-Scientific models have finite domains, normally established only in
-hindsight, once a successor theory explains the failure. Machine-learning
-systems for scientific data interpolate, predict forward or recover a governing
-expression; none takes a declared body of physical knowledge as the object under
-test. Here we show that the predictive boundary of a body of physical knowledge
-can be tested from that knowledge alone. We admit only relations recorded
-before a chosen date, the knowledge horizon, supply no later formula and no
-example of a departure, and ask whether relations the earlier knowledge cannot
-account for rank above those it can. At an 1899 horizon, a neural encoder
-trained on pre-1900 laws alone, and given at inference only a point cloud
-without formula, units or labels, ranks 55 twentieth-century law families above
-nine held-out pre-1900 groups with an area under the ROC curve (AUROC) of
-0.925, against 0.649 before optimization. A second test, fixed in advance, fits
-four simple forms to the part of each curve they describe and measures the
-departure of the rest from the extrapolation; it reaches 0.888 against 11
-held-out pre-1900 families with no learned representation. When a named
-pre-1900 law, the incumbent, is tested against historical measurements, the
-discrepancy is tied to that law rather than to the data: on five such
-measurements it collapses under the successful successor prediction in four
-cases and under none of ten wrong-shape or wrong-mechanism alternatives. The
-same construction applies to any period with a dated corpus, an admitted
-prediction and a calibration set.
+Scientific models have finite domains, established only in hindsight once a
+successor theory explains the failure. Here we show that the predictive
+boundary of a body of physical knowledge can be tested from that knowledge
+alone. Only relations recorded before a chosen date, the knowledge horizon, are
+admitted, with no later formula and no example of a departure, and we ask
+whether relations that knowledge cannot account for rank above those it can. At
+an 1899 horizon, a neural encoder trained on pre-1900 laws alone, given only a
+point cloud without formula, units or labels, ranks 55 twentieth-century law
+families above nine held-out pre-1900 groups with an area under the ROC curve
+(AUROC) of 0.925, against 0.649 before optimization. A second test, fixed in
+advance, extrapolates one of four simple forms fitted to part of each curve and
+reaches 0.888 against 11 held-out pre-1900 families without a learned
+representation. When a named pre-1900 law, the incumbent, is tested against
+five historical measurements, the discrepancy collapses under the successful
+successor prediction in four cases and under none of ten wrong-shape or
+wrong-mechanism alternatives. The same construction applies to any period with
+a dated corpus, an admitted prediction and a calibration set.
 \end{abstract}
 
 \section{Introduction}
@@ -83,8 +78,8 @@ discrepancy compares observations with a simulator~\cite{kennedy2001bayesian}.
 Symbolic regression searches for a replacement expression once a discrepancy has
 already been found~\cite{guimera2020bayesian,udrescu2020feynman}.
 
-None of these operations takes a dated body of physical knowledge as the object
-under test. A residual is large relative to some fitted model, a change point is
+However, none of these operations takes a dated body of physical knowledge as
+the object under test. A residual is large relative to some fitted model, a change point is
 a shift in some distribution, and a recovered expression is a fit to some data;
 in each case the knowledge being audited is implicit in the setup. Nor does an
 unusual curve shape identify the departure, because a departure from a named
@@ -95,14 +90,14 @@ We call the date that bounds a body of knowledge its knowledge horizon: only
 relations recorded before that date are admitted, and the pre-horizon law tested
 against a given dataset is the incumbent. Here we make the knowledge horizon an
 explicit input and test it directly with EPOCH (Epistemic Probe of Classical
-Horizons). Every test states in advance which laws or functional forms it may
-fit, which parameters it fits, how the measurement errors and any censoring are
-modelled, which data it fits, every data-dependent choice it makes, and the
-statistic and error rate it reports (Methods). It returns one of four verdicts:
-compatible over the measured range; localized incompatibility, with an interval
-for the boundary; whole-range incompatibility, with no identifiable boundary; or
-abstention. Each test reports three kinds of evidence separately, never as a
-single averaged score. The learned component is a neural encoder trained only on
+Horizons). Every test states in advance the laws it may fit, the error model,
+the data it fits, every data-dependent choice and the statistic and error rate
+it reports (Methods). It returns one of four verdicts: compatible over the
+measured range; localized incompatibility, with an interval for the boundary;
+whole-range incompatibility; or abstention.
+
+Each test reports three kinds of evidence separately, never as a single
+averaged score. The learned component is a neural encoder trained only on
 pre-horizon relations, with no example of a departure, which scores a new curve
 by its distance from them. The four-form component fits one of four simple forms
 (power, exponential, linear or constant) to the part of a curve where an
@@ -120,14 +115,17 @@ set of relations that share one law; training, validation and test data are
 divided by family, and no law appears on both sides. Training uses no later
 formula and no synthetic breakdown example, and the training and scoring
 protocol was frozen, that is fixed and time-stamped, before any score on later
-physics was computed. We find that an encoder built this way ranks
-twentieth-century law families above pre-1900 families withheld from training,
-and that the four-form component reaches the same ranking without any trained
-network. On five historical datasets the discrepancy with the pre-1900
-prediction collapses under the successor prediction in four of the five and
-under no wrong-shape or wrong-mechanism alternative. On real measured series the
-two highest learned scores belong to instrument records, a pattern consistent
-with the observation process setting the largest score differences.
+physics was computed.
+
+We find that an encoder built this way ranks twentieth-century law families
+above pre-1900 families withheld from training, and we find that the four-form
+component reaches the same ranking without any trained network. On five
+historical datasets we find that the discrepancy with the pre-1900 prediction
+collapses under the successor prediction in four of the five and under no
+wrong-shape or wrong-mechanism alternative. EPOCH therefore tests the
+predictive domain of a declared body of knowledge without being told where that
+domain ends, and the same construction applies to any period with a dated
+corpus, an admitted prediction and a calibration set.
 
 \section{Results}
 
@@ -137,8 +135,8 @@ EPOCH returns one of four verdicts for a set of measurements and a declared set
 of admissible laws: compatible over the measured range; localized
 incompatibility, with an interval for the boundary; whole-range incompatibility,
 with no identifiable boundary; or abstention, when the evidence is insufficient
-(Fig.~\ref{fig:concept}). A fixed routing rule decides which component produces
-the verdict. The four-form component is used when the measurements contain a
+(Fig.~\ref{fig:concept}). We fix in advance a routing rule that decides which
+component produces the verdict. The four-form component is used when the measurements contain a
 contiguous stretch, the interior, over which a pre-1900 law fits well. The
 theory-conditioned component is used otherwise, when an incumbent prediction and
 a model of the measurement errors are available. When neither condition is met
@@ -163,30 +161,29 @@ the verdict is abstention.
   \label{fig:concept}
 \end{figure}
 
-Each component is calibrated against its own reference distribution, the
-four-form and learned components against their scores on pre-1900 data and the
+We calibrate each component against its own reference distribution: the
+four-form and learned components against their scores on pre-1900 data, and the
 theory-conditioned component against a null distribution simulated from the
-incumbent prediction, and the three are reported separately. The four-form
-component receives a point cloud, a set of $(x, y)$ pairs with no formula, units
-or labels. It fits the best of four generic forms (power, exponential, linear
-and constant) on the interior and extrapolates the fit to the frontier, the
-remainder of the data. Two statistics measure the failure of the extrapolation.
-The split-conformal nonconformity is the mean absolute frontier residual divided
-by the 90th percentile of the interior absolute residuals. The
-extrapolation-residual ratio is the median absolute log-residual at the frontier
-divided by its interior value. Both denominators carry a one-percent relative
-floor (Methods). The theory-conditioned component computes the residuals of the
-measurements from the incumbent prediction, scaled by the declared measurement
-errors, and compares their size with the null distribution obtained by
-simulating data from that prediction on the same grid with the same errors. The
-learned component is a neural encoder trained only on point clouds from
-relations recorded before the horizon, with no example of a departure; its score
-is the distance of a new point cloud's embedding from the embeddings of the
-training relations. A conclusion about a named physical theory requires that the
-admissible laws and the observation model encode that theory's prediction for
-the measured quantity (Methods). Table~\ref{tab:principal} collects the
-principal quantitative results reported below, and Methods opens with the terms
-used.
+incumbent prediction. We report the three separately. The four-form component
+receives a point cloud and nothing else. It fits the best of four generic forms
+(power, exponential, linear and constant) on the interior and extrapolates the
+fit to the frontier, the remainder of the data. Two statistics measure the
+failure of the extrapolation. The split-conformal nonconformity is the mean
+absolute frontier residual divided by the 90th percentile of the interior
+absolute residuals, that is, a frontier residual scaled by the spread of the
+residuals where the fit is trusted. The extrapolation-residual ratio is the
+median absolute log-residual at the frontier divided by its interior value. Both
+denominators carry a one-percent relative floor (Methods).
+
+The theory-conditioned component computes the residuals of the measurements
+from the incumbent prediction, scaled by the declared measurement errors, and
+compares their size with the null distribution obtained by simulating data from
+that prediction on the same grid with the same errors. The learned component is
+a neural encoder trained only on point clouds from relations recorded before the
+horizon, with no example of a departure; its score is the distance of a new
+point cloud's embedding from the embeddings of the training relations.
+Table~\ref{tab:principal} collects the principal quantitative results reported
+below, and Methods opens with the terms used.
 
 \begin{table}[t]
 \centering
@@ -257,12 +254,15 @@ and the point-cloud encoder, which is invariant to the order of the points, is
 trained to match it. At inference the encoder receives a normalized point cloud
 and nothing else, with no formula, graph, units, date, source or anomaly label.
 Every scoring choice was frozen before any score on later physics was computed
-(Methods).
+(Methods). We report the area under the ROC curve (AUROC), the probability that
+a randomly chosen later family scores above a randomly chosen pre-1900 group,
+so that 0.5 is chance and 1 is complete separation; brackets give 95\%
+bootstrap intervals over families or groups (Methods).
 
 Against nine held-out pre-1900 groups, each a set of law families sharing one
-mechanism, the learned score separates 38 families dated 1901--1950, each traced
-to a primary citation, with AUROC 0.921 [0.833, 0.994], 17 post-1950 families
-with 0.935 [0.823, 1.000] and their 55-family union with 0.925 [0.851, 0.982]
+mechanism, the learned score separates the 38 families dated 1901--1950, each
+traced to a primary citation, with AUROC 0.921 [0.833, 0.994]. The 17 post-1950
+families give 0.935 [0.823, 1.000] and the 55-family union 0.925 [0.851, 0.982]
 (Fig.~\ref{fig:transfer}a; Fig.~\ref{fig:learned}a). The same network with its
 initial random weights and no training steps (the model before optimization)
 gives 0.589, 0.784 and 0.649 (Fig.~\ref{fig:learned}c). All four trained score
@@ -315,10 +315,10 @@ the next subsection; this leaves AUROC at 0.885 [0.778, 0.965] for the 38
 near-future families and 0.857 [0.741, 0.945] for all 55, against 0.516 and
 0.545 before optimization (Fig.~\ref{fig:learned}a,b). Within the curated
 benchmark, pre-1900 training therefore contributes beyond the difference in
-generating process. A separate
-native generator-gated set draws 1901--1950 formulas from the internal archive
-by the same generator as the pre-1900 corpus (Supplementary Note~16). On that
-set the trained model gives 0.536 [0.424, 0.643] against 0.594 [0.436, 0.756]
+generating process. In contrast, the generator-gated set draws the later
+formulas themselves from the internal archive by the same generator as the
+pre-1900 corpus, here 1901--1950 formulas (Supplementary Note~16). On that set
+the trained model gives 0.536 [0.424, 0.643] against 0.594 [0.436, 0.756]
 before optimization, so the curated and native results are not interchangeable.
 
 For the compact encoder, evaluated on a separate 192-dataset benchmark of 12
@@ -332,8 +332,10 @@ and test records. A compact encoder trained on the 205 classical records (the
 compact encoder throughout, trained with no unit information) reaches
 dataset-level AUROC 0.854 by k-nearest-neighbour distance and 0.895 by shrinkage
 Mahalanobis distance, against 0.329 and 0.288 for matched random features, and
-family-level AUROC 0.903 [0.729, 1.000]. A generic-function control encoder
-trained instead on generic smooth expressions, with identical architecture, seed, schedule, record
+family-level AUROC 0.903 [0.729, 1.000].
+
+In contrast, a generic-function control encoder that we trained on generic
+smooth expressions, with identical architecture, seed, schedule, record
 count, family-size profile and functional-signature histogram, reaches
 0.375 [0.167, 0.618]; the paired difference is 0.528 [0.264, 0.764]. Across
 three paired seeds the two ranges are 0.889--0.910 and 0.292--0.403. At the
@@ -346,29 +348,29 @@ obtained with no unit information supplied, is not carried by units.
 
 \subsection{Explicit extrapolation as independent evidence}
 
-Explicit extrapolation ranks later families above held-out pre-1900 families
-without a learned representation. The 55-family benchmark contains 55 named
+We next asked whether explicit extrapolation alone ranks later families above
+held-out pre-1900 families, without a learned representation. The 55-family
+benchmark contains 55 named
 physical-law families first valid from 1901 to 1996, each traced to a primary
 citation. Eight independently sampled and noisy 120-point records of each give
 440 formula-generated point clouds (Fig.~\ref{fig:transfer}b); eleven cited
 pre-1900 families excluded from encoder training are the controls. Both
 components are used frozen, and all quantities are reduced to one median per law
-family (Methods).
-
-The four-form component ranks later families above the earlier holdouts with
+family (Methods). The four-form component ranks later families above the
+earlier holdouts with
 AUROC 0.888 [0.800, 0.959], and the compact encoder with 0.669 [0.534, 0.798].
 An evaluation with all components frozen beforehand, over 200 formula records
 and 30 synthetic records of five breakdown families, gives 0.88, with recall 0.90
 and a false-positive rate of 0.24 at the 0.5 screening threshold, the median of
 the calibration scores, which selects cases for further testing.
 
-The ranking varies with functional form. Learned and four-form AUROCs are
+The ranking also varies with functional form. Learned and four-form AUROCs are
 0.629/0.795 for 12 later affine, power or exponential laws, 0.600/0.982 for five
 threshold or piecewise families, and 0.909/0.864 for six nonmonotone or
 oscillatory families, so the two scores respond differently to smooth familiar
 forms, to thresholds and to nonmonotone curves.
 
-When the frozen components are applied to 11 further twentieth-century cases
+When we apply the frozen components to 11 further twentieth-century cases
 (Fig.~\ref{fig:transfer}c--g), the two components diverge again: Casimir
 plates~\cite{casimir1948} give 1.000/0.892, Cherenkov emission~\cite{frank1937}
 0.823/0.965, cosmic acceleration~\cite{riess1998,perlmutter1999} 0.908/0.429 and
@@ -381,8 +383,9 @@ rate is reported below (Calibration, thresholds and the observation process).
 
 \subsection{Historical measurements at the 1899 horizon}
 
-Four historical datasets illustrate two of the four verdicts, whole-range
-incompatibility and localized incompatibility (Fig.~\ref{fig:cases}a--d); a fifth, Millikan's photoelectric
+We then scored four historical datasets that illustrate two of the four
+verdicts, whole-range incompatibility and localized incompatibility
+(Fig.~\ref{fig:cases}a--d); a fifth, Millikan's photoelectric
 measurement, is treated separately below. The four-form component's initial
 screen gives percentiles (the fraction of size-matched classical calibration
 simulations scoring lower) of 0.95 for FIRAS, 0.95 for copper specific heat,
@@ -442,8 +445,8 @@ smooth and residual-resistance models~\cite{drude1900}, EPOCH localizes a
 candidate boundary at 4.20~K, with figure-reading uncertainty and the censored
 lower values included in the observation model.
 
-In Millikan's 1916 photoelectric measurement the shape evidence and the theory
-evidence disagree~\cite{millikan1916}. Stopping potential is linear in
+In Millikan's 1916 photoelectric measurement, by contrast, the shape evidence
+and the theory evidence disagree~\cite{millikan1916}. Stopping potential is linear in
 frequency, $V_{\mathrm{stop}} = (h/e)(\nu - \nu_{0})$, with $R^{2} = 0.996$ and
 a slope that recovers $h/e$ to 0.3\% (Fig.~\ref{fig:cases}e), so the four-form
 component accepts the shape. On the same four measurements the
@@ -452,8 +455,9 @@ frequency-independent photoelectron energy. Their fitted intercept gives
 $\nu_{0} = 4.39\times10^{14}$~Hz, and because all four frequencies lie above
 $\nu_{0}$ the output is whole-range incompatibility.
 
-Independently measured Solar-System orbits recover Kepler's exponent of
-3/2~\cite{kepler1619} to four figures (1.500) and score 0.02, the four Galilean
+Conversely, independently measured Solar-System orbits recover Kepler's
+exponent of 3/2~\cite{kepler1619} to four figures (1.500) and score 0.02, the
+four Galilean
 moons give exponent 1.500 and score 0.00, and Boyle's original 1662
 pressure--volume table~\cite{boyle1662} gives exponent $-0.998$ and scores 0.38
 (Supplementary Fig.~1a--c). All three classical controls fall below the 0.5
@@ -465,7 +469,8 @@ We scored each dataset twice on the same grid and under the same error model,
 first under its old incumbent prediction and then under the historically
 successful successor, the prediction of the theory that replaced the incumbent;
 we call this advancing the horizon. The old horizon is rejected in all five
-cases (bootstrap $p = 0.001$; Fig.~\ref{fig:calibration}a). The advanced horizon
+cases (bootstrap $p = 0.001$, the finite-sample fraction of null replicates at
+least as discrepant; Fig.~\ref{fig:calibration}a). The advanced horizon
 clears four of the five: FIRAS under Planck's law~\cite{planck1901}
 ($p = 1.000$), Bertozzi under relativistic kinetic
 energy~\cite{einstein1905relativity} ($p = 0.089$), Onnes under a
@@ -499,23 +504,24 @@ the minimum relative error assumed for the reference polynomial ($p = 0.001$),
 clearing at 7.5\%. Across all five cases of this retrospective test, whose
 alternatives were chosen after the datasets were known (Supplementary
 Note~11), low-dimensional wrong-shape families remain rejected
-after Benjamini--Hochberg correction ($q \leq 0.0015$), as do dimensionally
+after Benjamini--Hochberg correction for the number of alternatives tested
+($q \leq 0.0015$), as do dimensionally
 coherent but mechanism-irrelevant physical forms (1,000 bootstrap replicates;
 $p = q = 1/1001$). Four of the five discrepancies therefore collapse under the
 successful successor prediction and under none of the tested alternatives.
 
 \subsection{Measured series at the same horizon}
 
-Frozen components applied to sixteen unmodified NIST measurement series give
-AUROC 0.62 [0.29, 0.89] for the learned score and 0.78 [0.38, 1.00] for the
-four-form score for the five post-1900 mechanism groups against the nine
-classical and metrological groups, both intervals including 0.5
-(Fig.~\ref{fig:measured} and Supplementary Note~18). A mechanism group is the
-set of series produced by one physical mechanism, a metrological group records
-a calibration artefact or instrument transfer curve, and groups are the units
-over which the AUROC is computed and resampled. Column semantics, incumbent and
-mechanism group are declared from each primary source before scoring, both
-components are used frozen, and all 128 view scores are released (Methods).
+We applied the frozen components to sixteen unmodified NIST measurement series.
+A mechanism group is the set of series produced by one physical mechanism, a
+metrological group records a calibration artefact or instrument transfer curve,
+and groups are the units over which the AUROC is computed and resampled. For
+the five post-1900 mechanism groups against the nine classical and metrological
+groups, the learned score gives AUROC 0.62 [0.29, 0.89] and the four-form score
+0.78 [0.38, 1.00], both intervals including 0.5 (Fig.~\ref{fig:measured} and
+Supplementary Note~18). Column semantics, incumbent and mechanism group are
+declared from each primary source before scoring, both components are used
+frozen, and all 128 view scores are released (Methods).
 
 \begin{figure}[t]
   \centering
@@ -553,9 +559,10 @@ highest learned scores belong to a five-year standard-resistor record and a
 
 \subsection{Calibration, thresholds and the observation process}
 
-On a 36-dataset synthetic benchmark on which every method receives the same
-inputs, the four-form component reaches AUROC 0.80 [0.64, 0.94], against 0.58
-for Gaussian-process discrepancy~\cite{rasmussen2006} and 0.77 for
+We compared the four-form component with two baselines on a 36-dataset
+synthetic benchmark on which every method receives the same inputs: it reaches
+AUROC 0.80 [0.64, 0.94], against 0.58 for Gaussian-process
+discrepancy~\cite{rasmussen2006} and 0.77 for
 split-conformal prediction (Supplementary Fig.~1d,f). Withholding the classical
 law, or both the law and the interior regime, leaves AUROC at 1.00 and 0.97.
 
@@ -576,16 +583,16 @@ heteroscedasticity (Fig.~\ref{fig:calibration}b). The reported output therefore
 includes a separate field stating whether saturation and censoring were tested,
 and they are tested explicitly for plateau and threshold cases.
 
-Boundary intervals are calibrated in the same way. Ordinary measurement
-bootstrap intervals cover only 53.9\% of true onsets at a nominal 90\% level,
-and 8.5\% for steps. Interval radii calibrated separately at each sample size on
+Boundary intervals are calibrated in the same way, and we find that ordinary
+measurement bootstrap intervals cover only 53.9\% of true onsets at a nominal
+90\% level, and 8.5\% for steps. Interval radii calibrated separately at each sample size on
 899 independent simulations raise held-out coverage to 91.3\% [89.3\%, 93.0\%]
 across 900 simulations, with family-wise coverage from 87.8\% for smooth
 turnovers to 94.4\% for kinks (Fig.~\ref{fig:calibration}c). The reported
 boundary is therefore an interval.
 
-Simulations extend the evaluation into interiors absent from the FIRAS and
-Bertozzi measurements. Blackbody radiation spanning $x = h\nu/kT$ from well
+Finally, simulations extend the evaluation into interiors absent from the
+FIRAS and Bertozzi measurements. Blackbody radiation spanning $x = h\nu/kT$ from well
 below to well above unity contains a Rayleigh--Jeans interior with
 $R^{2} = 0.99$ followed by a departure with split-conformal nonconformity 468
 and extrapolation-residual ratio 192; relativistic kinetic energy yields a
@@ -600,20 +607,38 @@ twentieth-century law families above nine held-out pre-1900 groups at AUROC
 0.925, against 0.649 for the same architecture before optimization. Regenerating
 those nine controls under the 55-family benchmark's sampling and noise process
 leaves 0.857, and the independently frozen four-form component reaches 0.888
-against 11 held-out pre-1900 families on the same 55-family benchmark.
+against 11 held-out pre-1900 families on the same 55-family benchmark. At the
+calibrated 5\% threshold the four-form component detects breakdown datasets at
+a true-positive rate of 0.271 [0.073, 0.500] with 0/96 false positives;
+ranking and calibrated detection are therefore reported as separate results.
+
+EPOCH draws on neural extrapolation~\cite{wang2023discovery,xu2021extrapolate},
+split-conformal prediction, Bayesian model discrepancy and change-point
+detection~\cite{angelopoulos2023conformal,page1954cusum,kennedy2001bayesian}, and
+shares machinery with model-independent searches in particle
+physics\cite{dagnolo2019newphysics} and with machine rediscovery of natural
+laws~\cite{guimera2020bayesian,udrescu2020feynman,schmidt2009distilling}. What
+differs is the target of inference: we test the predictive domain of a declared
+model before asking symbolic regression or theory construction for a
+replacement. Once a calibrated discrepancy exists, that search can proceed under
+a parsimony prior~\cite{he2026searchfree}, as the Bayesian machine scientist and
+AI Feynman do in recovering Planck-type expressions from blackbody-type
+data~\cite{guimera2020bayesian,udrescu2020feynman}, and physical interpretation
+then supplies the mechanism behind the fitted form.
 
 A discrepancy is interpretable only when it is tied to a named incumbent. When
-each historical dataset is scored twice on the same grid and under the same
+we score each historical dataset twice on the same grid and under the same
 error model, four of five old-horizon discrepancies disappear once the
 successful successor prediction is admitted, while wrong-shape and dimensionally
 coherent wrong-mechanism alternatives stay rejected after multiplicity
 correction. Copper heat capacity is the exception: the advanced model clears
 only when the reference-curve error floor is relaxed from 5\% to 7.5\%, so the
-copper verdict depends on the assumed floor, which therefore has to be declared
-with the incumbent rather than treated as a nuisance parameter. For a closed-form theory, advancing the horizon amounts
-to replacing the incumbent prediction and recalibrating its null distribution,
-and simulator-based references give the corresponding construction where no
-closed form exists.
+floor has to be declared with the incumbent. For a closed-form theory, advancing
+the horizon amounts to replacing the incumbent prediction and recalibrating its
+null distribution, and simulator-based references give the corresponding
+construction where no closed form exists. A conclusion about a named physical
+theory therefore requires that the admissible laws and the observation model
+encode that theory's prediction for the measured quantity (Methods).
 
 Shape novelty and predictive failure are not the same quantity. Later affine,
 power and exponential laws often stay close to one of the four generic forms
@@ -626,8 +651,9 @@ circular-interference resonance scores 0.0630 on the learned component and
 stays below the frozen four-form threshold, while superconducting flux
 creep~\cite{anderson1964fluxcreep}, which no pre-1900 theory accounts for, is
 close to logarithmic in time and sits at the bottom of the four-form ranking.
-Keeping the component scores separate preserves this distinction between an
-unusual shape and the failure of a named prediction.
+Keeping the component scores separate is what preserves this distinction
+between an unusual shape and the failure of a named prediction, and we expect
+it to matter most where a successor law keeps the incumbent's functional form.
 
 The negative class of the 1899 experiment is small: nine held-out pre-1900
 groups carry the primary learned comparison and set the width of its interval,
@@ -636,40 +662,23 @@ the generator-matched analysis was registered after the primary scores were
 opened. The native generator-gated result of 0.536 [0.424, 0.643] (Results)
 shows that the trained model is near chance when the later formulas are drawn
 by the internal generator; the generator-matched value of 0.857 controls for
-sampling within the curated benchmark only, and the two results are not
-interchangeable. On measured series
-the ranking falls to 0.62 for the learned component and 0.78 for the four-form
-component, with intervals that span chance. The two highest learned scores in
-that collection belong to a standard-resistor record and a polymer-impedance
-curve, a pattern consistent with the observation process setting the largest
-learned-score differences on measured data. Whether this is the sensitivity that
-saturation and censoring expose for the four-form component in the simulated
-instrument tests remains to be tested. At the calibrated 5\% threshold the
-four-form component detects breakdown datasets at a true-positive rate of
-0.271 [0.073, 0.500] with 0/96 false positives; ranking and calibrated
-detection are therefore reported as separate results.
-
-EPOCH draws on neural extrapolation~\cite{wang2023discovery,xu2021extrapolate},
-split-conformal prediction, Bayesian model discrepancy and change-point
-detection~\cite{angelopoulos2023conformal,page1954cusum,kennedy2001bayesian}, and
-shares machinery with model-independent searches in particle
-physics\cite{dagnolo2019newphysics} and with machine rediscovery of natural
-laws~\cite{guimera2020bayesian,udrescu2020feynman,schmidt2009distilling}. What
-differs is the target of inference: EPOCH tests the predictive domain of a
-declared model before asking symbolic regression or theory construction for a
-replacement. Once a calibrated discrepancy exists, that search can proceed under a
-parsimony prior~\cite{he2026searchfree}, as the Bayesian machine scientist and AI Feynman do in
-recovering Planck-type expressions from
-blackbody-type data~\cite{guimera2020bayesian,udrescu2020feynman}, and physical
-interpretation then supplies the mechanism behind the fitted form.
+sampling within the curated benchmark only. On measured series the ranking
+falls to 0.62 for the learned component and 0.78 for the four-form component,
+with intervals that span chance. The two highest learned scores in that
+collection belong to a standard-resistor record and a polymer-impedance curve,
+a pattern consistent with the observation process setting the largest
+learned-score differences on measured data. Whether this is the sensitivity
+that saturation and censoring expose for the four-form component in the
+simulated instrument tests remains to be tested.
 
 Large libraries of measured relations could be screened against a frozen
 horizon, and selected cases rerun with explicit measurement errors and incumbent
 predictions to obtain a model test and, where an interior is sampled, a boundary
 interval. Moving the horizon to another period requires a different dated
 corpus, admitted prediction, observation model and calibration set. The next
-experiment is to freeze the full decision path in advance and run it against
-mechanism-independent measurements whose instrument models have been audited.
+experiment we plan is to freeze the full decision path in advance and run it
+against mechanism-independent measurements whose instrument models have been
+audited.
 
 \section{Methods}
 
@@ -688,6 +697,7 @@ four-form components receive. \textit{Law family} and \textit{mechanism group}:
 the set of point clouds derived from one physical law traced to one dated
 source, and the set of measured series produced by one physical mechanism; both
 are the units over which AUROCs are computed and bootstrap intervals resampled.
+
 \textit{Four-form component}: fits the best of power, exponential, linear and
 constant forms on the interior, extrapolates to the frontier and reports the
 split-conformal nonconformity (the mean absolute frontier residual divided by
@@ -710,7 +720,9 @@ $x$-grid and with the same error model as the real measurements.
 \textit{Observation model}: the declared description of how the measurements
 were produced, comprising error distribution, censoring or saturation, and grid;
 an error floor is a minimum relative error assigned when no published covariance
-exists. \textit{Frozen}: fixed, and recorded with a time stamp and file hash,
+exists.
+
+\textit{Frozen}: fixed, and recorded with a time stamp and file hash,
 before any test data were scored. \textit{Routing rule}: the fixed rule that
 decides before scoring which component evaluates a dataset. \textit{Verdicts}:
 compatible (the incumbent fits over the measured range); localized
@@ -749,11 +761,10 @@ individual point or frontier.
 
 \subsection{The four forms and the interior and frontier}
 
-The four-form component (called the data-anchored or statistical component in
-the code and SI) draws on a fixed vocabulary of power, exponential, linear and
-constant forms. An eight-form ablation adding quadratic, cubic, square-root and
-logarithmic terms was tested and discarded, because the four-form version
-extrapolates better on validation data. Given a point cloud, a fixed rule takes
+The four-form component draws on a fixed vocabulary of power, exponential,
+linear and constant forms. We tested and discarded an eight-form ablation
+adding quadratic, cubic, square-root and logarithmic terms, because the
+four-form version extrapolates better on validation data. Given a point cloud, a fixed rule takes
 the candidate interior to be the contiguous regime in which one admitted form
 fits with high internal $R^{2}$, and the frontier to be the complementary
 region. The search runs from both ends and fit quality decides whether the low-
@@ -789,7 +800,8 @@ treated as the same law during training, spanning 64 historical-family tags.
 Held-out calibration and internal sets contain 11,648 and 62,336 clouds from 91
 and 487 formulas. Reducing these to scientific groups leaves nine
 historical-family groups, which form the internal control class for every AUROC
-reported here. The model trains for 30 epochs at batch size 1,024 under a
+reported here; these nine groups are the historical-family groups, or frozen
+relation groups, of the SI and code. The model trains for 30 epochs at batch size 1,024 under a
 checkpoint rule fixed before any temporal evaluation. Its learned score (a
 one-class score in the vocabulary of anomaly detection) averages four calibrated
 ranks, each transformed by its own pre-1900 calibration empirical cumulative
@@ -803,12 +815,11 @@ replicates. The same network before optimization passes through the identical
 pipeline. Code, configuration, score construction, seed and checkpoint rule were
 frozen before the first score on later physics was computed.
 
-For the generator-matched analysis, all nine internal control families were
-regenerated with the 55-family benchmark's point count, x-jitter, repeat count,
-noise range and heteroscedastic profile, while the checkpoint, reference
-memories, calibration distribution function, score and aggregation were left
-unchanged. The same analysis was then repeated with the checkpoint before
-optimization. A separate 96,064-cloud generator-gated set, in which later
+For the generator-matched analysis we regenerated all nine internal control
+families with the 55-family benchmark's point count, x-jitter, repeat count,
+noise range and heteroscedastic profile, leaving the checkpoint, reference
+memories, calibration distribution function, score and aggregation unchanged.
+We then repeated the same analysis with the checkpoint before optimization. A separate 96,064-cloud generator-gated set, in which later
 formulas are drawn from the internal archive by the same generator as the
 pre-1900 corpus instead of from the citation-anchored registry, and the
 cumulative pre-1950 pilot are reported in Supplementary Note~16.
@@ -823,8 +834,8 @@ resampled or rescaled copy of a record or of a measured series. Families are
 sampled without replacement so that repeated laws cannot become false
 contrastive negatives, and an auxiliary head predicts functional signatures. No
 breakdown, saturation, step, kink, splice or crossover example enters this
-optimization. Matched models are trained with SI dimensions and with zeroed
-dimension metadata, and the zero-unit model is primary for the synthetic
+optimization. We trained matched models with SI dimensions and with zeroed
+dimension metadata; the zero-unit model is primary for the synthetic
 benchmark. Frozen k-nearest-neighbour and shrinkage-Mahalanobis learned scores
 are compared against a matched random encoder. Leave-family-out calibration
 holds out each of the 40 training families in full, reduces the eight views
@@ -838,7 +849,7 @@ architecture, seed, batch size, augmentation, auxiliary objective and 1,000-step
 schedule but is trained on 205 point clouds
 from globally valid smooth expressions in 40 pseudo-families, matched to the
 historical set in record count, family-size profile and the histogram of
-eight-bit functional signatures. Both encoders are retrained from scratch under
+eight-bit functional signatures. We retrained both encoders from scratch under
 three paired initialization and augmentation seeds while the evaluation-view
 seed and the 24 breakdown and classical families stay fixed, and we report the
 observed range and sample standard deviation across those runs without altering
@@ -895,10 +906,10 @@ polynomials for six materials, Onnes resistance values including upper limits,
 Millikan sodium stopping potentials and Solar-System orbital constants. Each case
 is stored as a machine-readable record of the test, recording input status,
 model set, fitted parameters, observation model, fit subset, adaptive procedure,
-decision rule, output and provenance. Old- and advanced-horizon null
-distributions are evaluated on the same $x$-grid, and explicit error floors
-stand in for unavailable covariance and for digitization uncertainty and are
-varied in sensitivity analysis.
+decision rule, output and provenance. We evaluate old- and advanced-horizon
+null distributions on the same $x$-grid; explicit error floors stand in for
+unavailable covariance and for digitization uncertainty, and we vary them in
+sensitivity analysis.
 
 To establish that a collapse in the discrepancy is specific to the successful
 successor,
@@ -912,8 +923,8 @@ units are retained in the machine-readable output.
 
 \subsection{Measured series}
 
-Sixteen series are taken unmodified from the NIST Dataplot and Statistical
-Reference Dataset collections and bound to their SHA-256 hashes. A registry
+We took sixteen series unmodified from the NIST Dataplot and Statistical
+Reference Dataset collections and bound them to their SHA-256 hashes. A registry
 declares, for each series, the numeric block, the abscissa and response columns,
 the 1899 incumbent, the mechanism group and whether the mechanism was known
 before 1899, all before any score is computed. Where a file header and its
@@ -947,8 +958,8 @@ $n = 40$, 80 and 160.
 
 \subsection{Real-measurement inventory}
 
-Forty-four files were downloaded from the NIST Dataplot and Statistical Reference
-Dataset collections and their SHA-256 hashes frozen. The inventory holds 20
+We downloaded forty-four files from the NIST Dataplot and Statistical Reference
+Dataset collections and froze their SHA-256 hashes. The inventory holds 20
 instrument controls, 11 classical controls, six controls whose post-1900
 mechanism is known and seven horizon cases. A dataset is promoted into the evaluation registry only once its
 column semantics, incumbent prediction, measurement model, provenance and

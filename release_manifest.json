@@ -909,12 +909,12 @@
       "sha256": "0edcccd2435ad1121276ef522aedbb91c0f2555e1b551537f3ab7e0cca3e6f55"
     },
     "paper/manuscript.pdf": {
-      "bytes": 6006061,
-      "sha256": "6b18879ac0b9d67154021caac0ea0f8cdda72bb72645472c8290448578960e14"
+      "bytes": 6007026,
+      "sha256": "bacd1df097a66268d839a9991caca9548009ef75572384db1b4a811624265854"
     },
     "paper/manuscript.tex": {
-      "bytes": 60805,
-      "sha256": "fea1901f484bd12911fdf1539c654c2a30d24794e342e76e1005ac4efebde398"
+      "bytes": 61037,
+      "sha256": "f71d8a23daa8d7014807122803e08de1175823ae71b69fc5a0c25dbc1174b224"
     },
     "paper/neurips_2026.sty": {
       "bytes": 13462,
