@@ -42,27 +42,26 @@
 \begin{abstract}
 Scientific models have finite domains, normally established only in
 hindsight, once a successor theory explains the failure. Machine-learning
-systems for scientific data are optimized to interpolate, to predict forward, or
-to recover a governing expression; none takes a declared body of physical
-knowledge as the object under test. Here we show that the predictive boundary of
-a body of physical knowledge can be tested from that knowledge alone. We train a
-model only on physical relations recorded before a chosen date, the knowledge
-horizon, give it no later formula and no example of a departure, and require it
-to rank relations that the earlier knowledge cannot account for above relations
-that it can. With the horizon at 1899, a neural encoder trained on pre-1900 laws
-alone, and given at inference only a point cloud with no formula, units or
-labels, ranks 55 twentieth-century law families above nine held-out pre-1900
-groups with an area under the ROC curve (AUROC) of 0.925, against 0.649 for the
-same network before optimization. A second test, fixed in advance, fits four
-simple forms where a pre-1900 form fits the data and measures how far the
-remaining data depart from the extrapolation; it reaches 0.888 against 11
+systems for scientific data interpolate, predict forward or recover a governing
+expression; none takes a declared body of physical knowledge as the object under
+test. Here we show that the predictive boundary of a body of physical knowledge
+can be tested from that knowledge alone. We admit only relations recorded
+before a chosen date, the knowledge horizon, supply no later formula and no
+example of a departure, and ask whether relations the earlier knowledge cannot
+account for rank above those it can. At an 1899 horizon, a neural encoder
+trained on pre-1900 laws alone, and given at inference only a point cloud
+without formula, units or labels, ranks 55 twentieth-century law families above
+nine held-out pre-1900 groups with an area under the ROC curve (AUROC) of
+0.925, against 0.649 before optimization. A second test, fixed in advance, fits
+four simple forms to the part of each curve they describe and measures the
+departure of the rest from the extrapolation; it reaches 0.888 against 11
 held-out pre-1900 families with no learned representation. When a named
-pre-1900 law, the incumbent, is tested directly against historical
-measurements, the discrepancy is tied to that law rather than to the data: on
-five such measurements it collapses under the successful successor prediction
-in four cases and under none of the five wrong-shape or five wrong-mechanism
-alternatives. The same construction applies to any period with a dated corpus,
-an admitted prediction and a calibration set.
+pre-1900 law, the incumbent, is tested against historical measurements, the
+discrepancy is tied to that law rather than to the data: on five such
+measurements it collapses under the successful successor prediction in four
+cases and under none of ten wrong-shape or wrong-mechanism alternatives. The
+same construction applies to any period with a dated corpus, an admitted
+prediction and a calibration set.
 \end{abstract}
 
 \section{Introduction}
