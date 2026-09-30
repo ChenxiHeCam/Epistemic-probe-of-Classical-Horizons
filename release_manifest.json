@@ -13,8 +13,8 @@
       "sha256": "f5c4a9767034f55ca18bef1df154cc9f81eeea5a97701bbc7832c8b37519e287"
     },
     "README.md": {
-      "bytes": 6136,
-      "sha256": "d618a47aff0b346333cd6de24e7969cf10706ceb76e103a521f9dd4234ec5b2a"
+      "bytes": 10226,
+      "sha256": "6bfe4a5ae1dba678f42b424c44d2632a450d0654120fd1cc4ab01a1d5d2fefb2"
     },
     "build_release_manifest.py": {
       "bytes": 2114,
@@ -181,8 +181,8 @@
       "sha256": "a1ceb08a5a33c36d139d092de89f392000c724eecfc88df5c1e8293545ae9172"
     },
     "data/real_measurement_benchmark/README.md": {
-      "bytes": 1384,
-      "sha256": "b4e0b23be058c0806ed6bf92570ac358fce1f12dee338ab77777b0a2231cef74"
+      "bytes": 1760,
+      "sha256": "b2a0f57378c7ae09d1991d23f6cf056cccdc93f5e5d462512b58dbd1cfdcf952"
     },
     "data/real_measurement_benchmark/audit_downloads.py": {
       "bytes": 4114,
@@ -773,16 +773,16 @@
       "sha256": "59165482e4a293ea0550f8fd599ca3d24bc0933bb9394ae32abbaf2bfc89ff3f"
     },
     "learned_v3/README.md": {
-      "bytes": 1345,
-      "sha256": "4de9d5e715f53b67df7f8b1221596715b657992ec1d94b3ae7ad2dfce8c47333"
+      "bytes": 2281,
+      "sha256": "17f9088bbf972dfe7ee5f705e5b0e3b89eed193131f3ae35e2eb5a93f348bf84"
     },
     "learned_v3/compare_epoch_clock_v3.py": {
       "bytes": 5344,
       "sha256": "df7750993c1390c581c7071da0c43a0597a4c04bcdb9d2f86c471bf40df9f46c"
     },
     "learned_v3/configs/README.md": {
-      "bytes": 1812,
-      "sha256": "2dfe7b8fde0e344fb6aec338059e49b994ba66865b0d25d15325dd3822a14006"
+      "bytes": 2566,
+      "sha256": "0f49f168740a4e5a732a49fa357683125a90f63db548a90da97b914082f00828"
     },
     "learned_v3/configs/test_both.json": {
       "bytes": 1429,
@@ -877,8 +877,8 @@
       "sha256": "2e28b20bc3114ccc80e50fc63ae482ce75cd7ccb59665e94b3c00e0baf08f2a7"
     },
     "models/README.md": {
-      "bytes": 1117,
-      "sha256": "c65add98c5d096b7e3ebfb35564a9d23c4ba8ee80d0667743a923a35726354a3"
+      "bytes": 1667,
+      "sha256": "e6b1432337d21eb75e406f506372d16fc69f5784df4c07363c48d55af2338510"
     },
     "models/__init__.py": {
       "bytes": 0,
