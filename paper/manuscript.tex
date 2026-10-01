@@ -91,9 +91,7 @@ against a given dataset is the incumbent. Here we make the knowledge horizon an
 explicit input and test it directly with EPOCH (Epistemic Probe of Classical
 Horizons). Every test states in advance the laws it may fit, the error model,
 the data it fits, every data-dependent choice and the statistic and error rate
-it reports (Methods). It returns one of four verdicts: compatible over the
-measured range; localized incompatibility, with an interval for the boundary;
-whole-range incompatibility; or abstention.
+it reports (Methods). It returns one of four verdicts: compatible over the measured range; localized incompatibility, with an estimate of where the incumbent stops fitting; whole-range incompatibility; or abstention.
 
 Each test reports three kinds of evidence separately, never as a single
 averaged score. The learned component is a neural encoder trained only on
@@ -120,18 +118,13 @@ above pre-1900 families withheld from training, and we find that the four-form
 component reaches the same ranking without any trained network. On five
 historical datasets we find that the discrepancy with the pre-1900 prediction disappears under the successor prediction in four of the five and under no
 wrong-shape or wrong-mechanism alternative. EPOCH therefore tests the
-predictive domain of a dated body of knowledge without being told where that
-domain ends, and the same construction can be applied to any period for which a
-dated corpus, an admitted prediction, an observation model and a calibration
-set exist.
+predictive domain of a dated body of knowledge without being told where that domain ends. The same construction can be applied to any period for which a dated corpus, an admitted prediction, an observation model and a calibration set exist.
 
 \section{Results}
 
 \subsection{The object of a boundary test}
 
-EPOCH returns one of four verdicts for a set of measurements and a stated set of laws it may fit: compatible over the measured range; localized
-incompatibility, with an interval for the boundary; whole-range incompatibility,
-with no identifiable boundary; or abstention, when the evidence is insufficient
+EPOCH returns one of four verdicts for a set of measurements and a stated set of laws it may fit: compatible over the measured range; localized incompatibility, with an estimate of where the incumbent stops fitting; whole-range incompatibility, with no identifiable boundary; or abstention, when the evidence is insufficient
 (Fig.~\ref{fig:concept}). Which component produces the verdict is decided by a rule fixed in advance. The four-form component is used when the measurements contain a
 contiguous stretch, the interior, over which a pre-1900 law fits well. The
 theory-conditioned component is used otherwise, when an incumbent prediction and
@@ -213,8 +206,7 @@ Four-form AUROC 0.888 [0.800, 0.959]; compact encoder 0.669 [0.534, 0.798] \\
 Compact encoder trained on pre-1900 laws vs generic-function control encoder,
 12 breakdown and 12 classical families &
 Family AUROC 0.903 [0.729, 1.000] vs 0.375 [0.167, 0.618] \\
-Evaluation at the 0.5 screening threshold, 200 formula datasets and 30
-synthetic breakdowns &
+Extrapolation test with its decision rule set in advance, 200 pre-1900 formula datasets and 30 synthetic breakdowns, at the 0.5 screening threshold &
 AUROC 0.88 \\
 Four-form component at the calibrated threshold, 12 breakdown and 12 classical
 families &
@@ -229,7 +221,7 @@ metrological groups &
 Learned AUROC 0.62 [0.29, 0.89]; four-form AUROC 0.78 [0.38, 1.00]; both
 intervals include 0.5 \\
 Boundary localization on 900 held-out simulations &
-90\% interval coverage 91.3\% [89.3\%, 93.0\%] \\
+90\% interval coverage 91.3\% [89.3\%, 93.0\%] (Wilson interval) \\
 Simulated instrument effects at maximum severity &
 False-positive rate 0.40 for saturation; 0.63 for censoring; $\leq 0.11$ for all
 other tested effects \\
@@ -327,7 +319,7 @@ Mahalanobis distance, against 0.329 and 0.288 for matched random features, and
 family-level AUROC 0.903 [0.729, 1.000].
 
 In contrast, a generic-function control encoder that we trained on generic
-smooth expressions, with identical architecture, seed, schedule, dataset count, family-size profile and functional-signature histogram, reaches
+smooth expressions, with identical architecture, seed, schedule, dataset count, family-size profile and functional-signature histogram (the elementary function types each formula contains), reaches
 0.375 [0.167, 0.618]; the paired difference is 0.528 [0.264, 0.764]. Across
 three paired seeds the two ranges are 0.889--0.910 and 0.292--0.403. At the threshold fixed on held-out families the encoder detects 2/12 breakdown families with no false positive among the classical controls, and this count is not stable across the three
 seeds (2/12, 8/12 and 1/12; Supplementary Note~8). A deformation control that
@@ -345,7 +337,7 @@ citation. Eight noisy 120-point samples of each give
 pre-1900 families excluded from encoder training are the controls. Each law family is scored by the median over its point clouds (Methods). The four-form component ranks later families above the
 earlier holdouts with
 AUROC 0.888 [0.800, 0.959], and the compact encoder with 0.669 [0.534, 0.798].
-A second evaluation, over 200 formula datasets and 30 synthetic datasets of five breakdown families, gives 0.88, with recall 0.90
+An earlier evaluation of the extrapolation test, with its decision rule set before any label was seen, over 200 pre-1900 formula datasets and 30 synthetic datasets of five breakdown families, gives AUROC 0.88, with recall 0.90
 and a false-positive rate of 0.24 at the 0.5 screening threshold, the median of
 the calibration scores, which selects cases for further testing.
 
@@ -398,10 +390,7 @@ The COBE-FIRAS monopole spectrum of the cosmic microwave
 background~\cite{fixsen1996firas} has 43 points and, at $T = 2.725$~K, samples
 $x = h\nu/kT$ from 1.2 to 11.3, entirely outside the regime $x \ll 1$ in which
 the Rayleigh--Jeans law~\cite{rayleigh1900,jeans1905} holds. The incumbent
-prediction, intensity proportional to $\nu^{2}$, over-predicts the measured
-intensity above the peak by 475-fold to 3,000-fold depending on the window over
-which the law is fitted; with the 20\% window the bootstrap interval is
-[1,500, 2,400]. No interior is present, and the verdict is whole-range
+prediction, intensity proportional to $\nu^{2}$, over-predicts the measured intensity above the peak by 475-fold to 3,000-fold, depending on how many of the lowest frequencies are used to fit the law. Fitting to the lowest 20\% of frequencies gives a bootstrap interval of [1,500, 2,400]. No interior is present, and the verdict is whole-range
 incompatibility with the Rayleigh--Jeans prediction.
 
 Bertozzi's electron measurements\cite{bertozzi1964} report kinetic energy against
@@ -448,10 +437,7 @@ screening threshold.
 
 \subsection{Advancing the horizon on the same measurements}
 
-We scored each dataset twice on the same grid and under the same error model,
-first under its old incumbent prediction and then under the historically
-successful successor, the prediction of the theory that replaced the incumbent;
-we call this advancing the horizon. The pre-1900 prediction is rejected in all five cases (bootstrap $p = 0.001$; Methods; Fig.~\ref{fig:calibration}a). The successor prediction is not rejected in four of the five: FIRAS under Planck's law~\cite{planck1901}
+We scored each dataset twice on the same grid and under the same error model: first under its incumbent prediction, then under the prediction of the theory that historically replaced it. We call this advancing the horizon. The pre-1900 prediction is rejected in all five cases (bootstrap $p = 0.001$; Methods; Fig.~\ref{fig:calibration}a). The successor prediction is not rejected in four of the five: FIRAS under Planck's law~\cite{planck1901}
 ($p = 1.000$), Bertozzi under relativistic kinetic
 energy~\cite{einstein1905relativity} ($p = 0.089$), Onnes under a
 superconducting transition model ($p = 1.000$) and Millikan under the
@@ -479,13 +465,7 @@ $7.3\times10^{10}$.
 Copper heat capacity, however, is the exception and is sensitive to the error
 model. A Debye-plus-electronic form~\cite{debye1912} reduces the discrepancy by
 $3.86\times10^{3}$ but remains rejected under a 5\% reference-curve error floor,
-the minimum relative error assumed for the reference polynomial ($p = 0.001$), and passes at 7.5\%. Across all five cases of this retrospective test, whose
-alternatives were chosen after the datasets were known (Supplementary
-Note~11), low-dimensional wrong-shape families remain rejected
-after Benjamini--Hochberg correction for the number of alternatives tested
-($q \leq 0.0015$), as do dimensionally
-coherent wrong-mechanism forms (1,000 bootstrap replicates;
-$p = q = 1/1001$). Four of the five discrepancies therefore collapse under the
+the minimum relative error assumed for the reference polynomial ($p = 0.001$), and passes at 7.5\%. Across all five cases, low-dimensional wrong-shape families remain rejected after Benjamini--Hochberg correction for the number of alternatives tested ($q \leq 0.0015$), as do dimensionally coherent wrong-mechanism forms (1,000 bootstrap replicates; $p = q = 1/1001$). These alternatives were chosen after the datasets were known, so this is a retrospective test (Supplementary Note~11). Four of the five discrepancies therefore collapse under the
 successful successor prediction and under none of the tested alternatives.
 
 \subsection{Measured series at the same horizon}
@@ -537,8 +517,7 @@ We compared the four-form component with two baselines on a 36-dataset
 synthetic benchmark on which every method receives the same inputs: it reaches
 AUROC 0.80 [0.64, 0.94], against 0.58 for Gaussian-process
 discrepancy~\cite{rasmussen2006} and 0.77 for
-split-conformal prediction (Supplementary Fig.~1d,f). Withholding the classical
-law, or both the law and the interior regime, leaves AUROC at 1.00 and 0.97.
+split-conformal prediction (Supplementary Fig.~1d,f). Withholding the classical law, or both the law and the interior regime, leaves AUROC at 1.00 and 0.97 on the benchmark phenomena (Supplementary Note~3).
 
 We fixed the four-form threshold separately at $n = 5$, 9, 43 and 120 on
 classical calibration simulations and evaluated it over 12 breakdown and 12
@@ -556,19 +535,15 @@ x-axis error, 11\% for outliers, 2.5\% for correlated noise and 0\% for
 heteroscedasticity (Fig.~\ref{fig:calibration}b). The output therefore states whether saturation and censoring were tested, and they are tested explicitly for plateau and threshold cases.
 
 We calibrate boundary intervals in the same way. Ordinary measurement bootstrap
-intervals cover only 53.9\% of true onsets at a nominal 90\% level, and 8.5\%
-for steps. Interval radii calibrated separately at each sample size on 899
+intervals cover only 53.9\% of true onsets at a nominal 90\% level (358 development simulations), and 8.5\% for steps. Interval radii calibrated separately at each sample size on 899
 independent simulations raise held-out coverage to 91.3\% [89.3\%, 93.0\%]
 (Wilson interval) across 900 simulations, with family-wise coverage from 87.8\% for smooth
-turnovers to 94.4\% for kinks (Fig.~\ref{fig:calibration}c). The reported
-boundary is therefore an interval.
+turnovers to 94.4\% for kinks (Fig.~\ref{fig:calibration}c). For these simulated cases the reported boundary is therefore an interval.
 
 Finally, simulations extend the evaluation into interiors absent from the
 FIRAS and Bertozzi measurements. Blackbody radiation spanning $x = h\nu/kT$ from well
 below to well above unity contains a Rayleigh--Jeans interior with
-$R^{2} = 0.99$ followed by a departure with split-conformal nonconformity 468
-and extrapolation-residual ratio 192; relativistic kinetic energy yields a
-localized boundary at $0.86c$, and simulated photoelectric voltage localizes the
+$R^{2} = 0.99$ followed by a departure with split-conformal nonconformity 468 and extrapolation-residual ratio 192. Relativistic kinetic energy yields a localized boundary at $0.86c$, and simulated photoelectric voltage localizes the
 frequency threshold.
 
 \section{Discussion}
@@ -635,15 +610,12 @@ the training corpus the trained model gives 0.536 [0.424, 0.643] (Results),
 near chance. On measured series the ranking falls to 0.62 for the learned
 component and 0.78 for the four-form component, with intervals that span
 chance. The two highest learned scores in that collection belong to a
-standard-resistor record and a polymer-impedance curve, a pattern consistent with the observation process setting the largest learned-score differences on measured data; whether this is the sensitivity
-that saturation and censoring expose for the four-form component in the
-simulated instrument tests remains to be tested.
+standard-resistor record and a polymer-impedance curve, a pattern consistent with the observation process setting the largest learned-score differences on measured data. Whether this is the sensitivity that saturation and censoring expose for the four-form component in the simulated instrument tests remains to be tested.
 
 Large libraries of measured relations could be screened against a fixed horizon, and selected cases rerun with explicit measurement errors and incumbent
-predictions to obtain a model test and, where an interior is sampled, a boundary
-interval. Moving the horizon to another period requires a different dated
+predictions to obtain a model test and, where an interior is sampled, a boundary estimate. Moving the horizon to another period requires a different dated
 corpus, admitted prediction, observation model and calibration set. The next
-experiment we plan is to fix the full decision procedure in advance and run it against mechanism-independent measurements whose instrument models have been characterized.
+experiment we plan is to fix the full decision procedure in advance and run it against measurements selected without regard to whether their physics is pre- or post-1900, and whose instrument models have been characterized.
 
 \section{Methods}
 
@@ -688,9 +660,7 @@ exists.
 All thresholds, weights and scoring rules were fixed, and their files
 time-stamped and hashed, before any test data were scored; which component
 evaluates a dataset is decided by a rule fixed before scoring. \textit{Verdicts}:
-compatible (the incumbent fits over the measured range); localized
-incompatibility (the incumbent fits an interior and fails beyond a boundary
-reported with an interval); whole-range incompatibility (the incumbent fails
+compatible (the incumbent fits over the measured range); localized incompatibility (the incumbent fits an interior and fails beyond an estimated boundary); whole-range incompatibility (the incumbent fails
 everywhere sampled); abstention (the inputs do not support a test).
 \textit{Advancing the horizon}: rescoring the same measurements on the same
 grid and with the same error model after replacing the incumbent prediction by
@@ -790,8 +760,7 @@ The generic-function control encoder is a second encoder trained without unit in
 architecture, seed, batch size, augmentation, auxiliary objective and 1,000-step
 schedule but is trained on 205 point clouds
 from globally valid smooth expressions in 40 pseudo-families, matched to the
-historical set in dataset count, family-size profile and the histogram of
-eight-bit functional signatures. We retrained both encoders from scratch under
+historical set in dataset count, family-size profile and the histogram of eight-bit functional signatures, each bit recording whether one elementary function type (exponential, logarithm, sine, square root, power, inverse power, polynomial terms or hyperbolic) appears in the formula. We retrained both encoders from scratch under
 three paired initialization and augmentation seeds while the resampling seed and the 24 breakdown and classical families stay fixed, and we report the
 observed range and sample standard deviation across those runs. Finally, each of 46 held-out point clouds is paired
 with saturation, step, kink, splice, roll-off and crossover deformations that
@@ -831,7 +800,7 @@ twelve of the post-1900 laws deliberately overlap the affine, power or exponenti
 We analyse the published COBE-FIRAS monopole spectrum with its pointwise errors,
 five Bertozzi values digitized from the 1964 report, NIST specific-heat reference
 polynomials for six materials, Onnes resistance values including upper limits,
-Millikan sodium stopping potentials and Solar-System orbital constants. For each case we record the model set, fitted parameters, observation model, fit subset, adaptive choices, decision rule and output. We evaluate old- and advanced-horizon
+Millikan sodium stopping potentials and Solar-System orbital constants. The incumbent predictions are the classical predictions that follow from physics available before 1900; where the standard statement of a prediction was published later, as for the Rayleigh--Jeans form in 1900 and 1905 and the Drude model in 1900, we cite that statement as the reference and do not use it as a training source. For each case we record the model set, fitted parameters, observation model, fit subset, adaptive choices, decision rule and output. We evaluate old- and advanced-horizon
 null distributions on the same $x$-grid; explicit error floors stand in for
 unavailable covariance and for digitization uncertainty, and we vary them in
 sensitivity analysis.
