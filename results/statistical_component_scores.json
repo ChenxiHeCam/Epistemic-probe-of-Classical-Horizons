@@ -1,0 +1,28 @@
+{
+  "script": "engine/stat_final.py",
+  "cases": {
+    "FIRAS [break]": 0.948849104859335,
+    "specific heat Cu [break]": 0.948849104859335,
+    "Bertozzi [break]": 0.6556122448979592,
+    "Onnes [break]": 0.6556122448979592,
+    "Kepler control": 0.02040816326530612,
+    "Boyle 1662 control (25 real pts)": 0.3836317135549872,
+    "Galilean moons control (4 real pts)": 0.0
+  },
+  "suite_180": {
+    "n": 180,
+    "auroc": 0.6244444444444445
+  },
+  "formula_corpus_200_30": {
+    "n_classical_scored": 199,
+    "n_departures_scored": 30,
+    "auroc": 0.8842546063651592,
+    "threshold": 0.5,
+    "recall": 0.9,
+    "fpr": 0.24120603015075376,
+    "tp": 27,
+    "fn": 3,
+    "fp": 48,
+    "tn": 151
+  }
+}

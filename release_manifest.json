@@ -513,8 +513,8 @@
       "sha256": "82715ef88f560b3b4ed7aff7d5629805d1cb2630e5ec4e6957ee02e2899a196c"
     },
     "engine/stat_final.py": {
-      "bytes": 8691,
-      "sha256": "153fa7febf298dbd8d691ec7e339831b45f7d7383173094ed090a1504a5533af"
+      "bytes": 9413,
+      "sha256": "8d650ea053d945c0a30b95129041333a77083084c078b380b311cbb225ff3224"
     },
     "engine/strict_evidence_audit.py": {
       "bytes": 8996,
@@ -1001,12 +1001,12 @@
       "sha256": "0edcccd2435ad1121276ef522aedbb91c0f2555e1b551537f3ab7e0cca3e6f55"
     },
     "paper/manuscript.pdf": {
-      "bytes": 2616041,
-      "sha256": "a4430da0d408e1276d5770ec464761744c644e11f38a786a805b8b8197d37d0c"
+      "bytes": 2616073,
+      "sha256": "d27ea8c2a696d9ca96b9237cd8212afd1523e11dd38904fd9a8cc836762b47c6"
     },
     "paper/manuscript.tex": {
-      "bytes": 44835,
-      "sha256": "9d7c9c25fe162bbb47394ef15ef51194e7366243a1d3471fa8d963e7b77b21b2"
+      "bytes": 44908,
+      "sha256": "3041e36c75229d884f115059f9bdf67edaec6dbe635aa9d1cf2d295b10ab19ea"
     },
     "paper/neurips_2026.sty": {
       "bytes": 13462,
@@ -1017,12 +1017,12 @@
       "sha256": "3b2aa27dae1ea3ff95808f46037f2ffd6cc411a6521799155b61d778018785db"
     },
     "paper/supplementary.pdf": {
-      "bytes": 3916517,
-      "sha256": "02f195a99f3096f9c34b0065bb7633c17604da09290587d500613b9ec70992ab"
+      "bytes": 3916614,
+      "sha256": "96e50611a47b2b9611ba71eaa512cb7857c7de1bc6af500de106626dff7cfd51"
     },
     "paper/supplementary.tex": {
-      "bytes": 73781,
-      "sha256": "9a0f611dea3c76cf6e1cfc07d3e21952347792047139af5ae701a33a6d8163d3"
+      "bytes": 73887,
+      "sha256": "a8664773775f128ce7e282173f305d87ed5e5e93855e7c4ec6be8ab1b20bebea"
     },
     "protocols/CONFIRMATORY_PROTOCOL_TEMPLATE.md": {
       "bytes": 6357,
@@ -1247,6 +1247,10 @@
     "results/specific_heat_error_sensitivity.json": {
       "bytes": 2357,
       "sha256": "63acd29917318fdb4cbefe83703e85650f538c0d07e69cf866708d43a82e4795"
+    },
+    "results/statistical_component_scores.json": {
+      "bytes": 708,
+      "sha256": "4f20ed99ae57bf1e141a324b70177baab1d53d4d21d337116d664b7df327ecd6"
     },
     "results/strict_evidence.json": {
       "bytes": 1729,

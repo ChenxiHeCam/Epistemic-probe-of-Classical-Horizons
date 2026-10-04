@@ -1,6 +1,7 @@
 """Statistical component (leakage-free) final numbers on all real cases + 3 real controls,
 with classical-only, size-matched calibration."""
 import sys,json,warnings,numpy as np; warnings.filterwarnings('ignore')
+from pathlib import Path
 import legacy_paths  # repository-relative paths and external inputs
 from scipy.optimize import curve_fit
 SC=legacy_paths.SC
@@ -70,11 +71,13 @@ To=np.array([4.00,4.10,4.15,4.19,4.21,4.25,4.30,4.35,4.40]); Ro=np.array([1e-5,1
 ak=np.array([0.387,0.723,1.0,1.524,5.203,9.537,19.19,30.07]); Pk=np.array([0.241,0.615,1.0,1.881,11.86,29.46,84.01,164.8])
 boyle=np.array(json.load(open(SC+'boyle_1662.json')))
 gm_a=np.array([421.8,671.1,1070.4,1882.7]); gm_P=np.array([1.769,3.551,7.155,16.689])
+OUT_JSON = {'script': 'engine/stat_final.py', 'cases': {}}
 print('=== STATISTICAL component (leakage-free, classical-only size-matched calibration) ===')
 for name,x,y,tr in [('FIRAS [break]',nu,I,1),('specific heat Cu [break]',Tc,Cp,1),('Bertozzi [break]',KEb,b2,1),
  ('Onnes [break]',To,Ro,1),('Kepler control',ak,Pk,0),('Boyle 1662 control (25 real pts)',boyle[:,0],boyle[:,1],0),
  ('Galilean moons control (4 real pts)',gm_a,gm_P,0)]:
     v=score(np.asarray(x,float),np.asarray(y,float))
+    OUT_JSON['cases'][name]=None if v is None else float(v)
     print('  %-36s score=%s  %s'%(name,'%.2f'%v if v is not None else 'n/a','FLAG' if (v or 0)>0.5 else 'classical'))
 
 # ---------- suite + blind corpus with the improved statistical engine ----------
@@ -104,6 +107,7 @@ for l,fns in [(0,CLASS),(1,BREAK)]:
             r=np.random.RandomState(s); xx=np.sort(r.uniform(0.1,6,200)); yy=fn(xx)*(1+0.02*r.randn(200))
             v=score(xx,yy)
             if v is not None: sc.append(v); lab.append(l)
+OUT_JSON['suite_180']={'n':len(lab),'auroc':float(roc_auc_score(np.array(lab),np.array(sc)))}
 print('\nsuite (n=%d) statistical AUROC = %.3f'%(len(lab),roc_auc_score(np.array(lab),np.array(sc))))
 import re as _re
 exec(open(legacy_paths.CORPUS_BUILDER,encoding='utf-8').read().split('if __name__')[0])
@@ -145,3 +149,9 @@ sc2=np.array(sc2);lab2=np.array(lab2)
 tp=((sc2>0.5)&(lab2==1)).sum(); fn_=((sc2<=0.5)&(lab2==1)).sum(); fp=((sc2>0.5)&(lab2==0)).sum(); tn=((sc2<=0.5)&(lab2==0)).sum()
 print('blind corpus statistical AUROC = %.3f  | recall=%.2f FPR=%.2f (TP=%d FN=%d FP=%d TN=%d)'%(
  roc_auc_score(lab2,sc2),tp/max(tp+fn_,1),fp/max(fp+tn,1),tp,fn_,fp,tn))
+OUT_JSON['formula_corpus_200_30']={'n_classical_scored':int((lab2==0).sum()),'n_departures_scored':int((lab2==1).sum()),
+ 'auroc':float(roc_auc_score(lab2,sc2)),'threshold':0.5,'recall':float(tp/max(tp+fn_,1)),'fpr':float(fp/max(fp+tn,1)),
+ 'tp':int(tp),'fn':int(fn_),'fp':int(fp),'tn':int(tn)}
+_out=Path(__file__).resolve().parents[1]/'results'/'statistical_component_scores.json'
+_out.write_text(json.dumps(OUT_JSON,indent=2)+'\n',encoding='utf-8',newline='\n')
+print('wrote',_out)
