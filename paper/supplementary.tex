@@ -1,4 +1,4 @@
-% Supplementary Information
+% Supplemental Material
 % Compile with: pdflatex supplementary.tex   (twice)
 \documentclass{article}
 
@@ -24,12 +24,14 @@
 \DeclareCaptionLabelSeparator{nature}{ \textbar\ }
 \captionsetup{font=small,labelfont=bf,labelsep=nature,
               justification=justified,singlelinecheck=false}
-\renewcommand{\figurename}{Supplementary Figure}
-\renewcommand{\tablename}{Supplementary Table}
+\renewcommand{\figurename}{Fig.}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\tablename}{Table}
+\renewcommand{\thetable}{S\arabic{table}}
 
 \setlength{\emergencystretch}{2em}
 
-\title{Supplementary Information\\[6pt]
+\title{Supplemental Material\\[6pt]
 \large Understanding where physical theories fail without knowing what replaces them}
 
 \author{%
@@ -41,7 +43,7 @@
 \begin{document}
 \maketitle
 
-\section{Supplementary Note 1: Retrospective analyses and confirmatory design}
+\section{Note S1: Retrospective analyses and confirmatory design}
 
 The historical experiments are retrospective. The analysis specifies the fitted-regime rule, the extrapolation-region fraction (0.30), the four forms \{power, exponential, linear, constant\}, precision floors and random seeds. The 0.5 threshold is the median calibration score and is used for screening; statistical rejection requires separate calibration. A confirmatory design fixes a primary threshold at a 5\% false-positive rate (FPR) and a secondary threshold at a 1\% FPR on an independent calibration set before scoring the test set. We report finite-sample upper-tail probabilities, count calibration ties conservatively and apply Benjamini--Hochberg (BH) false-discovery-rate control when multiple datasets are scanned. The analysis specifies the assignment rule, exclusion criteria, data transformations, observation models, boundary intervals and abstention rules.
 
@@ -60,16 +62,16 @@ Each test specifies \(\mathcal{T}=(\mathcal{M},\Theta,P_\varepsilon,I,A,S,\alpha
   The verdict box lists the outcomes of the named-prediction test, and rejection
   of a named physical prediction comes only from that test. When a fitted regime
   exists and a pre-1900 prediction and error model are also supplied, both are
-  run and reported (dashed grey arrow), as for Millikan's measurement in
+  run and reported (dashed gray arrow), as for Millikan's measurement in
   Fig.~2e of the main text. The representation screen scores point clouds
   within its operating range and is reported separately. Box outlines follow
-  the colour key (green, extrapolation screen; purple, representation screen;
+  the color key (green, extrapolation screen; purple, representation screen;
   black, named-prediction test); the dashed purple arrow marks the learned
   score, which is reported separately from the verdict.}
   \label{sfig:routing}
 \end{figure}
 
-\section{Supplementary Note 2: Extrapolation-residual ratio and invariances}
+\section{Note S2: Extrapolation-residual ratio and invariances}
 
 For data $(x,y)$, the best of the four classical forms, $f$, is fitted in the fitted regime and extrapolated to the extrapolation region. With log-residuals $r(x)=\lvert\log(\lvert y\rvert/\lvert f(x)\rvert)\rvert$, the statistic is
 
@@ -77,15 +79,15 @@ For data $(x,y)$, the best of the four classical forms, $f$, is fitted in the fi
 \text{extrapolation-residual ratio}=\frac{\operatorname{median}_{\text{extrapolation region}} r}{\operatorname{median}_{\text{fitted regime}} r}.
 \]
 
-In the invariance tests, the ratio is unchanged under $y\to a\,y$ (amplitude) and $x\to b\,x$ (units), and tolerates additive noise up to 5--10\%. The split-conformal nonconformity is the mean absolute residual in the extrapolation region divided by the 90th percentile of the residuals in the fitted regime, with the same one-percent relative floor. This scaled residual has no coverage guarantee of its own. The ratio orders datasets by departure from the fitted form. Reported magnitudes, such as the FIRAS over-prediction factor, are given with their window dependence and a bootstrap interval (Supplementary Note~5).
+In the invariance tests, the ratio is unchanged under $y\to a\,y$ (amplitude) and $x\to b\,x$ (units), and tolerates additive noise up to 5--10\%. The split-conformal nonconformity is the mean absolute residual in the extrapolation region divided by the 90th percentile of the residuals in the fitted regime, with the same one-percent relative floor. This scaled residual has no coverage guarantee of its own. The ratio orders datasets by departure from the fitted form. Reported magnitudes, such as the COBE-FIRAS over-prediction factor, are given with their window dependence and a bootstrap interval (Note~S5).
 
-\section{Supplementary Note 3: Extrapolation-screen benchmark and information ablation}
+\section{Note S3: Extrapolation-screen benchmark and information ablation}
 
 The extrapolation-screen benchmark uses a synthetic suite of 36 datasets. The misspecification tests and the information ablation use a separate suite of 16 phenomena, 8 classical and 8 later.
 
 \subsection{Extrapolation-screen benchmark}
 
-On the synthetic suite ($n = 36$; 18 departures from classical forms versus 18 classical relations; Supplementary Fig.~2d), the area under the receiver operating characteristic curve (AUROC) of the extrapolation screen and of its two statistics is reported with overlapping bootstrap 95\% confidence intervals (0.72 [0.53, 0.88], 0.77 [0.60, 0.91] and 0.80 [0.64, 0.94]). AUROC measures how often a departure receives a higher score than a classical relation.
+On the synthetic suite ($n = 36$; 18 departures from classical forms versus 18 classical relations; Fig.~S2d), the area under the receiver operating characteristic curve (AUROC) of the extrapolation screen and of its two statistics is reported with overlapping bootstrap 95\% confidence intervals (0.72 [0.53, 0.88], 0.77 [0.60, 0.91] and 0.80 [0.64, 0.94]). AUROC measures how often a departure receives a higher score than a classical relation.
 
 \begin{table}[htbp]
 \centering
@@ -104,7 +106,7 @@ extrapolation-residual ratio & 0.72 \\
 
 \subsection{Misspecification tests and information ablation}
 
-On the 16-phenomenon suite (Supplementary Fig.~2e), the RESET and CUSUM misspecification tests are applied to the same classical fit, and the ablation measures the AUROC of the extrapolation-residual ratio while varying the information supplied by the analyst.
+On the 16-phenomenon suite (Fig.~S2e), Ramsey's regression specification error test (RESET) and the cumulative-sum (CUSUM) change-point test are applied to the same classical fit, and the ablation measures the AUROC of the extrapolation-residual ratio while varying the information supplied by the analyst.
 
 \begin{table}[htbp]
 \centering
@@ -128,17 +130,17 @@ Automatic selection of both the classical law and its fitted regime retains AURO
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\textwidth,keepaspectratio]{figures/figure_benchmarks.png}
-  \caption{\textbf{Measured classical controls and synthetic benchmarks. a--c}, Solar-System planets, the four Galilean moons and Boyle's 1662 pressure--volume table (black points) with the power law fitted by least squares in logarithmic coordinates (blue line), recovering exponents 1.500, 1.500 and $-0.998$; their extrapolation-screen percentiles are 0.02, 0.00 and 0.38, below the 0.5 screening threshold. \textbf{d}, AUROC on the 36-dataset synthetic suite (18 classical relations and 18 departures from classical forms; Supplementary Note~3) for the extrapolation-residual ratio and the split-conformal nonconformity (hatched green, the two statistics of the extrapolation screen) and their rank average, the extrapolation screen (solid green): 0.72 [0.53, 0.88], 0.77 [0.60, 0.91] and 0.80 [0.64, 0.94]. \textbf{e}, On a separate suite of 16 phenomena (8 classical, 8 later), the RESET and CUSUM misspecification tests applied to the same classical fit (grey; 0.73 and 0.67) and the extrapolation-residual ratio (hatched green) when the classical law is given, when it is selected automatically from the four forms, and when both the law and its fitted regime are selected automatically (1.00, 1.00 and 0.97). \textbf{f}, Receiver operating characteristic curve of the extrapolation screen on the 36-dataset suite (green line) with a pointwise bootstrap 95\% band (shading). At the most permissive threshold with at most 5\% false positives (here no false positive among 18 classical relations), one of 18 departures is detected (true-positive rate 6\%; open circle). Error bars in d and e and the band in f are 95\% intervals from 3,000 bootstrap resamples stratified by class; dotted lines mark chance.}
+  \caption{\textbf{Measured classical controls and synthetic benchmarks. a--c}, Solar-System planets, the four Galilean moons and Boyle's 1662 pressure--volume table (black points) with the power law fitted by least squares in logarithmic coordinates (blue line), recovering exponents 1.500, 1.500 and $-0.998$; their extrapolation-screen percentiles are 0.02, 0.00 and 0.38, below the 0.5 screening threshold. \textbf{d}, AUROC on the 36-dataset synthetic suite (18 classical relations and 18 departures from classical forms; Note~S3) for the extrapolation-residual ratio and the split-conformal nonconformity (hatched green, the two statistics of the extrapolation screen) and their rank average, the extrapolation screen (solid green): 0.72 [0.53, 0.88], 0.77 [0.60, 0.91] and 0.80 [0.64, 0.94]. \textbf{e}, On a separate suite of 16 phenomena (8 classical, 8 later), the RESET and CUSUM misspecification tests applied to the same classical fit (gray; 0.73 and 0.67) and the extrapolation-residual ratio (hatched green) when the classical law is given, when it is selected automatically from the four forms, and when both the law and its fitted regime are selected automatically (1.00, 1.00 and 0.97). \textbf{f}, Receiver operating characteristic curve of the extrapolation screen on the 36-dataset suite (green line) with a pointwise bootstrap 95\% band (shading). At the most permissive threshold with at most 5\% false positives (here no false positive among 18 classical relations), one of 18 departures is detected (true-positive rate 6\%; open circle). Error bars in d and e and the band in f are 95\% intervals from 3,000 bootstrap resamples stratified by class; dotted lines mark chance.}
   \label{sfig:benchmarks}
 \end{figure}
 
-\section{Supplementary Note 4: Confidence intervals and false-positive rates}
+\section{Note S4: Confidence intervals and false-positive rates}
 
-The extrapolation screen reaches AUROC 0.80 with bootstrap 95\% confidence interval (CI) [0.64, 0.94], resampled over 36 synthetic phenomena. In the broader mechanism-level benchmark, an uncapped log score is calibrated separately at $n = 5$, 9, 43 and 120 using 785 valid classical simulations per size. Across 12 synthetic departure families with eight samples each, TPR is 0.271 at the calibration-targeted 5\% FPR (mechanism-bootstrap 95\% CI [0.073, 0.500]) and 0 at the targeted 1\% FPR. Smooth roll-off and discontinuous-drop simulations have sensitivity 1.0, whereas seven families have zero sensitivity. On a separate synthetic null set of 12 classical function families with eight samples each, the observed FPR is 0/96 at both thresholds; neither class has a fit failure or abstention. This null is synthetic and independent of the calibration set. The evaluation of formula-derived point clouds (199 scored formula point clouds and 30 synthetic departures) reaches AUROC 0.88, recall 0.90 and false-positive rate 0.24 at the median calibration threshold.
+The extrapolation screen reaches AUROC 0.80 with bootstrap 95\% confidence interval (CI) [0.64, 0.94], resampled over 36 synthetic phenomena. In the broader mechanism-level benchmark, an uncapped log score is calibrated separately at $n = 5$, 9, 43 and 120 using 785 valid classical simulations per size. Across 12 synthetic departure families with eight samples each, the true-positive rate (TPR) is 0.271 at the calibration-targeted 5\% FPR (mechanism-bootstrap 95\% CI [0.073, 0.500]) and 0 at the targeted 1\% FPR. Smooth roll-off and discontinuous-drop simulations have sensitivity 1.0, whereas seven families have zero sensitivity. On a separate synthetic null set of 12 classical function families with eight samples each, the observed FPR is 0/96 at both thresholds; neither class has a fit failure or abstention. This null is synthetic and independent of the calibration set. The evaluation of formula-derived point clouds (199 scored formula point clouds and 30 synthetic departures) reaches AUROC 0.88, recall 0.90 and false-positive rate 0.24 at the median calibration threshold.
 
-The historical-case values in this paragraph are tail probabilities of the extrapolation score, separate from the named-prediction tests of Supplementary Note~11. They use 392 valid scores from 400 classical calibration datasets. The primary statistic is capped at a maximum value; with this capped statistic, FIRAS, copper specific heat, Bertozzi and Onnes have upper-tail p-values 0.053, 0.053, 0.346 and 0.346, and BH-adjusted q-values 0.107, 0.107, 0.346 and 0.346. The cap is reached by approximately 5\% of full-size and 34\% of small-size classical calibration datasets, which limits the smallest attainable p-value. An uncapped log-combination, examined after the capped results were known, gives nominal p-values 0.031, 0.023, 0.176 and 0.173, none of which survives four-case BH control.
+The historical-case values in this paragraph are tail probabilities of the extrapolation score, separate from the named-prediction tests of Note~S11. They use 392 valid scores from 400 classical calibration datasets. The primary statistic is capped at a maximum value; with this capped statistic, FIRAS, copper specific heat, Bertozzi and Onnes have upper-tail p-values 0.053, 0.053, 0.346 and 0.346, and BH-adjusted q-values 0.107, 0.107, 0.346 and 0.346. The cap is reached by approximately 5\% of full-size and 34\% of small-size classical calibration datasets, which limits the smallest attainable p-value. An uncapped log-combination, examined after the capped results were known, gives nominal p-values 0.031, 0.023, 0.176 and 0.173, none of which survives four-case BH control.
 
-\section{Supplementary Note 5: Real-data details}
+\section{Note S5: Real-data details}
 
 \begin{description}
 \item[COBE-FIRAS.] The 43-point spectrum measured by the Cosmic Background Explorer (COBE) Far Infrared Absolute Spectrophotometer (FIRAS), published by the National Aeronautics and Space Administration (NASA) on its Legacy Archive for Microwave Background Data Analysis (LAMBDA),
@@ -170,31 +172,31 @@ Exoplanet Archive set because $a$ is often back-computed from $P$ through Kepler
 
 Fitting the extrapolation screen's high-temperature regime on each of the six NIST reference curves selects a power form in every case and gives fitted-regime $R^{2}$ from 0.965 to 0.998 and extrapolation-residual ratios from 127 to 1,490; the largest $R^{2}$ is beryllium's, whose rising high-temperature segment has no Dulong--Petit plateau. These statistics describe the selected power fits, not goodness of fit to the Dulong--Petit constant.
 
-\section{Supplementary Note 6: Underdetermination of form and interpretation}
+\section{Note S6: Underdetermination of form and interpretation}
 
 Recognition, form recovery and interpretation are distinct tasks. Recognition is incompatibility with a model set and observation model specified before testing. Departure from the four forms establishes incompatibility with those forms alone; it need not imply departure from classical physics. For form recovery, sufficiently rich function classes fit a finite dataset arbitrarily well on a bounded window, so the replacement law is underdetermined without a parsimony prior. With such a prior, symbolic regression can recover a candidate mathematical form (Guimer\`a et al., Sci. Adv. 2020; Udrescu \& Tegmark, Sci. Adv. 2020). Interpretation is not identifiable from data alone. In Planck's case, the claim that the fitted constant quantizes energy exchange is a theoretical commitment outside the data. Millikan's photoelectric line illustrates the distinction: its linear shape is admitted by the four forms, while its residuals reject a supplied classical energy prediction.
 
-\section{Supplementary Note 7: Case studies and assignment rule}
+\section{Note S7: Case studies and assignment rule}
 
-The case studies combine real measurements, reference curves and synthetic formula evaluations; they are descriptive and do not estimate accuracy across mechanisms; the assignment rule is shown in Supplementary Fig.~\ref{sfig:routing}. Cases with a measured classical regime are assigned to the extrapolation screen. Cases without one require the named-prediction test and a pre-1900 prediction; cases with neither input receive an abstention verdict. FIRAS and Bertozzi lack a measured classical regime and require a named-prediction test. Specific heat and Onnes are candidates for extrapolation-screen evidence, subject to raw-data and censoring checks. Interference examples without a classical regime or a specified pre-1900 prediction are abstentions.
+The case studies combine real measurements, reference curves and synthetic formula evaluations; they are descriptive and do not estimate accuracy across mechanisms; the assignment rule is shown in Fig.~\ref{sfig:routing}. Cases with a measured classical regime are assigned to the extrapolation screen. Cases without one require the named-prediction test and a pre-1900 prediction; cases with neither input receive an abstention verdict. FIRAS and Bertozzi lack a measured classical regime and require a named-prediction test. Specific heat and Onnes are candidates for extrapolation-screen evidence, subject to raw-data and censoring checks. Interference examples without a classical regime or a specified pre-1900 prediction are abstentions.
 
-\section{Supplementary Note 8: Representation-screen encoders, controls and training-corpus provenance}
+\section{Note S8: Representation-screen encoders, controls and training-corpus provenance}
 
-The representation screen uses two encoders. The large encoder is trained on reductions of pre-1900 laws, with training, calibration and test formulas separated by law family (Supplementary Fig.~3; Supplementary Note~16). The compact encoder, compared here with its controls, is a set transformer of width 128 with three induced-set-attention blocks, trained for 1,000 steps on two independently subsampled and rescaled copies of each of 205 pre-1900 point clouds from 40 families. Families are sampled without replacement so that repeated laws cannot become false contrastive negatives, and an auxiliary head predicts functional signatures, which record the elementary function types present in each formula. No synthetic departure, saturation, step, kink, splice or crossover example enters this optimization. We trained matched models with International System of Units (SI) dimension metadata and with zeroed dimension metadata; the model trained without unit information is the compact encoder reported throughout.
+The representation screen uses two encoders. The large encoder is trained on reductions of pre-1900 laws, with training, calibration and test formulas separated by law family (Fig.~S3; Note~S16). The compact encoder, compared here with its controls, is a set transformer of width 128 with three induced-set-attention blocks, trained for 1,000 steps on two independently subsampled and rescaled copies of each of 205 pre-1900 point clouds from 40 families. Families are sampled without replacement so that repeated laws cannot become false contrastive negatives, and an auxiliary head predicts functional signatures, which record the elementary function types present in each formula. No synthetic departure, saturation, step, kink, splice or crossover example enters this optimization. We trained matched models with International System of Units (SI) dimension metadata and with zeroed dimension metadata; the model trained without unit information is the compact encoder reported throughout.
 
-We compare the compact encoder with a generic-function control encoder trained on analytic functions without historical restrictions. It is matched to the compact encoder in dataset count (205), pseudo-family count (40), exact family-size profile, full histogram of eight-bit functional signatures (which record the elementary function types present in each formula), architecture, initialization seed and optimization schedule. Each bit of the eight-bit signature records whether one elementary function type (exponential, logarithm, sine, square root, power, inverse power, polynomial terms or hyperbolic) appears in the formula. Its globally valid analytic generators contain no piecewise failure or anomaly supervision. On 12 synthetic departure families and 12 classical families (Supplementary Fig.~4c), family AUROC is 0.375 [0.167, 0.618], versus 0.903 for the compact encoder trained on pre-1900 laws; the paired family-bootstrap difference is 0.528 [0.264, 0.764]. Its calibrated threshold detects 10/12 synthetic departure families but also flags 11/12 synthetic classical families and 4/7 held-out cited classical test families. Thus it is sensitive but non-specific. This single matched generic-function control supports an incremental role for the historical corpus.
+We compare the compact encoder with a generic-function control encoder trained on analytic functions without historical restrictions. It is matched to the compact encoder in dataset count (205), pseudo-family count (40), exact family-size profile, full histogram of eight-bit functional signatures (which record the elementary function types present in each formula), architecture, initialization seed and optimization schedule. Each bit of the eight-bit signature records whether one elementary function type (exponential, logarithm, sine, square root, power, inverse power, polynomial terms or hyperbolic) appears in the formula. Its globally valid analytic generators contain no piecewise failure or anomaly supervision. On 12 synthetic departure families and 12 classical families (Fig.~S4c), family AUROC is 0.375 [0.167, 0.618], versus 0.903 for the compact encoder trained on pre-1900 laws; the paired family-bootstrap difference is 0.528 [0.264, 0.764]. Its calibrated threshold detects 10/12 synthetic departure families but also flags 11/12 synthetic classical families and 4/7 held-out cited classical test families. Thus it is sensitive but non-specific. This single matched generic-function control supports an incremental role for the historical corpus.
 
 We retrained both encoders from scratch under three paired initialization and augmentation seeds while the resampling seed and the 24 synthetic departure and classical families stay fixed. Across these runs the compact encoder gives family AUROC 0.910, 0.910 and 0.889, versus 0.403, 0.292 and 0.292 for the generic-function control encoder; paired differences are 0.507, 0.618 and 0.597. For the compact encoder, synthetic-classical and cited-test family false-positive rates remain 0/12 and 0/7 in all three runs. However, compact-encoder detection of synthetic departure families is 2/12, 8/12 and 1/12 after recalibrating the threshold in each run. The ranking and specificity increment persists across these seeds; detection at the calibrated threshold varies between runs. With only three seeds, ranges and sample standard deviations describe run-to-run variation; they do not provide confidence intervals.
 
-The provenance assessment in this paragraph concerns a larger point-cloud corpus built from the same formula graph. It is the pool from which the compact encoder's source-verified point clouds were selected (next paragraph) and from which the classical calibration curves of the extrapolation screen were sampled; the large encoder's corpus is described in Supplementary Note~16. The corpus contains 50,898 point clouds associated with 50,898 unique knowledge-graph node identifiers. Matching every identifier to the 5.6-million-node source graph shows that all 50,898 point clouds lack explicit year metadata and all lack source or citation metadata. A conservative keyword screen finds at least 1,686 post-1900 records (3.31\%), including named Eddington, Bondi, Prandtl, Debye, Fermi, Landau, Einstein and Bardeen--Cooper--Schrieffer (BCS) relations. The keyword count is a lower bound; the remaining records have not been fully classified by date. Exact normalized-expression duplicates form 4,381 groups containing 16,258 records; structural-template duplicates form 4,590 groups containing 26,726 records. The corpus is therefore not historically pure, and its 50,898 point clouds are not 50,898 independent laws.
+The provenance assessment in this paragraph concerns a larger point-cloud corpus built from the same formula graph. It is the pool from which the compact encoder's source-verified point clouds were selected (next paragraph) and from which the classical calibration curves of the extrapolation screen were sampled; the large encoder's corpus is described in Note~S16. The corpus contains 50,898 point clouds associated with 50,898 unique knowledge-graph node identifiers. Matching every identifier to the 5.6-million-node source graph shows that all 50,898 point clouds lack explicit year metadata and all lack source or citation metadata. A conservative keyword screen finds at least 1,686 post-1900 records (3.31\%), including named Eddington, Bondi, Prandtl, Debye, Fermi, Landau, Einstein and Bardeen--Cooper--Schrieffer (BCS) relations. The keyword count is a lower bound; the remaining records have not been fully classified by date. Exact normalized-expression duplicates form 4,381 groups containing 16,258 records; structural-template duplicates form 4,590 groups containing 26,726 records. The corpus is therefore not historically pure, and its 50,898 point clouds are not 50,898 independent laws.
 
-The compact encoder's corpus contains 268 point clouds from 51 cited pre-1900 law families, each dated by a verified source, split without family overlap into 205/17/46 training/validation/test datasets (40/4/7 families). The formula expressions were drawn from a machine-assembled formula graph. The 243 formula records audited for this corpus (covering 49 of its 51 families) comprise 116 generated with language models, 92 combinatorially constructed, 32 mined automatically and 3 manually curated records. A record was admitted only by exact name match to, or derivation ancestry from, a law family in a registry of dated pre-1900 sources, which supplies the date and citation but no formulas; the expressions were not individually checked against the original source texts. The compact encoder is trained on the 205 classical datasets alone, using neither synthetic departure examples nor deformation labels. On the 192-dataset benchmark, the compact encoder's k-nearest-neighbour (kNN) AUROC is 0.854 and shrinkage-Mahalanobis AUROC is 0.895, compared with 0.329 and 0.288 for a matched untrained network. The variant supplied with unit information reaches 0.449/0.432. Because the synthetic benchmark has no physical dimensions, this comparison tests a mismatch in metadata format. In the evaluation grouped by family, dataset AUROC is 0.870 and family AUROC is 0.903 (family-bootstrap 95\% CI [0.729, 1.000]). The calibrated threshold detects 2/12 synthetic departure families, flags 0/12 synthetic classical families and leaves all seven held-out cited classical families below threshold at the family level. One of 46 cited test records is flagged. Detection at the calibrated threshold is low, and the experiment uses a small corpus and synthetic data.
+The compact encoder's corpus contains 268 point clouds from 51 cited pre-1900 law families, each dated by a verified source, split without family overlap into 205/17/46 training/validation/test datasets (40/4/7 families). The formula expressions were drawn from a machine-assembled formula graph. The 243 formula records audited for this corpus (covering 49 of its 51 families) comprise 116 generated with language models, 92 combinatorially constructed, 32 mined automatically and 3 manually curated records. A record was admitted only by exact name match to, or derivation ancestry from, a law family in a registry of dated pre-1900 sources, which supplies the date and citation but no formulas; the expressions were not individually checked against the original source texts. The compact encoder is trained on the 205 classical datasets alone, using neither synthetic departure examples nor deformation labels. On the 192-dataset benchmark, the compact encoder's k-nearest-neighbor (kNN) AUROC is 0.854 and shrinkage-Mahalanobis AUROC is 0.895, compared with 0.329 and 0.288 for a matched untrained network. The variant supplied with unit information reaches 0.449/0.432. Because the synthetic benchmark has no physical dimensions, this comparison tests a mismatch in metadata format. In the evaluation grouped by family, dataset AUROC is 0.870 and family AUROC is 0.903 (family-bootstrap 95\% CI [0.729, 1.000]). The calibrated threshold detects 2/12 synthetic departure families, flags 0/12 synthetic classical families and leaves all seven held-out cited classical families below threshold at the family level. One of 46 cited test records is flagged. Detection at the calibrated threshold is low, and the experiment uses a small corpus and synthetic data.
 
 We also compare encoders with and without unit information using the same metadata format. We generate six deformations of every one of the 46 cited test datasets while preserving the source dataset's x/y SI exponent vectors; 34/46 datasets carry at least one nonzero exponent. The evaluation unit is a law family: within each of seven families we take one median for clean data and one for each of saturation, step, kink, splice, roll-off and crossover. Family-balanced AUROC is 0.684 for the encoder supplied with unit information and 0.922 for the compact encoder, a paired difference of $-0.238$ (5,000-replicate family bootstrap 95\% CI [$-0.439$, $-0.082$]). Both leave 7/7 clean families below threshold. At separately calibrated thresholds, however, the two variants detect 0/42 and 4/42 family-by-deformation cells; neither exceeds threshold when scores are pooled to the median for each deformation family. The ranking advantage of the compact encoder persists with matched metadata formats. Detection at the calibrated thresholds remains low. The comparison uses synthetic deformations, one paired training seed and seven test families; the inherited unit vectors were not manually re-derived for each formula.
 
 Two retrospective calibration choices give different representation-screen verdicts on historical measurements. Under a 40-family reference only copper exceeds the threshold (p = 2/41), while a separate 17-dataset validation reference gives FIRAS/copper kNN p = 6/18 and 2/18; neither exceeds its threshold. Mahalanobis gives the same minimum p = 1/18 to FIRAS, copper and the Boyle control, indicating sensitivity to the calibration choice. Michelson's speed-of-light series, a classical control with a near-constant response, is assigned by the rule to the named-prediction test; scored by the representation screen regardless, it receives kNN p = 1/18 and exceeds the validation threshold, a false positive for this classical control. Bertozzi and Onnes have fewer than 20 points and are outside the encoder's operating range (at least 20 points). The deformation-supervised probe, an earlier encoder trained with examples of deformations, has explicit morphology supervision; leave-one-deformation-family-out AUROCs are 0.521 (saturation), 0.636 (step), 0.407 (kink), 0.700 (splice), 0.735 (roll-off) and 0.635 (crossover), mean 0.606. Training without post-1900 physical formulas can still include an anomaly-shape prior through deformation supervision.
 
-\section{Supplementary Note 9: Digitized data tables}
+\section{Note S9: Digitized data tables}
 
 \begin{description}
 \item[Bertozzi 1964.] The digitized table is
@@ -228,11 +230,11 @@ The accompanying data contain
 complete coefficient sets for Cu, Al 6061, Pt, 304/316 stainless steel (SS) and Be.
 \end{description}
 
-\section{Supplementary Note 10: Data \& code availability}
+\section{Note S10: Data \& code availability}
 
 COBE-FIRAS is available from NASA LAMBDA. Bertozzi's data are from Am. J. Phys. 32, 551 (1964), NIST specific-heat data from trc.nist.gov/cryogenics, Onnes's data from KNAW Proceedings (public domain), Millikan's data from Phys. Rev.~7, 355 (1916, public domain) and Solar-System orbital constants from standard references. The post-1900 formula data include historical citations, an executable reduced-form generator, dataset parameters and seeds, point clouds, structural checks and inference results. The release used here will be archived on Zenodo on acceptance under the concept DOI 10.5281/zenodo.22138620.
 
-\section{Supplementary Note 11: Comparison with successor predictions}
+\section{Note S11: Comparison with successor predictions}
 
 We rescore the same measurements on the same grid and under the same error model using the pre-1900 and successor predictions, with 1,000 parametric-bootstrap replicates for each. All pre-1900 predictions return p = 1/1001. Successor-prediction p-values are 1.000 for FIRAS/Planck, 0.089 for Bertozzi/relativity, 0.001 for copper/Debye-plus-electronic, 1.000 for Onnes/superconducting transition and 0.900 for Millikan/photoelectricity. The discrepancy statistics fall by factors of $4.03\times10^{6}$, $9.58\times10^{5}$, $3.86\times10^{3}$, $7.29\times10^{10}$ and $1.99\times10^{4}$, respectively. Four of five cases meet the paired criterion: the pre-1900 prediction is rejected and the successor prediction is not rejected at 5\%.
 
@@ -252,23 +254,23 @@ V(\nu)=V_0+\frac{(h\nu)^2}{2m_ec^2e}.
 \]
 They assign, respectively, a fermionic occupation spectrum to FIRAS, a proton rest-energy scale to the Bertozzi electron beam, an Einstein oscillator to copper, continuous Arrhenius transport to Onnes and a Compton-recoil scale to Millikan. Amplitude and temperature scale are fitted for FIRAS; the proton mass is fixed; plateau, Einstein temperature and electronic coefficient are fitted for copper; resistance scale and activation temperature are fitted for Onnes; and only the voltage offset is fitted for Millikan. Each exponent or ratio is dimensionless and every prediction has the observed output dimension. All five wrong-mechanism models remain rejected after 1,000 valid parametric-bootstrap replicates per case (p = q = 1/1001 throughout). The wrong-shape and wrong-mechanism alternatives were chosen after the datasets were known.
 
-\section{Supplementary Note 12: Simulated instrument effects}
+\section{Note S12: Simulated instrument effects}
 
 Classical synthetic relations were corrupted without changing their physical law. At maximum tested severity, false-positive rates at the nominal 5\% threshold are 0 for a 20\% end-to-end calibration drift, 0.40 for sensor clipping at the 60th response percentile and 0.633 for censoring up to the 45th percentile. The rates are 0.092 for x-axis noise of 8\% of the range, 0.108 for six-standard-deviation outliers affecting 8\% of points, 0.025 for first-order autoregressive [AR(1)] noise with coefficient 0.95 and 0 for nine-fold heteroscedastic noise growth. Within these simulations, saturation and censoring have the largest false-positive rates. The rates apply to the tested generators.
 
-\section{Supplementary Note 13: Boundary intervals}
+\section{Note S13: Boundary intervals}
 
 An ordinary 90\% measurement-bootstrap interval covers the simulated onset only 53.9\% of the time overall and 8.5\% for steps. We therefore calibrate the normalized absolute localization error on 899 independent simulations, separately by sample size. The 90th-percentile radius is 0.219, 0.169 and 0.120 of the $x$ range for $n = 40$, 80 and 160. Applied unchanged to 900 held-out simulations, overall coverage is 0.913 (Wilson 95\% CI [0.893, 0.930]). By family, coverage is 0.939 for steps, 0.894 for saturation, 0.944 for kinks, 0.878 for smooth turnovers and 0.911 for crossovers. Coverage is marginal over the specified generators.
 
-\section{Supplementary Note 14: Candidate measurement datasets}
+\section{Note S14: Candidate measurement datasets}
 
-Forty-four files were downloaded from the NIST Dataplot/Statistical Reference Dataset index; source URLs were recorded. All 44 contain structurally extractable numeric blocks, and no two files are identical. The collection contains 20 candidate instrument controls, 11 candidate classical controls (including two historical controls), six controls with known modern mechanisms and seven candidate cases outside the knowledge horizon. Performance evaluation requires independent verification of each file's variables, pre-1900 prediction, expected relation, observation model and dependence on other series from the same mechanism. The intended benchmark would include complex shapes compatible with the pre-1900 prediction, instrument saturation and censoring, altered noise, known changes of classical mechanism and violations of a specified theory, using matched grids and errors. These files were collected while the method was being developed and are not an independent held-out test set. Sixteen series selected from them are scored in Supplementary Note~18, with each series' role specified before scoring.
+Forty-four files were downloaded from the NIST Dataplot/Statistical Reference Dataset index; source URLs were recorded. All 44 contain structurally extractable numeric blocks, and no two files are identical. The collection contains 20 candidate instrument controls, 11 candidate classical controls (including two historical controls), six controls with known modern mechanisms and seven candidate cases outside the knowledge horizon. Performance evaluation requires independent verification of each file's variables, pre-1900 prediction, expected relation, observation model and dependence on other series from the same mechanism. The intended benchmark would include complex shapes compatible with the pre-1900 prediction, instrument saturation and censoring, altered noise, known changes of classical mechanism and violations of a specified theory, using matched grids and errors. These files were collected while the method was being developed and are not an independent held-out test set. Sixteen series selected from them are scored in Note~S18, with each series' role specified before scoring.
 
-\section{Supplementary Note 15: Post-1900 formula transfer}
+\section{Note S15: Post-1900 formula transfer}
 
 We test the two screens without retraining on 55 named physical-law families first valid from 1901 to 1996. Every family has a primary historical citation, a dimensionless one-variable equation, a sampling domain and a generator. Forty-five citations include a DOI. Planck's 1900 law is excluded because the benchmark admits only laws first valid after 1900. Eight datasets per family vary nuisance parameters, point locations and 0.5--2.5\% additive response noise, producing 440 datasets of 120 points. Scores are summarized first within each dataset and then by one median per law family. Four duplicated functional signatures are retained as cases with the same shape at different dates; repeated formula shapes are not counted as independent measurement discoveries.
 
-Six sampled relations are standard specializations, interpolations or idealizations of the cited work, rather than literal transcriptions of individual equations. These are the physical interpretation of the Lorentz factor, a matter-curvature-Lambda Friedmann specialization, the two-fluid/London penetration-depth temperature law, the closed-form BCS gap interpolation, the two-flavour neutrino survival curve and the ideal integer quantum-Hall staircase. The source and data checks cover citation-year consistency, unique law-family identifiers and seeds, finite and varying numerical values, ordered point grids and absence of family overlap with the pre-1900 corpus. Line-by-line verification against every historical primary text was not performed.
+Six sampled relations are standard specializations, interpolations or idealizations of the cited work, rather than literal transcriptions of individual equations. These are the physical interpretation of the Lorentz factor, a matter-curvature-Lambda Friedmann specialization, the two-fluid/London penetration-depth temperature law, the closed-form BCS gap interpolation, the two-flavor neutrino survival curve and the ideal integer quantum-Hall staircase. The source and data checks cover citation-year consistency, unique law-family identifiers and seeds, finite and varying numerical values, ordered point grids and absence of family overlap with the pre-1900 corpus. Line-by-line verification against every historical primary text was not performed.
 
 The compact encoder is used without retraining. Its 205-dataset pre-1900 reference split, 40 family calibration values and 95th-percentile threshold 0.132 are unchanged. The extrapolation score uses the calibration thresholds for $n = 120$: 3.39 at the 95th percentile and 14.2 at the 99th percentile. Evaluation uses no training steps or optimizer and leaves the weights and thresholds unchanged. Eleven cited families excluded from encoder training are the negative controls.
 
@@ -306,7 +308,7 @@ Agreement between the screens describes the score pattern and has no calibrated 
 
 The deposited data contain the formula list, generated datasets, point clouds, construction settings, source checks and evaluation results. Fig.~3b of the main text shows the family-level ROC curves; the normalized curves for all 55 families are available as a vector figure.
 
-\section{Supplementary Note 16: Large encoder at the pre-1900 horizon and horizon extension}
+\section{Note S16: Large encoder at the pre-1900 horizon and horizon extension}
 
 The large-encoder analysis was specified after the retrospective analyses above but before its temporal results were known. The specification fixed the model, code and configuration, the 30-epoch model-selection rule, four score components, equal weights, aggregation, family/group-level AUROC, grouped bootstrap and a conditional horizon extension.  The later-formula lists and dates were known when this specification was written; temporal scores and label-dependent model choices were unavailable. After the results were known, we restricted the learned comparison to the source-verified pre-1900 training horizon; the completed pre-1950 extension is reported separately below.
 
@@ -360,7 +362,7 @@ The extension model is trained for 30 epochs and 27,840 batches on 959,744 cloud
 
 The same 38 later families dated 1901--1950 have median calibrated anomaly scores of 0.821 under the 1899 large encoder and 0.341 under the horizon extension. The paired median decrease is 0.429 [0.002, 0.623] and the paired mean decrease is 0.335 [0.195, 0.470]. Twenty-five families decrease, 13 increase and none ties, giving an exact two-sided sign-test p-value of 0.073. Under untrained-network features the median decrease is 0.0086 [0.0038, 0.0192]. These values describe the horizon extension; they do not evaluate the pre-1900-only comparison.
 
-Recomputation from the deposited group and family scores reproduces the large-encoder and horizon-extension results. Fig.~3a of the main text and Supplementary Fig.~\ref{sfig:encoder} report the pre-1900 large encoder, its untrained-network comparison and the regenerated controls; the horizon-extension results are reported here and in the deposited evaluation files.
+Recomputation from the deposited group and family scores reproduces the large-encoder and horizon-extension results. Fig.~3a of the main text and Fig.~\ref{sfig:encoder} report the pre-1900 large encoder, its untrained-network comparison and the regenerated controls; the horizon-extension results are reported here and in the deposited evaluation files.
 
 \begin{figure}[htbp]
   \centering
@@ -390,10 +392,10 @@ Recomputation from the deposited group and family scores reproduces the large-en
   families; open markers: regenerated controls and families after 1950; $n$ above each box). \textbf{c}, Compact
   encoder trained only on 205 datasets from 40 pre-1900 families with no synthetic departure example.
   Family-grouped AUROC is 0.903 [0.729, 1.000] against 0.375 [0.167, 0.618] for the generic-function control
-  encoder on the same evaluation families; dataset-level AUROC is 0.854 by k-nearest-neighbour distance and
+  encoder on the same evaluation families; dataset-level AUROC is 0.854 by k-nearest-neighbor distance and
   0.895 by shrinkage Mahalanobis distance, against 0.329 and 0.288 for the untrained network of the same
   architecture (open bars in the first two pairs; the open family-level bar is the generic-function control
-  encoder; Supplementary Note~8). Error bars on the family-level pair give family-bootstrap 95\% intervals; the
+  encoder; Note~S8). Error bars on the family-level pair give family-bootstrap 95\% intervals; the
   horizontal dashed line marks chance and the vertical line separates dataset-level and family-level
   comparisons. \textbf{d}, AUROC of each of the large encoder's four distance components on the 55-family
   comparison: distance to the nearest formula embedding (top-eight cosine distance to embeddings of the training
@@ -405,7 +407,7 @@ Recomputation from the deposited group and family scores reproduces the large-en
   \label{sfig:encoder}
 \end{figure}
 
-\section{Supplementary Note 17: Additional formula and simulated cases}
+\section{Note S17: Additional formula and simulated cases}
 
 We assembled these additional cases after the primary temporal results were known; they do not alter the 55-family benchmark. The set contains 11 one-dimensional cases, each with eight independently seeded 120-point datasets. Point locations, nuisance parameters and 0.5--2.0\% heteroscedastic response noise vary across datasets. Each family has a historical source and is identified as a formula reduction or a simplified mechanism simulation. Franck--Hertz and the Anderson envelope are phenomenological simulations, and the ideal condensate fraction assumes a homogeneous gas. The angular and correlation curves omit detector acceptance, and the cosmic-acceleration curve assumes homogeneous cosmology without covariance information. The gravitational-wave (GW) chirp is a leading-order reduction of frequency and does not model detector strain.
 
@@ -442,30 +444,30 @@ The residual gain, the $\log_{10}$ ratio of the pre-1900 prediction's to the suc
 
 Two further cases are assigned only to the named-prediction test. Lamb--Retherford tests a nonzero level splitting using sparse data, and the anomalous electron magnetic moment tests a scalar coefficient departure from the Dirac value. Replicating either value into a 120-point set would misrepresent the measurement unit and would not supply independent observations for the representation screen. These cases are assigned to the named-prediction test or receive an abstention verdict until measurements under multiple conditions support a test.
 
-Supplementary Fig.~\ref{sfig:generated} combines a forest plot of the principal AUROCs, all 11 score pairs and four representative curves; the extrapolation-screen and compact-encoder ROC curves are in Fig.~3b of the main text. A 55-panel figure of the normalized curves is available as a vector file. The additional cases do not enter the AUROC comparisons.
+Fig.~\ref{sfig:generated} combines a forest plot of the principal AUROCs, all 11 score pairs and four representative curves; the extrapolation-screen and compact-encoder ROC curves are in Fig.~3b of the main text. A 55-panel figure of the normalized curves is available as a vector file. The additional cases do not enter the AUROC comparisons.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\textwidth,keepaspectratio]{figures/sfigure_generated_cases.png}
   \caption{\textbf{Principal AUROCs and further generated cases. a}, Every principal AUROC of
-  Supplementary Table~\ref{stab:principal} that has a 95\% bootstrap interval; the separate evaluation of
+  Table~\ref{stab:principal} that has a 95\% bootstrap interval; the separate evaluation of
   199 formula datasets and 30 synthetic departures (AUROC 0.88) is not shown. Untrained-network intervals are
-  from Supplementary Note~16. Filled markers are the trained encoders (purple) and the extrapolation screen
-  (green); open grey markers are the untrained network or, for the synthetic-departure comparison, the
+  from Note~S16. Filled markers are the trained encoders (purple) and the extrapolation screen
+  (green); open gray markers are the untrained network or, for the synthetic-departure comparison, the
   generic-function control encoder; the dashed line marks chance. Measured-series intervals are resampled
   over mechanism groups. \textbf{b}, Large-encoder learned scores (purple circles) and extrapolation-screen percentiles
-  against size-matched calibration (green squares) for the 11 further cases, joined by a grey line;
+  against size-matched calibration (green squares) for the 11 further cases, joined by a gray line;
   triangles mark cases for which a physical incompatibility claim requires a named-prediction test; the plotted generated-case scores do not establish that claim. \textbf{c--f},
   Generated point clouds (black), later relations (vermillion) and pre-1900 predictions (blue, dashed),
   with both axes scaled to the unit interval, for Cherenkov emission, Fano resonance, cosmic acceleration and Pound--Rebka redshift. Values below each panel give the learned score and the extrapolation-screen percentile; ``Named-prediction test'' marks the cases assigned to that test.}
   \label{sfig:generated}
 \end{figure}
 
-\section{Supplementary Note 18: Screens on measured series}
+\section{Note S18: Screens on measured series}
 
 \subsection{Design}
 
-Sixteen series are taken unmodified from the NIST Dataplot and Statistical Reference Dataset collections and are referred to by their NIST dataset identifiers (for example HAHN1), listed with their relations in Supplementary Table~\ref{stab:measured}. For each series, \nolinkurl{real_measurement_case_registry.json} specifies the numeric block, the abscissa and response columns, the 1899 prediction, the basis for placing the phenomenon inside or outside the pre-1900 model set, the mechanism group and the primary source. The horizon class of a series follows from the measured phenomenon and its source, and is fixed before any score is computed. Series are sorted by abscissa and thinned uniformly to at most 2,000 points.
+Sixteen series are taken unmodified from the NIST Dataplot and Statistical Reference Dataset collections and are referred to by their NIST dataset identifiers (for example HAHN1), listed with their relations in Table~\ref{stab:measured}. For each series, \nolinkurl{real_measurement_case_registry.json} specifies the numeric block, the abscissa and response columns, the 1899 prediction, the basis for placing the phenomenon inside or outside the pre-1900 model set, the mechanism group and the primary source. The horizon class of a series follows from the measured phenomenon and its source, and is fixed before any score is computed. Series are sorted by abscissa and thinned uniformly to at most 2,000 points.
 
 A mechanism group, the unit of inference, comprises the measured series produced by the same physical mechanism; a subset or decimation of a series belongs to the group of the full series. The three superconducting magnetization files (BENNETT5, BENNETT6 and BENNETT7), recorded in one 1994 campaign, form a single group, so the sixteen series give fourteen mechanism groups, five outside the pre-1900 model set and nine classical or metrological.
 
@@ -481,7 +483,7 @@ We report raw screen scores. All 128 scores from resampled copies are available 
 
 \subsection{Series and scores}
 
-Supplementary Table~\ref{stab:measured} lists the sixteen series and their scores.
+Table~\ref{stab:measured} lists the sixteen series and their scores.
 
 \begin{table}[htbp]
 \centering
@@ -521,14 +523,14 @@ DZIUBA1 & date vs standard resistor value & 1,000 & standard resistor drift & me
 \end{tabular}
 \end{table}
 
-Grouped by mechanism, the learned score gives AUROC 0.622 [0.289, 0.889] and the extrapolation score 0.778 [0.378, 1.000], each with mechanism groups as the resampling unit; both intervals span chance. Supplementary Fig.~\ref{sfig:measured} shows the group medians, three of the series and every resampled learned score.
+Grouped by mechanism, the learned score gives AUROC 0.622 [0.289, 0.889] and the extrapolation score 0.778 [0.378, 1.000], each with mechanism groups as the resampling unit; both intervals span chance. Fig.~\ref{sfig:measured} shows the group medians, three of the series and every resampled learned score.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\textwidth,height=0.6\textheight,keepaspectratio]{figures/sfigure_measured.png}
-  \caption{\textbf{Measured series at the 1899 horizon. a}, Mechanism-group medians of the compact encoder's learned score and the extrapolation score for sixteen NIST series in fourteen groups, five outside the pre-1900 model set (filled vermillion squares) and nine classical or metrological (open blue circles). The extrapolation score uses the largest calibration size each series supports, and the learned score the compact encoder's pre-1900 reference. The horizontal axis is logarithmic above 0.05 and linear below. The dashed line is the single-dataset extrapolation-score reference threshold for $n = 120$ (95th percentile of 785 classical calibration simulations), not a calibrated threshold for group medians. Compact- and large-encoder scores use different scales (Supplementary Fig.~\ref{sfig:encoder}b). \textbf{b--d}, Three series, coloured as in a: copper thermal
+  \caption{\textbf{Measured series at the 1899 horizon. a}, Mechanism-group medians of the compact encoder's learned score and the extrapolation score for sixteen NIST series in fourteen groups, five outside the pre-1900 model set (filled vermillion squares) and nine classical or metrological (open blue circles). The extrapolation score uses the largest calibration size each series supports, and the learned score the compact encoder's pre-1900 reference. The horizontal axis is logarithmic above 0.05 and linear below. The dashed line is the single-dataset extrapolation-score reference threshold for $n = 120$ (95th percentile of 785 classical calibration simulations), not a calibrated threshold for group medians. Compact- and large-encoder scores use different scales (Fig.~\ref{sfig:encoder}b). \textbf{b--d}, Three series, colored as in a: copper thermal
   expansion against temperature, circular-interference transmittance, and
-  superconducting magnetization relaxation against log time; d shows the NIST file BENNETT6, one of the group's three magnetization files (Supplementary Fig.~\ref{sfig:shape} shows BENNETT5). Ordinates are plotted as recorded in the NIST files, which give units only for the abscissa. \textbf{e}, All learned scores of resampled copies (eight per series, not independent) behind the medians in \textbf{a}, jittered vertically; markers as in a.}
+  superconducting magnetization relaxation against log time; d shows the NIST file BENNETT6, one of the group's three magnetization files (Fig.~\ref{sfig:shape} shows BENNETT5). Ordinates are plotted as recorded in the NIST files, which give units only for the abscissa. \textbf{e}, All learned scores of resampled copies (eight per series, not independent) behind the medians in \textbf{a}, jittered vertically; markers as in a.}
   \label{sfig:measured}
 \end{figure}
 
@@ -540,7 +542,7 @@ Grouped by mechanism, the learned score gives AUROC 0.622 [0.289, 0.889] and the
   \caption{\textbf{Shape and mechanism on four measured series.} Rows separate
   mechanisms inside the pre-1900 model set (blue open circles) from mechanisms
   after 1900 (vermillion filled squares); columns separate simple from sharp or abrupt
-  shapes. Boxes give the mechanism-group medians of the learned score (compact encoder) and the extrapolation score; the magnetization panel plots one of the group's three files (NIST BENNETT5; Supplementary Fig.~\ref{sfig:measured}d shows BENNETT6). The extrapolation score is near zero for both
+  shapes. Boxes give the mechanism-group medians of the learned score (compact encoder) and the extrapolation score; the magnetization panel plots one of the group's three files (NIST BENNETT5; Fig.~\ref{sfig:measured}d shows BENNETT6). The extrapolation score is near zero for both
   simple shapes and above the classical median of 0.566 for both sharp shapes,
   whatever the mechanism; only the Bose-gas profile exceeds the $n = 120$ reference
   threshold of 3.39. The learned score is low throughout; a departure from a named theory can keep a
@@ -548,28 +550,28 @@ Grouped by mechanism, the learned score gives AUROC 0.622 [0.289, 0.889] and the
   \label{sfig:shape}
 \end{figure}
 
-Copper thermal expansion is the highest-ranked post-1900 group under the learned score. For example, the reported coefficient is 0.591 at 24~K and 21.09 at 852~K. Classical equipartition of lattice modes gives a temperature-independent coefficient; the observed fall towards zero below the Debye temperature is the departure. The cold Bose-gas density profile is the highest-ranked group under the extrapolation score, at 13.980 against a median of 0.566 across the classical and metrological groups.
+Copper thermal expansion is the highest-ranked post-1900 group under the learned score. For example, the reported coefficient is 0.591 at 24~K and 21.09 at 852~K. Classical equipartition of lattice modes gives a temperature-independent coefficient; the observed fall toward zero below the Debye temperature is the departure. The cold Bose-gas density profile is the highest-ranked group under the extrapolation score, at 13.980 against a median of 0.566 across the classical and metrological groups.
 
-Circular-interference transmittance is the shape control. Its transmittance rises by three and a half orders of magnitude to a sharp resonance at 451 nm and falls again within 20 nm. Among the sixteen series, this sharp shape provides a control accounted for by classical wave optics. Its learned score is 0.0630 and its extrapolation score 1.946, above the classical median of 0.566; the series is calibrated at $n = 9$, so the $n = 120$ reference threshold of 3.39 shown in Supplementary Fig.~\ref{sfig:measured}a does not apply to it. This classically explained resonance has a low learned score despite its sharp shape.
+Circular-interference transmittance is the shape control. Its transmittance rises by three and a half orders of magnitude to a sharp resonance at 451 nm and falls again within 20 nm. Among the sixteen series, this sharp shape provides a control accounted for by classical wave optics. Its learned score is 0.0630 and its extrapolation score 1.946, above the classical median of 0.566; the series is calibrated at $n = 9$, so the $n = 120$ reference threshold of 3.39 shown in Fig.~\ref{sfig:measured}a does not apply to it. This classically explained resonance has a low learned score despite its sharp shape.
 
 Superconducting magnetization relaxation is the converse. Superconducting relaxation has no pre-1900 account, but $M(t)$ against log time is close to a straight line over the sampled decade. The three files have the lowest, second-lowest and fourth-lowest extrapolation scores in the collection. The Pound--Rebka and Millikan relations also retain generic shapes despite discrepancies from named pre-1900 predictions. The named-prediction test examines these discrepancies.
 
-The two highest learned scores over the whole collection belong to a five-year standard-resistor record and a 23-point polymer-impedance curve. A Rydberg series, inside the horizon since 1888, ranks above every post-1900 group on the learned score (0.1588 against a highest post-1900 group value of 0.1586). On measured data, this pattern is consistent with the observation process setting the largest learned-score differences. Whether saturation and censoring, tested for the extrapolation screen in Supplementary Note 12, account for these learned-score differences has not been tested.
+The two highest learned scores over the whole collection belong to a five-year standard-resistor record and a 23-point polymer-impedance curve. A Rydberg series, inside the horizon since 1888, ranks above every post-1900 group on the learned score (0.1588 against a highest post-1900 group value of 0.1586). On measured data, this pattern is consistent with the observation process setting the largest learned-score differences. Whether saturation and censoring, tested for the extrapolation screen in Note S12, account for these learned-score differences has not been tested.
 
 \subsection{Scope}
 
-The bootstrap intervals are based on fourteen mechanism groups. The nine negative groups are weighted towards instrument transfer curves, and the seven series that support only the $n = 9$ calibration size are scored on eight subsamples of nine points drawn from series of 21 to 40 points. The scores from resampled copies allow the ordering to be recomputed with different groups, a different aggregation, or a restriction to the eight series that support $n = 120$.
+The bootstrap intervals are based on fourteen mechanism groups. The nine negative groups are weighted toward instrument transfer curves, and the seven series that support only the $n = 9$ calibration size are scored on eight subsamples of nine points drawn from series of 21 to 40 points. The scores from resampled copies allow the ordering to be recomputed with different groups, a different aggregation, or a restriction to the eight series that support $n = 120$.
 
-\section{Supplementary Note 19: Principal quantitative results}
+\section{Note S19: Principal quantitative results}
 
-Supplementary Table~\ref{stab:principal} lists every principal comparison with its evaluation population, in the order of the Results of the main text; Table~1 of the main text summarizes it.
+Table~\ref{stab:principal} lists every principal comparison with its evaluation population, in the order of the Results of the main text; Table~1 of the main text summarizes it.
 
 \begin{table}[htbp]
 \centering
 \caption{\textbf{Principal quantitative results.} Original controls are the nine held-out pre-1900 groups as originally generated; regenerated controls are the same
 groups regenerated with the sampling and noise process of the later families;
 the same-generator set is a set of later formulas generated by the same process
-as the pre-1900 corpus; metrological groups are calibration artefacts or
+as the pre-1900 corpus; metrological groups are calibration artifacts or
 instrument transfer curves. The 38 and 55 later families are each traced to a
 primary citation. Untrained denotes the same network with its initial random weights and no training steps. The large encoder is the 20.9-million-parameter model; the compact encoder is a small model trained on 205 point clouds from source-verified pre-1900 families; the generic-function control encoder is its twin trained on generic smooth expressions. A synthetic departure family is a set of curves built to depart from a classical form.}
 \label{stab:principal}

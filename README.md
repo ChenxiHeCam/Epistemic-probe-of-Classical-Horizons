@@ -220,7 +220,8 @@ each record come from the registry of dated pre-1900 sources
 machine-assembled formula graph, parts of which were generated with a language
 model or constructed combinatorially, and was not individually checked against
 the original source. The graph-edge fields (`edges_in`, `edges_out`) are
-inherited from that graph and are not used by any script.
+inherited from that graph and are not used by any script. The large encoder's training formulas and the
+same-generator set come from the same graph.
 
 ## License
 
