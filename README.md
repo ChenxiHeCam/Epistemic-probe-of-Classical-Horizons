@@ -1,7 +1,6 @@
 # EPOCH: Epistemic Probe of Classical Horizons
 
-This repository accompanies **"Testing predictive limits under a historical
-knowledge cutoff"** (Chenxi He and Jingqiu Chen).
+This repository accompanies **"Understanding where physical theories fail without knowing what replaces them"** (Chenxi He and Jingqiu Chen).
 EPOCH tests whether a body of physical knowledge bounded by a date still
 accounts for a set of measurements, where that compatibility ends, and whether
 a prediction of the theory that historically succeeded it is compatible with the same data.

@@ -13,8 +13,8 @@
       "sha256": "f5c4a9767034f55ca18bef1df154cc9f81eeea5a97701bbc7832c8b37519e287"
     },
     "README.md": {
-      "bytes": 11476,
-      "sha256": "5f4eed2583b82db890fd290785a68b3d0ea27fe7e919a258cf491f243f36fb64"
+      "bytes": 11492,
+      "sha256": "3731ddf2fcb2912cf755068051c0bf3db0ba369a9d3cce81a733329e9d27b695"
     },
     "build_release_manifest.py": {
       "bytes": 2114,
@@ -1001,12 +1001,12 @@
       "sha256": "0edcccd2435ad1121276ef522aedbb91c0f2555e1b551537f3ab7e0cca3e6f55"
     },
     "paper/manuscript.pdf": {
-      "bytes": 2616073,
-      "sha256": "d27ea8c2a696d9ca96b9237cd8212afd1523e11dd38904fd9a8cc836762b47c6"
+      "bytes": 2615771,
+      "sha256": "aa78157a9028f3b1be437d5de5a55fa9eb2390e75062f78b2d2f8dc660e1ec96"
     },
     "paper/manuscript.tex": {
-      "bytes": 44908,
-      "sha256": "3041e36c75229d884f115059f9bdf67edaec6dbe635aa9d1cf2d295b10ab19ea"
+      "bytes": 44923,
+      "sha256": "1647513cc43ba03283ca47a09498151f2589bdd9ed51f6d7c4aa707aafff5cca"
     },
     "paper/neurips_2026.sty": {
       "bytes": 13462,
@@ -1017,12 +1017,12 @@
       "sha256": "3b2aa27dae1ea3ff95808f46037f2ffd6cc411a6521799155b61d778018785db"
     },
     "paper/supplementary.pdf": {
-      "bytes": 3916614,
-      "sha256": "96e50611a47b2b9611ba71eaa512cb7857c7de1bc6af500de106626dff7cfd51"
+      "bytes": 3916476,
+      "sha256": "7791e55ddfc60ef70a5838a0a3c02bb94eae8c3b804495a859d5962a402b866c"
     },
     "paper/supplementary.tex": {
-      "bytes": 73887,
-      "sha256": "a8664773775f128ce7e282173f305d87ed5e5e93855e7c4ec6be8ab1b20bebea"
+      "bytes": 73902,
+      "sha256": "c717667af844fa4d43bffb50f9ed4c74fe9f98f33a50502599c7e374c468a186"
     },
     "protocols/CONFIRMATORY_PROTOCOL_TEMPLATE.md": {
       "bytes": 6357,
