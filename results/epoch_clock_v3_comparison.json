@@ -1,0 +1,225 @@
+{
+  "status": "PASS",
+  "schema_version": "3.0",
+  "test": "paired anomaly-score collapse after advancing knowledge horizon",
+  "score": "one_class_ensemble",
+  "families": 38,
+  "pre1900_median": 0.8206521739130435,
+  "pre1950_median": 0.3411111111111111,
+  "median_collapse": 0.42920893719806763,
+  "median_collapse_ci95": [
+    0.0023248792270531317,
+    0.6230676328502416
+  ],
+  "mean_collapse": 0.33496154335113143,
+  "mean_collapse_ci95": [
+    0.19451521580218667,
+    0.4696416618993135
+  ],
+  "families_decreased": 25,
+  "families_increased": 13,
+  "ties": 0,
+  "fraction_decreased_among_non_ties": 0.6578947368421053,
+  "exact_two_sided_sign_test_p": 0.07295138851623051,
+  "paired_scores": {
+    "avrami_kinetics": {
+      "pre1900_score": 0.8641304347826088,
+      "pre1950_score": 0.44,
+      "collapse": 0.42413043478260876
+    },
+    "bethe_stopping": {
+      "pre1900_score": 0.8396739130434783,
+      "pre1950_score": 0.03,
+      "collapse": 0.8096739130434782
+    },
+    "bloch_spin_wave": {
+      "pre1900_score": 0.8831521739130435,
+      "pre1950_score": 0.005555555555555556,
+      "collapse": 0.8775966183574879
+    },
+    "bohr_atom": {
+      "pre1900_score": 0.8125,
+      "pre1950_score": 0.09555555555555553,
+      "collapse": 0.7169444444444445
+    },
+    "bose_einstein_statistics": {
+      "pre1900_score": 0.6711956521739131,
+      "pre1950_score": 1.0,
+      "collapse": -0.3288043478260869
+    },
+    "bragg_diffraction": {
+      "pre1900_score": 0.8668478260869565,
+      "pre1950_score": 0.0077777777777777776,
+      "collapse": 0.8590700483091788
+    },
+    "breit_wigner_resonance": {
+      "pre1900_score": 0.907608695652174,
+      "pre1950_score": 0.9855555555555555,
+      "collapse": -0.07794685990338157
+    },
+    "brillouin_paramagnetism": {
+      "pre1900_score": 0.8777173913043479,
+      "pre1950_score": 0.23888888888888887,
+      "collapse": 0.638828502415459
+    },
+    "brownian_diffusion": {
+      "pre1900_score": 0.04619565217391304,
+      "pre1950_score": 0.0077777777777777776,
+      "collapse": 0.03841787439613526
+    },
+    "child_langmuir_space_charge": {
+      "pre1900_score": 0.8641304347826089,
+      "pre1950_score": 0.006666666666666666,
+      "collapse": 0.8574637681159422
+    },
+    "compton_scattering": {
+      "pre1900_score": 0.7907608695652173,
+      "pre1950_score": 0.1577777777777778,
+      "collapse": 0.6329830917874395
+    },
+    "curie_weiss_susceptibility": {
+      "pre1900_score": 0.6005434782608695,
+      "pre1950_score": 0.8722222222222222,
+      "collapse": -0.2716787439613527
+    },
+    "de_broglie_matter_wave": {
+      "pre1900_score": 0.44565217391304346,
+      "pre1950_score": 1.0,
+      "collapse": -0.5543478260869565
+    },
+    "debye_huckel_screening": {
+      "pre1900_score": 0.7826086956521738,
+      "pre1950_score": 1.0,
+      "collapse": -0.21739130434782616
+    },
+    "debye_solid": {
+      "pre1900_score": 0.9157608695652174,
+      "pre1950_score": 0.981111111111111,
+      "collapse": -0.06535024154589364
+    },
+    "einstein_solid": {
+      "pre1900_score": 0.8505434782608696,
+      "pre1950_score": 0.9955555555555556,
+      "collapse": -0.14501207729468601
+    },
+    "fermi_dirac_statistics": {
+      "pre1900_score": 0.6739130434782609,
+      "pre1950_score": 0.39888888888888885,
+      "collapse": 0.275024154589372
+    },
+    "fowler_nordheim_emission": {
+      "pre1900_score": 0.8559782608695652,
+      "pre1950_score": 0.0077777777777777776,
+      "collapse": 0.8482004830917874
+    },
+    "friedmann_expansion": {
+      "pre1900_score": 0.875,
+      "pre1950_score": 0.021111111111111112,
+      "collapse": 0.8538888888888889
+    },
+    "gamow_tunnelling": {
+      "pre1900_score": 0.8777173913043479,
+      "pre1950_score": 0.0077777777777777776,
+      "collapse": 0.8699396135265701
+    },
+    "geiger_nuttall": {
+      "pre1900_score": 0.828804347826087,
+      "pre1950_score": 0.013333333333333332,
+      "collapse": 0.8154710144927537
+    },
+    "ginzburg_landau_order": {
+      "pre1900_score": 0.9619565217391304,
+      "pre1950_score": 0.33888888888888885,
+      "collapse": 0.6230676328502416
+    },
+    "hill_binding": {
+      "pre1900_score": 0.7989130434782608,
+      "pre1950_score": 1.0,
+      "collapse": -0.20108695652173925
+    },
+    "hubble_relation": {
+      "pre1900_score": 0.05706521739130435,
+      "pre1950_score": 0.16555555555555554,
+      "collapse": -0.10849033816425119
+    },
+    "kolmogorov_turbulence": {
+      "pre1900_score": 0.7907608695652174,
+      "pre1950_score": 1.0,
+      "collapse": -0.2092391304347826
+    },
+    "kramers_escape": {
+      "pre1900_score": 0.8016304347826086,
+      "pre1950_score": 0.2822222222222222,
+      "collapse": 0.5194082125603865
+    },
+    "langevin_paramagnetism": {
+      "pre1900_score": 0.8777173913043479,
+      "pre1950_score": 0.3433333333333333,
+      "collapse": 0.5343840579710146
+    },
+    "langmuir_adsorption": {
+      "pre1900_score": 0.7826086956521738,
+      "pre1950_score": 1.0,
+      "collapse": -0.21739130434782616
+    },
+    "london_two_fluid_penetration": {
+      "pre1900_score": 0.8097826086956521,
+      "pre1950_score": 0.5011111111111111,
+      "collapse": 0.30867149758454104
+    },
+    "moseley_xray": {
+      "pre1900_score": 0.5706521739130435,
+      "pre1950_score": 0.14777777777777776,
+      "collapse": 0.4228743961352657
+    },
+    "photoelectric_threshold": {
+      "pre1900_score": 0.7934782608695653,
+      "pre1950_score": 0.23111111111111113,
+      "collapse": 0.5623671497584541
+    },
+    "rabi_oscillation": {
+      "pre1900_score": 0.7282608695652174,
+      "pre1950_score": 0.34444444444444444,
+      "collapse": 0.38381642512077296
+    },
+    "radioactive_decay": {
+      "pre1900_score": 0.7934782608695652,
+      "pre1950_score": 0.8755555555555555,
+      "collapse": -0.08207729468599034
+    },
+    "richardson_dushman_emission": {
+      "pre1900_score": 0.8559782608695652,
+      "pre1950_score": 0.01,
+      "collapse": 0.8459782608695652
+    },
+    "rutherford_scattering": {
+      "pre1900_score": 0.8695652173913043,
+      "pre1950_score": 0.9033333333333333,
+      "collapse": -0.033768115942029
+    },
+    "saha_ionization": {
+      "pre1900_score": 0.6467391304347826,
+      "pre1950_score": 0.01,
+      "collapse": 0.6367391304347826
+    },
+    "shockley_diode": {
+      "pre1900_score": 0.8396739130434783,
+      "pre1950_score": 0.3877777777777778,
+      "collapse": 0.4518961352657005
+    },
+    "special_relativity": {
+      "pre1900_score": 0.9320652173913043,
+      "pre1950_score": 0.49777777777777776,
+      "collapse": 0.43428743961352656
+    }
+  },
+  "provenance": {
+    "pre1900_evaluation": "/root/autodl-tmp/epoch_horizons/v2/results/phase_a_pre1900_v3_evaluation.json",
+    "pre1900_evaluation_sha256": "922c4900104f9cb99b427088d2c830aac51c5c6c25ac2f2b02871b7024295351",
+    "pre1950_evaluation": "/root/autodl-tmp/epoch_horizons/v2/results/phase_b_pre1950_v3_evaluation.json",
+    "pre1950_evaluation_sha256": "f531b8ef8770205a632acdb3a9c44353ae2470fa61e7aa9c4fc39bfe08eab506",
+    "bootstrap_repetitions": 10000,
+    "seed": 20260907
+  },
+  "interpretation_guardrail": "Positive collapse means the same 1901-1950 family became less anomalous after entering the admissible knowledge horizon; it is not a claim of causal discovery or successor-law recovery."
+}

@@ -1,0 +1,79 @@
+{
+  "schema_version": "2.0",
+  "run_id": "epoch_pre1900_main",
+  "knowledge_cutoff": 1899,
+  "promotion_state": "phase_a_frozen_before_any_pre1950_training",
+  "pointcloud": {
+    "bundle": "/root/autodl-tmp/epoch_horizons/v2/pointcloud_full_final",
+    "view_index": "/root/autodl-tmp/epoch_horizons/v2/pointcloud_views",
+    "view": "pre1900_temporal_eval",
+    "headline_provenance_mode": "strict",
+    "headline_counts": {
+      "train": 880896,
+      "calibration": 11648,
+      "internal_test": 62336,
+      "temporal_test": 96064
+    },
+    "expanded_ablation_counts": {
+      "train": 1605888,
+      "calibration": 45632,
+      "internal_test": 127296,
+      "temporal_test": 96064
+    },
+    "points_per_sample": 64,
+    "available_native_point_counts": [64, 128, 256],
+    "anomaly_supervision": "none"
+  },
+  "formula_graph": {
+    "bundle": "/root/autodl-tmp/epoch_horizons/v2/formula_graphs",
+    "join_key": "formula_index",
+    "formula_records": {
+      "train": 3441,
+      "calibration": 91,
+      "internal_test": 487,
+      "temporal_test": 1501
+    },
+    "use": "training-only structural teacher paired to point clouds; inference can remain point-cloud-only",
+    "node_features": ["node_type", "constant", "variable_slot", "depth"],
+    "edge_features": ["direction", "child_position"]
+  },
+  "symbolic": {
+    "strict_chain_bundle": "/root/autodl-tmp/epoch_horizons/v2/symbolic_chain_core",
+    "strict_chain_layer": "pre1900_audited_chain_core",
+    "strict_direct_augmentation": "/root/autodl-tmp/epoch_horizons/v2/symbolic_direct/pre1900_audited_direct.jsonl.gz",
+    "expanded_bundle": "/root/autodl-tmp/epoch_horizons/v2/symbolic_pretrain",
+    "strict_counts": {
+      "train": 3977,
+      "calibration": 84,
+      "internal_test": 521,
+      "temporal_test_1901_1950": 1178
+    },
+    "expanded_main_rows_including_chains": 582553,
+    "strict_direct_rows": 1421,
+    "deformation_layers_enabled": false
+  },
+  "loaders": {
+    "pointcloud": "/root/autodl-tmp/epoch_horizons/v2/scripts/epoch_pointcloud_dataset.py",
+    "formula_graph": "/root/autodl-tmp/epoch_horizons/v2/scripts/epoch_formula_graph_dataset.py",
+    "symbolic": "/root/autodl-tmp/epoch_horizons/v2/scripts/epoch_symbolic_dataset.py"
+  },
+  "tests": {
+    "known_internal": {
+      "view": "pre1900_temporal_eval",
+      "role": "internal_test",
+      "horizon": "pre1900"
+    },
+    "future_1901_1950": {
+      "view": "pre1900_temporal_eval",
+      "role": "temporal_test",
+      "horizon": "pre1950"
+    },
+    "curated_1901_1950": "/root/autodl-tmp/epoch_horizons/v2/temporal_benchmarks/post1900_to_1950.npz",
+    "curated_post1950": "/root/autodl-tmp/epoch_horizons/v2/temporal_benchmarks/post1950_forward.npz"
+  },
+  "evaluation": {
+    "primary_metric": "AUROC",
+    "aggregation": "aggregate cloud scores to formula, then report source-law-family macro result",
+    "confidence_interval": "cluster bootstrap by formula family or leakage group"
+  }
+}

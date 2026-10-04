@@ -1,0 +1,448 @@
+{
+  "status": "frozen real-measurement case registry; column semantics and horizon class fixed before scoring",
+  "label_basis": "horizon class declared from the measured phenomenon and its primary source, never from an EPOCH score",
+  "datasets": 16,
+  "mechanism_groups": [
+    "bose_gas_density",
+    "circular_interference",
+    "cryogenic_thermal_expansion",
+    "linewidth_standard",
+    "load_cell_elasticity",
+    "optical_linewidth_calibration",
+    "polymer_impedance",
+    "radiographic_defect_calibration",
+    "rydberg_series",
+    "semiconductor_magnetotransport",
+    "semiconductor_mobility",
+    "standard_resistor_drift",
+    "superconducting_flux_creep",
+    "ultrasonic_attenuation"
+  ],
+  "post_1900_mechanism_groups": [
+    "bose_gas_density",
+    "cryogenic_thermal_expansion",
+    "semiconductor_magnetotransport",
+    "semiconductor_mobility",
+    "superconducting_flux_creep"
+  ],
+  "classical_or_metrology_groups": [
+    "circular_interference",
+    "linewidth_standard",
+    "load_cell_elasticity",
+    "optical_linewidth_calibration",
+    "polymer_impedance",
+    "radiographic_defect_calibration",
+    "rydberg_series",
+    "standard_resistor_drift",
+    "ultrasonic_attenuation"
+  ],
+  "excluded_subset_files": {
+    "CHWIRUT2": "subset of CHWIRUT1; shares mechanism group ultrasonic_attenuation and adds no independent unit",
+    "CLARK2": "CLARK3 is its 1/5 decimation; shares mechanism group bose_gas_density and adds no independent unit"
+  },
+  "max_points_per_record": 2000,
+  "cases": [
+    {
+      "dataset": "HAHN1",
+      "mechanism_group": "cryogenic_thermal_expansion",
+      "x_col": 0,
+      "y_col": 1,
+      "x_name": "temperature (K)",
+      "y_name": "coefficient of thermal expansion",
+      "column_note": "the numeric block stores (temperature, coefficient); the header text lists the response first, so the order was fixed against the certified StRD values (first point: 24.41 K, 0.591)",
+      "horizon_class": "post_1900_mechanism",
+      "incumbent_1899": "temperature-independent expansion coefficient from classical equipartition of lattice modes",
+      "why": "the measured coefficient falls towards zero below the Debye temperature, which equipartition cannot produce",
+      "source": "T. Hahn, copper thermal expansion study, NIST (1970s); NIST StRD HAHN1",
+      "points_used": 236,
+      "points_available": 236,
+      "rows_in_file": 236,
+      "file": "raw/HAHN1.DAT",
+      "file_sha256": "8be597779666a8f2601dbf28086990c7f42ff7e97c69177a8affa3c57d5afc60",
+      "x_range": [
+        14.13,
+        851.61
+      ],
+      "y_range": [
+        0.08,
+        21.085
+      ]
+    },
+    {
+      "dataset": "BENNETT5",
+      "mechanism_group": "superconducting_flux_creep",
+      "x_col": 1,
+      "y_col": 0,
+      "x_name": "log time (ln minutes)",
+      "y_name": "magnetization M(t)",
+      "horizon_class": "post_1900_mechanism",
+      "incumbent_1899": "no persistent screening currents; classical Ohmic decay of an induced magnetization",
+      "why": "magnetization relaxation of a superconductor has no pre-1900 account",
+      "source": "L. Bennett, L. Swartzendruber and H. Brown, NIST (April 1994); NIST StRD BENNETT5",
+      "points_used": 154,
+      "points_available": 154,
+      "rows_in_file": 154,
+      "file": "raw/BENNETT5.DAT",
+      "file_sha256": "993369c420082be86acd5a61fdbce8465de5c7d53e2b38576513442dd09a1e54",
+      "x_range": [
+        7.447168,
+        12.27224
+      ],
+      "y_range": [
+        -34.834702,
+        -31.7868
+      ]
+    },
+    {
+      "dataset": "BENNETT6",
+      "mechanism_group": "superconducting_flux_creep",
+      "x_col": 1,
+      "y_col": 0,
+      "x_name": "log time (ln minutes)",
+      "y_name": "magnetization M(t)",
+      "horizon_class": "post_1900_mechanism",
+      "incumbent_1899": "no persistent screening currents; classical Ohmic decay of an induced magnetization",
+      "why": "magnetization relaxation of a superconductor has no pre-1900 account",
+      "source": "L. Bennett, L. Swartzendruber and H. Brown, NIST (April 1994); NIST StRD BENNETT6",
+      "points_used": 744,
+      "points_available": 744,
+      "rows_in_file": 744,
+      "file": "raw/BENNETT6.DAT",
+      "file_sha256": "8375c6a3942b8685e193af17dec58141137e6de04d4fb6fedb065d17435d34dc",
+      "x_range": [
+        6.472346,
+        12.81659
+      ],
+      "y_range": [
+        -7.40399,
+        -5.58702
+      ]
+    },
+    {
+      "dataset": "BENNETT7",
+      "mechanism_group": "superconducting_flux_creep",
+      "x_col": 0,
+      "y_col": 1,
+      "x_name": "log time (ln minutes)",
+      "y_name": "magnetization M(t)",
+      "horizon_class": "post_1900_mechanism",
+      "incumbent_1899": "no persistent screening currents; classical Ohmic decay of an induced magnetization",
+      "why": "magnetization relaxation of a superconductor has no pre-1900 account",
+      "source": "L. Bennett, L. Swartzendruber and H. Brown, NIST (April 1994); NIST StRD BENNETT7",
+      "points_used": 2000,
+      "points_available": 2996,
+      "rows_in_file": 2996,
+      "file": "raw/BENNETT7.DAT",
+      "file_sha256": "67e4a9fa49ec67c432eda40b2dc2a1a0869ab3387d0cbb7811ee614c395225af",
+      "x_range": [
+        5.313205,
+        11.718
+      ],
+      "y_range": [
+        -1.54905,
+        -1.2267
+      ]
+    },
+    {
+      "dataset": "CLARK3",
+      "mechanism_group": "bose_gas_density",
+      "x_col": 1,
+      "y_col": 0,
+      "x_name": "position",
+      "y_name": "cold Bose-gas density",
+      "horizon_class": "post_1900_mechanism",
+      "incumbent_1899": "Maxwell-Boltzmann density profile of a classical gas",
+      "why": "the density profile of a degenerate Bose gas requires quantum statistics",
+      "source": "C. Clark, Physics Laboratory, NIST (1995); NIST Dataplot CLARK3, a 1/5 decimation of CLARK2",
+      "points_used": 2000,
+      "points_available": 2000,
+      "rows_in_file": 2000,
+      "file": "raw/CLARK3.DAT",
+      "file_sha256": "070c81697e52464ba8d7136cb6fd338a839e7a12d073d52c49e215c9c5e8705e",
+      "x_range": [
+        0.0,
+        9.995
+      ],
+      "y_range": [
+        3.495120463612948e-22,
+        0.7090473353377791
+      ]
+    },
+    {
+      "dataset": "ROSZMAN1",
+      "mechanism_group": "rydberg_series",
+      "x_col": 0,
+      "y_col": 1,
+      "x_name": "principal quantum number",
+      "y_name": "term energy (cm-1)",
+      "horizon_class": "classical_or_metrology",
+      "incumbent_1899": "empirical Rydberg series with a fitted series constant (Rydberg 1888)",
+      "why": "the file is a bare (n, term energy) block for a sulfur Rydberg series; the measured curve follows an inverse-square series that was available empirically before 1900, so the declared horizon already predicts it",
+      "column_note": "the file carries no header; the certified StRD response (the quantum defect itself) is absent, and the second column is the StRD predictor",
+      "source": "R. Roszman, quantum defects for sulfur, NIST; NIST StRD ROSZMAN1 predictor block",
+      "points_used": 25,
+      "points_available": 25,
+      "rows_in_file": 25,
+      "file": "raw/ROSZMAN1.DAT",
+      "file_sha256": "a425252202dd16cc1d2fcc9d07f064c80177aa874555d58fe46e1d16cc36d9cf",
+      "x_range": [
+        5.0,
+        16.0
+      ],
+      "y_range": [
+        -4868.68,
+        -464.17
+      ]
+    },
+    {
+      "dataset": "KIM",
+      "mechanism_group": "semiconductor_magnetotransport",
+      "x_col": 0,
+      "y_col": 1,
+      "x_name": "magnetic field strength",
+      "y_name": "reduced conductivity (type 1)",
+      "horizon_class": "post_1900_mechanism",
+      "incumbent_1899": "single-carrier Drude magnetoconductivity",
+      "why": "the two-carrier reduction of the measured curve rests on band theory",
+      "source": "Kim, electron mobility analysis, NIST (June 1992); NIST Dataplot KIM",
+      "points_used": 21,
+      "points_available": 21,
+      "rows_in_file": 21,
+      "file": "raw/KIM.DAT",
+      "file_sha256": "b7041cf88fe6f38a7f0ac5b45ff34b0ca1c718b052eb1f0e89a4c4c1b87bc274",
+      "x_range": [
+        0.0018,
+        1.4091
+      ],
+      "y_range": [
+        0.115,
+        0.999
+      ]
+    },
+    {
+      "dataset": "THURBER",
+      "mechanism_group": "semiconductor_mobility",
+      "x_col": 1,
+      "y_col": 0,
+      "x_name": "log carrier density",
+      "y_name": "electron mobility",
+      "horizon_class": "post_1900_mechanism",
+      "incumbent_1899": "classical free-electron transport with density-independent mobility",
+      "why": "the measured mobility-density relation rests on band structure and impurity scattering",
+      "source": "R. Thurber, semiconductor electron mobility, NIST; NIST StRD THURBER",
+      "points_used": 37,
+      "points_available": 37,
+      "rows_in_file": 37,
+      "file": "raw/THURBER.DAT",
+      "file_sha256": "be9fe9b8c6cb40b947b84cec0d45b952bed574bcde05d322fba4b45ab9bd06df",
+      "x_range": [
+        -3.067,
+        2.2
+      ],
+      "y_range": [
+        80.574,
+        1468.705
+      ]
+    },
+    {
+      "dataset": "CHWIRUT1",
+      "mechanism_group": "ultrasonic_attenuation",
+      "x_col": 1,
+      "y_col": 0,
+      "x_name": "metal distance",
+      "y_name": "ultrasonic response",
+      "horizon_class": "classical_or_metrology",
+      "incumbent_1899": "attenuated elastic-wave propagation with geometric spreading",
+      "why": "classical acoustics covers the measured attenuation",
+      "source": "D. Chwirut, ultrasonic reference-block calibration, NIST; NIST StRD CHWIRUT1",
+      "points_used": 214,
+      "points_available": 214,
+      "rows_in_file": 214,
+      "file": "raw/CHWIRUT1.DAT",
+      "file_sha256": "ecc4ee3cbbbf1500fae64765bf257027ffb4ecc7889c5a7ac974e51af646841b",
+      "x_range": [
+        0.5,
+        6.0
+      ],
+      "y_range": [
+        3.75,
+        92.9
+      ]
+    },
+    {
+      "dataset": "ECKERLE4",
+      "mechanism_group": "circular_interference",
+      "x_col": 0,
+      "y_col": 1,
+      "x_name": "wavelength (nm)",
+      "y_name": "transmittance",
+      "horizon_class": "classical_or_metrology",
+      "incumbent_1899": "classical wave-optical interference in a circular aperture",
+      "why": "a sharp transmission resonance is morphologically unusual but fully classical; this is the shape-versus-physics hard control",
+      "source": "K. Eckerle, circular interference transmittance, NIST; NIST StRD ECKERLE4",
+      "points_used": 35,
+      "points_available": 35,
+      "rows_in_file": 35,
+      "file": "raw/ECKERLE4.DAT",
+      "file_sha256": "b57f7c8a9e59951f03ae23ea6cb0d4083553e70572ccb608e0c6ef9a1525ac8d",
+      "x_range": [
+        400.0,
+        500.0
+      ],
+      "y_range": [
+        7.1e-05,
+        0.3698049
+      ]
+    },
+    {
+      "dataset": "PONTIUS",
+      "mechanism_group": "load_cell_elasticity",
+      "x_col": 1,
+      "y_col": 0,
+      "x_name": "applied load",
+      "y_name": "deflection",
+      "horizon_class": "classical_or_metrology",
+      "incumbent_1899": "Hookean elastic response with a small quadratic correction",
+      "why": "classical elasticity covers the measured deflection",
+      "source": "P. Pontius, NIST load-cell calibration; NIST StRD PONTIUS",
+      "points_used": 40,
+      "points_available": 40,
+      "rows_in_file": 40,
+      "file": "raw/PONTIUS.DAT",
+      "file_sha256": "7854389f4b3058fc1d1f03250843d2c2ef00e09162939339769e9cb9ab1e8d8c",
+      "x_range": [
+        150000.0,
+        3000000.0
+      ],
+      "y_range": [
+        0.11019,
+        2.16844
+      ]
+    },
+    {
+      "dataset": "KIRBY2",
+      "mechanism_group": "linewidth_standard",
+      "x_col": 1,
+      "y_col": 0,
+      "x_name": "nominal line width",
+      "y_name": "measured line width",
+      "horizon_class": "classical_or_metrology",
+      "incumbent_1899": "smooth monotone instrument response",
+      "why": "an electron-microscope line-width standard is a metrology transfer curve, not a physical law",
+      "source": "R. Kirby, electron-microscope line-width standards, NIST; NIST StRD KIRBY2",
+      "points_used": 151,
+      "points_available": 151,
+      "rows_in_file": 151,
+      "file": "raw/KIRBY2.DAT",
+      "file_sha256": "663680af98a99ddce101457b663fbfe9a49c0554ad8a9b6557d3af978b26c33c",
+      "x_range": [
+        9.65,
+        371.3
+      ],
+      "y_range": [
+        0.0082,
+        92.2
+      ]
+    },
+    {
+      "dataset": "BERGER1",
+      "mechanism_group": "radiographic_defect_calibration",
+      "x_col": 1,
+      "y_col": 0,
+      "x_name": "in-lab defect size",
+      "y_name": "in-field defect size",
+      "horizon_class": "classical_or_metrology",
+      "incumbent_1899": "smooth monotone instrument response",
+      "why": "a radiographic calibration curve is a metrology transfer curve, not a physical law",
+      "source": "Berger, Alaska pipeline ultrasonic defect calibration, NIST; NIST StRD BERGER1",
+      "points_used": 107,
+      "points_available": 107,
+      "rows_in_file": 107,
+      "file": "raw/BERGER1.DAT",
+      "file_sha256": "a87e31e81c2c91c83e26b75bf8bd5c9a448c4eaf6f4bf3fc20ee899254d6fb30",
+      "x_range": [
+        4.3,
+        81.9
+      ],
+      "y_range": [
+        5.0,
+        85.0
+      ]
+    },
+    {
+      "dataset": "CALIBRATIONLINE",
+      "mechanism_group": "optical_linewidth_calibration",
+      "x_col": 0,
+      "y_col": 1,
+      "x_name": "line-width artifact",
+      "y_name": "measured line width",
+      "horizon_class": "classical_or_metrology",
+      "incumbent_1899": "smooth monotone instrument response",
+      "why": "an optical imaging calibration line is a metrology transfer curve, not a physical law",
+      "source": "C. Croarkin, optical imaging linewidth calibration, NIST; NIST Dataplot CALIBRATIONLINE",
+      "points_used": 40,
+      "points_available": 40,
+      "rows_in_file": 40,
+      "file": "raw/CALIBRATIONLINE.DAT",
+      "file_sha256": "b9a7277c2f2e6ac9e9d96402dbd7683704263180c8a99d8925fe44fb0b219ddc",
+      "x_range": [
+        1.99,
+        10.77
+      ],
+      "y_range": [
+        2.19,
+        10.93
+      ]
+    },
+    {
+      "dataset": "WATTODR3",
+      "mechanism_group": "polymer_impedance",
+      "x_col": 0,
+      "y_col": 1,
+      "x_name": "frequency",
+      "y_name": "real part of complex impedance",
+      "horizon_class": "classical_or_metrology",
+      "incumbent_1899": "classical dielectric relaxation of a polymer",
+      "why": "complex impedance dispersion is classical electromagnetism",
+      "source": "Bates and Watts (1988) p. 280 polymer impedance; NIST Dataplot WATTODR3",
+      "points_used": 23,
+      "points_available": 23,
+      "rows_in_file": 23,
+      "file": "raw/WATTODR3.DAT",
+      "file_sha256": "9feff04e4d8956b3afa278783e62a154a04a91ef262501449f05fc3af251617d",
+      "x_range": [
+        30.0,
+        150000.0
+      ],
+      "y_range": [
+        2.759,
+        4.22
+      ]
+    },
+    {
+      "dataset": "DZIUBA1",
+      "mechanism_group": "standard_resistor_drift",
+      "x_col": -1,
+      "y_col": 3,
+      "x_name": "decimal date",
+      "y_name": "standard resistor value",
+      "horizon_class": "classical_or_metrology",
+      "incumbent_1899": "slow monotone instrument drift about a stable reference value",
+      "why": "a five-year standard-resistor record is an instrument stability series",
+      "source": "R. Dziuba, standard resistors 1980-1985, NIST (July 1986); NIST Dataplot DZIUBA1",
+      "points_used": 1000,
+      "points_available": 1000,
+      "rows_in_file": 1000,
+      "file": "raw/DZIUBA1.DAT",
+      "file_sha256": "ccec9e416d96a843e173f2d6f102658a95a023101a850f07bac574c906dd9b47",
+      "x_range": [
+        1980.0940860215053,
+        1985.8360215053763
+      ],
+      "y_range": [
+        27.828,
+        28.1185
+      ]
+    }
+  ]
+}

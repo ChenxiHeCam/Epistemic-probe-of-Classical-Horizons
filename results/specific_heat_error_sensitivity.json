@@ -1,0 +1,69 @@
+{
+  "status": "sensitivity analysis; NIST reference-polynomial covariance is not available locally",
+  "interpretation": "A conclusion that the advanced horizon clears the data must be stable over a defensible, externally justified error floor.",
+  "rows": [
+    {
+      "relative_error_floor": 0.02,
+      "old_statistic": 5024901.124294229,
+      "old_pvalue": 0.000999000999000999,
+      "advanced_statistic": 1300.5288527686089,
+      "advanced_pvalue": 0.000999000999000999,
+      "score_collapse_ratio": 3863.736751089415,
+      "paired_success": false
+    },
+    {
+      "relative_error_floor": 0.03,
+      "old_statistic": 2255274.887513688,
+      "old_pvalue": 0.000999000999000999,
+      "advanced_statistic": 583.7030400370181,
+      "advanced_pvalue": 0.000999000999000999,
+      "score_collapse_ratio": 3863.7367510894915,
+      "paired_success": false
+    },
+    {
+      "relative_error_floor": 0.05,
+      "old_statistic": 827767.9156161493,
+      "old_pvalue": 0.000999000999000999,
+      "advanced_statistic": 214.24024692747696,
+      "advanced_pvalue": 0.000999000999000999,
+      "score_collapse_ratio": 3863.7367510893473,
+      "paired_success": false
+    },
+    {
+      "relative_error_floor": 0.075,
+      "old_statistic": 376745.75470574084,
+      "old_pvalue": 0.000999000999000999,
+      "advanced_statistic": 97.50813240563375,
+      "advanced_pvalue": 0.9100899100899101,
+      "score_collapse_ratio": 3863.7367510894255,
+      "paired_success": true
+    },
+    {
+      "relative_error_floor": 0.1,
+      "old_statistic": 216917.48988433377,
+      "old_pvalue": 0.000999000999000999,
+      "advanced_statistic": 56.14189160873224,
+      "advanced_pvalue": 1.0,
+      "score_collapse_ratio": 3863.736751089354,
+      "paired_success": true
+    },
+    {
+      "relative_error_floor": 0.15,
+      "old_statistic": 100877.72803069104,
+      "old_pvalue": 0.000999000999000999,
+      "advanced_statistic": 26.10885123119496,
+      "advanced_pvalue": 1.0,
+      "score_collapse_ratio": 3863.736751089298,
+      "paired_success": true
+    },
+    {
+      "relative_error_floor": 0.2,
+      "old_statistic": 59278.48653186826,
+      "old_pvalue": 0.000999000999000999,
+      "advanced_statistic": 15.342268469805909,
+      "advanced_pvalue": 1.0,
+      "score_collapse_ratio": 3863.7367510893373,
+      "paired_success": true
+    }
+  ]
+}

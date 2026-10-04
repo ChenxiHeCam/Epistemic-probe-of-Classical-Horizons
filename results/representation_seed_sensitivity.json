@@ -1,0 +1,174 @@
+{
+  "status": "completed paired training-seed sensitivity; canonical checkpoints unchanged",
+  "seeds": [
+    20260905,
+    20260906,
+    20260907
+  ],
+  "evaluation_seed": 20261900,
+  "matched": {
+    "records": 205,
+    "families": 40,
+    "family_size_profile": true,
+    "function_signature_histogram": true,
+    "architecture": true,
+    "optimization": true,
+    "paired_initialization_seed": true
+  },
+  "runs": [
+    {
+      "seed": 20260905,
+      "strict": {
+        "dataset_auroc": 0.8868272569444445,
+        "family_auroc": 0.9097222222222222,
+        "breakdown_family_tpr": 0.16666666666666666,
+        "synthetic_classical_family_fpr": 0.0,
+        "cited_test_family_fpr": 0.0,
+        "threshold": 0.16037176921963692
+      },
+      "generic": {
+        "dataset_auroc": 0.39615885416666674,
+        "family_auroc": 0.4027777777777778,
+        "breakdown_family_tpr": 0.8333333333333334,
+        "synthetic_classical_family_fpr": 0.9166666666666666,
+        "cited_test_family_fpr": 0.7142857142857143,
+        "threshold": 0.006141975522041321
+      },
+      "strict_minus_generic_family_auroc": 0.5069444444444444,
+      "final_training_loss": {
+        "strict": {
+          "contrastive": 1.6089158058166504,
+          "signature": 0.4546932578086853,
+          "total": 1.8362624645233154
+        },
+        "generic": {
+          "contrastive": 3.185357093811035,
+          "signature": 0.2932450771331787,
+          "total": 3.331979751586914
+        }
+      }
+    },
+    {
+      "seed": 20260906,
+      "strict": {
+        "dataset_auroc": 0.9103732638888888,
+        "family_auroc": 0.9097222222222222,
+        "breakdown_family_tpr": 0.6666666666666666,
+        "synthetic_classical_family_fpr": 0.0,
+        "cited_test_family_fpr": 0.0,
+        "threshold": 0.09699402749538422
+      },
+      "generic": {
+        "dataset_auroc": 0.29535590277777773,
+        "family_auroc": 0.2916666666666667,
+        "breakdown_family_tpr": 0.8333333333333334,
+        "synthetic_classical_family_fpr": 1.0,
+        "cited_test_family_fpr": 0.5714285714285714,
+        "threshold": 0.00981723703444004
+      },
+      "strict_minus_generic_family_auroc": 0.6180555555555556,
+      "final_training_loss": {
+        "strict": {
+          "contrastive": 1.676358699798584,
+          "signature": 0.42247405648231506,
+          "total": 1.887595772743225
+        },
+        "generic": {
+          "contrastive": 2.954465627670288,
+          "signature": 0.28815650939941406,
+          "total": 3.098543882369995
+        }
+      }
+    },
+    {
+      "seed": 20260907,
+      "strict": {
+        "dataset_auroc": 0.8568793402777778,
+        "family_auroc": 0.8888888888888888,
+        "breakdown_family_tpr": 0.08333333333333333,
+        "synthetic_classical_family_fpr": 0.0,
+        "cited_test_family_fpr": 0.0,
+        "threshold": 0.11005816236138344
+      },
+      "generic": {
+        "dataset_auroc": 0.3049045138888889,
+        "family_auroc": 0.29166666666666663,
+        "breakdown_family_tpr": 0.8333333333333334,
+        "synthetic_classical_family_fpr": 1.0,
+        "cited_test_family_fpr": 0.8571428571428571,
+        "threshold": 0.004267546581104398
+      },
+      "strict_minus_generic_family_auroc": 0.5972222222222222,
+      "final_training_loss": {
+        "strict": {
+          "contrastive": 1.377176284790039,
+          "signature": 0.4473347067832947,
+          "total": 1.6008436679840088
+        },
+        "generic": {
+          "contrastive": 3.2001543045043945,
+          "signature": 0.2500680685043335,
+          "total": 3.325188398361206
+        }
+      }
+    }
+  ],
+  "summary": {
+    "strict_family_auroc": {
+      "values": [
+        0.9097222222222222,
+        0.9097222222222222,
+        0.8888888888888888
+      ],
+      "mean": 0.9027777777777777,
+      "sample_sd": 0.012028130608117225,
+      "min": 0.8888888888888888,
+      "max": 0.9097222222222222
+    },
+    "generic_family_auroc": {
+      "values": [
+        0.4027777777777778,
+        0.2916666666666667,
+        0.29166666666666663
+      ],
+      "mean": 0.32870370370370366,
+      "sample_sd": 0.06415002990995843,
+      "min": 0.29166666666666663,
+      "max": 0.4027777777777778
+    },
+    "strict_minus_generic_family_auroc": {
+      "values": [
+        0.5069444444444444,
+        0.6180555555555556,
+        0.5972222222222222
+      ],
+      "mean": 0.5740740740740741,
+      "sample_sd": 0.059061809361912396,
+      "min": 0.5069444444444444,
+      "max": 0.6180555555555556
+    },
+    "strict_synthetic_classical_family_fpr": {
+      "values": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "mean": 0.0,
+      "sample_sd": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    },
+    "generic_synthetic_classical_family_fpr": {
+      "values": [
+        0.9166666666666666,
+        1.0,
+        1.0
+      ],
+      "mean": 0.9722222222222222,
+      "sample_sd": 0.048112522432468836,
+      "min": 0.9166666666666666,
+      "max": 1.0
+    }
+  },
+  "claim_boundary": "Three paired seeds estimate training instability descriptively; n=3 is not a precise training-population confidence interval, and all evaluations remain synthetic."
+}

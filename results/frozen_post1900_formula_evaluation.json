@@ -1,0 +1,1687 @@
+{
+  "status": "completed frozen forward-inference audit",
+  "no_training_audit": {
+    "training_steps": 0,
+    "optimizer_constructed": false,
+    "model_eval_mode": true,
+    "weights_updated": false,
+    "thresholds_updated": false,
+    "post1900_records_entered_training_or_calibration": false
+  },
+  "frozen_artifacts": {
+    "encoder": "encoder_pre1900_strict_zero_units.pt",
+    "encoder_sha256": "9ca8e661427a8bf538eea3c3acf9f9c34f2dcf867d5fe545c10cf7e29cf0df84",
+    "pre1900_reference_data": "pre1900_audited_pointclouds.npz",
+    "pre1900_reference_data_sha256": "6c6d1c81ca9cb8cbf13c1a5ed16d014f773f3c1e7cd02bdd5eba8b6658d49124",
+    "learned_threshold_q95_family": 0.13164656469598413,
+    "learned_calibration_families": 40,
+    "learned_minimum_resolvable_conformal_p": 0.024390243902439025,
+    "stat_threshold_q95_n120": 3.391320707553498,
+    "stat_threshold_q99_n120": 14.201822917642659,
+    "learned_protocol_source": "pre1900_cross_family_conformal.json",
+    "stat_protocol_source": "calibrated_detector_v2.json"
+  },
+  "benchmark": {
+    "registry": "post1900_formula_registry.json",
+    "registry_sha256": "d6670ee4034be3f286f6626d593207eb7a4d5d61a15eda3998952240f9c8d7c6",
+    "pointcloud_archive": "post1900_formula_pointclouds.npz",
+    "pointcloud_archive_sha256": "12cfb0c5c2d35245d0a4162a2f23126b272a89032d8912ef2bef672cbea26be0",
+    "source_law_families": 55,
+    "records": 440,
+    "records_per_family": 8,
+    "points_per_record": 120,
+    "strict_year_range": [
+      1901,
+      1996
+    ],
+    "negative_controls": "11 cited source-law families held out from pre-1900 encoder training"
+  },
+  "primary_family_level": {
+    "learned": {
+      "post1900_alerts": 7,
+      "post1900_families": 55,
+      "post1900_rate": 0.12727272727272726,
+      "post1900_wilson_95_ci": [
+        0.06304210427364634,
+        0.24017027655909076
+      ],
+      "heldout_pre1900_false_alerts": 0,
+      "heldout_pre1900_families": 11,
+      "heldout_pre1900_fpr": 0.0,
+      "heldout_pre1900_wilson_95_ci": [
+        0.0,
+        0.2588329669680317
+      ],
+      "auroc_post1900_vs_heldout_pre1900": 0.6694214876033058,
+      "family_bootstrap_95_ci": [
+        0.5338842975206611,
+        0.7983884297520656
+      ]
+    },
+    "statistical_four_form": {
+      "post1900_alerts": 7,
+      "post1900_families": 55,
+      "post1900_rate": 0.12727272727272726,
+      "post1900_wilson_95_ci": [
+        0.06304210427364634,
+        0.24017027655909076
+      ],
+      "heldout_pre1900_false_alerts": 0,
+      "heldout_pre1900_families": 11,
+      "heldout_pre1900_fpr": 0.0,
+      "heldout_pre1900_wilson_95_ci": [
+        0.0,
+        0.2588329669680317
+      ],
+      "q99_post1900_alerts": 0,
+      "q99_post1900_rate": 0.0,
+      "auroc_post1900_vs_heldout_pre1900": 0.8876033057851239,
+      "family_bootstrap_95_ci": [
+        0.8,
+        0.9586776859504131
+      ],
+      "post1900_record_abstentions": 2,
+      "heldout_pre1900_record_abstentions": 0
+    },
+    "framework_or": {
+      "post1900_alerts": 11,
+      "post1900_families": 55,
+      "post1900_rate": 0.2,
+      "post1900_wilson_95_ci": [
+        0.11552214909761245,
+        0.32364879157263937
+      ],
+      "heldout_pre1900_false_alerts": 0,
+      "heldout_pre1900_families": 11,
+      "heldout_pre1900_fpr": 0.0,
+      "heldout_pre1900_wilson_95_ci": [
+        0.0,
+        0.2588329669680317
+      ]
+    },
+    "framework_and": {
+      "post1900_alerts": 3,
+      "post1900_families": 55,
+      "post1900_rate": 0.05454545454545454,
+      "post1900_wilson_95_ci": [
+        0.01872321555468448,
+        0.14853060544053792
+      ],
+      "heldout_pre1900_false_alerts": 0,
+      "heldout_pre1900_families": 11,
+      "heldout_pre1900_fpr": 0.0,
+      "heldout_pre1900_wilson_95_ci": [
+        0.0,
+        0.2588329669680317
+      ]
+    }
+  },
+  "by_shape_class": {
+    "learned_alert_q95": {
+      "declared_dictionary_overlap": {
+        "families": 12,
+        "alerts": 1,
+        "rate": 0.08333333333333333,
+        "wilson_95_ci": [
+          0.014865094404917095,
+          0.35387991114111694
+        ]
+      },
+      "nonmonotone_or_oscillatory": {
+        "families": 6,
+        "alerts": 2,
+        "rate": 0.3333333333333333,
+        "wilson_95_ci": [
+          0.09677141110578041,
+          0.700006684861608
+        ]
+      },
+      "smooth_composite": {
+        "families": 31,
+        "alerts": 1,
+        "rate": 0.03225806451612903,
+        "wilson_95_ci": [
+          0.005717221525416816,
+          0.16194105164724906
+        ]
+      },
+      "special_function_or_integral": {
+        "families": 1,
+        "alerts": 1,
+        "rate": 1.0,
+        "wilson_95_ci": [
+          0.20654931437723745,
+          1.0
+        ]
+      },
+      "threshold_or_piecewise": {
+        "families": 5,
+        "alerts": 2,
+        "rate": 0.4,
+        "wilson_95_ci": [
+          0.11762077423264783,
+          0.769275718723987
+        ]
+      }
+    },
+    "stat_alert_q95": {
+      "declared_dictionary_overlap": {
+        "families": 12,
+        "alerts": 0,
+        "rate": 0.0,
+        "wilson_95_ci": [
+          0.0,
+          0.24249400665524085
+        ]
+      },
+      "nonmonotone_or_oscillatory": {
+        "families": 6,
+        "alerts": 2,
+        "rate": 0.3333333333333333,
+        "wilson_95_ci": [
+          0.09677141110578041,
+          0.700006684861608
+        ]
+      },
+      "smooth_composite": {
+        "families": 31,
+        "alerts": 3,
+        "rate": 0.0967741935483871,
+        "wilson_95_ci": [
+          0.03346464416319736,
+          0.24899938443392836
+        ]
+      },
+      "special_function_or_integral": {
+        "families": 1,
+        "alerts": 1,
+        "rate": 1.0,
+        "wilson_95_ci": [
+          0.20654931437723745,
+          1.0
+        ]
+      },
+      "threshold_or_piecewise": {
+        "families": 5,
+        "alerts": 1,
+        "rate": 0.2,
+        "wilson_95_ci": [
+          0.03622410863243014,
+          0.6244653702374747
+        ]
+      }
+    },
+    "framework_or_alert_q95": {
+      "declared_dictionary_overlap": {
+        "families": 12,
+        "alerts": 1,
+        "rate": 0.08333333333333333,
+        "wilson_95_ci": [
+          0.014865094404917095,
+          0.35387991114111694
+        ]
+      },
+      "nonmonotone_or_oscillatory": {
+        "families": 6,
+        "alerts": 3,
+        "rate": 0.5,
+        "wilson_95_ci": [
+          0.1876163064826506,
+          0.8123836935173494
+        ]
+      },
+      "smooth_composite": {
+        "families": 31,
+        "alerts": 4,
+        "rate": 0.12903225806451613,
+        "wilson_95_ci": [
+          0.051342843746291486,
+          0.28852406256306423
+        ]
+      },
+      "special_function_or_integral": {
+        "families": 1,
+        "alerts": 1,
+        "rate": 1.0,
+        "wilson_95_ci": [
+          0.20654931437723745,
+          1.0
+        ]
+      },
+      "threshold_or_piecewise": {
+        "families": 5,
+        "alerts": 2,
+        "rate": 0.4,
+        "wilson_95_ci": [
+          0.11762077423264783,
+          0.769275718723987
+        ]
+      }
+    },
+    "framework_and_alert_q95": {
+      "declared_dictionary_overlap": {
+        "families": 12,
+        "alerts": 0,
+        "rate": 0.0,
+        "wilson_95_ci": [
+          0.0,
+          0.24249400665524085
+        ]
+      },
+      "nonmonotone_or_oscillatory": {
+        "families": 6,
+        "alerts": 1,
+        "rate": 0.16666666666666666,
+        "wilson_95_ci": [
+          0.030053369748306635,
+          0.5635028221864702
+        ]
+      },
+      "smooth_composite": {
+        "families": 31,
+        "alerts": 0,
+        "rate": 0.0,
+        "wilson_95_ci": [
+          0.0,
+          0.11025539546043596
+        ]
+      },
+      "special_function_or_integral": {
+        "families": 1,
+        "alerts": 1,
+        "rate": 1.0,
+        "wilson_95_ci": [
+          0.20654931437723745,
+          1.0
+        ]
+      },
+      "threshold_or_piecewise": {
+        "families": 5,
+        "alerts": 1,
+        "rate": 0.2,
+        "wilson_95_ci": [
+          0.03622410863243014,
+          0.6244653702374747
+        ]
+      }
+    }
+  },
+  "by_chronology_descriptive_only": {
+    "1901-1919": {
+      "families": 17,
+      "learned_alert_rate": 0.17647058823529413,
+      "stat_alert_rate": 0.17647058823529413,
+      "framework_or_alert_rate": 0.29411764705882354
+    },
+    "1920-1949": {
+      "families": 20,
+      "learned_alert_rate": 0.0,
+      "stat_alert_rate": 0.05,
+      "framework_or_alert_rate": 0.05
+    },
+    "1950-1999": {
+      "families": 18,
+      "learned_alert_rate": 0.2222222222222222,
+      "stat_alert_rate": 0.16666666666666666,
+      "framework_or_alert_rate": 0.2777777777777778
+    }
+  },
+  "unique_functional_signatures": {
+    "count": 51,
+    "learned_alerts": 7,
+    "stat_alerts": 7,
+    "rows": [
+      {
+        "functional_signature": "bcs_gap_interpolation",
+        "source_law_families": 1,
+        "learned_alert": true,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "bose_occupation",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "brillouin_coth_difference",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "cooperative_sigmoid",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": true
+      },
+      {
+        "functional_signature": "coth_minus_inverse",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "critical_inverse_square_root",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "critical_special_function",
+        "source_law_families": 1,
+        "learned_alert": true,
+        "stat_alert": true
+      },
+      {
+        "functional_signature": "critical_square_root_threshold",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "debye_integral",
+        "source_law_families": 1,
+        "learned_alert": true,
+        "stat_alert": true
+      },
+      {
+        "functional_signature": "double_power_rational",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "einstein_oscillator_heat_capacity",
+        "source_law_families": 1,
+        "learned_alert": true,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "essential_singularity",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "exponential_decay",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "fermi_sigmoid",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": true
+      },
+      {
+        "functional_signature": "gaussian_weighted_power",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "integer_staircase",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "inverse",
+        "source_law_families": 2,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "inverse_argument_oscillation",
+        "source_law_families": 1,
+        "learned_alert": true,
+        "stat_alert": true
+      },
+      {
+        "functional_signature": "inverse_logarithm",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "inverse_root_exponential",
+        "source_law_families": 2,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "inverse_square",
+        "source_law_families": 1,
+        "learned_alert": true,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "inverse_temperature_exponential",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "inverse_trigonometric",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "inverse_trigonometric_power",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "linear",
+        "source_law_families": 2,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "logarithmic",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "lorentzian_resonance",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "offset_exponential",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "offset_power_3_over_2",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "one_minus_cosine_half_cycle",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "power_3_over_2",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "power_4",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "power_minus_2_35",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "power_minus_5_over_3",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "power_times_exponential_cutoff",
+        "source_law_families": 1,
+        "learned_alert": true,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "power_times_inverse_field_exponential",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "power_times_inverse_temperature_exponential",
+        "source_law_families": 2,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "rational_log_shift",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "rational_saturation",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": true
+      },
+      {
+        "functional_signature": "relativistic_divergence",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "relativistic_log_over_square",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "relativistic_mass_radius_turnover",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "screened_inverse",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "shifted_inverse",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "shifted_quadratic",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "sine",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": true
+      },
+      {
+        "functional_signature": "sinusoidal_probability",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "square_root_polynomial_sum",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "stretched_exponential_saturation",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "stretched_inverse_temperature_exponential",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      },
+      {
+        "functional_signature": "thresholded_affine",
+        "source_law_families": 1,
+        "learned_alert": false,
+        "stat_alert": false
+      }
+    ]
+  },
+  "heldout_pre1900_controls": [
+    {
+      "family_id": "archimedes_buoyancy",
+      "learned_score": 0.014555779285728931,
+      "learned_alert_q95": false,
+      "stat_score": 0.4237436061747766,
+      "stat_alert_q95": false,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "classical_interference",
+      "learned_score": 0.05323474109172821,
+      "learned_alert_q95": false,
+      "stat_score": 0.612665785713184,
+      "stat_alert_q95": false,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "coulomb_electrostatics",
+      "learned_score": 0.0688234269618988,
+      "learned_alert_q95": false,
+      "stat_score": 0.000492912735163079,
+      "stat_alert_q95": false,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "fresnel_optics",
+      "learned_score": 0.03382439352571964,
+      "learned_alert_q95": false,
+      "stat_score": 0.4340631885761534,
+      "stat_alert_q95": false,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "gibbs_thermodynamics",
+      "learned_score": 0.021779315546154976,
+      "learned_alert_q95": false,
+      "stat_score": 0.3450017658483474,
+      "stat_alert_q95": false,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "helmholtz_free_energy",
+      "learned_score": 0.010767875472083688,
+      "learned_alert_q95": false,
+      "stat_score": 0.7624691549994476,
+      "stat_alert_q95": false,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "kelvin_helmholtz",
+      "learned_score": 0.007627531886100769,
+      "learned_alert_q95": false,
+      "stat_score": 0.7886309693850182,
+      "stat_alert_q95": false,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "maxwell_boltzmann",
+      "learned_score": 0.026295220479369164,
+      "learned_alert_q95": false,
+      "stat_score": 1.2503075107165817,
+      "stat_alert_q95": false,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "poynting_energy_flux",
+      "learned_score": 0.017949160188436508,
+      "learned_alert_q95": false,
+      "stat_score": 0.5923215457638207,
+      "stat_alert_q95": false,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "roche_limit",
+      "learned_score": 0.02992090955376625,
+      "learned_alert_q95": false,
+      "stat_score": 0.4163380655744563,
+      "stat_alert_q95": false,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "stokes_drag",
+      "learned_score": 0.03631863743066788,
+      "learned_alert_q95": false,
+      "stat_score": 0.4660856653978819,
+      "stat_alert_q95": false,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    }
+  ],
+  "post1900_families": [
+    {
+      "family_id": "avrami_kinetics",
+      "law_name": "Avrami transformation kinetics",
+      "first_valid_year": 1939,
+      "domain": "materials_physics",
+      "shape_class": "smooth_composite",
+      "functional_signature": "stretched_exponential_saturation",
+      "learned_score": 0.08698956668376923,
+      "learned_family_conformal_p": 0.14634146341463414,
+      "learned_alert_q95": false,
+      "stat_score": 2.906193483409119,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "bcs_superconducting_gap",
+      "law_name": "BCS superconducting gap curve",
+      "first_valid_year": 1957,
+      "domain": "condensed_matter",
+      "shape_class": "threshold_or_piecewise",
+      "functional_signature": "bcs_gap_interpolation",
+      "learned_score": 0.15503564476966858,
+      "learned_family_conformal_p": 0.04878048780487805,
+      "learned_alert_q95": true,
+      "stat_score": 3.1078319668579346,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": true,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "bethe_stopping",
+      "law_name": "Bethe charged-particle stopping relation",
+      "first_valid_year": 1930,
+      "domain": "nuclear_physics",
+      "shape_class": "smooth_composite",
+      "functional_signature": "relativistic_log_over_square",
+      "learned_score": 0.01586557738482952,
+      "learned_family_conformal_p": 0.7804878048780488,
+      "learned_alert_q95": false,
+      "stat_score": 2.750874446258221,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "bkt_correlation_length",
+      "law_name": "Berezinskii-Kosterlitz-Thouless correlation length",
+      "first_valid_year": 1973,
+      "domain": "condensed_matter",
+      "shape_class": "smooth_composite",
+      "functional_signature": "essential_singularity",
+      "learned_score": 0.035971395671367645,
+      "learned_family_conformal_p": 0.1951219512195122,
+      "learned_alert_q95": false,
+      "stat_score": 0.6044241329916542,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "bloch_spin_wave",
+      "law_name": "Bloch T^(3/2) magnetization law",
+      "first_valid_year": 1930,
+      "domain": "condensed_matter",
+      "shape_class": "declared_dictionary_overlap",
+      "functional_signature": "offset_power_3_over_2",
+      "learned_score": 0.013160680420696735,
+      "learned_family_conformal_p": 0.8536585365853658,
+      "learned_alert_q95": false,
+      "stat_score": 0.39874290096577464,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "bohr_atom",
+      "law_name": "Bohr hydrogen energy levels",
+      "first_valid_year": 1913,
+      "domain": "quantum_and_atomic",
+      "shape_class": "declared_dictionary_overlap",
+      "functional_signature": "inverse_square",
+      "learned_score": 0.18097926676273346,
+      "learned_family_conformal_p": 0.04878048780487805,
+      "learned_alert_q95": true,
+      "stat_score": 1.0741492965699386,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": true,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "bose_einstein_statistics",
+      "law_name": "Bose-Einstein occupation",
+      "first_valid_year": 1924,
+      "domain": "quantum_statistics",
+      "shape_class": "smooth_composite",
+      "functional_signature": "bose_occupation",
+      "learned_score": 0.12160465121269226,
+      "learned_family_conformal_p": 0.07317073170731707,
+      "learned_alert_q95": false,
+      "stat_score": 2.1150294210934515,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "bragg_diffraction",
+      "law_name": "Bragg diffraction law",
+      "first_valid_year": 1913,
+      "domain": "quantum_and_atomic",
+      "shape_class": "smooth_composite",
+      "functional_signature": "inverse_trigonometric",
+      "learned_score": 0.007447096519172192,
+      "learned_family_conformal_p": 0.9512195121951219,
+      "learned_alert_q95": false,
+      "stat_score": 1.544337563491602,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "breit_wigner_resonance",
+      "law_name": "Breit-Wigner resonance profile",
+      "first_valid_year": 1936,
+      "domain": "nuclear_physics",
+      "shape_class": "nonmonotone_or_oscillatory",
+      "functional_signature": "lorentzian_resonance",
+      "learned_score": 0.039819054305553436,
+      "learned_family_conformal_p": 0.17073170731707318,
+      "learned_alert_q95": false,
+      "stat_score": 0.38810431580916815,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "brillouin_paramagnetism",
+      "law_name": "Brillouin magnetization function",
+      "first_valid_year": 1927,
+      "domain": "quantum_statistics",
+      "shape_class": "smooth_composite",
+      "functional_signature": "brillouin_coth_difference",
+      "learned_score": 0.058648619800806046,
+      "learned_family_conformal_p": 0.14634146341463414,
+      "learned_alert_q95": false,
+      "stat_score": 0.4570487798772463,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "brownian_diffusion",
+      "law_name": "Einstein mean-square displacement",
+      "first_valid_year": 1905,
+      "domain": "statistical_physics",
+      "shape_class": "declared_dictionary_overlap",
+      "functional_signature": "linear",
+      "learned_score": 0.007611368782818317,
+      "learned_family_conformal_p": 0.9512195121951219,
+      "learned_alert_q95": false,
+      "stat_score": 0.39075215738768854,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "child_langmuir_space_charge",
+      "law_name": "Child-Langmuir space-charge law",
+      "first_valid_year": 1911,
+      "domain": "electromagnetism",
+      "shape_class": "declared_dictionary_overlap",
+      "functional_signature": "power_3_over_2",
+      "learned_score": 0.01112719438970089,
+      "learned_family_conformal_p": 0.9024390243902439,
+      "learned_alert_q95": false,
+      "stat_score": 1.4673795300767072,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "compton_scattering",
+      "law_name": "Compton wavelength shift",
+      "first_valid_year": 1923,
+      "domain": "quantum_and_atomic",
+      "shape_class": "smooth_composite",
+      "functional_signature": "one_minus_cosine_half_cycle",
+      "learned_score": 0.010405130684375763,
+      "learned_family_conformal_p": 0.9024390243902439,
+      "learned_alert_q95": false,
+      "stat_score": 2.1435555442382244,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "curie_weiss_susceptibility",
+      "law_name": "Curie-Weiss susceptibility",
+      "first_valid_year": 1907,
+      "domain": "condensed_matter",
+      "shape_class": "smooth_composite",
+      "functional_signature": "shifted_inverse",
+      "learned_score": 0.02778228558599949,
+      "learned_family_conformal_p": 0.3170731707317073,
+      "learned_alert_q95": false,
+      "stat_score": 1.281499368409343,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "de_broglie_matter_wave",
+      "law_name": "de Broglie wavelength",
+      "first_valid_year": 1924,
+      "domain": "quantum_and_atomic",
+      "shape_class": "declared_dictionary_overlap",
+      "functional_signature": "inverse",
+      "learned_score": 0.12047333270311356,
+      "learned_family_conformal_p": 0.0975609756097561,
+      "learned_alert_q95": false,
+      "stat_score": 0.9004715607630502,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "debye_huckel_screening",
+      "law_name": "Debye-Huckel screened potential",
+      "first_valid_year": 1923,
+      "domain": "statistical_physics",
+      "shape_class": "smooth_composite",
+      "functional_signature": "screened_inverse",
+      "learned_score": 0.12017795443534851,
+      "learned_family_conformal_p": 0.0975609756097561,
+      "learned_alert_q95": false,
+      "stat_score": 2.5212615548882864,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "debye_solid",
+      "law_name": "Debye heat-capacity law",
+      "first_valid_year": 1912,
+      "domain": "condensed_matter",
+      "shape_class": "special_function_or_integral",
+      "functional_signature": "debye_integral",
+      "learned_score": 0.15953350067138672,
+      "learned_family_conformal_p": 0.04878048780487805,
+      "learned_alert_q95": true,
+      "stat_score": 5.2115943481199976,
+      "stat_alert_q95": true,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": true,
+      "framework_and_alert_q95": true
+    },
+    {
+      "family_id": "einstein_solid",
+      "law_name": "Einstein solid heat capacity",
+      "first_valid_year": 1907,
+      "domain": "condensed_matter",
+      "shape_class": "smooth_composite",
+      "functional_signature": "einstein_oscillator_heat_capacity",
+      "learned_score": 0.15147948265075684,
+      "learned_family_conformal_p": 0.04878048780487805,
+      "learned_alert_q95": true,
+      "stat_score": 1.9629516470254227,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": true,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "fermi_dirac_statistics",
+      "law_name": "Fermi-Dirac occupation",
+      "first_valid_year": 1926,
+      "domain": "quantum_statistics",
+      "shape_class": "smooth_composite",
+      "functional_signature": "fermi_sigmoid",
+      "learned_score": 0.023072227835655212,
+      "learned_family_conformal_p": 0.4878048780487805,
+      "learned_alert_q95": false,
+      "stat_score": 3.972184104727945,
+      "stat_alert_q95": true,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": true,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "fowler_nordheim_emission",
+      "law_name": "Fowler-Nordheim field-emission law",
+      "first_valid_year": 1928,
+      "domain": "quantum_transport",
+      "shape_class": "smooth_composite",
+      "functional_signature": "power_times_inverse_field_exponential",
+      "learned_score": 0.03223083168268204,
+      "learned_family_conformal_p": 0.21951219512195122,
+      "learned_alert_q95": false,
+      "stat_score": 2.458178601809682,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "friedmann_expansion",
+      "law_name": "Friedmann expansion equation",
+      "first_valid_year": 1922,
+      "domain": "cosmology",
+      "shape_class": "smooth_composite",
+      "functional_signature": "square_root_polynomial_sum",
+      "learned_score": 0.011471495032310486,
+      "learned_family_conformal_p": 0.9024390243902439,
+      "learned_alert_q95": false,
+      "stat_score": 1.4687230703294105,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "gamow_tunnelling",
+      "law_name": "Gamow barrier-penetration factor",
+      "first_valid_year": 1928,
+      "domain": "nuclear_physics",
+      "shape_class": "smooth_composite",
+      "functional_signature": "inverse_root_exponential",
+      "learned_score": 0.012812773697078228,
+      "learned_family_conformal_p": 0.8780487804878049,
+      "learned_alert_q95": false,
+      "stat_score": 2.061643148846139,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "geiger_nuttall",
+      "law_name": "Geiger-Nuttall alpha-decay relation",
+      "first_valid_year": 1911,
+      "domain": "nuclear_physics",
+      "shape_class": "smooth_composite",
+      "functional_signature": "inverse_root_exponential",
+      "learned_score": 0.009667888283729553,
+      "learned_family_conformal_p": 0.9024390243902439,
+      "learned_alert_q95": false,
+      "stat_score": 2.092135638179079,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "ginzburg_landau_order",
+      "law_name": "Ginzburg-Landau mean-field order parameter",
+      "first_valid_year": 1950,
+      "domain": "condensed_matter",
+      "shape_class": "threshold_or_piecewise",
+      "functional_signature": "critical_square_root_threshold",
+      "learned_score": 0.02243272215127945,
+      "learned_family_conformal_p": 0.4878048780487805,
+      "learned_alert_q95": false,
+      "stat_score": 3.1851613526663347,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "hawking_temperature",
+      "law_name": "Hawking black-hole temperature",
+      "first_valid_year": 1974,
+      "domain": "gravitation",
+      "shape_class": "declared_dictionary_overlap",
+      "functional_signature": "inverse",
+      "learned_score": 0.11608514189720154,
+      "learned_family_conformal_p": 0.0975609756097561,
+      "learned_alert_q95": false,
+      "stat_score": 0.8788011372034967,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "hill_binding",
+      "law_name": "Hill cooperative-binding equation",
+      "first_valid_year": 1910,
+      "domain": "biophysics",
+      "shape_class": "smooth_composite",
+      "functional_signature": "cooperative_sigmoid",
+      "learned_score": 0.0816359594464302,
+      "learned_family_conformal_p": 0.14634146341463414,
+      "learned_alert_q95": false,
+      "stat_score": 6.114397991102249,
+      "stat_alert_q95": true,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": true,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "hubble_relation",
+      "law_name": "Hubble distance-velocity relation",
+      "first_valid_year": 1929,
+      "domain": "cosmology",
+      "shape_class": "declared_dictionary_overlap",
+      "functional_signature": "linear",
+      "learned_score": 0.009385309182107449,
+      "learned_family_conformal_p": 0.9024390243902439,
+      "learned_alert_q95": false,
+      "stat_score": 0.4586211973803566,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "integer_quantum_hall",
+      "law_name": "Integer quantum-Hall conductance staircase",
+      "first_valid_year": 1980,
+      "domain": "condensed_matter",
+      "shape_class": "threshold_or_piecewise",
+      "functional_signature": "integer_staircase",
+      "learned_score": 0.02009049989283085,
+      "learned_family_conformal_p": 0.6585365853658537,
+      "learned_alert_q95": false,
+      "stat_score": 1.1390578960153595,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "ising_spontaneous_magnetization",
+      "law_name": "Yang exact 2D-Ising spontaneous magnetization",
+      "first_valid_year": 1952,
+      "domain": "statistical_physics",
+      "shape_class": "threshold_or_piecewise",
+      "functional_signature": "critical_special_function",
+      "learned_score": 0.1336652636528015,
+      "learned_family_conformal_p": 0.04878048780487805,
+      "learned_alert_q95": true,
+      "stat_score": 4.553141808779952,
+      "stat_alert_q95": true,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": true,
+      "framework_and_alert_q95": true
+    },
+    {
+      "family_id": "josephson_current_phase",
+      "law_name": "Josephson current-phase relation",
+      "first_valid_year": 1962,
+      "domain": "condensed_matter",
+      "shape_class": "nonmonotone_or_oscillatory",
+      "functional_signature": "sine",
+      "learned_score": 0.03416697308421135,
+      "learned_family_conformal_p": 0.21951219512195122,
+      "learned_alert_q95": false,
+      "stat_score": 3.7636565104822406,
+      "stat_alert_q95": true,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": true,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "kolmogorov_turbulence",
+      "law_name": "Kolmogorov inertial-range spectrum",
+      "first_valid_year": 1941,
+      "domain": "fluid_dynamics",
+      "shape_class": "declared_dictionary_overlap",
+      "functional_signature": "power_minus_5_over_3",
+      "learned_score": 0.06940557062625885,
+      "learned_family_conformal_p": 0.14634146341463414,
+      "learned_alert_q95": false,
+      "stat_score": 1.7448140865502535,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "kondo_resistivity",
+      "law_name": "Kondo logarithmic resistivity",
+      "first_valid_year": 1964,
+      "domain": "condensed_matter",
+      "shape_class": "smooth_composite",
+      "functional_signature": "logarithmic",
+      "learned_score": 0.03268730640411377,
+      "learned_family_conformal_p": 0.21951219512195122,
+      "learned_alert_q95": false,
+      "stat_score": 0.29767446419306764,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "kramers_escape",
+      "law_name": "Kramers activated escape rate",
+      "first_valid_year": 1940,
+      "domain": "statistical_physics",
+      "shape_class": "smooth_composite",
+      "functional_signature": "inverse_temperature_exponential",
+      "learned_score": 0.006884917616844177,
+      "learned_family_conformal_p": 0.975609756097561,
+      "learned_alert_q95": false,
+      "stat_score": 2.582064652008791,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "langevin_paramagnetism",
+      "law_name": "Langevin paramagnetism function",
+      "first_valid_year": 1905,
+      "domain": "statistical_physics",
+      "shape_class": "smooth_composite",
+      "functional_signature": "coth_minus_inverse",
+      "learned_score": 0.07594259828329086,
+      "learned_family_conformal_p": 0.14634146341463414,
+      "learned_alert_q95": false,
+      "stat_score": 0.7387501559129676,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "langmuir_adsorption",
+      "law_name": "Langmuir adsorption isotherm",
+      "first_valid_year": 1918,
+      "domain": "surface_physics",
+      "shape_class": "smooth_composite",
+      "functional_signature": "rational_saturation",
+      "learned_score": 0.0965072363615036,
+      "learned_family_conformal_p": 0.14634146341463414,
+      "learned_alert_q95": false,
+      "stat_score": 4.075882820000567,
+      "stat_alert_q95": true,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": true,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "london_two_fluid_penetration",
+      "law_name": "Two-fluid/London penetration-depth relation",
+      "first_valid_year": 1935,
+      "domain": "condensed_matter",
+      "shape_class": "smooth_composite",
+      "functional_signature": "critical_inverse_square_root",
+      "learned_score": 0.12669780850410461,
+      "learned_family_conformal_p": 0.07317073170731707,
+      "learned_alert_q95": false,
+      "stat_score": 0.5802876139946669,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "moseley_xray",
+      "law_name": "Moseley X-ray frequency law",
+      "first_valid_year": 1913,
+      "domain": "quantum_and_atomic",
+      "shape_class": "smooth_composite",
+      "functional_signature": "shifted_quadratic",
+      "learned_score": 0.04636345058679581,
+      "learned_family_conformal_p": 0.17073170731707318,
+      "learned_alert_q95": false,
+      "stat_score": 1.5794841834199667,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "mott_variable_range_hopping",
+      "law_name": "Mott variable-range hopping",
+      "first_valid_year": 1968,
+      "domain": "condensed_matter",
+      "shape_class": "smooth_composite",
+      "functional_signature": "stretched_inverse_temperature_exponential",
+      "learned_score": 0.033319663256406784,
+      "learned_family_conformal_p": 0.21951219512195122,
+      "learned_alert_q95": false,
+      "stat_score": 1.8600764229314868,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "nauenberg_white_dwarf",
+      "law_name": "Nauenberg white-dwarf mass-radius relation",
+      "first_valid_year": 1972,
+      "domain": "astrophysics",
+      "shape_class": "smooth_composite",
+      "functional_signature": "relativistic_mass_radius_turnover",
+      "learned_score": 0.005644163582473993,
+      "learned_family_conformal_p": 0.975609756097561,
+      "learned_alert_q95": false,
+      "stat_score": 1.9438203524901356,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "navarro_frenk_white",
+      "law_name": "Navarro-Frenk-White density profile",
+      "first_valid_year": 1996,
+      "domain": "cosmology",
+      "shape_class": "smooth_composite",
+      "functional_signature": "double_power_rational",
+      "learned_score": 0.08309115469455719,
+      "learned_family_conformal_p": 0.14634146341463414,
+      "learned_alert_q95": false,
+      "stat_score": 2.629908471465287,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "neutrino_oscillation",
+      "law_name": "Two-flavour neutrino survival probability",
+      "first_valid_year": 1962,
+      "domain": "particle_physics",
+      "shape_class": "nonmonotone_or_oscillatory",
+      "functional_signature": "inverse_argument_oscillation",
+      "learned_score": 0.14277857542037964,
+      "learned_family_conformal_p": 0.04878048780487805,
+      "learned_alert_q95": true,
+      "stat_score": 3.877896533743578,
+      "stat_alert_q95": true,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": true,
+      "framework_and_alert_q95": true
+    },
+    {
+      "family_id": "photoelectric_threshold",
+      "law_name": "Einstein photoelectric relation",
+      "first_valid_year": 1905,
+      "domain": "quantum_physics",
+      "shape_class": "threshold_or_piecewise",
+      "functional_signature": "thresholded_affine",
+      "learned_score": 0.014369099400937557,
+      "learned_family_conformal_p": 0.8292682926829268,
+      "learned_alert_q95": false,
+      "stat_score": 3.2926553529620968,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "press_schechter_mass_function",
+      "law_name": "Press-Schechter multiplicity function",
+      "first_valid_year": 1974,
+      "domain": "cosmology",
+      "shape_class": "nonmonotone_or_oscillatory",
+      "functional_signature": "gaussian_weighted_power",
+      "learned_score": 0.0913553535938263,
+      "learned_family_conformal_p": 0.14634146341463414,
+      "learned_alert_q95": false,
+      "stat_score": 1.8751699455131523,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "qcd_asymptotic_freedom",
+      "law_name": "One-loop QCD running coupling",
+      "first_valid_year": 1973,
+      "domain": "particle_physics",
+      "shape_class": "smooth_composite",
+      "functional_signature": "inverse_logarithm",
+      "learned_score": 0.061703845858573914,
+      "learned_family_conformal_p": 0.14634146341463414,
+      "learned_alert_q95": false,
+      "stat_score": 1.0684256101426917,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "rabi_oscillation",
+      "law_name": "Rabi transition probability",
+      "first_valid_year": 1937,
+      "domain": "quantum_dynamics",
+      "shape_class": "nonmonotone_or_oscillatory",
+      "functional_signature": "sinusoidal_probability",
+      "learned_score": 0.055895350873470306,
+      "learned_family_conformal_p": 0.14634146341463414,
+      "learned_alert_q95": false,
+      "stat_score": 2.0332119811599814,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 2,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "radioactive_decay",
+      "law_name": "Rutherford-Soddy radioactive-decay law",
+      "first_valid_year": 1902,
+      "domain": "nuclear_physics",
+      "shape_class": "declared_dictionary_overlap",
+      "functional_signature": "exponential_decay",
+      "learned_score": 0.048068299889564514,
+      "learned_family_conformal_p": 0.14634146341463414,
+      "learned_alert_q95": false,
+      "stat_score": 1.3859623938649244,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "richardson_dushman_emission",
+      "law_name": "Richardson thermionic-emission law",
+      "first_valid_year": 1901,
+      "domain": "statistical_physics",
+      "shape_class": "smooth_composite",
+      "functional_signature": "power_times_inverse_temperature_exponential",
+      "learned_score": 0.030189059674739838,
+      "learned_family_conformal_p": 0.24390243902439024,
+      "learned_alert_q95": false,
+      "stat_score": 2.7883270191393903,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "rutherford_scattering",
+      "law_name": "Rutherford scattering angular law",
+      "first_valid_year": 1911,
+      "domain": "nuclear_physics",
+      "shape_class": "smooth_composite",
+      "functional_signature": "inverse_trigonometric_power",
+      "learned_score": 0.054888200014829636,
+      "learned_family_conformal_p": 0.14634146341463414,
+      "learned_alert_q95": false,
+      "stat_score": 1.1067671092148337,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "saha_ionization",
+      "law_name": "Saha ionization relation",
+      "first_valid_year": 1920,
+      "domain": "astrophysics",
+      "shape_class": "smooth_composite",
+      "functional_signature": "power_times_inverse_temperature_exponential",
+      "learned_score": 0.01710738241672516,
+      "learned_family_conformal_p": 0.7560975609756098,
+      "learned_alert_q95": false,
+      "stat_score": 2.5173824214935303,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "salpeter_initial_mass",
+      "law_name": "Salpeter stellar initial-mass function",
+      "first_valid_year": 1955,
+      "domain": "astrophysics",
+      "shape_class": "declared_dictionary_overlap",
+      "functional_signature": "power_minus_2_35",
+      "learned_score": 0.060280345380306244,
+      "learned_family_conformal_p": 0.14634146341463414,
+      "learned_alert_q95": false,
+      "stat_score": 1.6011338152583372,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "schechter_luminosity",
+      "law_name": "Schechter galaxy luminosity function",
+      "first_valid_year": 1976,
+      "domain": "astrophysics",
+      "shape_class": "nonmonotone_or_oscillatory",
+      "functional_signature": "power_times_exponential_cutoff",
+      "learned_score": 0.16100431978702545,
+      "learned_family_conformal_p": 0.04878048780487805,
+      "learned_alert_q95": true,
+      "stat_score": 2.570880359990574,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": true,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "shockley_diode",
+      "law_name": "Shockley ideal-diode equation",
+      "first_valid_year": 1949,
+      "domain": "semiconductor_physics",
+      "shape_class": "declared_dictionary_overlap",
+      "functional_signature": "offset_exponential",
+      "learned_score": 0.02051572874188423,
+      "learned_family_conformal_p": 0.6097560975609756,
+      "learned_alert_q95": false,
+      "stat_score": 1.3964783439023938,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "special_relativity",
+      "law_name": "Lorentz factor in special relativity",
+      "first_valid_year": 1905,
+      "domain": "relativity",
+      "shape_class": "smooth_composite",
+      "functional_signature": "relativistic_divergence",
+      "learned_score": 0.06220147758722305,
+      "learned_family_conformal_p": 0.14634146341463414,
+      "learned_alert_q95": false,
+      "stat_score": 0.8712644281421947,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "tully_fisher_relation",
+      "law_name": "Tully-Fisher luminosity-velocity law",
+      "first_valid_year": 1977,
+      "domain": "astrophysics",
+      "shape_class": "declared_dictionary_overlap",
+      "functional_signature": "power_4",
+      "learned_score": 0.07268043607473373,
+      "learned_family_conformal_p": 0.14634146341463414,
+      "learned_alert_q95": false,
+      "stat_score": 2.3075719430841315,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    },
+    {
+      "family_id": "williams_landel_ferry",
+      "law_name": "Williams-Landel-Ferry shift factor",
+      "first_valid_year": 1955,
+      "domain": "materials_physics",
+      "shape_class": "smooth_composite",
+      "functional_signature": "rational_log_shift",
+      "learned_score": 0.11900679767131805,
+      "learned_family_conformal_p": 0.0975609756097561,
+      "learned_alert_q95": false,
+      "stat_score": 1.4814174866477168,
+      "stat_alert_q95": false,
+      "stat_alert_q99": false,
+      "stat_record_abstentions": 0,
+      "framework_or_alert_q95": false,
+      "framework_and_alert_q95": false
+    }
+  ],
+  "interpretation": {
+    "estimand": "discrimination and alert rate for later formula shapes relative to a frozen pre-1900 representation/four-form extrapolation task",
+    "not_estimand": "real-measurement discovery rate, historical publication-year classification, or rejection of all pre-1900 physics",
+    "expected_hard_cases": "Post-1900 laws exactly expressible as affine, power or exponential curves can correctly remain unflagged by a shape-only system.",
+    "multiple_testing": "Per-family learned conformal p-values are descriptive; with 40 calibration families their minimum is 1/41, so they cannot support a 55-test BH claim.",
+    "framework_combination": "OR and AND rows are transparent component combinations at their existing q95 thresholds; no new ensemble weight or threshold was fitted."
+  }
+}

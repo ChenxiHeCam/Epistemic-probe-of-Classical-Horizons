@@ -1,0 +1,95 @@
+{
+  "status": "PASS",
+  "scope": "independent hash and arithmetic recomputation from frozen family/group scores",
+  "files_present": [
+    "phase_a_pre1900_v3_evaluation.json",
+    "phase_b_pre1950_v3_evaluation.json",
+    "epoch_clock_v3_comparison.json",
+    "random_phase_a_pre1900_v3_evaluation.json",
+    "random_phase_b_pre1950_v3_evaluation.json",
+    "random_epoch_clock_v3_comparison.json",
+    "matched_pre1900_domain_control_trained_v3.json",
+    "matched_pre1900_domain_control_random_v3.json"
+  ],
+  "files_missing": [],
+  "sha256": {
+    "phase_a_pre1900_v3_evaluation.json": "922c4900104f9cb99b427088d2c830aac51c5c6c25ac2f2b02871b7024295351",
+    "phase_b_pre1950_v3_evaluation.json": "f531b8ef8770205a632acdb3a9c44353ae2470fa61e7aa9c4fc39bfe08eab506",
+    "epoch_clock_v3_comparison.json": "2f4f145bea16227d07b6979f6d42aab8a7f253de4315923d559924c994fc4ad7",
+    "random_phase_a_pre1900_v3_evaluation.json": "c96ad620470c2ad69226d6759c90849eeb383275545a35eb71af8ef357c8cc78",
+    "random_phase_b_pre1950_v3_evaluation.json": "bea0c2c91205468df5b785de9851fc17038ea72d0970b077bf1e3c494c631789",
+    "random_epoch_clock_v3_comparison.json": "44140aaa4c91dbe615653495d1dfcab3a6f52e2a40763967c31d3a08e8d86e1a",
+    "matched_pre1900_domain_control_trained_v3.json": "69e20cef8f8b80f6104cf58126c79eda4c7d21a326fce01faf3186edf06cb77d",
+    "matched_pre1900_domain_control_random_v3.json": "349533f97b7ead481eb98a1c76b5de27be653118c097f1b4609852d804088ff6"
+  },
+  "checkpoint_files_missing": [],
+  "checkpoint_sha256": {
+    "phase_a_pre1900_checkpoint_final.pt": "3a350d85a79dd02d426d610cc96408b3041485d820e4a3b424da2ba4d00622d0",
+    "phase_b_pre1950_checkpoint_final.pt": "ca64446d95bb0966a630412ec60ea5e43461974f74dcc5f8e9cccd16ab57dde5"
+  },
+  "checks": {
+    "phase_a_pre1900_v3_evaluation.json": {
+      "comparisons_recomputed": {
+        "pre1900_internal_vs_generated_1901_1950": 0.5357496533967122,
+        "known_internal_vs_curated_1901_1950": 0.9210526315789473,
+        "known_internal_vs_curated_all_post1900": 0.9252525252525252,
+        "known_internal_vs_curated_post1950": 0.934640522875817
+      }
+    },
+    "phase_b_pre1950_v3_evaluation.json": {
+      "comparisons_recomputed": {
+        "known_internal_vs_curated_post1950": 0.4530360531309298,
+        "known_pre1900_internal_vs_curated_post1950": 0.4444444444444444,
+        "known_pre1950_internal_vs_curated_post1950": 0.45449500554938954
+      }
+    },
+    "random_phase_a_pre1900_v3_evaluation.json": {
+      "comparisons_recomputed": {
+        "pre1900_internal_vs_generated_1901_1950": 0.5937809467221232,
+        "known_internal_vs_curated_1901_1950": 0.5891812865497076,
+        "known_internal_vs_curated_all_post1900": 0.6494949494949495,
+        "known_internal_vs_curated_post1950": 0.7843137254901961
+      }
+    },
+    "random_phase_b_pre1950_v3_evaluation.json": {
+      "comparisons_recomputed": {
+        "known_internal_vs_curated_post1950": 0.7476280834914611,
+        "known_pre1900_internal_vs_curated_post1950": 0.7908496732026143,
+        "known_pre1950_internal_vs_curated_post1950": 0.7402885682574917
+      }
+    },
+    "epoch_clock_v3_comparison.json": {
+      "families": 38,
+      "median_collapse": 0.42920893719806763,
+      "decreases": 25,
+      "increases": 13,
+      "ties": 0,
+      "exact_two_sided_sign_test_p": 0.07295138851623051
+    },
+    "random_epoch_clock_v3_comparison.json": {
+      "families": 38,
+      "median_collapse": 0.00858695652173913,
+      "decreases": 31,
+      "increases": 6,
+      "ties": 1,
+      "exact_two_sided_sign_test_p": 4.12575900554657e-05
+    },
+    "matched_pre1900_domain_control_trained_v3.json": {
+      "comparisons_recomputed": {
+        "matched_pre1900_vs_curated_1901_1950": 0.8845029239766082,
+        "matched_pre1900_vs_curated_post1950": 0.7941176470588235,
+        "matched_pre1900_vs_curated_all_post1900": 0.8565656565656565,
+        "native_internal_vs_matched_pre1900_domain_shift": 0.6049382716049383
+      }
+    },
+    "matched_pre1900_domain_control_random_v3.json": {
+      "comparisons_recomputed": {
+        "matched_pre1900_vs_curated_1901_1950": 0.5160818713450293,
+        "matched_pre1900_vs_curated_post1950": 0.6111111111111112,
+        "matched_pre1900_vs_curated_all_post1900": 0.5454545454545454,
+        "native_internal_vs_matched_pre1900_domain_shift": 0.6172839506172839
+      }
+    }
+  },
+  "guardrail": "This audit verifies deposited arithmetic and file identity; it does not remove benchmark, provenance, generator-domain or external-validity limits."
+}

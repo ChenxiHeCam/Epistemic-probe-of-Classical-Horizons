@@ -1,0 +1,144 @@
+{
+  "status": "completed capacity/data-matched generic normal-function control",
+  "checkpoint": "encoder_general_function_control_zero_units.pt",
+  "checkpoint_sha256": "5a4fef3e5d9f2e92fda567369199ff74f07063d940f4483d673eaf67f72bebdd",
+  "data": "general_function_control_pointclouds.npz",
+  "data_sha256": "15c00452770cb48d0e50ec7ff790e8587a35f2e5be0d0a96a6aca2511c0b67a2",
+  "device": "cuda",
+  "training_records": 205,
+  "training_families": 40,
+  "matched_to_strict": {
+    "records": 205,
+    "families": 40,
+    "family_size_profile": [
+      35,
+      22,
+      13,
+      11,
+      11,
+      10,
+      7,
+      6,
+      6,
+      6,
+      5,
+      5,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      4,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      2,
+      2,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "signature_rows_exactly_matched": true,
+    "unique_function_signatures": 15,
+    "architecture": {
+      "d_model": 128,
+      "n_isab": 3
+    },
+    "optimization": {
+      "steps": 1000,
+      "batch": 32,
+      "subsample": 64,
+      "seed": 20260905
+    }
+  },
+  "history": [
+    {
+      "step": 1,
+      "contrastive": 4.0440568923950195,
+      "signature": 0.7014806270599365,
+      "total": 4.394797325134277
+    },
+    {
+      "step": 100,
+      "contrastive": 3.2325618267059326,
+      "signature": 0.6229110956192017,
+      "total": 3.5440173149108887
+    },
+    {
+      "step": 200,
+      "contrastive": 3.1586055755615234,
+      "signature": 0.5691683888435364,
+      "total": 3.443189859390259
+    },
+    {
+      "step": 300,
+      "contrastive": 3.057941436767578,
+      "signature": 0.5557882785797119,
+      "total": 3.3358354568481445
+    },
+    {
+      "step": 400,
+      "contrastive": 3.0139598846435547,
+      "signature": 0.46496617794036865,
+      "total": 3.246443033218384
+    },
+    {
+      "step": 500,
+      "contrastive": 3.238030195236206,
+      "signature": 0.5173913240432739,
+      "total": 3.4967257976531982
+    },
+    {
+      "step": 600,
+      "contrastive": 3.165574073791504,
+      "signature": 0.4153108596801758,
+      "total": 3.373229503631592
+    },
+    {
+      "step": 700,
+      "contrastive": 2.951212167739868,
+      "signature": 0.37184932827949524,
+      "total": 3.137136936187744
+    },
+    {
+      "step": 800,
+      "contrastive": 3.0840229988098145,
+      "signature": 0.3976293206214905,
+      "total": 3.2828376293182373
+    },
+    {
+      "step": 900,
+      "contrastive": 2.8518381118774414,
+      "signature": 0.32422035932540894,
+      "total": 3.0139482021331787
+    },
+    {
+      "step": 1000,
+      "contrastive": 3.185357093811035,
+      "signature": 0.2932450771331787,
+      "total": 3.331979751586914
+    }
+  ],
+  "exclusions": [
+    "no historical or physical provenance",
+    "no piecewise breakdown generator",
+    "no breakdown/deformation labels",
+    "no saturation, step, kink, splice or crossover supervision",
+    "high-level eight-bit function-signature distribution exactly matches the strict training set"
+  ],
+  "claim_boundary": "This is a generic-function representation control, not a historical corpus and not an additional EPOCH training source."
+}

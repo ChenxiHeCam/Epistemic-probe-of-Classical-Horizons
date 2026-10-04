@@ -1,0 +1,342 @@
+{
+  "status": "completed unit-metadata-consistent held-out-law deformation audit",
+  "data_sha256": "6c6d1c81ca9cb8cbf13c1a5ed16d014f773f3c1e7cd02bdd5eba8b6658d49124",
+  "heldout": {
+    "records": 46,
+    "source_law_families": 7,
+    "deformation_families": [
+      "saturation",
+      "step",
+      "kink",
+      "splice",
+      "rolloff",
+      "crossover"
+    ],
+    "training_records": 205,
+    "training_source_law_families": 40,
+    "training_records_with_any_nonzero_dimension_metadata": 200,
+    "records_with_any_nonzero_dimension_metadata": 34,
+    "dimension_preservation": "each deformed point cloud retains its source record's x/y SI vector"
+  },
+  "protocol": {
+    "ranking_unit": "one clean median and six deformation medians within each held-out source-law family",
+    "calibration_unit": "leave-one-source-law-family-out median over 40 training families",
+    "threshold": "95th-percentile higher-order statistic, frozen separately for each checkpoint",
+    "paired_bootstrap_unit": "held-out source-law family",
+    "bootstrap_repetitions": 5000
+  },
+  "variants": {
+    "with_units": {
+      "checkpoint": "encoder_pre1900_strict_with_units.pt",
+      "checkpoint_sha256": "2d3438a8cbb11efb35f4b44e5d7a6dde98400a99c428f3790d5d5e22ddf605f6",
+      "uses_dimension_metadata": true,
+      "threshold": 0.5738191604614258,
+      "calibration_source_family_scores": {
+        "ampere_electrodynamics": 0.4839608669281006,
+        "bernoulli_fluid": 0.11322908103466034,
+        "carnot_engine": 0.35343050956726074,
+        "classical_elastic_waves": 0.14695857092738152,
+        "classical_resonance": 0.34906548261642456,
+        "classical_torsion": 0.2223290242254734,
+        "classical_wave_equation": 0.12626810371875763,
+        "clausius_clapeyron": 0.4793337881565094,
+        "clausius_kinetic_gas": 0.22234603762626648,
+        "clausius_mossotti": 0.46604084968566895,
+        "clausius_virial": 0.4428078979253769,
+        "continuity_mass_flow": 0.007136335596442223,
+        "doppler_acoustics": 0.5548748970031738,
+        "euler_bernoulli_beam": 0.4583776444196701,
+        "euler_buckling": 0.0961061418056488,
+        "first_law_thermodynamics": 0.3946603536605835,
+        "fourier_heat": 0.523091197013855,
+        "gibbs_thomson": 0.4062335789203644,
+        "gyroscope_precession": 0.2913209944963455,
+        "hamiltonian_mechanics": 0.3790639042854309,
+        "henry_solubility": 0.46967813372612,
+        "ideal_gas": 0.31200703978538513,
+        "kepler_orbits": 0.3955982029438019,
+        "lagrangian_mechanics": 0.12088661640882492,
+        "larmor_precession": 0.6018921136856079,
+        "larmor_radiation": 0.5738191604614258,
+        "mass_action_equilibrium": 0.3427654355764389,
+        "maxwell_electromagnetism": 0.48907971382141113,
+        "navier_stokes": 0.4611347019672394,
+        "newton_cooling": 0.3877399414777756,
+        "newtonian_dynamics": 0.3688013553619385,
+        "radiation_pressure_classical": 0.07378213107585907,
+        "rayleigh_acoustics": 0.33978042006492615,
+        "reynolds_number": 0.3419194221496582,
+        "simple_pendulum": 0.4226134419441223,
+        "snell_refraction": 0.37748560309410095,
+        "stefan_boltzmann": 0.370779812335968,
+        "thin_lens_optics": 0.4412165880203247,
+        "van_der_waals_eos": 0.45954614877700806,
+        "young_laplace": 0.5445948839187622
+      },
+      "record_auroc": 0.6197227473219911,
+      "source_family_balanced_auroc": 0.6836734693877551,
+      "clean_record_fpr": 0.0,
+      "clean_source_family_fpr": 0.0,
+      "deformed_record_tpr": 0.0,
+      "deformed_source_family_cell_tpr": 0.0,
+      "global_deformation_median_tpr": 0.0,
+      "pairwise_score_increase": 0.7282608695652174,
+      "clean_source_family_scores": {
+        "coulomb_electrostatics": 0.2786262631416321,
+        "fresnel_optics": 0.06057404354214668,
+        "helmholtz_free_energy": 0.19788756221532822,
+        "kelvin_helmholtz": 0.06297755241394043,
+        "maxwell_boltzmann": 0.08446460962295532,
+        "poynting_energy_flux": 0.18585649132728577,
+        "roche_limit": 0.0010199010139331222
+      },
+      "deformed_source_family_scores": {
+        "saturation": {
+          "coulomb_electrostatics": 0.27726155519485474,
+          "fresnel_optics": 0.12961633875966072,
+          "helmholtz_free_energy": 0.16886305063962936,
+          "kelvin_helmholtz": 0.11148546636104584,
+          "maxwell_boltzmann": 0.0730389840900898,
+          "poynting_energy_flux": 0.18565334379673004,
+          "roche_limit": 0.05883365869522095
+        },
+        "step": {
+          "coulomb_electrostatics": 0.2898119390010834,
+          "fresnel_optics": 0.09218932688236237,
+          "helmholtz_free_energy": 0.13838211819529533,
+          "kelvin_helmholtz": 0.23295152187347412,
+          "maxwell_boltzmann": 0.1546729877591133,
+          "poynting_energy_flux": 0.2372359186410904,
+          "roche_limit": 0.3351783752441406
+        },
+        "kink": {
+          "coulomb_electrostatics": 0.24636982381343842,
+          "fresnel_optics": 0.12666384130716324,
+          "helmholtz_free_energy": 0.12616071850061417,
+          "kelvin_helmholtz": 0.2636590003967285,
+          "maxwell_boltzmann": 0.1663684844970703,
+          "poynting_energy_flux": 0.23542018234729767,
+          "roche_limit": 0.24271461367607117
+        },
+        "splice": {
+          "coulomb_electrostatics": 0.3129199743270874,
+          "fresnel_optics": 0.12160450592637062,
+          "helmholtz_free_energy": 0.17696841806173325,
+          "kelvin_helmholtz": 0.14938020706176758,
+          "maxwell_boltzmann": 0.12388528510928154,
+          "poynting_energy_flux": 0.18572238087654114,
+          "roche_limit": 0.14570164680480957
+        },
+        "rolloff": {
+          "coulomb_electrostatics": 0.2775558829307556,
+          "fresnel_optics": 0.1634301319718361,
+          "helmholtz_free_energy": 0.09390492364764214,
+          "kelvin_helmholtz": 0.3081893026828766,
+          "maxwell_boltzmann": 0.10907075554132462,
+          "poynting_energy_flux": 0.2296510934829712,
+          "roche_limit": 0.3561694025993347
+        },
+        "crossover": {
+          "coulomb_electrostatics": 0.27313700318336487,
+          "fresnel_optics": 0.17009474337100983,
+          "helmholtz_free_energy": 0.2581329643726349,
+          "kelvin_helmholtz": 0.27669665217399597,
+          "maxwell_boltzmann": 0.17429768294095993,
+          "poynting_energy_flux": 0.18629443645477295,
+          "roche_limit": 0.04164210706949234
+        }
+      },
+      "by_deformation": {
+        "saturation": {
+          "record_auroc_vs_clean": 0.5623818525519848,
+          "record_tpr": 0.0,
+          "median_score": 0.13007113337516785
+        },
+        "step": {
+          "record_auroc_vs_clean": 0.6205103969754253,
+          "record_tpr": 0.0,
+          "median_score": 0.15553396195173264
+        },
+        "kink": {
+          "record_auroc_vs_clean": 0.6285444234404536,
+          "record_tpr": 0.0,
+          "median_score": 0.18037448823451996
+        },
+        "splice": {
+          "record_auroc_vs_clean": 0.6053875236294896,
+          "record_tpr": 0.0,
+          "median_score": 0.14754092693328857
+        },
+        "rolloff": {
+          "record_auroc_vs_clean": 0.6630434782608696,
+          "record_tpr": 0.0,
+          "median_score": 0.17326424270868301
+        },
+        "crossover": {
+          "record_auroc_vs_clean": 0.638468809073724,
+          "record_tpr": 0.0,
+          "median_score": 0.19261054694652557
+        }
+      }
+    },
+    "zero_units": {
+      "checkpoint": "encoder_pre1900_strict_zero_units.pt",
+      "checkpoint_sha256": "9ca8e661427a8bf538eea3c3acf9f9c34f2dcf867d5fe545c10cf7e29cf0df84",
+      "uses_dimension_metadata": false,
+      "threshold": 0.13359329849481583,
+      "calibration_source_family_scores": {
+        "ampere_electrodynamics": 0.024329224601387978,
+        "bernoulli_fluid": 0.01991849299520254,
+        "carnot_engine": 0.021829343400895596,
+        "classical_elastic_waves": 0.008645273745059967,
+        "classical_resonance": 0.02485925331711769,
+        "classical_torsion": 0.012433067429810762,
+        "classical_wave_equation": 0.008096644654870033,
+        "clausius_clapeyron": 0.030504023656249046,
+        "clausius_kinetic_gas": 0.02265571989119053,
+        "clausius_mossotti": 0.19326964020729065,
+        "clausius_virial": 0.11464420706033707,
+        "continuity_mass_flow": 0.0193603727966547,
+        "doppler_acoustics": 0.03499537892639637,
+        "euler_bernoulli_beam": 0.0639894800260663,
+        "euler_buckling": 0.037087321281433105,
+        "first_law_thermodynamics": 0.021425575017929077,
+        "fourier_heat": 0.004249685909599066,
+        "gibbs_thomson": 0.026832781732082367,
+        "gyroscope_precession": 0.019653858616948128,
+        "hamiltonian_mechanics": 0.0167206022888422,
+        "henry_solubility": 0.019589940086007118,
+        "ideal_gas": 0.02313452772796154,
+        "kepler_orbits": 0.03709925338625908,
+        "lagrangian_mechanics": 0.008437183685600758,
+        "larmor_precession": 0.01492430828511715,
+        "larmor_radiation": 0.0071133943274617195,
+        "mass_action_equilibrium": 0.0911480188369751,
+        "maxwell_electromagnetism": 0.019375085830688477,
+        "navier_stokes": 0.017988314852118492,
+        "newton_cooling": 0.13359329849481583,
+        "newtonian_dynamics": 0.028407756239175797,
+        "radiation_pressure_classical": 0.018140198662877083,
+        "rayleigh_acoustics": 0.026639780029654503,
+        "reynolds_number": 0.03162786737084389,
+        "simple_pendulum": 0.017610706388950348,
+        "snell_refraction": 0.025380083359777927,
+        "stefan_boltzmann": 0.04460498131811619,
+        "thin_lens_optics": 0.016951989382505417,
+        "van_der_waals_eos": 0.02303171157836914,
+        "young_laplace": 0.029863186180591583
+      },
+      "record_auroc": 0.851685570258349,
+      "source_family_balanced_auroc": 0.9217687074829931,
+      "clean_record_fpr": 0.021739130434782608,
+      "clean_source_family_fpr": 0.0,
+      "deformed_record_tpr": 0.16304347826086957,
+      "deformed_source_family_cell_tpr": 0.09523809523809523,
+      "global_deformation_median_tpr": 0.0,
+      "pairwise_score_increase": 0.8659420289855072,
+      "clean_source_family_scores": {
+        "coulomb_electrostatics": 0.061528705060482025,
+        "fresnel_optics": 0.027337338775396347,
+        "helmholtz_free_energy": 0.009220832725986838,
+        "kelvin_helmholtz": 0.009222653694450855,
+        "maxwell_boltzmann": 0.021525445394217968,
+        "poynting_energy_flux": 0.02164371684193611,
+        "roche_limit": 0.025475379079580307
+      },
+      "deformed_source_family_scores": {
+        "saturation": {
+          "coulomb_electrostatics": 0.03769289702177048,
+          "fresnel_optics": 0.07937191426753998,
+          "helmholtz_free_energy": 0.07696225680410862,
+          "kelvin_helmholtz": 0.11717771738767624,
+          "maxwell_boltzmann": 0.05245668813586235,
+          "poynting_energy_flux": 0.18627285957336426,
+          "roche_limit": 0.17435437440872192
+        },
+        "step": {
+          "coulomb_electrostatics": 0.07721878588199615,
+          "fresnel_optics": 0.07436391711235046,
+          "helmholtz_free_energy": 0.06899543479084969,
+          "kelvin_helmholtz": 0.05801621079444885,
+          "maxwell_boltzmann": 0.07397568970918655,
+          "poynting_energy_flux": 0.056036923080682755,
+          "roche_limit": 0.10491502285003662
+        },
+        "kink": {
+          "coulomb_electrostatics": 0.02432241477072239,
+          "fresnel_optics": 0.07843659073114395,
+          "helmholtz_free_energy": 0.0513143390417099,
+          "kelvin_helmholtz": 0.0726604163646698,
+          "maxwell_boltzmann": 0.10351139679551125,
+          "poynting_energy_flux": 0.1453101634979248,
+          "roche_limit": 0.11616995930671692
+        },
+        "splice": {
+          "coulomb_electrostatics": 0.029549047350883484,
+          "fresnel_optics": 0.04586750082671642,
+          "helmholtz_free_energy": 0.05696418136358261,
+          "kelvin_helmholtz": 0.05894647538661957,
+          "maxwell_boltzmann": 0.06808334589004517,
+          "poynting_energy_flux": 0.028520086780190468,
+          "roche_limit": 0.05969002842903137
+        },
+        "rolloff": {
+          "coulomb_electrostatics": 0.06083880364894867,
+          "fresnel_optics": 0.08467742800712585,
+          "helmholtz_free_energy": 0.07637783512473106,
+          "kelvin_helmholtz": 0.077242411673069,
+          "maxwell_boltzmann": 0.05742814019322395,
+          "poynting_energy_flux": 0.07785510271787643,
+          "roche_limit": 0.08602852374315262
+        },
+        "crossover": {
+          "coulomb_electrostatics": 0.030803244560956955,
+          "fresnel_optics": 0.05293656885623932,
+          "helmholtz_free_energy": 0.054578300565481186,
+          "kelvin_helmholtz": 0.21514999866485596,
+          "maxwell_boltzmann": 0.04998442530632019,
+          "poynting_energy_flux": 0.027063332498073578,
+          "roche_limit": 0.045607082545757294
+        }
+      },
+      "by_deformation": {
+        "saturation": {
+          "record_auroc_vs_clean": 0.8709829867674858,
+          "record_tpr": 0.30434782608695654,
+          "median_score": 0.0815686471760273
+        },
+        "step": {
+          "record_auroc_vs_clean": 0.9135160680529302,
+          "record_tpr": 0.06521739130434782,
+          "median_score": 0.07436391711235046
+        },
+        "kink": {
+          "record_auroc_vs_clean": 0.8809073724007561,
+          "record_tpr": 0.1956521739130435,
+          "median_score": 0.08052966743707657
+        },
+        "splice": {
+          "record_auroc_vs_clean": 0.8015122873345935,
+          "record_tpr": 0.06521739130434782,
+          "median_score": 0.04716432839632034
+        },
+        "rolloff": {
+          "record_auroc_vs_clean": 0.8851606805293005,
+          "record_tpr": 0.1956521739130435,
+          "median_score": 0.07801221683621407
+        },
+        "crossover": {
+          "record_auroc_vs_clean": 0.7580340264650284,
+          "record_tpr": 0.15217391304347827,
+          "median_score": 0.051151640713214874
+        }
+      }
+    }
+  },
+  "with_minus_zero_source_family_balanced_auroc": -0.23809523809523803,
+  "paired_source_family_bootstrap_95_ci": [
+    -0.4387755102040817,
+    -0.08163265306122447
+  ],
+  "claim_boundary": "The comparison removes train/test metadata-format mismatch but uses synthetic deformations and only seven cited test families under one paired training seed. Archived SI vectors were not manually re-derived for every formula, so this is not a full physical-dimension audit."
+}

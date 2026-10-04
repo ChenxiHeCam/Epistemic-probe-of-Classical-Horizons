@@ -1,0 +1,64 @@
+{
+  "status": "PASS",
+  "source_registry_sha256": "d6670ee4034be3f286f6626d593207eb7a4d5d61a15eda3998952240f9c8d7c6",
+  "source_records_sha256": "43386dc527ce730e44d3b74e6c1a9a9cccf985c597e671d5d41f4c2bf3bf956d",
+  "source_pointclouds_sha256": "12cfb0c5c2d35245d0a4162a2f23126b272a89032d8912ef2bef672cbea26be0",
+  "cutoffs": {
+    "pre1900_model_temporal_positive": "1901 onward, reported separately as 1901-1950 and >1950",
+    "pre1950_model_temporal_positive": ">1950 only"
+  },
+  "subsets": [
+    {
+      "name": "post1900_to_1950",
+      "records": 304,
+      "families": 38,
+      "npz": {
+        "file": "post1900_to_1950.npz",
+        "bytes": 271931,
+        "sha256": "b882a4a646dc78a6b8140c61fbe802b14e6e6487b7b8b7c2c8ab17e9e1635172"
+      },
+      "metadata": {
+        "file": "post1900_to_1950_records.jsonl",
+        "bytes": 170352,
+        "sha256": "5d4b2dd6823d2cd21542bb694a2842f3ce0deb01ef619862571489064039fdce"
+      }
+    },
+    {
+      "name": "post1950_forward",
+      "records": 136,
+      "families": 17,
+      "npz": {
+        "file": "post1950_forward.npz",
+        "bytes": 122429,
+        "sha256": "9c325137b21968af27e5a7026d4eca836ba255d7f41f42cbbdde954c488dd59e"
+      },
+      "metadata": {
+        "file": "post1950_forward_records.jsonl",
+        "bytes": 81277,
+        "sha256": "4e0f673d52609e7e4f1415abf5a245fe6da6793579a5019711b49838b6d04a52"
+      }
+    }
+  ],
+  "protocol": {
+    "inference_unit": "source-law family",
+    "metrics": [
+      "family-macro AUROC",
+      "family-clustered bootstrap CI"
+    ],
+    "pre1900_model": {
+      "negative": "pre1900_temporal_eval/internal_test point-cloud view",
+      "positive_near": "post1900_to_1950.npz",
+      "positive_forward": "post1950_forward.npz"
+    },
+    "pre1950_model": {
+      "negative": "pre1950_joint/internal_test, with pre1900 and pre1950 strata reported separately",
+      "positive_forward": "post1950_forward.npz"
+    }
+  },
+  "audits": {
+    "subsets_partition_all_records": true,
+    "family_years_respect_cutoffs": true,
+    "exact_equation_overlap_pre1950_train_post1950_test": 0,
+    "semantic_equivalence_audit": "not established by exact-string comparison"
+  }
+}

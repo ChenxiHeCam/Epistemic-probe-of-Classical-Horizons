@@ -1,0 +1,275 @@
+{
+  "status": "completed source-audited classical-only family-level cross-conformal audit",
+  "checkpoint": "encoder_pre1900_strict_zero_units.pt",
+  "checkpoint_sha256": "9ca8e661427a8bf538eea3c3acf9f9c34f2dcf867d5fe545c10cf7e29cf0df84",
+  "data_sha256": "6c6d1c81ca9cb8cbf13c1a5ed16d014f773f3c1e7cd02bdd5eba8b6658d49124",
+  "protocol": {
+    "training_families": 40,
+    "views_per_record": 8,
+    "calibration_unit": "source-law family median",
+    "reference_exclusion": "entire calibration family excluded",
+    "tail": "strictly greater than 95th-percentile higher-order threshold",
+    "threshold": 0.13164656469598413
+  },
+  "calibration": {
+    "ampere_electrodynamics": {
+      "records": 4,
+      "median_score": 0.023755169473588467
+    },
+    "bernoulli_fluid": {
+      "records": 4,
+      "median_score": 0.02362290769815445
+    },
+    "carnot_engine": {
+      "records": 10,
+      "median_score": 0.021999620832502842
+    },
+    "classical_elastic_waves": {
+      "records": 4,
+      "median_score": 0.007223792374134064
+    },
+    "classical_resonance": {
+      "records": 11,
+      "median_score": 0.028497997671365738
+    },
+    "classical_torsion": {
+      "records": 2,
+      "median_score": 0.012913275975733995
+    },
+    "classical_wave_equation": {
+      "records": 3,
+      "median_score": 0.009356971830129623
+    },
+    "clausius_clapeyron": {
+      "records": 4,
+      "median_score": 0.027523205615580082
+    },
+    "clausius_kinetic_gas": {
+      "records": 1,
+      "median_score": 0.0347120426595211
+    },
+    "clausius_mossotti": {
+      "records": 1,
+      "median_score": 0.12047982215881348
+    },
+    "clausius_virial": {
+      "records": 6,
+      "median_score": 0.19849278032779694
+    },
+    "continuity_mass_flow": {
+      "records": 3,
+      "median_score": 0.0194072425365448
+    },
+    "doppler_acoustics": {
+      "records": 22,
+      "median_score": 0.03854008764028549
+    },
+    "euler_bernoulli_beam": {
+      "records": 4,
+      "median_score": 0.10750761069357395
+    },
+    "euler_buckling": {
+      "records": 1,
+      "median_score": 0.029793770983815193
+    },
+    "first_law_thermodynamics": {
+      "records": 7,
+      "median_score": 0.01930617168545723
+    },
+    "fourier_heat": {
+      "records": 3,
+      "median_score": 0.0032357187010347843
+    },
+    "gibbs_thomson": {
+      "records": 1,
+      "median_score": 0.025460798293352127
+    },
+    "gyroscope_precession": {
+      "records": 4,
+      "median_score": 0.022416433319449425
+    },
+    "hamiltonian_mechanics": {
+      "records": 5,
+      "median_score": 0.015639016404747963
+    },
+    "henry_solubility": {
+      "records": 1,
+      "median_score": 0.0204237699508667
+    },
+    "ideal_gas": {
+      "records": 4,
+      "median_score": 0.016125716269016266
+    },
+    "kepler_orbits": {
+      "records": 13,
+      "median_score": 0.028985630720853806
+    },
+    "lagrangian_mechanics": {
+      "records": 4,
+      "median_score": 0.013796328566968441
+    },
+    "larmor_precession": {
+      "records": 1,
+      "median_score": 0.012294748798012733
+    },
+    "larmor_radiation": {
+      "records": 1,
+      "median_score": 0.007823732681572437
+    },
+    "mass_action_equilibrium": {
+      "records": 6,
+      "median_score": 0.1013362780213356
+    },
+    "maxwell_electromagnetism": {
+      "records": 3,
+      "median_score": 0.02028116211295128
+    },
+    "navier_stokes": {
+      "records": 3,
+      "median_score": 0.017151951789855957
+    },
+    "newton_cooling": {
+      "records": 2,
+      "median_score": 0.13164656469598413
+    },
+    "newtonian_dynamics": {
+      "records": 11,
+      "median_score": 0.022414512932300568
+    },
+    "radiation_pressure_classical": {
+      "records": 2,
+      "median_score": 0.02466844767332077
+    },
+    "rayleigh_acoustics": {
+      "records": 35,
+      "median_score": 0.027166446670889854
+    },
+    "reynolds_number": {
+      "records": 5,
+      "median_score": 0.030834142118692398
+    },
+    "simple_pendulum": {
+      "records": 1,
+      "median_score": 0.01571781560778618
+    },
+    "snell_refraction": {
+      "records": 2,
+      "median_score": 0.021671702153980732
+    },
+    "stefan_boltzmann": {
+      "records": 6,
+      "median_score": 0.04802623949944973
+    },
+    "thin_lens_optics": {
+      "records": 1,
+      "median_score": 0.01867532730102539
+    },
+    "van_der_waals_eos": {
+      "records": 1,
+      "median_score": 0.02235070988535881
+    },
+    "young_laplace": {
+      "records": 3,
+      "median_score": 0.02739126607775688
+    }
+  },
+  "heldout_classical": {
+    "validation": {
+      "records": 17,
+      "families": 4,
+      "record_fpr": 0.058823529411764705,
+      "family_fpr": 0.0,
+      "family_scores": {
+        "archimedes_buoyancy": 0.014555779285728931,
+        "classical_interference": 0.05323474109172821,
+        "gibbs_thermodynamics": 0.021779315546154976,
+        "stokes_drag": 0.03631863743066788
+      }
+    },
+    "test": {
+      "records": 46,
+      "families": 7,
+      "record_fpr": 0.021739130434782608,
+      "family_fpr": 0.0,
+      "family_scores": {
+        "coulomb_electrostatics": 0.0688234269618988,
+        "fresnel_optics": 0.03382439352571964,
+        "helmholtz_free_energy": 0.010767875472083688,
+        "kelvin_helmholtz": 0.007627531886100769,
+        "maxwell_boltzmann": 0.026295220479369164,
+        "poynting_energy_flux": 0.017949160188436508,
+        "roche_limit": 0.02992090955376625
+      }
+    }
+  },
+  "synthetic": {
+    "dataset_auroc": 0.8700086805555556,
+    "family_auroc": 0.9027777777777778,
+    "family_auroc_bootstrap_95_ci": [
+      0.7291666666666667,
+      1.0
+    ],
+    "breakdown_dataset_tpr_at_threshold": 0.23958333333333334,
+    "breakdown_family_tpr_at_threshold": 0.16666666666666666,
+    "classical_family_fpr_at_threshold": 0.0,
+    "family_scores": {
+      "B:bounded_growth": 0.03318313509225845,
+      "B:discontinuous_drop": 0.24506482481956482,
+      "B:kink": 0.07936394214630127,
+      "B:log_correction": 0.012760868296027184,
+      "B:oscillation": 0.042373768985271454,
+      "B:resonance": 0.07881815731525421,
+      "B:saturation": 0.0754682794213295,
+      "B:smooth_crossover": 0.12389573454856873,
+      "B:smooth_rolloff": 0.3789067566394806,
+      "B:step": 0.06783568859100342,
+      "B:threshold": 0.06126020848751068,
+      "B:turnover": 0.05071115121245384,
+      "C:affine_decline": 0.017713487148284912,
+      "C:exponential_decay": 0.017335690557956696,
+      "C:exponential_growth": 0.030453577637672424,
+      "C:inverse": 0.040350206196308136,
+      "C:inverse_square": 0.026066560298204422,
+      "C:linear": 0.005343115422874689,
+      "C:offset_inverse": 0.022754549980163574,
+      "C:power_1p5": 0.016193218529224396,
+      "C:power_2p5": 0.04535692185163498,
+      "C:quadratic": 0.026915740221738815,
+      "C:quartic": 0.013208776712417603,
+      "C:square_root": 0.02507663518190384
+    }
+  },
+  "real_cases": {
+    "FIRAS_blackbody": {
+      "n": 43,
+      "route": "generic_learned_component",
+      "score": 0.09112092852592468,
+      "family_conformal_p": 0.14634146341463414,
+      "alert": false,
+      "relative_response_variation": 0.84001660996011
+    },
+    "copper_specific_heat": {
+      "n": 120,
+      "route": "generic_learned_component",
+      "score": 0.14396557211875916,
+      "family_conformal_p": 0.04878048780487805,
+      "alert": true,
+      "relative_response_variation": 1.1545694175781345
+    },
+    "Boyle_1662_control": {
+      "n": 25,
+      "route": "generic_learned_component",
+      "score": 0.03097168356180191,
+      "family_conformal_p": 0.21951219512195122,
+      "alert": false,
+      "relative_response_variation": 0.41163208698284387
+    },
+    "Michelson_1879_control": {
+      "n": 100,
+      "route": "abstain_from_generic_learned_component",
+      "reason": "near-constant response; route to a theory-conditioned constant/noise model",
+      "relative_response_variation": 0.0002621829108947961
+    }
+  },
+  "claim_boundary": "No breakdown/deformation examples enter training or calibration. The family-level result is a small-corpus retrospective audit; the real-case learned scores remain exploratory."
+}

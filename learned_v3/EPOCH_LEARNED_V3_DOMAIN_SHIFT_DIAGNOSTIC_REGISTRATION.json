@@ -1,0 +1,21 @@
+{
+  "schema_version": "3.0-post-score-diagnostic",
+  "frozen_at": "2026-09-07T16:09:25.7213798+08:00",
+  "status": "frozen_after_phase_a_primary_scores_and_before_any_matched-control_score",
+  "trigger": "The Phase-A curated 1901-1950 comparison reached AUROC 0.921 while the separately defined native-generator 1901-1950 auxiliary comparison reached AUROC 0.536. This raises a generator-domain alternative that the frozen primary comparison alone cannot exclude.",
+  "selection_rule": "Use all nine, and only the nine, independent pre-1900 family groups in the frozen Phase-A internal negative class: bernoulli_fluid, euler_buckling, fourier_heat, gibbs_thomson, helmholtz_resonance, hydrostatics, newtonian_dynamics, torricelli_outflow and young_laplace.",
+  "generation": "Represent each family by one canonical one-dimensional reduction and use the same 120-point support sampling, 10% local x jitter, eight repeats, nuisance amplitude, 0.5-2.5% response-noise draw and heteroscedastic profile as the curated post-1900 generator.",
+  "frozen_evaluation": "Reuse the exact Phase-A checkpoint, training memories, calibration-formula empirical CDF, four score components, equal-weight ensemble, top-8 rule and family-median aggregation. Compare all curated future families against the nine generator-matched controls; separately quantify native-internal versus generator-matched-control separability.",
+  "random_control": "Repeat after the already registered zero-optimization checkpoint and its frozen primary result are available.",
+  "interpretation_rule": "If generator-matched controls themselves shift upward or the matched-control future AUROC materially collapses, the Phase-A primary separation is generator-confounded. If matched controls remain close to native controls and future AUROC remains high while the random model does not reproduce it, the representation-learning interpretation is strengthened but remains formula-level and post-score diagnostic.",
+  "claim_boundary": "This diagnostic was motivated by an opened Phase-A result. It cannot be called preregistered, cannot replace a sealed benchmark and supplies no real-measurement discovery rate.",
+  "hashes": {
+    "phase_a_primary_result": "922c4900104f9cb99b427088d2c830aac51c5c6c25ac2f2b02871b7024295351",
+    "patched_frozen_evaluator": "831f45cbb919e148337d88265fc66a61915e5b8bd5bcecc28fa80b80bd804288",
+    "build_matched_pre1900_clock_controls_v3.py": "7f9cca9eb55e4a4137d19591d6d69b4de0b2d2ed724a72d1d8e11ed03e5a3644",
+    "evaluate_matched_pre1900_clock_controls_v3.py": "be165a5f707790c5c811830b35d4bd4f6691647351b69559426b33ca6beb65fd",
+    "matched_pre1900_controls_v3.npz": "125c9f4e30b8e1ada6c86c5b0d513d9a5911161c699dc3d276dfd58a889dd70c",
+    "matched_pre1900_controls_v3_registry.json": "b40978aca7e1b0120477f1550427a512ed17d71b1695ec60e86f7e97983833bf",
+    "matched_pre1900_controls_v3_manifest.json": "6f33f1f4888b437702c5cfb43f8bbbd1759c66876db36c76455a3cbd908ee46a"
+  }
+}

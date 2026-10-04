@@ -1,0 +1,104 @@
+{
+  "status": "completed capacity/data-matched generic-function representation control",
+  "checkpoint": "encoder_general_function_control_zero_units.pt",
+  "checkpoint_sha256": "5a4fef3e5d9f2e92fda567369199ff74f07063d940f4483d673eaf67f72bebdd",
+  "data": "general_function_control_pointclouds.npz",
+  "data_sha256": "15c00452770cb48d0e50ec7ff790e8587a35f2e5be0d0a96a6aca2511c0b67a2",
+  "protocol": {
+    "training_records": 205,
+    "training_families": 40,
+    "views_per_record": 8,
+    "calibration_unit": "synthetic generator-family median",
+    "threshold": 0.006132632493972778,
+    "no_anomaly_supervision": true,
+    "record_count_match": true,
+    "family_size_profile_match": true,
+    "function_signature_histogram_match": true
+  },
+  "synthetic": {
+    "dataset_knn_auroc": 0.3946397569444444,
+    "dataset_knn_family_clustered_95_ci": [
+      0.1895534939236111,
+      0.622100151909722
+    ],
+    "dataset_mahalanobis_auroc": 0.20203993055555552,
+    "dataset_mahalanobis_family_clustered_95_ci": [
+      0.06692979600694446,
+      0.37631293402777777
+    ],
+    "family_knn_auroc": 0.375,
+    "family_knn_bootstrap_95_ci": [
+      0.16666666666666666,
+      0.6180555555555556
+    ],
+    "breakdown_dataset_tpr_at_threshold": 0.8125,
+    "breakdown_family_tpr_at_threshold": 0.8333333333333334,
+    "classical_family_fpr_at_threshold": 0.9166666666666666,
+    "family_scores": {
+      "B:bounded_growth": 0.04705751687288284,
+      "B:discontinuous_drop": 0.013285523280501366,
+      "B:kink": 0.19270524382591248,
+      "B:log_correction": 0.020736277103424072,
+      "B:oscillation": 0.002968880347907543,
+      "B:resonance": 0.023736566305160522,
+      "B:saturation": 0.08773535490036011,
+      "B:smooth_crossover": 0.13552497327327728,
+      "B:smooth_rolloff": 0.008289461955428123,
+      "B:step": 0.05903169512748718,
+      "B:threshold": 0.00465274415910244,
+      "B:turnover": 0.08482303470373154,
+      "C:affine_decline": 0.2613859176635742,
+      "C:exponential_decay": 0.21220454573631287,
+      "C:exponential_growth": 0.018539834767580032,
+      "C:inverse": 0.13776038587093353,
+      "C:inverse_square": 0.07532075047492981,
+      "C:linear": 0.003718733787536621,
+      "C:offset_inverse": 0.19351539015769958,
+      "C:power_1p5": 0.008077681064605713,
+      "C:power_2p5": 0.0898873507976532,
+      "C:quadratic": 0.026893993839621544,
+      "C:quartic": 0.03236395865678787,
+      "C:square_root": 0.02760293334722519
+    }
+  },
+  "heldout_cited_pre1900": {
+    "validation": {
+      "records": 17,
+      "families": 4,
+      "record_fpr": 0.7058823529411765,
+      "family_fpr": 0.75,
+      "family_scores": {
+        "archimedes_buoyancy": 0.008070945739746094,
+        "classical_interference": 0.1879880577325821,
+        "gibbs_thermodynamics": 0.01787658967077732,
+        "stokes_drag": 0.005780410952866077
+      }
+    },
+    "test": {
+      "records": 46,
+      "families": 7,
+      "record_fpr": 0.5434782608695652,
+      "family_fpr": 0.5714285714285714,
+      "family_scores": {
+        "coulomb_electrostatics": 0.07169602811336517,
+        "fresnel_optics": 0.0060535697266459465,
+        "helmholtz_free_energy": 0.15052177011966705,
+        "kelvin_helmholtz": 0.0022093236912041903,
+        "maxwell_boltzmann": 0.02123245969414711,
+        "poynting_energy_flux": 0.004810207989066839,
+        "roche_limit": 0.013429129496216774
+      }
+    }
+  },
+  "incremental_comparison": {
+    "strict_pre1900_family_auroc": 0.9027777777777778,
+    "generic_function_family_auroc": 0.375,
+    "strict_minus_generic_family_auroc": 0.5277777777777778,
+    "paired_family_bootstrap_95_ci": [
+      0.26388888888888884,
+      0.7638888888888888
+    ],
+    "interpretation": "The paired interval tests ranking increment over generic function pretraining. It does not compare historical semantics unavailable to a notation-free encoder."
+  },
+  "claim_boundary": "This matched control contains no historical provenance and no anomaly supervision. All comparisons remain synthetic/developmental."
+}

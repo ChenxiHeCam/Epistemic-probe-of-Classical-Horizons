@@ -1,0 +1,137 @@
+[
+  {
+    "test_id": "firas_rayleigh_jeans_old_horizon",
+    "status": "retrospective_development",
+    "knowledge_horizon": "classical radiation / Rayleigh-Jeans prediction",
+    "evidence_type": "processed_measurement",
+    "route": "theory_conditioned",
+    "model_set": ["I(nu) = A * nu^2"],
+    "fitted_parameters": ["amplitude A"],
+    "observation_model": {
+      "description": "published pointwise sigma plus independent 0.1% response floor",
+      "covariance_status": "frequency covariance unavailable locally",
+      "censoring": "none"
+    },
+    "fit_subset": "all 43 published spectral points",
+    "adaptive_procedure": ["weighted fit of A", "same-grid parametric bootstrap", "refit A in every replicate"],
+    "statistic": "sum of squared standardized residuals",
+    "decision_rule": {
+      "alpha": 0.05,
+      "tail": "upper",
+      "multiplicity": "BH-FDR across the five retrospective clock cases",
+      "calibration_scope": "complete nuisance fit rerun in each of 1000 bootstrap replicates"
+    },
+    "semantic_output": "model_incompatibility_boundary_not_identifiable",
+    "boundary_identifiable": false,
+    "abstention_reason": null,
+    "provenance": {"description": "COBE-FIRAS published monopole spectrum table", "file_sha256": null}
+  },
+  {
+    "test_id": "bertozzi_newtonian_old_horizon",
+    "status": "retrospective_development",
+    "knowledge_horizon": "Newtonian kinetic-energy prediction",
+    "evidence_type": "digitized_historical_figure",
+    "route": "theory_conditioned",
+    "model_set": ["beta^2 = 2 KE / (m_e c^2), m_e c^2 = 0.511 MeV"],
+    "fitted_parameters": [],
+    "observation_model": {
+      "description": "independent 0.02 beta^2 digitization/error floor",
+      "covariance_status": "not available",
+      "censoring": "none"
+    },
+    "fit_subset": "no fitting; evaluate all five digitized values",
+    "adaptive_procedure": ["fixed prediction", "same-grid parametric bootstrap"],
+    "statistic": "sum of squared standardized residuals",
+    "decision_rule": {
+      "alpha": 0.05,
+      "tail": "upper",
+      "multiplicity": "BH-FDR across the five retrospective clock cases",
+      "calibration_scope": "fixed prediction evaluated in each of 1000 bootstrap replicates"
+    },
+    "semantic_output": "model_incompatibility_boundary_not_identifiable",
+    "boundary_identifiable": false,
+    "abstention_reason": null,
+    "provenance": {"description": "five values digitized from Bertozzi (1964)", "file_sha256": null}
+  },
+  {
+    "test_id": "nist_copper_dulong_petit_old_horizon",
+    "status": "retrospective_development",
+    "knowledge_horizon": "Dulong-Petit constant heat-capacity prediction",
+    "evidence_type": "reference_fit_curve",
+    "route": "data_anchored",
+    "model_set": ["log Cp(T) = constant on the incumbent regime"],
+    "fitted_parameters": ["log plateau"],
+    "observation_model": {
+      "description": "independent 5% relative/log error floor",
+      "covariance_status": "NIST reference-polynomial covariance unavailable locally",
+      "censoring": "none"
+    },
+    "fit_subset": "upper temperature quartile of 120 evaluated reference-curve points",
+    "adaptive_procedure": ["fit plateau on declared upper quartile", "same-grid lognormal bootstrap", "refit plateau in every replicate"],
+    "statistic": "sum of squared standardized log residuals",
+    "decision_rule": {
+      "alpha": 0.05,
+      "tail": "upper",
+      "multiplicity": "BH-FDR across the five retrospective clock cases",
+      "calibration_scope": "complete plateau fit rerun in each of 1000 bootstrap replicates"
+    },
+    "semantic_output": "localized_model_incompatibility",
+    "boundary_identifiable": true,
+    "abstention_reason": null,
+    "provenance": {"description": "NIST OFHC-copper reference polynomial evaluated on a grid", "file_sha256": null}
+  },
+  {
+    "test_id": "onnes_smooth_resistance_old_horizon",
+    "status": "retrospective_development",
+    "knowledge_horizon": "declared smooth normal/residual-resistance prediction",
+    "evidence_type": "digitized_historical_figure",
+    "route": "data_anchored",
+    "model_set": ["R(T) = slope*T + intercept over the observed normal segment"],
+    "fitted_parameters": ["slope", "intercept"],
+    "observation_model": {
+      "description": "0.003 ohm for normal points; current development code represents four limits at 2e-6 ohm",
+      "covariance_status": "not available",
+      "censoring": "four sub-transition observations are upper limits; confirmatory censoring likelihood still required"
+    },
+    "fit_subset": "points above 4.21 K",
+    "adaptive_procedure": ["fit normal trend", "same-grid parametric bootstrap", "refit trend in every replicate"],
+    "statistic": "sum of squared standardized residuals in the current development implementation",
+    "decision_rule": {
+      "alpha": 0.05,
+      "tail": "upper",
+      "multiplicity": "BH-FDR across the five retrospective clock cases",
+      "calibration_scope": "complete normal-trend fit rerun in each of 1000 bootstrap replicates"
+    },
+    "semantic_output": "localized_model_incompatibility",
+    "boundary_identifiable": true,
+    "abstention_reason": null,
+    "provenance": {"description": "Onnes mercury-resistance values read from historical figure and textual limit", "file_sha256": null}
+  },
+  {
+    "test_id": "millikan_constant_energy_old_horizon",
+    "status": "retrospective_development",
+    "knowledge_horizon": "frequency-independent photoelectron-energy prediction",
+    "evidence_type": "digitized_historical_figure",
+    "route": "theory_conditioned",
+    "model_set": ["V_stop(nu) = constant"],
+    "fitted_parameters": ["constant stopping potential"],
+    "observation_model": {
+      "description": "independent 0.02 V pointwise error from the development protocol",
+      "covariance_status": "not available",
+      "censoring": "none in the four retained above-threshold points"
+    },
+    "fit_subset": "all four digitized sodium points",
+    "adaptive_procedure": ["fit constant", "same-grid parametric bootstrap", "refit constant in every replicate"],
+    "statistic": "sum of squared standardized residuals",
+    "decision_rule": {
+      "alpha": 0.05,
+      "tail": "upper",
+      "multiplicity": "BH-FDR across the five retrospective clock cases",
+      "calibration_scope": "complete constant fit rerun in each of 1000 bootstrap replicates"
+    },
+    "semantic_output": "model_incompatibility_boundary_not_identifiable",
+    "boundary_identifiable": false,
+    "abstention_reason": null,
+    "provenance": {"description": "four sodium stopping-potential values digitized from Millikan (1916)", "file_sha256": null}
+  }
+]

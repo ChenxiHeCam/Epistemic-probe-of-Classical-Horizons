@@ -1,0 +1,2307 @@
+{
+  "status": "PASS",
+  "schema_version": "3.0",
+  "run_id": "epoch_pre1950_joint",
+  "knowledge_cutoff": 1950,
+  "primary_metric": "one_class_ensemble",
+  "future_horizon_used_for_training_or_score_fitting": false,
+  "query_input": "normalized unordered point cloud only",
+  "aggregation": "cloud median to formula; formula median to source-law family/relation group",
+  "memory": {
+    "known_graph_formula_embeddings": 4673,
+    "known_graph_identity_embeddings": 548,
+    "known_point_formula_prototypes": 4673,
+    "point_gaussian_shrinkage": 0.05193751268005681,
+    "all_corpus_identity_labels": 10639,
+    "top_k": 8
+  },
+  "provenance": {
+    "config": "/root/autodl-tmp/epoch_horizons/v2/run_configs/train_pre1950_joint.json",
+    "config_sha256": "ac43432bb53d4a1c64374ae32ddb0814cce9f9eae7cbf154e34d6d485663259b",
+    "checkpoint": "/root/autodl-tmp/epoch_horizons/v2/runs/phase_b_pre1950_joint_v3_20260907/checkpoint_final.pt",
+    "checkpoint_sha256": "ca64446d95bb0966a630412ec60ea5e43461974f74dcc5f8e9cccd16ab57dde5",
+    "formula_table_sha256": "27f267d2afd82b67514b32c99ae44bcd6feae09705ff32d9ea8ae01834bb2ade"
+  },
+  "calibration_formulas": 224,
+  "sets": {
+    "known_internal": {
+      "groups": 62,
+      "score_summary": {
+        "calibrated_graph_formula_knn_distance": {
+          "median": 0.52,
+          "q25": 0.3655555555555555,
+          "q75": 0.6433333333333333
+        },
+        "calibrated_graph_identity_knn_distance": {
+          "median": 0.4922222222222222,
+          "q25": 0.3388888888888889,
+          "q75": 0.67
+        },
+        "calibrated_point_formula_knn_distance": {
+          "median": 0.5722222222222222,
+          "q25": 0.33333333333333337,
+          "q75": 0.7111111111111111
+        },
+        "calibrated_point_shrinkage_mahalanobis": {
+          "median": 0.5355555555555556,
+          "q25": 0.32944444444444443,
+          "q75": 0.6844444444444444
+        },
+        "graph_formula_knn_distance": {
+          "median": 0.008335307240486145,
+          "q25": 0.008308850228786469,
+          "q75": 0.008360423147678375
+        },
+        "graph_identity_knn_distance": {
+          "median": 0.008770540356636047,
+          "q25": 0.0087488554418087,
+          "q75": 0.008796963840723038
+        },
+        "one_class_ensemble": {
+          "median": 0.5233333333333333,
+          "q25": 0.37930555555555556,
+          "q75": 0.6291666666666667
+        },
+        "point_formula_knn_distance": {
+          "median": -1.3515353202819824e-05,
+          "q25": -2.1144747734069824e-05,
+          "q75": -7.420778274536133e-06
+        },
+        "point_shrinkage_mahalanobis": {
+          "median": 2155.6561279296875,
+          "q25": 2130.950408935547,
+          "q75": 2181.3712768554688
+        }
+      },
+      "scores": {
+        "newtonian_dynamics": {
+          "graph_formula_knn_distance": 0.008315205574035645,
+          "graph_identity_knn_distance": 0.008760064840316772,
+          "point_formula_knn_distance": -2.276897430419922e-05,
+          "point_shrinkage_mahalanobis": 2129.166015625,
+          "calibrated_graph_formula_knn_distance": 0.4,
+          "calibrated_graph_identity_knn_distance": 0.4177777777777778,
+          "calibrated_point_formula_knn_distance": 0.2577777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.32,
+          "one_class_ensemble": 0.3733333333333333
+        },
+        "euler_buckling": {
+          "graph_formula_knn_distance": 0.008331239223480225,
+          "graph_identity_knn_distance": 0.008773624897003174,
+          "point_formula_knn_distance": -1.9609928131103516e-05,
+          "point_shrinkage_mahalanobis": 2153.20947265625,
+          "calibrated_graph_formula_knn_distance": 0.5333333333333333,
+          "calibrated_graph_identity_knn_distance": 0.5111111111111111,
+          "calibrated_point_formula_knn_distance": 0.39555555555555555,
+          "calibrated_point_shrinkage_mahalanobis": 0.5288888888888889,
+          "one_class_ensemble": 0.4677777777777778
+        },
+        "gibbs_thomson": {
+          "graph_formula_knn_distance": 0.008353054523468018,
+          "graph_identity_knn_distance": 0.008775651454925537,
+          "point_formula_knn_distance": -1.33514404296875e-05,
+          "point_shrinkage_mahalanobis": 2161.656005859375,
+          "calibrated_graph_formula_knn_distance": 0.64,
+          "calibrated_graph_identity_knn_distance": 0.5377777777777778,
+          "calibrated_point_formula_knn_distance": 0.6088888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.5955555555555555,
+          "one_class_ensemble": 0.5966666666666667
+        },
+        "young_laplace": {
+          "graph_formula_knn_distance": 0.008324205875396729,
+          "graph_identity_knn_distance": 0.008759662508964539,
+          "point_formula_knn_distance": -1.4066696166992188e-05,
+          "point_shrinkage_mahalanobis": 2149.593994140625,
+          "calibrated_graph_formula_knn_distance": 0.4822222222222222,
+          "calibrated_graph_identity_knn_distance": 0.4222222222222222,
+          "calibrated_point_formula_knn_distance": 0.5866666666666667,
+          "calibrated_point_shrinkage_mahalanobis": 0.4955555555555555,
+          "one_class_ensemble": 0.5155555555555555
+        },
+        "fourier_heat": {
+          "graph_formula_knn_distance": 0.008321046829223633,
+          "graph_identity_knn_distance": 0.00876365602016449,
+          "point_formula_knn_distance": -2.014636993408203e-05,
+          "point_shrinkage_mahalanobis": 2129.0758056640625,
+          "calibrated_graph_formula_knn_distance": 0.43777777777777777,
+          "calibrated_graph_identity_knn_distance": 0.44,
+          "calibrated_point_formula_knn_distance": 0.38,
+          "calibrated_point_shrinkage_mahalanobis": 0.32,
+          "one_class_ensemble": 0.38555555555555554
+        },
+        "bernoulli_fluid": {
+          "graph_formula_knn_distance": 0.008308500051498413,
+          "graph_identity_knn_distance": 0.008749470114707947,
+          "point_formula_knn_distance": -2.1964311599731445e-05,
+          "point_shrinkage_mahalanobis": 2128.87890625,
+          "calibrated_graph_formula_knn_distance": 0.3622222222222222,
+          "calibrated_graph_identity_knn_distance": 0.3422222222222222,
+          "calibrated_point_formula_knn_distance": 0.3,
+          "calibrated_point_shrinkage_mahalanobis": 0.3111111111111111,
+          "one_class_ensemble": 0.3327777777777778
+        },
+        "hydrostatics": {
+          "graph_formula_knn_distance": 0.008339613676071167,
+          "graph_identity_knn_distance": 0.008775562047958374,
+          "point_formula_knn_distance": -2.0891427993774414e-05,
+          "point_shrinkage_mahalanobis": 2123.271484375,
+          "calibrated_graph_formula_knn_distance": 0.5822222222222222,
+          "calibrated_graph_identity_knn_distance": 0.5377777777777778,
+          "calibrated_point_formula_knn_distance": 0.3488888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.2688888888888889,
+          "one_class_ensemble": 0.4222222222222223
+        },
+        "torricelli_outflow": {
+          "graph_formula_knn_distance": 0.008361965417861938,
+          "graph_identity_knn_distance": 0.00881195068359375,
+          "point_formula_knn_distance": -1.0073184967041016e-05,
+          "point_shrinkage_mahalanobis": 2116.4229736328125,
+          "calibrated_graph_formula_knn_distance": 0.6866666666666668,
+          "calibrated_graph_identity_knn_distance": 0.808888888888889,
+          "calibrated_point_formula_knn_distance": 0.7,
+          "calibrated_point_shrinkage_mahalanobis": 0.23777777777777778,
+          "one_class_ensemble": 0.6083333333333334
+        },
+        "helmholtz_resonance": {
+          "graph_formula_knn_distance": 0.008322328329086304,
+          "graph_identity_knn_distance": 0.008803412318229675,
+          "point_formula_knn_distance": -8.404254913330078e-06,
+          "point_shrinkage_mahalanobis": 2158.604736328125,
+          "calibrated_graph_formula_knn_distance": 0.45999999999999996,
+          "calibrated_graph_identity_knn_distance": 0.74,
+          "calibrated_point_formula_knn_distance": 0.7377777777777779,
+          "calibrated_point_shrinkage_mahalanobis": 0.5666666666666667,
+          "one_class_ensemble": 0.7061111111111111
+        },
+        "TG1950_78ddf5c4dade319f8c46": {
+          "graph_formula_knn_distance": 0.008381113409996033,
+          "graph_identity_knn_distance": 0.008757337927818298,
+          "point_formula_knn_distance": -5.319714546203613e-06,
+          "point_shrinkage_mahalanobis": 2172.341064453125,
+          "calibrated_graph_formula_knn_distance": 0.7177777777777777,
+          "calibrated_graph_identity_knn_distance": 0.40888888888888886,
+          "calibrated_point_formula_knn_distance": 0.6155555555555556,
+          "calibrated_point_shrinkage_mahalanobis": 0.5533333333333333,
+          "one_class_ensemble": 0.5738888888888889
+        },
+        "TG1950_ef00f57bf7018701bbd0": {
+          "graph_formula_knn_distance": 0.00833633542060852,
+          "graph_identity_knn_distance": 0.008759170770645142,
+          "point_formula_knn_distance": -2.3156404495239258e-05,
+          "point_shrinkage_mahalanobis": 2137.984375,
+          "calibrated_graph_formula_knn_distance": 0.5311111111111111,
+          "calibrated_graph_identity_knn_distance": 0.41555555555555557,
+          "calibrated_point_formula_knn_distance": 0.27111111111111114,
+          "calibrated_point_shrinkage_mahalanobis": 0.3977777777777778,
+          "one_class_ensemble": 0.4394444444444444
+        },
+        "TG1950_bfdb96530d532603aa5f": {
+          "graph_formula_knn_distance": 0.008435040712356567,
+          "graph_identity_knn_distance": 0.008845090866088867,
+          "point_formula_knn_distance": -1.3172626495361328e-05,
+          "point_shrinkage_mahalanobis": 2146.45849609375,
+          "calibrated_graph_formula_knn_distance": 0.9422222222222222,
+          "calibrated_graph_identity_knn_distance": 0.9244444444444444,
+          "calibrated_point_formula_knn_distance": 0.6133333333333333,
+          "calibrated_point_shrinkage_mahalanobis": 0.4577777777777778,
+          "one_class_ensemble": 0.6322222222222221
+        },
+        "TG1950_b39229537a3011320570": {
+          "graph_formula_knn_distance": 0.008356064558029175,
+          "graph_identity_knn_distance": 0.0088062584400177,
+          "point_formula_knn_distance": -1.0967254638671875e-05,
+          "point_shrinkage_mahalanobis": 2154.375,
+          "calibrated_graph_formula_knn_distance": 0.6444444444444445,
+          "calibrated_graph_identity_knn_distance": 0.7644444444444445,
+          "calibrated_point_formula_knn_distance": 0.6888888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.5422222222222223,
+          "one_class_ensemble": 0.6188888888888889
+        },
+        "TG1950_d813afe81ce63b56c06c": {
+          "graph_formula_knn_distance": 0.008349478244781494,
+          "graph_identity_knn_distance": 0.008798569440841675,
+          "point_formula_knn_distance": -2.9325485229492188e-05,
+          "point_shrinkage_mahalanobis": 2181.607177734375,
+          "calibrated_graph_formula_knn_distance": 0.6177777777777778,
+          "calibrated_graph_identity_knn_distance": 0.6977777777777778,
+          "calibrated_point_formula_knn_distance": 0.05333333333333334,
+          "calibrated_point_shrinkage_mahalanobis": 0.7555555555555555,
+          "one_class_ensemble": 0.5311111111111111
+        },
+        "TG1950_88371ea82bd3637c3976": {
+          "graph_formula_knn_distance": 0.00828482210636139,
+          "graph_identity_knn_distance": 0.008735239505767822,
+          "point_formula_knn_distance": -2.3663043975830078e-05,
+          "point_shrinkage_mahalanobis": 2099.9617919921875,
+          "calibrated_graph_formula_knn_distance": 0.24,
+          "calibrated_graph_identity_knn_distance": 0.24222222222222223,
+          "calibrated_point_formula_knn_distance": 0.3,
+          "calibrated_point_shrinkage_mahalanobis": 0.09333333333333332,
+          "one_class_ensemble": 0.21888888888888888
+        },
+        "TG1950_f5cc8039db06779c9bb3": {
+          "graph_formula_knn_distance": 0.008404791355133057,
+          "graph_identity_knn_distance": 0.008832752704620361,
+          "point_formula_knn_distance": -1.0848045349121094e-05,
+          "point_shrinkage_mahalanobis": 2190.175048828125,
+          "calibrated_graph_formula_knn_distance": 0.8888888888888888,
+          "calibrated_graph_identity_knn_distance": 0.9022222222222223,
+          "calibrated_point_formula_knn_distance": 0.6888888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.8177777777777778,
+          "one_class_ensemble": 0.7933333333333333
+        },
+        "TG1950_6eb1a25d03368c8e919d": {
+          "graph_formula_knn_distance": 0.008343324065208435,
+          "graph_identity_knn_distance": 0.008781000971794128,
+          "point_formula_knn_distance": -2.2530555725097656e-05,
+          "point_shrinkage_mahalanobis": 2139.290771484375,
+          "calibrated_graph_formula_knn_distance": 0.5711111111111111,
+          "calibrated_graph_identity_knn_distance": 0.5733333333333333,
+          "calibrated_point_formula_knn_distance": 0.2733333333333333,
+          "calibrated_point_shrinkage_mahalanobis": 0.39555555555555555,
+          "one_class_ensemble": 0.4811111111111111
+        },
+        "TG1950_6c911e842ab1113c915f": {
+          "graph_formula_knn_distance": 0.008401736617088318,
+          "graph_identity_knn_distance": 0.008827805519104004,
+          "point_formula_knn_distance": -1.3500452041625977e-05,
+          "point_shrinkage_mahalanobis": 2157.287841796875,
+          "calibrated_graph_formula_knn_distance": 0.788888888888889,
+          "calibrated_graph_identity_knn_distance": 0.8133333333333332,
+          "calibrated_point_formula_knn_distance": 0.5911111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.5533333333333333,
+          "one_class_ensemble": 0.7
+        },
+        "TG1950_283f4656f225394fc10b": {
+          "graph_formula_knn_distance": 0.008277550339698792,
+          "graph_identity_knn_distance": 0.00872945785522461,
+          "point_formula_knn_distance": -2.5153160095214844e-05,
+          "point_shrinkage_mahalanobis": 2137.0740966796875,
+          "calibrated_graph_formula_knn_distance": 0.1577777777777778,
+          "calibrated_graph_identity_knn_distance": 0.21333333333333332,
+          "calibrated_point_formula_knn_distance": 0.14222222222222222,
+          "calibrated_point_shrinkage_mahalanobis": 0.37555555555555553,
+          "one_class_ensemble": 0.2877777777777778
+        },
+        "TG1950_f9a60bc34ca3352d5ea7": {
+          "graph_formula_knn_distance": 0.008337169885635376,
+          "graph_identity_knn_distance": 0.008773311972618103,
+          "point_formula_knn_distance": -1.7344951629638672e-05,
+          "point_shrinkage_mahalanobis": 2191.31640625,
+          "calibrated_graph_formula_knn_distance": 0.56,
+          "calibrated_graph_identity_knn_distance": 0.5177777777777778,
+          "calibrated_point_formula_knn_distance": 0.4311111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.8155555555555556,
+          "one_class_ensemble": 0.5327777777777778
+        },
+        "TG1950_8edc18306b85dde25b06": {
+          "graph_formula_knn_distance": 0.008378148078918457,
+          "graph_identity_knn_distance": 0.008807837963104248,
+          "point_formula_knn_distance": -3.0994415283203125e-06,
+          "point_shrinkage_mahalanobis": 2209.083984375,
+          "calibrated_graph_formula_knn_distance": 0.7777777777777778,
+          "calibrated_graph_identity_knn_distance": 0.7822222222222223,
+          "calibrated_point_formula_knn_distance": 0.84,
+          "calibrated_point_shrinkage_mahalanobis": 0.8933333333333333,
+          "one_class_ensemble": 0.6366666666666666
+        },
+        "TG1950_ef9d37b3b9ef062ba41a": {
+          "graph_formula_knn_distance": 0.008389443159103394,
+          "graph_identity_knn_distance": 0.008826687932014465,
+          "point_formula_knn_distance": -8.702278137207031e-06,
+          "point_shrinkage_mahalanobis": 2182.058349609375,
+          "calibrated_graph_formula_knn_distance": 0.8333333333333333,
+          "calibrated_graph_identity_knn_distance": 0.8822222222222222,
+          "calibrated_point_formula_knn_distance": 0.731111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.6866666666666666,
+          "one_class_ensemble": 0.7833333333333333
+        },
+        "TG1950_88270d26c0a817afacef": {
+          "graph_formula_knn_distance": 0.00862056016921997,
+          "graph_identity_knn_distance": 0.009015724062919617,
+          "point_formula_knn_distance": -7.778406143188477e-06,
+          "point_shrinkage_mahalanobis": 2204.646240234375,
+          "calibrated_graph_formula_knn_distance": 0.9822222222222222,
+          "calibrated_graph_identity_knn_distance": 0.9622222222222222,
+          "calibrated_point_formula_knn_distance": 0.5844444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.5800000000000001,
+          "one_class_ensemble": 0.7772222222222223
+        },
+        "TG1950_49ef39e8e80c1e5c0f2d": {
+          "graph_formula_knn_distance": 0.008272022008895874,
+          "graph_identity_knn_distance": 0.008722946047782898,
+          "point_formula_knn_distance": -1.1116266250610352e-05,
+          "point_shrinkage_mahalanobis": 2180.66357421875,
+          "calibrated_graph_formula_knn_distance": 0.1711111111111111,
+          "calibrated_graph_identity_knn_distance": 0.1511111111111111,
+          "calibrated_point_formula_knn_distance": 0.5733333333333333,
+          "calibrated_point_shrinkage_mahalanobis": 0.6844444444444444,
+          "one_class_ensemble": 0.395
+        },
+        "TG1950_ebe808fb37d2b2485327": {
+          "graph_formula_knn_distance": 0.0083371102809906,
+          "graph_identity_knn_distance": 0.008768543601036072,
+          "point_formula_knn_distance": -1.3887882232666016e-05,
+          "point_shrinkage_mahalanobis": 2187.262451171875,
+          "calibrated_graph_formula_knn_distance": 0.5044444444444445,
+          "calibrated_graph_identity_knn_distance": 0.48888888888888893,
+          "calibrated_point_formula_knn_distance": 0.5711111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.7555555555555555,
+          "one_class_ensemble": 0.5722222222222222
+        },
+        "TG1950_b774de353eac8fb3efa3": {
+          "graph_formula_knn_distance": 0.008330479264259338,
+          "graph_identity_knn_distance": 0.008749023079872131,
+          "point_formula_knn_distance": -1.3530254364013672e-05,
+          "point_shrinkage_mahalanobis": 2145.3013916015625,
+          "calibrated_graph_formula_knn_distance": 0.5222222222222223,
+          "calibrated_graph_identity_knn_distance": 0.3466666666666667,
+          "calibrated_point_formula_knn_distance": 0.5355555555555556,
+          "calibrated_point_shrinkage_mahalanobis": 0.4577777777777778,
+          "one_class_ensemble": 0.46555555555555556
+        },
+        "TG1950_5e30891a8be48e5df68c": {
+          "graph_formula_knn_distance": 0.008357137441635132,
+          "graph_identity_knn_distance": 0.008785873651504517,
+          "point_formula_knn_distance": -2.682209014892578e-05,
+          "point_shrinkage_mahalanobis": 2146.687255859375,
+          "calibrated_graph_formula_knn_distance": 0.6488888888888888,
+          "calibrated_graph_identity_knn_distance": 0.6266666666666667,
+          "calibrated_point_formula_knn_distance": 0.11555555555555555,
+          "calibrated_point_shrinkage_mahalanobis": 0.4577777777777778,
+          "one_class_ensemble": 0.4777777777777778
+        },
+        "TG1950_5aeb40727c5b58e39828": {
+          "graph_formula_knn_distance": 0.008309900760650635,
+          "graph_identity_knn_distance": 0.008755043148994446,
+          "point_formula_knn_distance": -2.47955322265625e-05,
+          "point_shrinkage_mahalanobis": 2127.2535400390625,
+          "calibrated_graph_formula_knn_distance": 0.37555555555555553,
+          "calibrated_graph_identity_knn_distance": 0.3844444444444445,
+          "calibrated_point_formula_knn_distance": 0.18,
+          "calibrated_point_shrinkage_mahalanobis": 0.28888888888888886,
+          "one_class_ensemble": 0.33888888888888885
+        },
+        "TG1950_451b60a880764fd800ce": {
+          "graph_formula_knn_distance": 0.008323431015014648,
+          "graph_identity_knn_distance": 0.00873422622680664,
+          "point_formula_knn_distance": -9.119510650634766e-06,
+          "point_shrinkage_mahalanobis": 2150.189208984375,
+          "calibrated_graph_formula_knn_distance": 0.4711111111111111,
+          "calibrated_graph_identity_knn_distance": 0.24888888888888888,
+          "calibrated_point_formula_knn_distance": 0.7111111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.5022222222222222,
+          "one_class_ensemble": 0.5333333333333333
+        },
+        "TG1950_7197e0cfeb70e85be016": {
+          "graph_formula_knn_distance": 0.008338600397109985,
+          "graph_identity_knn_distance": 0.008751019835472107,
+          "point_formula_knn_distance": -2.4139881134033203e-06,
+          "point_shrinkage_mahalanobis": 2175.8453369140625,
+          "calibrated_graph_formula_knn_distance": 0.5377777777777778,
+          "calibrated_graph_identity_knn_distance": 0.3666666666666667,
+          "calibrated_point_formula_knn_distance": 0.8311111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.64,
+          "one_class_ensemble": 0.5938888888888889
+        },
+        "TG1950_dcf887fe0a8edbbce040": {
+          "graph_formula_knn_distance": 0.008290410041809082,
+          "graph_identity_knn_distance": 0.00875842571258545,
+          "point_formula_knn_distance": -2.0563602447509766e-05,
+          "point_shrinkage_mahalanobis": 2142.02490234375,
+          "calibrated_graph_formula_knn_distance": 0.24,
+          "calibrated_graph_identity_knn_distance": 0.4088888888888889,
+          "calibrated_point_formula_knn_distance": 0.36444444444444446,
+          "calibrated_point_shrinkage_mahalanobis": 0.41333333333333333,
+          "one_class_ensemble": 0.35666666666666663
+        },
+        "TG1950_3f812b3a998113d1ae2d": {
+          "graph_formula_knn_distance": 0.008392632007598877,
+          "graph_identity_knn_distance": 0.008771240711212158,
+          "point_formula_knn_distance": -5.4836273193359375e-06,
+          "point_shrinkage_mahalanobis": 2221.7666015625,
+          "calibrated_graph_formula_knn_distance": 0.8311111111111111,
+          "calibrated_graph_identity_knn_distance": 0.4888888888888889,
+          "calibrated_point_formula_knn_distance": 0.8044444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.9288888888888889,
+          "one_class_ensemble": 0.8011111111111111
+        },
+        "TG1950_0dfebea1758db2b353b0": {
+          "graph_formula_knn_distance": 0.008362114429473877,
+          "graph_identity_knn_distance": 0.00883510708808899,
+          "point_formula_knn_distance": -1.1980533599853516e-05,
+          "point_shrinkage_mahalanobis": 2162.0948486328125,
+          "calibrated_graph_formula_knn_distance": 0.6266666666666667,
+          "calibrated_graph_identity_knn_distance": 0.7844444444444445,
+          "calibrated_point_formula_knn_distance": 0.5555555555555556,
+          "calibrated_point_shrinkage_mahalanobis": 0.5844444444444444,
+          "one_class_ensemble": 0.6377777777777778
+        },
+        "TG1950_86ba628874ff4f265c67": {
+          "graph_formula_knn_distance": 0.0083998441696167,
+          "graph_identity_knn_distance": 0.008826524019241333,
+          "point_formula_knn_distance": -2.8759241104125977e-06,
+          "point_shrinkage_mahalanobis": 2173.410400390625,
+          "calibrated_graph_formula_knn_distance": 0.8111111111111111,
+          "calibrated_graph_identity_knn_distance": 0.7977777777777777,
+          "calibrated_point_formula_knn_distance": 0.768888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.6355555555555555,
+          "one_class_ensemble": 0.7533333333333334
+        },
+        "TG1950_bb3ca5e7c8c65c3ec572": {
+          "graph_formula_knn_distance": 0.008337333798408508,
+          "graph_identity_knn_distance": 0.008795320987701416,
+          "point_formula_knn_distance": -2.2232532501220703e-05,
+          "point_shrinkage_mahalanobis": 2123.34521484375,
+          "calibrated_graph_formula_knn_distance": 0.5644444444444444,
+          "calibrated_graph_identity_knn_distance": 0.6777777777777778,
+          "calibrated_point_formula_knn_distance": 0.28444444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.25555555555555554,
+          "one_class_ensemble": 0.43999999999999995
+        },
+        "TG1950_755ae1b602aa1a47dd39": {
+          "graph_formula_knn_distance": 0.008291453123092651,
+          "graph_identity_knn_distance": 0.00874471664428711,
+          "point_formula_knn_distance": -2.1219253540039062e-05,
+          "point_shrinkage_mahalanobis": 2111.529296875,
+          "calibrated_graph_formula_knn_distance": 0.24,
+          "calibrated_graph_identity_knn_distance": 0.3244444444444444,
+          "calibrated_point_formula_knn_distance": 0.3288888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.14222222222222222,
+          "one_class_ensemble": 0.2411111111111111
+        },
+        "TG1950_c189d6047158ec731737": {
+          "graph_formula_knn_distance": 0.00834396481513977,
+          "graph_identity_knn_distance": 0.008783012628555298,
+          "point_formula_knn_distance": -1.4781951904296875e-05,
+          "point_shrinkage_mahalanobis": 2149.334716796875,
+          "calibrated_graph_formula_knn_distance": 0.5333333333333333,
+          "calibrated_graph_identity_knn_distance": 0.5488888888888889,
+          "calibrated_point_formula_knn_distance": 0.5711111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.4866666666666667,
+          "one_class_ensemble": 0.5349999999999999
+        },
+        "TG1950_ce99630f8d2627ba0818": {
+          "graph_formula_knn_distance": 0.008304685354232788,
+          "graph_identity_knn_distance": 0.008753538131713867,
+          "point_formula_knn_distance": -1.913309097290039e-05,
+          "point_shrinkage_mahalanobis": 2129.6844482421875,
+          "calibrated_graph_formula_knn_distance": 0.3422222222222222,
+          "calibrated_graph_identity_knn_distance": 0.3822222222222222,
+          "calibrated_point_formula_knn_distance": 0.41333333333333333,
+          "calibrated_point_shrinkage_mahalanobis": 0.3022222222222222,
+          "one_class_ensemble": 0.3305555555555556
+        },
+        "TG1950_ac19d90d4a47132c7212": {
+          "graph_formula_knn_distance": 0.008321046829223633,
+          "graph_identity_knn_distance": 0.008774876594543457,
+          "point_formula_knn_distance": -6.794929504394531e-06,
+          "point_shrinkage_mahalanobis": 2174.366943359375,
+          "calibrated_graph_formula_knn_distance": 0.44,
+          "calibrated_graph_identity_knn_distance": 0.5288888888888889,
+          "calibrated_point_formula_knn_distance": 0.7688888888888888,
+          "calibrated_point_shrinkage_mahalanobis": 0.6844444444444444,
+          "one_class_ensemble": 0.48333333333333334
+        },
+        "TG1950_aa7ab7df5dab6739ac98": {
+          "graph_formula_knn_distance": 0.008302077651023865,
+          "graph_identity_knn_distance": 0.008726045489311218,
+          "point_formula_knn_distance": -1.5854835510253906e-05,
+          "point_shrinkage_mahalanobis": 2154.5361328125,
+          "calibrated_graph_formula_knn_distance": 0.3288888888888889,
+          "calibrated_graph_identity_knn_distance": 0.1911111111111111,
+          "calibrated_point_formula_knn_distance": 0.4666666666666667,
+          "calibrated_point_shrinkage_mahalanobis": 0.5222222222222221,
+          "one_class_ensemble": 0.37722222222222224
+        },
+        "TG1950_131420b9143992739146": {
+          "graph_formula_knn_distance": 0.008296787738800049,
+          "graph_identity_knn_distance": 0.008775442838668823,
+          "point_formula_knn_distance": -1.8835067749023438e-05,
+          "point_shrinkage_mahalanobis": 2198.176513671875,
+          "calibrated_graph_formula_knn_distance": 0.28444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.5377777777777778,
+          "calibrated_point_formula_knn_distance": 0.4222222222222222,
+          "calibrated_point_shrinkage_mahalanobis": 0.8755555555555555,
+          "one_class_ensemble": 0.37
+        },
+        "TG1950_585b4a9bb4da9f8f33da": {
+          "graph_formula_knn_distance": 0.00827278196811676,
+          "graph_identity_knn_distance": 0.008724451065063477,
+          "point_formula_knn_distance": -2.6226043701171875e-06,
+          "point_shrinkage_mahalanobis": 2156.776123046875,
+          "calibrated_graph_formula_knn_distance": 0.17777777777777778,
+          "calibrated_graph_identity_knn_distance": 0.19555555555555557,
+          "calibrated_point_formula_knn_distance": 0.8333333333333333,
+          "calibrated_point_shrinkage_mahalanobis": 0.5577777777777777,
+          "one_class_ensemble": 0.4322222222222223
+        },
+        "TG1950_c9483604ae66db36f0d7": {
+          "graph_formula_knn_distance": 0.008409783244132996,
+          "graph_identity_knn_distance": 0.008784636855125427,
+          "point_formula_knn_distance": -3.3080577850341797e-06,
+          "point_shrinkage_mahalanobis": 2235.3636474609375,
+          "calibrated_graph_formula_knn_distance": 0.8933333333333333,
+          "calibrated_graph_identity_knn_distance": 0.6,
+          "calibrated_point_formula_knn_distance": 0.7488888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.9377777777777778,
+          "one_class_ensemble": 0.7949999999999999
+        },
+        "TG1950_ecbedfd02205b3d19481": {
+          "graph_formula_knn_distance": 0.008280977606773376,
+          "graph_identity_knn_distance": 0.008730486035346985,
+          "point_formula_knn_distance": -1.150369644165039e-05,
+          "point_shrinkage_mahalanobis": 2163.9368896484375,
+          "calibrated_graph_formula_knn_distance": 0.2311111111111111,
+          "calibrated_graph_identity_knn_distance": 0.21555555555555556,
+          "calibrated_point_formula_knn_distance": 0.6488888888888888,
+          "calibrated_point_shrinkage_mahalanobis": 0.5466666666666666,
+          "one_class_ensemble": 0.41055555555555556
+        },
+        "TG1950_a2dae689ffb6586536d9": {
+          "graph_formula_knn_distance": 0.008536040782928467,
+          "graph_identity_knn_distance": 0.009002119302749634,
+          "point_formula_knn_distance": 0.0,
+          "point_shrinkage_mahalanobis": 2165.49658203125,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 1.0,
+          "calibrated_point_formula_knn_distance": 0.88,
+          "calibrated_point_shrinkage_mahalanobis": 0.6133333333333333,
+          "one_class_ensemble": 0.8733333333333333
+        },
+        "TG1950_501c439f06b8a28a7f32": {
+          "graph_formula_knn_distance": 0.00830647349357605,
+          "graph_identity_knn_distance": 0.008744701743125916,
+          "point_formula_knn_distance": -2.4497509002685547e-05,
+          "point_shrinkage_mahalanobis": 2134.748291015625,
+          "calibrated_graph_formula_knn_distance": 0.35333333333333333,
+          "calibrated_graph_identity_knn_distance": 0.3,
+          "calibrated_point_formula_knn_distance": 0.18888888888888888,
+          "calibrated_point_shrinkage_mahalanobis": 0.35777777777777775,
+          "one_class_ensemble": 0.33
+        },
+        "TG1950_12c4c0775cfe2f6183bc": {
+          "graph_formula_knn_distance": 0.008332833647727966,
+          "graph_identity_knn_distance": 0.008767962455749512,
+          "point_formula_knn_distance": -2.8192996978759766e-05,
+          "point_shrinkage_mahalanobis": 2099.367431640625,
+          "calibrated_graph_formula_knn_distance": 0.48444444444444446,
+          "calibrated_graph_identity_knn_distance": 0.4822222222222222,
+          "calibrated_point_formula_knn_distance": 0.08222222222222222,
+          "calibrated_point_shrinkage_mahalanobis": 0.08888888888888888,
+          "one_class_ensemble": 0.2844444444444445
+        },
+        "TG1950_255ea6cc261fd61af213": {
+          "graph_formula_knn_distance": 0.008380740880966187,
+          "graph_identity_knn_distance": 0.008798360824584961,
+          "point_formula_knn_distance": -1.4156103134155273e-06,
+          "point_shrinkage_mahalanobis": 2193.355224609375,
+          "calibrated_graph_formula_knn_distance": 0.7755555555555556,
+          "calibrated_graph_identity_knn_distance": 0.7088888888888889,
+          "calibrated_point_formula_knn_distance": 0.6955555555555555,
+          "calibrated_point_shrinkage_mahalanobis": 0.7,
+          "one_class_ensemble": 0.72
+        },
+        "TG1950_1e5e00b2514553ed9c64": {
+          "graph_formula_knn_distance": 0.00831952691078186,
+          "graph_identity_knn_distance": 0.008746862411499023,
+          "point_formula_knn_distance": -2.6226043701171875e-05,
+          "point_shrinkage_mahalanobis": 2118.021484375,
+          "calibrated_graph_formula_knn_distance": 0.4311111111111111,
+          "calibrated_graph_identity_knn_distance": 0.3288888888888889,
+          "calibrated_point_formula_knn_distance": 0.12444444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.2,
+          "one_class_ensemble": 0.35555555555555557
+        },
+        "TG1950_0f1ebe348d72b0178b36": {
+          "graph_formula_knn_distance": 0.008353948593139648,
+          "graph_identity_knn_distance": 0.008771106600761414,
+          "point_formula_knn_distance": -7.3015689849853516e-06,
+          "point_shrinkage_mahalanobis": 2219.0068359375,
+          "calibrated_graph_formula_knn_distance": 0.6155555555555555,
+          "calibrated_graph_identity_knn_distance": 0.5,
+          "calibrated_point_formula_knn_distance": 0.74,
+          "calibrated_point_shrinkage_mahalanobis": 0.9022222222222223,
+          "one_class_ensemble": 0.6894444444444444
+        },
+        "TG1950_e37053a4f022a2a94784": {
+          "graph_formula_knn_distance": 0.008495360612869263,
+          "graph_identity_knn_distance": 0.008910894393920898,
+          "point_formula_knn_distance": -9.179115295410156e-06,
+          "point_shrinkage_mahalanobis": 2176.246826171875,
+          "calibrated_graph_formula_knn_distance": 0.9911111111111112,
+          "calibrated_graph_identity_knn_distance": 0.9822222222222222,
+          "calibrated_point_formula_knn_distance": 0.7111111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.7066666666666667,
+          "one_class_ensemble": 0.8477777777777777
+        },
+        "TG1950_c12e706eeeaf176b426c": {
+          "graph_formula_knn_distance": 0.008296579122543335,
+          "graph_identity_knn_distance": 0.00873991847038269,
+          "point_formula_knn_distance": -1.919269561767578e-05,
+          "point_shrinkage_mahalanobis": 2114.67236328125,
+          "calibrated_graph_formula_knn_distance": 0.28444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.29333333333333333,
+          "calibrated_point_formula_knn_distance": 0.40444444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.16444444444444445,
+          "one_class_ensemble": 0.2866666666666666
+        },
+        "TG1950_ae8dda61175908901380": {
+          "graph_formula_knn_distance": 0.00823773443698883,
+          "graph_identity_knn_distance": 0.008681833744049072,
+          "point_formula_knn_distance": -2.092123031616211e-05,
+          "point_shrinkage_mahalanobis": 2121.797607421875,
+          "calibrated_graph_formula_knn_distance": 0.03777777777777778,
+          "calibrated_graph_identity_knn_distance": 0.03111111111111111,
+          "calibrated_point_formula_knn_distance": 0.3466666666666667,
+          "calibrated_point_shrinkage_mahalanobis": 0.31777777777777777,
+          "one_class_ensemble": 0.18333333333333332
+        },
+        "TG1950_c2af3fcc9a82fcde3168": {
+          "graph_formula_knn_distance": 0.008288919925689697,
+          "graph_identity_knn_distance": 0.008748799562454224,
+          "point_formula_knn_distance": -4.649162292480469e-06,
+          "point_shrinkage_mahalanobis": 2195.642578125,
+          "calibrated_graph_formula_knn_distance": 0.2311111111111111,
+          "calibrated_graph_identity_knn_distance": 0.3377777777777778,
+          "calibrated_point_formula_knn_distance": 0.8177777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.8488888888888889,
+          "one_class_ensemble": 0.5433333333333333
+        },
+        "TG1950_3b0ad79cf7f7fc721044": {
+          "graph_formula_knn_distance": 0.008346214890480042,
+          "graph_identity_knn_distance": 0.008791685104370117,
+          "point_formula_knn_distance": -1.1771917343139648e-06,
+          "point_shrinkage_mahalanobis": 2193.2900390625,
+          "calibrated_graph_formula_knn_distance": 0.5955555555555556,
+          "calibrated_graph_identity_knn_distance": 0.6466666666666667,
+          "calibrated_point_formula_knn_distance": 0.6377777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.6000000000000001,
+          "one_class_ensemble": 0.62
+        },
+        "TG1950_63c7f3aa60ed03c73b86": {
+          "graph_formula_knn_distance": 0.008361518383026123,
+          "graph_identity_knn_distance": 0.008797511458396912,
+          "point_formula_knn_distance": -1.049041748046875e-05,
+          "point_shrinkage_mahalanobis": 2172.712158203125,
+          "calibrated_graph_formula_knn_distance": 0.5022222222222222,
+          "calibrated_graph_identity_knn_distance": 0.5022222222222222,
+          "calibrated_point_formula_knn_distance": 0.6777777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.6733333333333333,
+          "one_class_ensemble": 0.5888888888888889
+        },
+        "TG1950_955dd29b1bf805c0f9eb": {
+          "graph_formula_knn_distance": 0.008285105228424072,
+          "graph_identity_knn_distance": 0.00872752070426941,
+          "point_formula_knn_distance": -2.3096799850463867e-05,
+          "point_shrinkage_mahalanobis": 2082.7197265625,
+          "calibrated_graph_formula_knn_distance": 0.2,
+          "calibrated_graph_identity_knn_distance": 0.17777777777777778,
+          "calibrated_point_formula_knn_distance": 0.2577777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.044444444444444446,
+          "one_class_ensemble": 0.16999999999999998
+        },
+        "TG1950_3f697b117e9bc8ccdca5": {
+          "graph_formula_knn_distance": 0.00832366943359375,
+          "graph_identity_knn_distance": 0.008730769157409668,
+          "point_formula_knn_distance": -5.066394805908203e-06,
+          "point_shrinkage_mahalanobis": 2196.109375,
+          "calibrated_graph_formula_knn_distance": 0.47555555555555556,
+          "calibrated_graph_identity_knn_distance": 0.21777777777777776,
+          "calibrated_point_formula_knn_distance": 0.8177777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.8533333333333334,
+          "one_class_ensemble": 0.5911111111111111
+        },
+        "TG1950_76e3c721b3168d2bb75f": {
+          "graph_formula_knn_distance": 0.00833427906036377,
+          "graph_identity_knn_distance": 0.008769974112510681,
+          "point_formula_knn_distance": -8.195638656616211e-07,
+          "point_shrinkage_mahalanobis": 2171.448486328125,
+          "calibrated_graph_formula_knn_distance": 0.5177777777777778,
+          "calibrated_graph_identity_knn_distance": 0.4955555555555555,
+          "calibrated_point_formula_knn_distance": 0.8222222222222222,
+          "calibrated_point_shrinkage_mahalanobis": 0.5266666666666666,
+          "one_class_ensemble": 0.5905555555555555
+        },
+        "TG1950_4f5129f9fb72a4107a4a": {
+          "graph_formula_knn_distance": 0.008317887783050537,
+          "graph_identity_knn_distance": 0.008763596415519714,
+          "point_formula_knn_distance": -2.142786979675293e-05,
+          "point_shrinkage_mahalanobis": 2136.826171875,
+          "calibrated_graph_formula_knn_distance": 0.42,
+          "calibrated_graph_identity_knn_distance": 0.4444444444444444,
+          "calibrated_point_formula_knn_distance": 0.3244444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.38,
+          "one_class_ensemble": 0.39222222222222225
+        },
+        "TG1950_02c11e1ff274a5767150": {
+          "graph_formula_knn_distance": 0.008316010236740112,
+          "graph_identity_knn_distance": 0.008772552013397217,
+          "point_formula_knn_distance": -1.8894672393798828e-05,
+          "point_shrinkage_mahalanobis": 2122.482421875,
+          "calibrated_graph_formula_knn_distance": 0.4088888888888889,
+          "calibrated_graph_identity_knn_distance": 0.5022222222222222,
+          "calibrated_point_formula_knn_distance": 0.4177777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.26222222222222225,
+          "one_class_ensemble": 0.3977777777777778
+        },
+        "TG1950_ad2b57fa609d3081ee41": {
+          "graph_formula_knn_distance": 0.008342385292053223,
+          "graph_identity_knn_distance": 0.008748799562454224,
+          "point_formula_knn_distance": 1.3113021850585938e-06,
+          "point_shrinkage_mahalanobis": 2203.815185546875,
+          "calibrated_graph_formula_knn_distance": 0.5955555555555555,
+          "calibrated_graph_identity_knn_distance": 0.3377777777777778,
+          "calibrated_point_formula_knn_distance": 0.9111111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.8844444444444445,
+          "one_class_ensemble": 0.6822222222222223
+        }
+      }
+    },
+    "known_internal_pre1900": {
+      "groups": 9,
+      "score_summary": {
+        "calibrated_graph_formula_knn_distance": {
+          "median": 0.4822222222222222,
+          "q25": 0.43777777777777777,
+          "q75": 0.5822222222222222
+        },
+        "calibrated_graph_identity_knn_distance": {
+          "median": 0.5111111111111111,
+          "q25": 0.4222222222222222,
+          "q75": 0.5377777777777778
+        },
+        "calibrated_point_formula_knn_distance": {
+          "median": 0.39555555555555555,
+          "q25": 0.3488888888888889,
+          "q75": 0.6088888888888889
+        },
+        "calibrated_point_shrinkage_mahalanobis": {
+          "median": 0.32,
+          "q25": 0.3111111111111111,
+          "q75": 0.5288888888888889
+        },
+        "graph_formula_knn_distance": {
+          "median": 0.008324205875396729,
+          "q25": 0.008321046829223633,
+          "q75": 0.008339613676071167
+        },
+        "graph_identity_knn_distance": {
+          "median": 0.008773624897003174,
+          "q25": 0.008760064840316772,
+          "q75": 0.008775651454925537
+        },
+        "one_class_ensemble": {
+          "median": 0.4677777777777778,
+          "q25": 0.38555555555555554,
+          "q75": 0.5966666666666667
+        },
+        "point_formula_knn_distance": {
+          "median": -1.9609928131103516e-05,
+          "q25": -2.0891427993774414e-05,
+          "q75": -1.33514404296875e-05
+        },
+        "point_shrinkage_mahalanobis": {
+          "median": 2129.166015625,
+          "q25": 2128.87890625,
+          "q75": 2153.20947265625
+        }
+      },
+      "scores": {
+        "newtonian_dynamics": {
+          "graph_formula_knn_distance": 0.008315205574035645,
+          "graph_identity_knn_distance": 0.008760064840316772,
+          "point_formula_knn_distance": -2.276897430419922e-05,
+          "point_shrinkage_mahalanobis": 2129.166015625,
+          "calibrated_graph_formula_knn_distance": 0.4,
+          "calibrated_graph_identity_knn_distance": 0.4177777777777778,
+          "calibrated_point_formula_knn_distance": 0.2577777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.32,
+          "one_class_ensemble": 0.3733333333333333
+        },
+        "euler_buckling": {
+          "graph_formula_knn_distance": 0.008331239223480225,
+          "graph_identity_knn_distance": 0.008773624897003174,
+          "point_formula_knn_distance": -1.9609928131103516e-05,
+          "point_shrinkage_mahalanobis": 2153.20947265625,
+          "calibrated_graph_formula_knn_distance": 0.5333333333333333,
+          "calibrated_graph_identity_knn_distance": 0.5111111111111111,
+          "calibrated_point_formula_knn_distance": 0.39555555555555555,
+          "calibrated_point_shrinkage_mahalanobis": 0.5288888888888889,
+          "one_class_ensemble": 0.4677777777777778
+        },
+        "gibbs_thomson": {
+          "graph_formula_knn_distance": 0.008353054523468018,
+          "graph_identity_knn_distance": 0.008775651454925537,
+          "point_formula_knn_distance": -1.33514404296875e-05,
+          "point_shrinkage_mahalanobis": 2161.656005859375,
+          "calibrated_graph_formula_knn_distance": 0.64,
+          "calibrated_graph_identity_knn_distance": 0.5377777777777778,
+          "calibrated_point_formula_knn_distance": 0.6088888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.5955555555555555,
+          "one_class_ensemble": 0.5966666666666667
+        },
+        "young_laplace": {
+          "graph_formula_knn_distance": 0.008324205875396729,
+          "graph_identity_knn_distance": 0.008759662508964539,
+          "point_formula_knn_distance": -1.4066696166992188e-05,
+          "point_shrinkage_mahalanobis": 2149.593994140625,
+          "calibrated_graph_formula_knn_distance": 0.4822222222222222,
+          "calibrated_graph_identity_knn_distance": 0.4222222222222222,
+          "calibrated_point_formula_knn_distance": 0.5866666666666667,
+          "calibrated_point_shrinkage_mahalanobis": 0.4955555555555555,
+          "one_class_ensemble": 0.5155555555555555
+        },
+        "fourier_heat": {
+          "graph_formula_knn_distance": 0.008321046829223633,
+          "graph_identity_knn_distance": 0.00876365602016449,
+          "point_formula_knn_distance": -2.014636993408203e-05,
+          "point_shrinkage_mahalanobis": 2129.0758056640625,
+          "calibrated_graph_formula_knn_distance": 0.43777777777777777,
+          "calibrated_graph_identity_knn_distance": 0.44,
+          "calibrated_point_formula_knn_distance": 0.38,
+          "calibrated_point_shrinkage_mahalanobis": 0.32,
+          "one_class_ensemble": 0.38555555555555554
+        },
+        "bernoulli_fluid": {
+          "graph_formula_knn_distance": 0.008308500051498413,
+          "graph_identity_knn_distance": 0.008749470114707947,
+          "point_formula_knn_distance": -2.1964311599731445e-05,
+          "point_shrinkage_mahalanobis": 2128.87890625,
+          "calibrated_graph_formula_knn_distance": 0.3622222222222222,
+          "calibrated_graph_identity_knn_distance": 0.3422222222222222,
+          "calibrated_point_formula_knn_distance": 0.3,
+          "calibrated_point_shrinkage_mahalanobis": 0.3111111111111111,
+          "one_class_ensemble": 0.3327777777777778
+        },
+        "hydrostatics": {
+          "graph_formula_knn_distance": 0.008339613676071167,
+          "graph_identity_knn_distance": 0.008775562047958374,
+          "point_formula_knn_distance": -2.0891427993774414e-05,
+          "point_shrinkage_mahalanobis": 2123.271484375,
+          "calibrated_graph_formula_knn_distance": 0.5822222222222222,
+          "calibrated_graph_identity_knn_distance": 0.5377777777777778,
+          "calibrated_point_formula_knn_distance": 0.3488888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.2688888888888889,
+          "one_class_ensemble": 0.4222222222222223
+        },
+        "torricelli_outflow": {
+          "graph_formula_knn_distance": 0.008361965417861938,
+          "graph_identity_knn_distance": 0.00881195068359375,
+          "point_formula_knn_distance": -1.0073184967041016e-05,
+          "point_shrinkage_mahalanobis": 2116.4229736328125,
+          "calibrated_graph_formula_knn_distance": 0.6866666666666668,
+          "calibrated_graph_identity_knn_distance": 0.808888888888889,
+          "calibrated_point_formula_knn_distance": 0.7,
+          "calibrated_point_shrinkage_mahalanobis": 0.23777777777777778,
+          "one_class_ensemble": 0.6083333333333334
+        },
+        "helmholtz_resonance": {
+          "graph_formula_knn_distance": 0.008322328329086304,
+          "graph_identity_knn_distance": 0.008803412318229675,
+          "point_formula_knn_distance": -8.404254913330078e-06,
+          "point_shrinkage_mahalanobis": 2158.604736328125,
+          "calibrated_graph_formula_knn_distance": 0.45999999999999996,
+          "calibrated_graph_identity_knn_distance": 0.74,
+          "calibrated_point_formula_knn_distance": 0.7377777777777779,
+          "calibrated_point_shrinkage_mahalanobis": 0.5666666666666667,
+          "one_class_ensemble": 0.7061111111111111
+        }
+      }
+    },
+    "known_internal_pre1950": {
+      "groups": 53,
+      "score_summary": {
+        "calibrated_graph_formula_knn_distance": {
+          "median": 0.5222222222222223,
+          "q25": 0.3422222222222222,
+          "q75": 0.6488888888888888
+        },
+        "calibrated_graph_identity_knn_distance": {
+          "median": 0.48888888888888893,
+          "q25": 0.3288888888888889,
+          "q75": 0.6777777777777778
+        },
+        "calibrated_point_formula_knn_distance": {
+          "median": 0.5733333333333333,
+          "q25": 0.3288888888888889,
+          "q75": 0.731111111111111
+        },
+        "calibrated_point_shrinkage_mahalanobis": {
+          "median": 0.5533333333333333,
+          "q25": 0.38,
+          "q75": 0.7
+        },
+        "graph_formula_knn_distance": {
+          "median": 0.0083371102809906,
+          "q25": 0.008304685354232788,
+          "q75": 0.008362114429473877
+        },
+        "graph_identity_knn_distance": {
+          "median": 0.008769974112510681,
+          "q25": 0.008746862411499023,
+          "q75": 0.008797511458396912
+        },
+        "one_class_ensemble": {
+          "median": 0.5327777777777778,
+          "q25": 0.37722222222222224,
+          "q75": 0.6366666666666666
+        },
+        "point_formula_knn_distance": {
+          "median": -1.3172626495361328e-05,
+          "q25": -2.1219253540039062e-05,
+          "q75": -5.4836273193359375e-06
+        },
+        "point_shrinkage_mahalanobis": {
+          "median": 2162.0948486328125,
+          "q25": 2137.0740966796875,
+          "q75": 2187.262451171875
+        }
+      },
+      "scores": {
+        "TG1950_78ddf5c4dade319f8c46": {
+          "graph_formula_knn_distance": 0.008381113409996033,
+          "graph_identity_knn_distance": 0.008757337927818298,
+          "point_formula_knn_distance": -5.319714546203613e-06,
+          "point_shrinkage_mahalanobis": 2172.341064453125,
+          "calibrated_graph_formula_knn_distance": 0.7177777777777777,
+          "calibrated_graph_identity_knn_distance": 0.40888888888888886,
+          "calibrated_point_formula_knn_distance": 0.6155555555555556,
+          "calibrated_point_shrinkage_mahalanobis": 0.5533333333333333,
+          "one_class_ensemble": 0.5738888888888889
+        },
+        "TG1950_ef00f57bf7018701bbd0": {
+          "graph_formula_knn_distance": 0.00833633542060852,
+          "graph_identity_knn_distance": 0.008759170770645142,
+          "point_formula_knn_distance": -2.3156404495239258e-05,
+          "point_shrinkage_mahalanobis": 2137.984375,
+          "calibrated_graph_formula_knn_distance": 0.5311111111111111,
+          "calibrated_graph_identity_knn_distance": 0.41555555555555557,
+          "calibrated_point_formula_knn_distance": 0.27111111111111114,
+          "calibrated_point_shrinkage_mahalanobis": 0.3977777777777778,
+          "one_class_ensemble": 0.4394444444444444
+        },
+        "TG1950_bfdb96530d532603aa5f": {
+          "graph_formula_knn_distance": 0.008435040712356567,
+          "graph_identity_knn_distance": 0.008845090866088867,
+          "point_formula_knn_distance": -1.3172626495361328e-05,
+          "point_shrinkage_mahalanobis": 2146.45849609375,
+          "calibrated_graph_formula_knn_distance": 0.9422222222222222,
+          "calibrated_graph_identity_knn_distance": 0.9244444444444444,
+          "calibrated_point_formula_knn_distance": 0.6133333333333333,
+          "calibrated_point_shrinkage_mahalanobis": 0.4577777777777778,
+          "one_class_ensemble": 0.6322222222222221
+        },
+        "TG1950_b39229537a3011320570": {
+          "graph_formula_knn_distance": 0.008356064558029175,
+          "graph_identity_knn_distance": 0.0088062584400177,
+          "point_formula_knn_distance": -1.0967254638671875e-05,
+          "point_shrinkage_mahalanobis": 2154.375,
+          "calibrated_graph_formula_knn_distance": 0.6444444444444445,
+          "calibrated_graph_identity_knn_distance": 0.7644444444444445,
+          "calibrated_point_formula_knn_distance": 0.6888888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.5422222222222223,
+          "one_class_ensemble": 0.6188888888888889
+        },
+        "TG1950_d813afe81ce63b56c06c": {
+          "graph_formula_knn_distance": 0.008349478244781494,
+          "graph_identity_knn_distance": 0.008798569440841675,
+          "point_formula_knn_distance": -2.9325485229492188e-05,
+          "point_shrinkage_mahalanobis": 2181.607177734375,
+          "calibrated_graph_formula_knn_distance": 0.6177777777777778,
+          "calibrated_graph_identity_knn_distance": 0.6977777777777778,
+          "calibrated_point_formula_knn_distance": 0.05333333333333334,
+          "calibrated_point_shrinkage_mahalanobis": 0.7555555555555555,
+          "one_class_ensemble": 0.5311111111111111
+        },
+        "TG1950_88371ea82bd3637c3976": {
+          "graph_formula_knn_distance": 0.00828482210636139,
+          "graph_identity_knn_distance": 0.008735239505767822,
+          "point_formula_knn_distance": -2.3663043975830078e-05,
+          "point_shrinkage_mahalanobis": 2099.9617919921875,
+          "calibrated_graph_formula_knn_distance": 0.24,
+          "calibrated_graph_identity_knn_distance": 0.24222222222222223,
+          "calibrated_point_formula_knn_distance": 0.3,
+          "calibrated_point_shrinkage_mahalanobis": 0.09333333333333332,
+          "one_class_ensemble": 0.21888888888888888
+        },
+        "TG1950_f5cc8039db06779c9bb3": {
+          "graph_formula_knn_distance": 0.008404791355133057,
+          "graph_identity_knn_distance": 0.008832752704620361,
+          "point_formula_knn_distance": -1.0848045349121094e-05,
+          "point_shrinkage_mahalanobis": 2190.175048828125,
+          "calibrated_graph_formula_knn_distance": 0.8888888888888888,
+          "calibrated_graph_identity_knn_distance": 0.9022222222222223,
+          "calibrated_point_formula_knn_distance": 0.6888888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.8177777777777778,
+          "one_class_ensemble": 0.7933333333333333
+        },
+        "TG1950_6eb1a25d03368c8e919d": {
+          "graph_formula_knn_distance": 0.008343324065208435,
+          "graph_identity_knn_distance": 0.008781000971794128,
+          "point_formula_knn_distance": -2.2530555725097656e-05,
+          "point_shrinkage_mahalanobis": 2139.290771484375,
+          "calibrated_graph_formula_knn_distance": 0.5711111111111111,
+          "calibrated_graph_identity_knn_distance": 0.5733333333333333,
+          "calibrated_point_formula_knn_distance": 0.2733333333333333,
+          "calibrated_point_shrinkage_mahalanobis": 0.39555555555555555,
+          "one_class_ensemble": 0.4811111111111111
+        },
+        "TG1950_6c911e842ab1113c915f": {
+          "graph_formula_knn_distance": 0.008401736617088318,
+          "graph_identity_knn_distance": 0.008827805519104004,
+          "point_formula_knn_distance": -1.3500452041625977e-05,
+          "point_shrinkage_mahalanobis": 2157.287841796875,
+          "calibrated_graph_formula_knn_distance": 0.788888888888889,
+          "calibrated_graph_identity_knn_distance": 0.8133333333333332,
+          "calibrated_point_formula_knn_distance": 0.5911111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.5533333333333333,
+          "one_class_ensemble": 0.7
+        },
+        "TG1950_283f4656f225394fc10b": {
+          "graph_formula_knn_distance": 0.008277550339698792,
+          "graph_identity_knn_distance": 0.00872945785522461,
+          "point_formula_knn_distance": -2.5153160095214844e-05,
+          "point_shrinkage_mahalanobis": 2137.0740966796875,
+          "calibrated_graph_formula_knn_distance": 0.1577777777777778,
+          "calibrated_graph_identity_knn_distance": 0.21333333333333332,
+          "calibrated_point_formula_knn_distance": 0.14222222222222222,
+          "calibrated_point_shrinkage_mahalanobis": 0.37555555555555553,
+          "one_class_ensemble": 0.2877777777777778
+        },
+        "TG1950_f9a60bc34ca3352d5ea7": {
+          "graph_formula_knn_distance": 0.008337169885635376,
+          "graph_identity_knn_distance": 0.008773311972618103,
+          "point_formula_knn_distance": -1.7344951629638672e-05,
+          "point_shrinkage_mahalanobis": 2191.31640625,
+          "calibrated_graph_formula_knn_distance": 0.56,
+          "calibrated_graph_identity_knn_distance": 0.5177777777777778,
+          "calibrated_point_formula_knn_distance": 0.4311111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.8155555555555556,
+          "one_class_ensemble": 0.5327777777777778
+        },
+        "TG1950_8edc18306b85dde25b06": {
+          "graph_formula_knn_distance": 0.008378148078918457,
+          "graph_identity_knn_distance": 0.008807837963104248,
+          "point_formula_knn_distance": -3.0994415283203125e-06,
+          "point_shrinkage_mahalanobis": 2209.083984375,
+          "calibrated_graph_formula_knn_distance": 0.7777777777777778,
+          "calibrated_graph_identity_knn_distance": 0.7822222222222223,
+          "calibrated_point_formula_knn_distance": 0.84,
+          "calibrated_point_shrinkage_mahalanobis": 0.8933333333333333,
+          "one_class_ensemble": 0.6366666666666666
+        },
+        "TG1950_ef9d37b3b9ef062ba41a": {
+          "graph_formula_knn_distance": 0.008389443159103394,
+          "graph_identity_knn_distance": 0.008826687932014465,
+          "point_formula_knn_distance": -8.702278137207031e-06,
+          "point_shrinkage_mahalanobis": 2182.058349609375,
+          "calibrated_graph_formula_knn_distance": 0.8333333333333333,
+          "calibrated_graph_identity_knn_distance": 0.8822222222222222,
+          "calibrated_point_formula_knn_distance": 0.731111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.6866666666666666,
+          "one_class_ensemble": 0.7833333333333333
+        },
+        "TG1950_88270d26c0a817afacef": {
+          "graph_formula_knn_distance": 0.00862056016921997,
+          "graph_identity_knn_distance": 0.009015724062919617,
+          "point_formula_knn_distance": -7.778406143188477e-06,
+          "point_shrinkage_mahalanobis": 2204.646240234375,
+          "calibrated_graph_formula_knn_distance": 0.9822222222222222,
+          "calibrated_graph_identity_knn_distance": 0.9622222222222222,
+          "calibrated_point_formula_knn_distance": 0.5844444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.5800000000000001,
+          "one_class_ensemble": 0.7772222222222223
+        },
+        "TG1950_49ef39e8e80c1e5c0f2d": {
+          "graph_formula_knn_distance": 0.008272022008895874,
+          "graph_identity_knn_distance": 0.008722946047782898,
+          "point_formula_knn_distance": -1.1116266250610352e-05,
+          "point_shrinkage_mahalanobis": 2180.66357421875,
+          "calibrated_graph_formula_knn_distance": 0.1711111111111111,
+          "calibrated_graph_identity_knn_distance": 0.1511111111111111,
+          "calibrated_point_formula_knn_distance": 0.5733333333333333,
+          "calibrated_point_shrinkage_mahalanobis": 0.6844444444444444,
+          "one_class_ensemble": 0.395
+        },
+        "TG1950_ebe808fb37d2b2485327": {
+          "graph_formula_knn_distance": 0.0083371102809906,
+          "graph_identity_knn_distance": 0.008768543601036072,
+          "point_formula_knn_distance": -1.3887882232666016e-05,
+          "point_shrinkage_mahalanobis": 2187.262451171875,
+          "calibrated_graph_formula_knn_distance": 0.5044444444444445,
+          "calibrated_graph_identity_knn_distance": 0.48888888888888893,
+          "calibrated_point_formula_knn_distance": 0.5711111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.7555555555555555,
+          "one_class_ensemble": 0.5722222222222222
+        },
+        "TG1950_b774de353eac8fb3efa3": {
+          "graph_formula_knn_distance": 0.008330479264259338,
+          "graph_identity_knn_distance": 0.008749023079872131,
+          "point_formula_knn_distance": -1.3530254364013672e-05,
+          "point_shrinkage_mahalanobis": 2145.3013916015625,
+          "calibrated_graph_formula_knn_distance": 0.5222222222222223,
+          "calibrated_graph_identity_knn_distance": 0.3466666666666667,
+          "calibrated_point_formula_knn_distance": 0.5355555555555556,
+          "calibrated_point_shrinkage_mahalanobis": 0.4577777777777778,
+          "one_class_ensemble": 0.46555555555555556
+        },
+        "TG1950_5e30891a8be48e5df68c": {
+          "graph_formula_knn_distance": 0.008357137441635132,
+          "graph_identity_knn_distance": 0.008785873651504517,
+          "point_formula_knn_distance": -2.682209014892578e-05,
+          "point_shrinkage_mahalanobis": 2146.687255859375,
+          "calibrated_graph_formula_knn_distance": 0.6488888888888888,
+          "calibrated_graph_identity_knn_distance": 0.6266666666666667,
+          "calibrated_point_formula_knn_distance": 0.11555555555555555,
+          "calibrated_point_shrinkage_mahalanobis": 0.4577777777777778,
+          "one_class_ensemble": 0.4777777777777778
+        },
+        "TG1950_5aeb40727c5b58e39828": {
+          "graph_formula_knn_distance": 0.008309900760650635,
+          "graph_identity_knn_distance": 0.008755043148994446,
+          "point_formula_knn_distance": -2.47955322265625e-05,
+          "point_shrinkage_mahalanobis": 2127.2535400390625,
+          "calibrated_graph_formula_knn_distance": 0.37555555555555553,
+          "calibrated_graph_identity_knn_distance": 0.3844444444444445,
+          "calibrated_point_formula_knn_distance": 0.18,
+          "calibrated_point_shrinkage_mahalanobis": 0.28888888888888886,
+          "one_class_ensemble": 0.33888888888888885
+        },
+        "TG1950_451b60a880764fd800ce": {
+          "graph_formula_knn_distance": 0.008323431015014648,
+          "graph_identity_knn_distance": 0.00873422622680664,
+          "point_formula_knn_distance": -9.119510650634766e-06,
+          "point_shrinkage_mahalanobis": 2150.189208984375,
+          "calibrated_graph_formula_knn_distance": 0.4711111111111111,
+          "calibrated_graph_identity_knn_distance": 0.24888888888888888,
+          "calibrated_point_formula_knn_distance": 0.7111111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.5022222222222222,
+          "one_class_ensemble": 0.5333333333333333
+        },
+        "TG1950_7197e0cfeb70e85be016": {
+          "graph_formula_knn_distance": 0.008338600397109985,
+          "graph_identity_knn_distance": 0.008751019835472107,
+          "point_formula_knn_distance": -2.4139881134033203e-06,
+          "point_shrinkage_mahalanobis": 2175.8453369140625,
+          "calibrated_graph_formula_knn_distance": 0.5377777777777778,
+          "calibrated_graph_identity_knn_distance": 0.3666666666666667,
+          "calibrated_point_formula_knn_distance": 0.8311111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.64,
+          "one_class_ensemble": 0.5938888888888889
+        },
+        "TG1950_dcf887fe0a8edbbce040": {
+          "graph_formula_knn_distance": 0.008290410041809082,
+          "graph_identity_knn_distance": 0.00875842571258545,
+          "point_formula_knn_distance": -2.0563602447509766e-05,
+          "point_shrinkage_mahalanobis": 2142.02490234375,
+          "calibrated_graph_formula_knn_distance": 0.24,
+          "calibrated_graph_identity_knn_distance": 0.4088888888888889,
+          "calibrated_point_formula_knn_distance": 0.36444444444444446,
+          "calibrated_point_shrinkage_mahalanobis": 0.41333333333333333,
+          "one_class_ensemble": 0.35666666666666663
+        },
+        "TG1950_3f812b3a998113d1ae2d": {
+          "graph_formula_knn_distance": 0.008392632007598877,
+          "graph_identity_knn_distance": 0.008771240711212158,
+          "point_formula_knn_distance": -5.4836273193359375e-06,
+          "point_shrinkage_mahalanobis": 2221.7666015625,
+          "calibrated_graph_formula_knn_distance": 0.8311111111111111,
+          "calibrated_graph_identity_knn_distance": 0.4888888888888889,
+          "calibrated_point_formula_knn_distance": 0.8044444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.9288888888888889,
+          "one_class_ensemble": 0.8011111111111111
+        },
+        "TG1950_0dfebea1758db2b353b0": {
+          "graph_formula_knn_distance": 0.008362114429473877,
+          "graph_identity_knn_distance": 0.00883510708808899,
+          "point_formula_knn_distance": -1.1980533599853516e-05,
+          "point_shrinkage_mahalanobis": 2162.0948486328125,
+          "calibrated_graph_formula_knn_distance": 0.6266666666666667,
+          "calibrated_graph_identity_knn_distance": 0.7844444444444445,
+          "calibrated_point_formula_knn_distance": 0.5555555555555556,
+          "calibrated_point_shrinkage_mahalanobis": 0.5844444444444444,
+          "one_class_ensemble": 0.6377777777777778
+        },
+        "TG1950_86ba628874ff4f265c67": {
+          "graph_formula_knn_distance": 0.0083998441696167,
+          "graph_identity_knn_distance": 0.008826524019241333,
+          "point_formula_knn_distance": -2.8759241104125977e-06,
+          "point_shrinkage_mahalanobis": 2173.410400390625,
+          "calibrated_graph_formula_knn_distance": 0.8111111111111111,
+          "calibrated_graph_identity_knn_distance": 0.7977777777777777,
+          "calibrated_point_formula_knn_distance": 0.768888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.6355555555555555,
+          "one_class_ensemble": 0.7533333333333334
+        },
+        "TG1950_bb3ca5e7c8c65c3ec572": {
+          "graph_formula_knn_distance": 0.008337333798408508,
+          "graph_identity_knn_distance": 0.008795320987701416,
+          "point_formula_knn_distance": -2.2232532501220703e-05,
+          "point_shrinkage_mahalanobis": 2123.34521484375,
+          "calibrated_graph_formula_knn_distance": 0.5644444444444444,
+          "calibrated_graph_identity_knn_distance": 0.6777777777777778,
+          "calibrated_point_formula_knn_distance": 0.28444444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.25555555555555554,
+          "one_class_ensemble": 0.43999999999999995
+        },
+        "TG1950_755ae1b602aa1a47dd39": {
+          "graph_formula_knn_distance": 0.008291453123092651,
+          "graph_identity_knn_distance": 0.00874471664428711,
+          "point_formula_knn_distance": -2.1219253540039062e-05,
+          "point_shrinkage_mahalanobis": 2111.529296875,
+          "calibrated_graph_formula_knn_distance": 0.24,
+          "calibrated_graph_identity_knn_distance": 0.3244444444444444,
+          "calibrated_point_formula_knn_distance": 0.3288888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.14222222222222222,
+          "one_class_ensemble": 0.2411111111111111
+        },
+        "TG1950_c189d6047158ec731737": {
+          "graph_formula_knn_distance": 0.00834396481513977,
+          "graph_identity_knn_distance": 0.008783012628555298,
+          "point_formula_knn_distance": -1.4781951904296875e-05,
+          "point_shrinkage_mahalanobis": 2149.334716796875,
+          "calibrated_graph_formula_knn_distance": 0.5333333333333333,
+          "calibrated_graph_identity_knn_distance": 0.5488888888888889,
+          "calibrated_point_formula_knn_distance": 0.5711111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.4866666666666667,
+          "one_class_ensemble": 0.5349999999999999
+        },
+        "TG1950_ce99630f8d2627ba0818": {
+          "graph_formula_knn_distance": 0.008304685354232788,
+          "graph_identity_knn_distance": 0.008753538131713867,
+          "point_formula_knn_distance": -1.913309097290039e-05,
+          "point_shrinkage_mahalanobis": 2129.6844482421875,
+          "calibrated_graph_formula_knn_distance": 0.3422222222222222,
+          "calibrated_graph_identity_knn_distance": 0.3822222222222222,
+          "calibrated_point_formula_knn_distance": 0.41333333333333333,
+          "calibrated_point_shrinkage_mahalanobis": 0.3022222222222222,
+          "one_class_ensemble": 0.3305555555555556
+        },
+        "TG1950_ac19d90d4a47132c7212": {
+          "graph_formula_knn_distance": 0.008321046829223633,
+          "graph_identity_knn_distance": 0.008774876594543457,
+          "point_formula_knn_distance": -6.794929504394531e-06,
+          "point_shrinkage_mahalanobis": 2174.366943359375,
+          "calibrated_graph_formula_knn_distance": 0.44,
+          "calibrated_graph_identity_knn_distance": 0.5288888888888889,
+          "calibrated_point_formula_knn_distance": 0.7688888888888888,
+          "calibrated_point_shrinkage_mahalanobis": 0.6844444444444444,
+          "one_class_ensemble": 0.48333333333333334
+        },
+        "TG1950_aa7ab7df5dab6739ac98": {
+          "graph_formula_knn_distance": 0.008302077651023865,
+          "graph_identity_knn_distance": 0.008726045489311218,
+          "point_formula_knn_distance": -1.5854835510253906e-05,
+          "point_shrinkage_mahalanobis": 2154.5361328125,
+          "calibrated_graph_formula_knn_distance": 0.3288888888888889,
+          "calibrated_graph_identity_knn_distance": 0.1911111111111111,
+          "calibrated_point_formula_knn_distance": 0.4666666666666667,
+          "calibrated_point_shrinkage_mahalanobis": 0.5222222222222221,
+          "one_class_ensemble": 0.37722222222222224
+        },
+        "TG1950_131420b9143992739146": {
+          "graph_formula_knn_distance": 0.008296787738800049,
+          "graph_identity_knn_distance": 0.008775442838668823,
+          "point_formula_knn_distance": -1.8835067749023438e-05,
+          "point_shrinkage_mahalanobis": 2198.176513671875,
+          "calibrated_graph_formula_knn_distance": 0.28444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.5377777777777778,
+          "calibrated_point_formula_knn_distance": 0.4222222222222222,
+          "calibrated_point_shrinkage_mahalanobis": 0.8755555555555555,
+          "one_class_ensemble": 0.37
+        },
+        "TG1950_585b4a9bb4da9f8f33da": {
+          "graph_formula_knn_distance": 0.00827278196811676,
+          "graph_identity_knn_distance": 0.008724451065063477,
+          "point_formula_knn_distance": -2.6226043701171875e-06,
+          "point_shrinkage_mahalanobis": 2156.776123046875,
+          "calibrated_graph_formula_knn_distance": 0.17777777777777778,
+          "calibrated_graph_identity_knn_distance": 0.19555555555555557,
+          "calibrated_point_formula_knn_distance": 0.8333333333333333,
+          "calibrated_point_shrinkage_mahalanobis": 0.5577777777777777,
+          "one_class_ensemble": 0.4322222222222223
+        },
+        "TG1950_c9483604ae66db36f0d7": {
+          "graph_formula_knn_distance": 0.008409783244132996,
+          "graph_identity_knn_distance": 0.008784636855125427,
+          "point_formula_knn_distance": -3.3080577850341797e-06,
+          "point_shrinkage_mahalanobis": 2235.3636474609375,
+          "calibrated_graph_formula_knn_distance": 0.8933333333333333,
+          "calibrated_graph_identity_knn_distance": 0.6,
+          "calibrated_point_formula_knn_distance": 0.7488888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.9377777777777778,
+          "one_class_ensemble": 0.7949999999999999
+        },
+        "TG1950_ecbedfd02205b3d19481": {
+          "graph_formula_knn_distance": 0.008280977606773376,
+          "graph_identity_knn_distance": 0.008730486035346985,
+          "point_formula_knn_distance": -1.150369644165039e-05,
+          "point_shrinkage_mahalanobis": 2163.9368896484375,
+          "calibrated_graph_formula_knn_distance": 0.2311111111111111,
+          "calibrated_graph_identity_knn_distance": 0.21555555555555556,
+          "calibrated_point_formula_knn_distance": 0.6488888888888888,
+          "calibrated_point_shrinkage_mahalanobis": 0.5466666666666666,
+          "one_class_ensemble": 0.41055555555555556
+        },
+        "TG1950_a2dae689ffb6586536d9": {
+          "graph_formula_knn_distance": 0.008536040782928467,
+          "graph_identity_knn_distance": 0.009002119302749634,
+          "point_formula_knn_distance": 0.0,
+          "point_shrinkage_mahalanobis": 2165.49658203125,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 1.0,
+          "calibrated_point_formula_knn_distance": 0.88,
+          "calibrated_point_shrinkage_mahalanobis": 0.6133333333333333,
+          "one_class_ensemble": 0.8733333333333333
+        },
+        "TG1950_501c439f06b8a28a7f32": {
+          "graph_formula_knn_distance": 0.00830647349357605,
+          "graph_identity_knn_distance": 0.008744701743125916,
+          "point_formula_knn_distance": -2.4497509002685547e-05,
+          "point_shrinkage_mahalanobis": 2134.748291015625,
+          "calibrated_graph_formula_knn_distance": 0.35333333333333333,
+          "calibrated_graph_identity_knn_distance": 0.3,
+          "calibrated_point_formula_knn_distance": 0.18888888888888888,
+          "calibrated_point_shrinkage_mahalanobis": 0.35777777777777775,
+          "one_class_ensemble": 0.33
+        },
+        "TG1950_12c4c0775cfe2f6183bc": {
+          "graph_formula_knn_distance": 0.008332833647727966,
+          "graph_identity_knn_distance": 0.008767962455749512,
+          "point_formula_knn_distance": -2.8192996978759766e-05,
+          "point_shrinkage_mahalanobis": 2099.367431640625,
+          "calibrated_graph_formula_knn_distance": 0.48444444444444446,
+          "calibrated_graph_identity_knn_distance": 0.4822222222222222,
+          "calibrated_point_formula_knn_distance": 0.08222222222222222,
+          "calibrated_point_shrinkage_mahalanobis": 0.08888888888888888,
+          "one_class_ensemble": 0.2844444444444445
+        },
+        "TG1950_255ea6cc261fd61af213": {
+          "graph_formula_knn_distance": 0.008380740880966187,
+          "graph_identity_knn_distance": 0.008798360824584961,
+          "point_formula_knn_distance": -1.4156103134155273e-06,
+          "point_shrinkage_mahalanobis": 2193.355224609375,
+          "calibrated_graph_formula_knn_distance": 0.7755555555555556,
+          "calibrated_graph_identity_knn_distance": 0.7088888888888889,
+          "calibrated_point_formula_knn_distance": 0.6955555555555555,
+          "calibrated_point_shrinkage_mahalanobis": 0.7,
+          "one_class_ensemble": 0.72
+        },
+        "TG1950_1e5e00b2514553ed9c64": {
+          "graph_formula_knn_distance": 0.00831952691078186,
+          "graph_identity_knn_distance": 0.008746862411499023,
+          "point_formula_knn_distance": -2.6226043701171875e-05,
+          "point_shrinkage_mahalanobis": 2118.021484375,
+          "calibrated_graph_formula_knn_distance": 0.4311111111111111,
+          "calibrated_graph_identity_knn_distance": 0.3288888888888889,
+          "calibrated_point_formula_knn_distance": 0.12444444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.2,
+          "one_class_ensemble": 0.35555555555555557
+        },
+        "TG1950_0f1ebe348d72b0178b36": {
+          "graph_formula_knn_distance": 0.008353948593139648,
+          "graph_identity_knn_distance": 0.008771106600761414,
+          "point_formula_knn_distance": -7.3015689849853516e-06,
+          "point_shrinkage_mahalanobis": 2219.0068359375,
+          "calibrated_graph_formula_knn_distance": 0.6155555555555555,
+          "calibrated_graph_identity_knn_distance": 0.5,
+          "calibrated_point_formula_knn_distance": 0.74,
+          "calibrated_point_shrinkage_mahalanobis": 0.9022222222222223,
+          "one_class_ensemble": 0.6894444444444444
+        },
+        "TG1950_e37053a4f022a2a94784": {
+          "graph_formula_knn_distance": 0.008495360612869263,
+          "graph_identity_knn_distance": 0.008910894393920898,
+          "point_formula_knn_distance": -9.179115295410156e-06,
+          "point_shrinkage_mahalanobis": 2176.246826171875,
+          "calibrated_graph_formula_knn_distance": 0.9911111111111112,
+          "calibrated_graph_identity_knn_distance": 0.9822222222222222,
+          "calibrated_point_formula_knn_distance": 0.7111111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.7066666666666667,
+          "one_class_ensemble": 0.8477777777777777
+        },
+        "TG1950_c12e706eeeaf176b426c": {
+          "graph_formula_knn_distance": 0.008296579122543335,
+          "graph_identity_knn_distance": 0.00873991847038269,
+          "point_formula_knn_distance": -1.919269561767578e-05,
+          "point_shrinkage_mahalanobis": 2114.67236328125,
+          "calibrated_graph_formula_knn_distance": 0.28444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.29333333333333333,
+          "calibrated_point_formula_knn_distance": 0.40444444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.16444444444444445,
+          "one_class_ensemble": 0.2866666666666666
+        },
+        "TG1950_ae8dda61175908901380": {
+          "graph_formula_knn_distance": 0.00823773443698883,
+          "graph_identity_knn_distance": 0.008681833744049072,
+          "point_formula_knn_distance": -2.092123031616211e-05,
+          "point_shrinkage_mahalanobis": 2121.797607421875,
+          "calibrated_graph_formula_knn_distance": 0.03777777777777778,
+          "calibrated_graph_identity_knn_distance": 0.03111111111111111,
+          "calibrated_point_formula_knn_distance": 0.3466666666666667,
+          "calibrated_point_shrinkage_mahalanobis": 0.31777777777777777,
+          "one_class_ensemble": 0.18333333333333332
+        },
+        "TG1950_c2af3fcc9a82fcde3168": {
+          "graph_formula_knn_distance": 0.008288919925689697,
+          "graph_identity_knn_distance": 0.008748799562454224,
+          "point_formula_knn_distance": -4.649162292480469e-06,
+          "point_shrinkage_mahalanobis": 2195.642578125,
+          "calibrated_graph_formula_knn_distance": 0.2311111111111111,
+          "calibrated_graph_identity_knn_distance": 0.3377777777777778,
+          "calibrated_point_formula_knn_distance": 0.8177777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.8488888888888889,
+          "one_class_ensemble": 0.5433333333333333
+        },
+        "TG1950_3b0ad79cf7f7fc721044": {
+          "graph_formula_knn_distance": 0.008346214890480042,
+          "graph_identity_knn_distance": 0.008791685104370117,
+          "point_formula_knn_distance": -1.1771917343139648e-06,
+          "point_shrinkage_mahalanobis": 2193.2900390625,
+          "calibrated_graph_formula_knn_distance": 0.5955555555555556,
+          "calibrated_graph_identity_knn_distance": 0.6466666666666667,
+          "calibrated_point_formula_knn_distance": 0.6377777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.6000000000000001,
+          "one_class_ensemble": 0.62
+        },
+        "TG1950_63c7f3aa60ed03c73b86": {
+          "graph_formula_knn_distance": 0.008361518383026123,
+          "graph_identity_knn_distance": 0.008797511458396912,
+          "point_formula_knn_distance": -1.049041748046875e-05,
+          "point_shrinkage_mahalanobis": 2172.712158203125,
+          "calibrated_graph_formula_knn_distance": 0.5022222222222222,
+          "calibrated_graph_identity_knn_distance": 0.5022222222222222,
+          "calibrated_point_formula_knn_distance": 0.6777777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.6733333333333333,
+          "one_class_ensemble": 0.5888888888888889
+        },
+        "TG1950_955dd29b1bf805c0f9eb": {
+          "graph_formula_knn_distance": 0.008285105228424072,
+          "graph_identity_knn_distance": 0.00872752070426941,
+          "point_formula_knn_distance": -2.3096799850463867e-05,
+          "point_shrinkage_mahalanobis": 2082.7197265625,
+          "calibrated_graph_formula_knn_distance": 0.2,
+          "calibrated_graph_identity_knn_distance": 0.17777777777777778,
+          "calibrated_point_formula_knn_distance": 0.2577777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.044444444444444446,
+          "one_class_ensemble": 0.16999999999999998
+        },
+        "TG1950_3f697b117e9bc8ccdca5": {
+          "graph_formula_knn_distance": 0.00832366943359375,
+          "graph_identity_knn_distance": 0.008730769157409668,
+          "point_formula_knn_distance": -5.066394805908203e-06,
+          "point_shrinkage_mahalanobis": 2196.109375,
+          "calibrated_graph_formula_knn_distance": 0.47555555555555556,
+          "calibrated_graph_identity_knn_distance": 0.21777777777777776,
+          "calibrated_point_formula_knn_distance": 0.8177777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.8533333333333334,
+          "one_class_ensemble": 0.5911111111111111
+        },
+        "TG1950_76e3c721b3168d2bb75f": {
+          "graph_formula_knn_distance": 0.00833427906036377,
+          "graph_identity_knn_distance": 0.008769974112510681,
+          "point_formula_knn_distance": -8.195638656616211e-07,
+          "point_shrinkage_mahalanobis": 2171.448486328125,
+          "calibrated_graph_formula_knn_distance": 0.5177777777777778,
+          "calibrated_graph_identity_knn_distance": 0.4955555555555555,
+          "calibrated_point_formula_knn_distance": 0.8222222222222222,
+          "calibrated_point_shrinkage_mahalanobis": 0.5266666666666666,
+          "one_class_ensemble": 0.5905555555555555
+        },
+        "TG1950_4f5129f9fb72a4107a4a": {
+          "graph_formula_knn_distance": 0.008317887783050537,
+          "graph_identity_knn_distance": 0.008763596415519714,
+          "point_formula_knn_distance": -2.142786979675293e-05,
+          "point_shrinkage_mahalanobis": 2136.826171875,
+          "calibrated_graph_formula_knn_distance": 0.42,
+          "calibrated_graph_identity_knn_distance": 0.4444444444444444,
+          "calibrated_point_formula_knn_distance": 0.3244444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.38,
+          "one_class_ensemble": 0.39222222222222225
+        },
+        "TG1950_02c11e1ff274a5767150": {
+          "graph_formula_knn_distance": 0.008316010236740112,
+          "graph_identity_knn_distance": 0.008772552013397217,
+          "point_formula_knn_distance": -1.8894672393798828e-05,
+          "point_shrinkage_mahalanobis": 2122.482421875,
+          "calibrated_graph_formula_knn_distance": 0.4088888888888889,
+          "calibrated_graph_identity_knn_distance": 0.5022222222222222,
+          "calibrated_point_formula_knn_distance": 0.4177777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.26222222222222225,
+          "one_class_ensemble": 0.3977777777777778
+        },
+        "TG1950_ad2b57fa609d3081ee41": {
+          "graph_formula_knn_distance": 0.008342385292053223,
+          "graph_identity_knn_distance": 0.008748799562454224,
+          "point_formula_knn_distance": 1.3113021850585938e-06,
+          "point_shrinkage_mahalanobis": 2203.815185546875,
+          "calibrated_graph_formula_knn_distance": 0.5955555555555555,
+          "calibrated_graph_identity_knn_distance": 0.3377777777777778,
+          "calibrated_point_formula_knn_distance": 0.9111111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.8844444444444445,
+          "one_class_ensemble": 0.6822222222222223
+        }
+      }
+    },
+    "curated_1901_1950": {
+      "groups": 38,
+      "score_summary": {
+        "calibrated_graph_formula_knn_distance": {
+          "median": 0.008888888888888889,
+          "q25": 0.0044444444444444444,
+          "q75": 0.9955555555555555
+        },
+        "calibrated_graph_identity_knn_distance": {
+          "median": 0.017777777777777778,
+          "q25": 0.0044444444444444444,
+          "q75": 0.9688888888888889
+        },
+        "calibrated_point_formula_knn_distance": {
+          "median": 0.6088888888888888,
+          "q25": 0.017777777777777778,
+          "q75": 0.9944444444444445
+        },
+        "calibrated_point_shrinkage_mahalanobis": {
+          "median": 0.45111111111111113,
+          "q25": 0.0044444444444444444,
+          "q75": 0.9977777777777778
+        },
+        "graph_formula_knn_distance": {
+          "median": 0.008201465010643005,
+          "q25": 0.008125349879264832,
+          "q75": 0.008555427193641663
+        },
+        "graph_identity_knn_distance": {
+          "median": 0.008669361472129822,
+          "q25": 0.008588165044784546,
+          "q75": 0.008887208998203278
+        },
+        "one_class_ensemble": {
+          "median": 0.3411111111111111,
+          "q25": 0.023333333333333334,
+          "q75": 0.8963888888888889
+        },
+        "point_formula_knn_distance": {
+          "median": -1.341104507446289e-05,
+          "q25": -3.559887409210205e-05,
+          "q75": 2.09808349609375e-05
+        },
+        "point_shrinkage_mahalanobis": {
+          "median": 2144.848876953125,
+          "q25": 2057.1494750976562,
+          "q75": 2309.4385375976562
+        }
+      },
+      "scores": {
+        "richardson_dushman_emission": {
+          "graph_formula_knn_distance": 0.008162260055541992,
+          "graph_identity_knn_distance": 0.008623182773590088,
+          "point_formula_knn_distance": -3.457069396972656e-05,
+          "point_shrinkage_mahalanobis": 1980.076904296875,
+          "calibrated_graph_formula_knn_distance": 0.008888888888888889,
+          "calibrated_graph_identity_knn_distance": 0.008888888888888889,
+          "calibrated_point_formula_knn_distance": 0.017777777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.0044444444444444444,
+          "one_class_ensemble": 0.01
+        },
+        "radioactive_decay": {
+          "graph_formula_knn_distance": 0.008336275815963745,
+          "graph_identity_knn_distance": 0.008896023035049438,
+          "point_formula_knn_distance": 9.387731552124023e-06,
+          "point_shrinkage_mahalanobis": 2432.88330078125,
+          "calibrated_graph_formula_knn_distance": 0.5644444444444444,
+          "calibrated_graph_identity_knn_distance": 0.9777777777777777,
+          "calibrated_point_formula_knn_distance": 0.96,
+          "calibrated_point_shrinkage_mahalanobis": 1.0,
+          "one_class_ensemble": 0.8755555555555555
+        },
+        "special_relativity": {
+          "graph_formula_knn_distance": 0.008022516965866089,
+          "graph_identity_knn_distance": 0.00847288966178894,
+          "point_formula_knn_distance": 1.3113021850585938e-05,
+          "point_shrinkage_mahalanobis": 2297.725830078125,
+          "calibrated_graph_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.0044444444444444444,
+          "calibrated_point_formula_knn_distance": 0.9911111111111112,
+          "calibrated_point_shrinkage_mahalanobis": 0.9911111111111112,
+          "one_class_ensemble": 0.49777777777777776
+        },
+        "photoelectric_threshold": {
+          "graph_formula_knn_distance": 0.008199959993362427,
+          "graph_identity_knn_distance": 0.008680343627929688,
+          "point_formula_knn_distance": -4.4465065002441406e-05,
+          "point_shrinkage_mahalanobis": 2202.7958984375,
+          "calibrated_graph_formula_knn_distance": 0.008888888888888889,
+          "calibrated_graph_identity_knn_distance": 0.02666666666666667,
+          "calibrated_point_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.8844444444444445,
+          "one_class_ensemble": 0.23111111111111113
+        },
+        "brownian_diffusion": {
+          "graph_formula_knn_distance": 0.008121192455291748,
+          "graph_identity_knn_distance": 0.008592545986175537,
+          "point_formula_knn_distance": -3.4928321838378906e-05,
+          "point_shrinkage_mahalanobis": 2034.9600830078125,
+          "calibrated_graph_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.0044444444444444444,
+          "calibrated_point_formula_knn_distance": 0.017777777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.0044444444444444444,
+          "one_class_ensemble": 0.0077777777777777776
+        },
+        "langevin_paramagnetism": {
+          "graph_formula_knn_distance": 0.008048683404922485,
+          "graph_identity_knn_distance": 0.00851374864578247,
+          "point_formula_knn_distance": -2.652406692504883e-06,
+          "point_shrinkage_mahalanobis": 2151.47314453125,
+          "calibrated_graph_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.0044444444444444444,
+          "calibrated_point_formula_knn_distance": 0.8444444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.52,
+          "one_class_ensemble": 0.3433333333333333
+        },
+        "einstein_solid": {
+          "graph_formula_knn_distance": 0.00901871919631958,
+          "graph_identity_knn_distance": 0.009452521800994873,
+          "point_formula_knn_distance": 2.7745962142944336e-05,
+          "point_shrinkage_mahalanobis": 2254.9384765625,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 1.0,
+          "calibrated_point_formula_knn_distance": 0.9955555555555555,
+          "calibrated_point_shrinkage_mahalanobis": 0.9866666666666667,
+          "one_class_ensemble": 0.9955555555555556
+        },
+        "curie_weiss_susceptibility": {
+          "graph_formula_knn_distance": 0.008684009313583374,
+          "graph_identity_knn_distance": 0.009141623973846436,
+          "point_formula_knn_distance": -1.0311603546142578e-05,
+          "point_shrinkage_mahalanobis": 2186.30224609375,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 1.0,
+          "calibrated_point_formula_knn_distance": 0.6933333333333334,
+          "calibrated_point_shrinkage_mahalanobis": 0.7955555555555556,
+          "one_class_ensemble": 0.8722222222222222
+        },
+        "hill_binding": {
+          "graph_formula_knn_distance": 0.009572118520736694,
+          "graph_identity_knn_distance": 0.009994328022003174,
+          "point_formula_knn_distance": 0.00013402104377746582,
+          "point_shrinkage_mahalanobis": 2539.09912109375,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 1.0,
+          "calibrated_point_formula_knn_distance": 1.0,
+          "calibrated_point_shrinkage_mahalanobis": 1.0,
+          "one_class_ensemble": 1.0
+        },
+        "geiger_nuttall": {
+          "graph_formula_knn_distance": 0.008185535669326782,
+          "graph_identity_knn_distance": 0.008644849061965942,
+          "point_formula_knn_distance": -3.0875205993652344e-05,
+          "point_shrinkage_mahalanobis": 2030.0185546875,
+          "calibrated_graph_formula_knn_distance": 0.008888888888888889,
+          "calibrated_graph_identity_knn_distance": 0.008888888888888889,
+          "calibrated_point_formula_knn_distance": 0.03111111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.0044444444444444444,
+          "one_class_ensemble": 0.013333333333333332
+        },
+        "rutherford_scattering": {
+          "graph_formula_knn_distance": 0.008474111557006836,
+          "graph_identity_knn_distance": 0.008837074041366577,
+          "point_formula_knn_distance": 4.380941390991211e-06,
+          "point_shrinkage_mahalanobis": 2188.433349609375,
+          "calibrated_graph_formula_knn_distance": 0.9822222222222222,
+          "calibrated_graph_identity_knn_distance": 0.9066666666666666,
+          "calibrated_point_formula_knn_distance": 0.9155555555555556,
+          "calibrated_point_shrinkage_mahalanobis": 0.8088888888888889,
+          "one_class_ensemble": 0.9033333333333333
+        },
+        "child_langmuir_space_charge": {
+          "graph_formula_knn_distance": 0.008157849311828613,
+          "graph_identity_knn_distance": 0.00860595703125,
+          "point_formula_knn_distance": -4.094839096069336e-05,
+          "point_shrinkage_mahalanobis": 2043.3343505859375,
+          "calibrated_graph_formula_knn_distance": 0.008888888888888889,
+          "calibrated_graph_identity_knn_distance": 0.0044444444444444444,
+          "calibrated_point_formula_knn_distance": 0.008888888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.0044444444444444444,
+          "one_class_ensemble": 0.006666666666666666
+        },
+        "debye_solid": {
+          "graph_formula_knn_distance": 0.008960247039794922,
+          "graph_identity_knn_distance": 0.00937950611114502,
+          "point_formula_knn_distance": 6.973743438720703e-06,
+          "point_shrinkage_mahalanobis": 2316.898193359375,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 1.0,
+          "calibrated_point_formula_knn_distance": 0.9244444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 1.0,
+          "one_class_ensemble": 0.981111111111111
+        },
+        "bragg_diffraction": {
+          "graph_formula_knn_distance": 0.00820457935333252,
+          "graph_identity_knn_distance": 0.008647263050079346,
+          "point_formula_knn_distance": -4.1365623474121094e-05,
+          "point_shrinkage_mahalanobis": 2056.131591796875,
+          "calibrated_graph_formula_knn_distance": 0.008888888888888889,
+          "calibrated_graph_identity_knn_distance": 0.008888888888888889,
+          "calibrated_point_formula_knn_distance": 0.008888888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.0044444444444444444,
+          "one_class_ensemble": 0.0077777777777777776
+        },
+        "bohr_atom": {
+          "graph_formula_knn_distance": 0.008271455764770508,
+          "graph_identity_knn_distance": 0.008735179901123047,
+          "point_formula_knn_distance": -5.263090133666992e-05,
+          "point_shrinkage_mahalanobis": 2060.203125,
+          "calibrated_graph_formula_knn_distance": 0.12444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.24888888888888888,
+          "calibrated_point_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.0044444444444444444,
+          "one_class_ensemble": 0.09555555555555553
+        },
+        "moseley_xray": {
+          "graph_formula_knn_distance": 0.008066266775131226,
+          "graph_identity_knn_distance": 0.008541405200958252,
+          "point_formula_knn_distance": -1.430511474609375e-05,
+          "point_shrinkage_mahalanobis": 2049.94580078125,
+          "calibrated_graph_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.0044444444444444444,
+          "calibrated_point_formula_knn_distance": 0.5777777777777777,
+          "calibrated_point_shrinkage_mahalanobis": 0.0044444444444444444,
+          "one_class_ensemble": 0.14777777777777776
+        },
+        "langmuir_adsorption": {
+          "graph_formula_knn_distance": 0.009175896644592285,
+          "graph_identity_knn_distance": 0.009662032127380371,
+          "point_formula_knn_distance": 7.486343383789062e-05,
+          "point_shrinkage_mahalanobis": 2313.3427734375,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 1.0,
+          "calibrated_point_formula_knn_distance": 1.0,
+          "calibrated_point_shrinkage_mahalanobis": 1.0,
+          "one_class_ensemble": 1.0
+        },
+        "saha_ionization": {
+          "graph_formula_knn_distance": 0.008137822151184082,
+          "graph_identity_knn_distance": 0.008587270975112915,
+          "point_formula_knn_distance": -3.0994415283203125e-05,
+          "point_shrinkage_mahalanobis": 2022.8896484375,
+          "calibrated_graph_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.0044444444444444444,
+          "calibrated_point_formula_knn_distance": 0.02666666666666667,
+          "calibrated_point_shrinkage_mahalanobis": 0.0044444444444444444,
+          "one_class_ensemble": 0.01
+        },
+        "friedmann_expansion": {
+          "graph_formula_knn_distance": 0.008193612098693848,
+          "graph_identity_knn_distance": 0.008663862943649292,
+          "point_formula_knn_distance": -3.933906555175781e-05,
+          "point_shrinkage_mahalanobis": 2087.93115234375,
+          "calibrated_graph_formula_knn_distance": 0.008888888888888889,
+          "calibrated_graph_identity_knn_distance": 0.013333333333333334,
+          "calibrated_point_formula_knn_distance": 0.008888888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.05333333333333334,
+          "one_class_ensemble": 0.021111111111111112
+        },
+        "compton_scattering": {
+          "graph_formula_knn_distance": 0.008214116096496582,
+          "graph_identity_knn_distance": 0.008674860000610352,
+          "point_formula_knn_distance": -2.4139881134033203e-05,
+          "point_shrinkage_mahalanobis": 2138.224609375,
+          "calibrated_graph_formula_knn_distance": 0.017777777777777778,
+          "calibrated_graph_identity_knn_distance": 0.022222222222222223,
+          "calibrated_point_formula_knn_distance": 0.2088888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.38222222222222224,
+          "one_class_ensemble": 0.1577777777777778
+        },
+        "debye_huckel_screening": {
+          "graph_formula_knn_distance": 0.009329825639724731,
+          "graph_identity_knn_distance": 0.009798884391784668,
+          "point_formula_knn_distance": 0.00012433528900146484,
+          "point_shrinkage_mahalanobis": 2688.5283203125,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 1.0,
+          "calibrated_point_formula_knn_distance": 1.0,
+          "calibrated_point_shrinkage_mahalanobis": 1.0,
+          "one_class_ensemble": 1.0
+        },
+        "de_broglie_matter_wave": {
+          "graph_formula_knn_distance": 0.009361505508422852,
+          "graph_identity_knn_distance": 0.009828656911849976,
+          "point_formula_knn_distance": 0.00010728836059570312,
+          "point_shrinkage_mahalanobis": 2511.548828125,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 1.0,
+          "calibrated_point_formula_knn_distance": 1.0,
+          "calibrated_point_shrinkage_mahalanobis": 1.0,
+          "one_class_ensemble": 1.0
+        },
+        "bose_einstein_statistics": {
+          "graph_formula_knn_distance": 0.009584486484527588,
+          "graph_identity_knn_distance": 0.010002970695495605,
+          "point_formula_knn_distance": 0.0001487433910369873,
+          "point_shrinkage_mahalanobis": 2529.95166015625,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 1.0,
+          "calibrated_point_formula_knn_distance": 1.0,
+          "calibrated_point_shrinkage_mahalanobis": 1.0,
+          "one_class_ensemble": 1.0
+        },
+        "fermi_dirac_statistics": {
+          "graph_formula_knn_distance": 0.008361458778381348,
+          "graph_identity_knn_distance": 0.008830249309539795,
+          "point_formula_knn_distance": -3.463029861450195e-05,
+          "point_shrinkage_mahalanobis": 1990.701904296875,
+          "calibrated_graph_formula_knn_distance": 0.6755555555555556,
+          "calibrated_graph_identity_knn_distance": 0.8977777777777778,
+          "calibrated_point_formula_knn_distance": 0.017777777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.0044444444444444444,
+          "one_class_ensemble": 0.39888888888888885
+        },
+        "brillouin_paramagnetism": {
+          "graph_formula_knn_distance": 0.008169323205947876,
+          "graph_identity_knn_distance": 0.008656591176986694,
+          "point_formula_knn_distance": -4.5299530029296875e-05,
+          "point_shrinkage_mahalanobis": 2224.51025390625,
+          "calibrated_graph_formula_knn_distance": 0.008888888888888889,
+          "calibrated_graph_identity_knn_distance": 0.013333333333333334,
+          "calibrated_point_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.9288888888888889,
+          "one_class_ensemble": 0.23888888888888887
+        },
+        "gamow_tunnelling": {
+          "graph_formula_knn_distance": 0.008120357990264893,
+          "graph_identity_knn_distance": 0.008590847253799438,
+          "point_formula_knn_distance": -3.5822391510009766e-05,
+          "point_shrinkage_mahalanobis": 2031.23046875,
+          "calibrated_graph_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.0044444444444444444,
+          "calibrated_point_formula_knn_distance": 0.017777777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.0044444444444444444,
+          "one_class_ensemble": 0.0077777777777777776
+        },
+        "fowler_nordheim_emission": {
+          "graph_formula_knn_distance": 0.008097231388092041,
+          "graph_identity_knn_distance": 0.008554846048355103,
+          "point_formula_knn_distance": -4.106760025024414e-05,
+          "point_shrinkage_mahalanobis": 2070.5166015625,
+          "calibrated_graph_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.0044444444444444444,
+          "calibrated_point_formula_knn_distance": 0.008888888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.013333333333333334,
+          "one_class_ensemble": 0.0077777777777777776
+        },
+        "hubble_relation": {
+          "graph_formula_knn_distance": 0.008078813552856445,
+          "graph_identity_knn_distance": 0.008530974388122559,
+          "point_formula_knn_distance": -1.2516975402832031e-05,
+          "point_shrinkage_mahalanobis": 2065.932373046875,
+          "calibrated_graph_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.0044444444444444444,
+          "calibrated_point_formula_knn_distance": 0.64,
+          "calibrated_point_shrinkage_mahalanobis": 0.013333333333333334,
+          "one_class_ensemble": 0.16555555555555554
+        },
+        "bethe_stopping": {
+          "graph_formula_knn_distance": 0.008202970027923584,
+          "graph_identity_knn_distance": 0.00869634747505188,
+          "point_formula_knn_distance": -3.457069396972656e-05,
+          "point_shrinkage_mahalanobis": 2084.139404296875,
+          "calibrated_graph_formula_knn_distance": 0.008888888888888889,
+          "calibrated_graph_identity_knn_distance": 0.044444444444444446,
+          "calibrated_point_formula_knn_distance": 0.017777777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.04888888888888889,
+          "one_class_ensemble": 0.03
+        },
+        "bloch_spin_wave": {
+          "graph_formula_knn_distance": 0.008154243230819702,
+          "graph_identity_knn_distance": 0.00857648253440857,
+          "point_formula_knn_distance": -4.845857620239258e-05,
+          "point_shrinkage_mahalanobis": 1998.7374267578125,
+          "calibrated_graph_formula_knn_distance": 0.008888888888888889,
+          "calibrated_graph_identity_knn_distance": 0.0044444444444444444,
+          "calibrated_point_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.0044444444444444444,
+          "one_class_ensemble": 0.005555555555555556
+        },
+        "london_two_fluid_penetration": {
+          "graph_formula_knn_distance": 0.008048951625823975,
+          "graph_identity_knn_distance": 0.008406966924667358,
+          "point_formula_knn_distance": 2.3603439331054688e-05,
+          "point_shrinkage_mahalanobis": 2333.1162109375,
+          "calibrated_graph_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.0044444444444444444,
+          "calibrated_point_formula_knn_distance": 0.9955555555555555,
+          "calibrated_point_shrinkage_mahalanobis": 1.0,
+          "one_class_ensemble": 0.5011111111111111
+        },
+        "breit_wigner_resonance": {
+          "graph_formula_knn_distance": 0.008582532405853271,
+          "graph_identity_knn_distance": 0.008860766887664795,
+          "point_formula_knn_distance": 8.705258369445801e-05,
+          "point_shrinkage_mahalanobis": 2562.369140625,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 0.9422222222222222,
+          "calibrated_point_formula_knn_distance": 1.0,
+          "calibrated_point_shrinkage_mahalanobis": 1.0,
+          "one_class_ensemble": 0.9855555555555555
+        },
+        "rabi_oscillation": {
+          "graph_formula_knn_distance": 0.00835120677947998,
+          "graph_identity_knn_distance": 0.00879475474357605,
+          "point_formula_knn_distance": -3.421306610107422e-05,
+          "point_shrinkage_mahalanobis": 2080.851806640625,
+          "calibrated_graph_formula_knn_distance": 0.6266666666666667,
+          "calibrated_graph_identity_knn_distance": 0.68,
+          "calibrated_point_formula_knn_distance": 0.022222222222222223,
+          "calibrated_point_shrinkage_mahalanobis": 0.04888888888888889,
+          "one_class_ensemble": 0.34444444444444444
+        },
+        "avrami_kinetics": {
+          "graph_formula_knn_distance": 0.007986575365066528,
+          "graph_identity_knn_distance": 0.008504360914230347,
+          "point_formula_knn_distance": 2.5928020477294922e-05,
+          "point_shrinkage_mahalanobis": 2181.4443359375,
+          "calibrated_graph_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.0044444444444444444,
+          "calibrated_point_formula_knn_distance": 0.9955555555555555,
+          "calibrated_point_shrinkage_mahalanobis": 0.7555555555555555,
+          "one_class_ensemble": 0.44
+        },
+        "kramers_escape": {
+          "graph_formula_knn_distance": 0.008141249418258667,
+          "graph_identity_knn_distance": 0.008608072996139526,
+          "point_formula_knn_distance": -5.841255187988281e-06,
+          "point_shrinkage_mahalanobis": 2130.2294921875,
+          "calibrated_graph_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.0044444444444444444,
+          "calibrated_point_formula_knn_distance": 0.7911111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.3288888888888889,
+          "one_class_ensemble": 0.2822222222222222
+        },
+        "kolmogorov_turbulence": {
+          "graph_formula_knn_distance": 0.009286105632781982,
+          "graph_identity_knn_distance": 0.009645819664001465,
+          "point_formula_knn_distance": 5.060434341430664e-05,
+          "point_shrinkage_mahalanobis": 2424.99169921875,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 1.0,
+          "calibrated_point_formula_knn_distance": 1.0,
+          "calibrated_point_shrinkage_mahalanobis": 1.0,
+          "one_class_ensemble": 1.0
+        },
+        "shockley_diode": {
+          "graph_formula_knn_distance": 0.007996886968612671,
+          "graph_identity_knn_distance": 0.008442699909210205,
+          "point_formula_knn_distance": 9.238719940185547e-06,
+          "point_shrinkage_mahalanobis": 2159.85595703125,
+          "calibrated_graph_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.0044444444444444444,
+          "calibrated_point_formula_knn_distance": 0.96,
+          "calibrated_point_shrinkage_mahalanobis": 0.5822222222222222,
+          "one_class_ensemble": 0.3877777777777778
+        },
+        "ginzburg_landau_order": {
+          "graph_formula_knn_distance": 0.008374124765396118,
+          "graph_identity_knn_distance": 0.008767634630203247,
+          "point_formula_knn_distance": -3.999471664428711e-05,
+          "point_shrinkage_mahalanobis": 2109.97900390625,
+          "calibrated_graph_formula_knn_distance": 0.7555555555555555,
+          "calibrated_graph_identity_knn_distance": 0.4622222222222222,
+          "calibrated_point_formula_knn_distance": 0.008888888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.1288888888888889,
+          "one_class_ensemble": 0.33888888888888885
+        }
+      }
+    },
+    "curated_post1950": {
+      "groups": 17,
+      "score_summary": {
+        "calibrated_graph_formula_knn_distance": {
+          "median": 0.26222222222222225,
+          "q25": 0.008888888888888889,
+          "q75": 1.0
+        },
+        "calibrated_graph_identity_knn_distance": {
+          "median": 0.3288888888888889,
+          "q25": 0.013333333333333334,
+          "q75": 1.0
+        },
+        "calibrated_point_formula_knn_distance": {
+          "median": 0.5333333333333333,
+          "q25": 0.017777777777777778,
+          "q75": 1.0
+        },
+        "calibrated_point_shrinkage_mahalanobis": {
+          "median": 0.7511111111111111,
+          "q25": 0.0044444444444444444,
+          "q75": 0.9911111111111112
+        },
+        "graph_formula_knn_distance": {
+          "median": 0.008294224739074707,
+          "q25": 0.008191525936126709,
+          "q75": 0.009171515703201294
+        },
+        "graph_identity_knn_distance": {
+          "median": 0.008746981620788574,
+          "q25": 0.00865548849105835,
+          "q75": 0.009593665599822998
+        },
+        "one_class_ensemble": {
+          "median": 0.37333333333333335,
+          "q25": 0.17777777777777778,
+          "q75": 0.9977777777777778
+        },
+        "point_formula_knn_distance": {
+          "median": -1.621246337890625e-05,
+          "q25": -3.516674041748047e-05,
+          "q75": 4.8726797103881836e-05
+        },
+        "point_shrinkage_mahalanobis": {
+          "median": 2179.740234375,
+          "q25": 2062.2109375,
+          "q75": 2284.2919921875
+        }
+      },
+      "scores": {
+        "ising_spontaneous_magnetization": {
+          "graph_formula_knn_distance": 0.008191525936126709,
+          "graph_identity_knn_distance": 0.00865548849105835,
+          "point_formula_knn_distance": -5.155801773071289e-05,
+          "point_shrinkage_mahalanobis": 2072.37109375,
+          "calibrated_graph_formula_knn_distance": 0.008888888888888889,
+          "calibrated_graph_identity_knn_distance": 0.013333333333333334,
+          "calibrated_point_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.022222222222222223,
+          "one_class_ensemble": 0.012222222222222223
+        },
+        "salpeter_initial_mass": {
+          "graph_formula_knn_distance": 0.009057044982910156,
+          "graph_identity_knn_distance": 0.009449511766433716,
+          "point_formula_knn_distance": 2.6971101760864258e-05,
+          "point_shrinkage_mahalanobis": 2348.16943359375,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 1.0,
+          "calibrated_point_formula_knn_distance": 0.9955555555555555,
+          "calibrated_point_shrinkage_mahalanobis": 1.0,
+          "one_class_ensemble": 0.9988888888888889
+        },
+        "williams_landel_ferry": {
+          "graph_formula_knn_distance": 0.008158087730407715,
+          "graph_identity_knn_distance": 0.008673161268234253,
+          "point_formula_knn_distance": -3.641843795776367e-05,
+          "point_shrinkage_mahalanobis": 2179.740234375,
+          "calibrated_graph_formula_knn_distance": 0.008888888888888889,
+          "calibrated_graph_identity_knn_distance": 0.022222222222222223,
+          "calibrated_point_formula_knn_distance": 0.017777777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.7511111111111111,
+          "one_class_ensemble": 0.19999999999999998
+        },
+        "bcs_superconducting_gap": {
+          "graph_formula_knn_distance": 0.00827091932296753,
+          "graph_identity_knn_distance": 0.008640050888061523,
+          "point_formula_knn_distance": -1.621246337890625e-05,
+          "point_shrinkage_mahalanobis": 2216.1630859375,
+          "calibrated_graph_formula_knn_distance": 0.11555555555555555,
+          "calibrated_graph_identity_knn_distance": 0.008888888888888889,
+          "calibrated_point_formula_knn_distance": 0.5333333333333333,
+          "calibrated_point_shrinkage_mahalanobis": 0.9111111111111111,
+          "one_class_ensemble": 0.39222222222222225
+        },
+        "josephson_current_phase": {
+          "graph_formula_knn_distance": 0.008294224739074707,
+          "graph_identity_knn_distance": 0.008746981620788574,
+          "point_formula_knn_distance": -2.682209014892578e-05,
+          "point_shrinkage_mahalanobis": 2053.158203125,
+          "calibrated_graph_formula_knn_distance": 0.26222222222222225,
+          "calibrated_graph_identity_knn_distance": 0.3288888888888889,
+          "calibrated_point_formula_knn_distance": 0.11555555555555555,
+          "calibrated_point_shrinkage_mahalanobis": 0.0044444444444444444,
+          "one_class_ensemble": 0.17777777777777778
+        },
+        "neutrino_oscillation": {
+          "graph_formula_knn_distance": 0.00819694995880127,
+          "graph_identity_knn_distance": 0.008662700653076172,
+          "point_formula_knn_distance": -4.172325134277344e-05,
+          "point_shrinkage_mahalanobis": 2091.26708984375,
+          "calibrated_graph_formula_knn_distance": 0.008888888888888889,
+          "calibrated_graph_identity_knn_distance": 0.013333333333333334,
+          "calibrated_point_formula_knn_distance": 0.008888888888888889,
+          "calibrated_point_shrinkage_mahalanobis": 0.06222222222222222,
+          "one_class_ensemble": 0.02333333333333333
+        },
+        "kondo_resistivity": {
+          "graph_formula_knn_distance": 0.009171515703201294,
+          "graph_identity_knn_distance": 0.009593665599822998,
+          "point_formula_knn_distance": 5.4329633712768555e-05,
+          "point_shrinkage_mahalanobis": 2261.66552734375,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 1.0,
+          "calibrated_point_formula_knn_distance": 1.0,
+          "calibrated_point_shrinkage_mahalanobis": 0.9911111111111112,
+          "one_class_ensemble": 0.9977777777777778
+        },
+        "mott_variable_range_hopping": {
+          "graph_formula_knn_distance": 0.00917556881904602,
+          "graph_identity_knn_distance": 0.009600788354873657,
+          "point_formula_knn_distance": 4.8726797103881836e-05,
+          "point_shrinkage_mahalanobis": 2145.19775390625,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 1.0,
+          "calibrated_point_formula_knn_distance": 1.0,
+          "calibrated_point_shrinkage_mahalanobis": 0.44,
+          "one_class_ensemble": 0.86
+        },
+        "nauenberg_white_dwarf": {
+          "graph_formula_knn_distance": 0.008085459470748901,
+          "graph_identity_knn_distance": 0.008543014526367188,
+          "point_formula_knn_distance": -2.2232532501220703e-05,
+          "point_shrinkage_mahalanobis": 1973.58349609375,
+          "calibrated_graph_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.0044444444444444444,
+          "calibrated_point_formula_knn_distance": 0.29333333333333333,
+          "calibrated_point_shrinkage_mahalanobis": 0.0044444444444444444,
+          "one_class_ensemble": 0.07666666666666666
+        },
+        "bkt_correlation_length": {
+          "graph_formula_knn_distance": 0.00824826955795288,
+          "graph_identity_knn_distance": 0.008736252784729004,
+          "point_formula_knn_distance": -2.4318695068359375e-05,
+          "point_shrinkage_mahalanobis": 2284.2919921875,
+          "calibrated_graph_formula_knn_distance": 0.05333333333333334,
+          "calibrated_graph_identity_knn_distance": 0.25333333333333335,
+          "calibrated_point_formula_knn_distance": 0.19555555555555557,
+          "calibrated_point_shrinkage_mahalanobis": 0.9911111111111112,
+          "one_class_ensemble": 0.37333333333333335
+        },
+        "qcd_asymptotic_freedom": {
+          "graph_formula_knn_distance": 0.008950024843215942,
+          "graph_identity_knn_distance": 0.00936192274093628,
+          "point_formula_knn_distance": 3.6954879760742188e-06,
+          "point_shrinkage_mahalanobis": 2206.101806640625,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 1.0,
+          "calibrated_point_formula_knn_distance": 0.9111111111111111,
+          "calibrated_point_shrinkage_mahalanobis": 0.8888888888888888,
+          "one_class_ensemble": 0.95
+        },
+        "hawking_temperature": {
+          "graph_formula_knn_distance": 0.0093899667263031,
+          "graph_identity_knn_distance": 0.009816229343414307,
+          "point_formula_knn_distance": 8.064508438110352e-05,
+          "point_shrinkage_mahalanobis": 2336.78076171875,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 1.0,
+          "calibrated_point_formula_knn_distance": 1.0,
+          "calibrated_point_shrinkage_mahalanobis": 1.0,
+          "one_class_ensemble": 1.0
+        },
+        "press_schechter_mass_function": {
+          "graph_formula_knn_distance": 0.008333474397659302,
+          "graph_identity_knn_distance": 0.008786797523498535,
+          "point_formula_knn_distance": -5.0902366638183594e-05,
+          "point_shrinkage_mahalanobis": 2043.308837890625,
+          "calibrated_graph_formula_knn_distance": 0.5511111111111111,
+          "calibrated_graph_identity_knn_distance": 0.6311111111111111,
+          "calibrated_point_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_point_shrinkage_mahalanobis": 0.0044444444444444444,
+          "one_class_ensemble": 0.2977777777777778
+        },
+        "schechter_luminosity": {
+          "graph_formula_knn_distance": 0.009700268507003784,
+          "graph_identity_knn_distance": 0.01013028621673584,
+          "point_formula_knn_distance": 0.00018510222434997559,
+          "point_shrinkage_mahalanobis": 2957.606689453125,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 1.0,
+          "calibrated_point_formula_knn_distance": 1.0,
+          "calibrated_point_shrinkage_mahalanobis": 1.0,
+          "one_class_ensemble": 1.0
+        },
+        "tully_fisher_relation": {
+          "graph_formula_knn_distance": 0.008107364177703857,
+          "graph_identity_knn_distance": 0.008524119853973389,
+          "point_formula_knn_distance": -7.748603820800781e-06,
+          "point_shrinkage_mahalanobis": 2062.2109375,
+          "calibrated_graph_formula_knn_distance": 0.0044444444444444444,
+          "calibrated_graph_identity_knn_distance": 0.0044444444444444444,
+          "calibrated_point_formula_knn_distance": 0.7466666666666667,
+          "calibrated_point_shrinkage_mahalanobis": 0.0044444444444444444,
+          "one_class_ensemble": 0.19
+        },
+        "integer_quantum_hall": {
+          "graph_formula_knn_distance": 0.008177489042282104,
+          "graph_identity_knn_distance": 0.008639782667160034,
+          "point_formula_knn_distance": -3.516674041748047e-05,
+          "point_shrinkage_mahalanobis": 2054.024169921875,
+          "calibrated_graph_formula_knn_distance": 0.008888888888888889,
+          "calibrated_graph_identity_knn_distance": 0.008888888888888889,
+          "calibrated_point_formula_knn_distance": 0.017777777777777778,
+          "calibrated_point_shrinkage_mahalanobis": 0.0044444444444444444,
+          "one_class_ensemble": 0.01
+        },
+        "navarro_frenk_white": {
+          "graph_formula_knn_distance": 0.009256154298782349,
+          "graph_identity_knn_distance": 0.009681284427642822,
+          "point_formula_knn_distance": 8.127093315124512e-05,
+          "point_shrinkage_mahalanobis": 2408.53173828125,
+          "calibrated_graph_formula_knn_distance": 1.0,
+          "calibrated_graph_identity_knn_distance": 1.0,
+          "calibrated_point_formula_knn_distance": 1.0,
+          "calibrated_point_shrinkage_mahalanobis": 1.0,
+          "one_class_ensemble": 1.0
+        }
+      }
+    }
+  },
+  "comparisons": {
+    "known_internal_vs_curated_post1950": {
+      "auroc": 0.4530360531309298,
+      "ci95": [
+        0.22770398481973433,
+        0.6783799810246679
+      ],
+      "negative_groups": 62,
+      "positive_groups": 17,
+      "bootstrap_repetitions": 2000
+    },
+    "known_pre1900_internal_vs_curated_post1950": {
+      "auroc": 0.4444444444444444,
+      "ci95": [
+        0.21568627450980393,
+        0.673202614379085
+      ],
+      "negative_groups": 9,
+      "positive_groups": 17,
+      "bootstrap_repetitions": 2000
+    },
+    "known_pre1950_internal_vs_curated_post1950": {
+      "auroc": 0.45449500554938954,
+      "ci95": [
+        0.23415649278579356,
+        0.6770255271920089
+      ],
+      "negative_groups": 53,
+      "positive_groups": 17,
+      "bootstrap_repetitions": 2000
+    }
+  },
+  "component_aurocs_descriptive": {
+    "known_internal_vs_curated_post1950": {
+      "graph_formula_knn_distance": 0.45161290322580644,
+      "graph_identity_knn_distance": 0.476280834914611,
+      "point_formula_knn_distance": 0.5009487666034156,
+      "point_shrinkage_mahalanobis": 0.5284629981024668,
+      "calibrated_graph_formula_knn_distance": 0.45398481973434535,
+      "calibrated_graph_identity_knn_distance": 0.47343453510436434,
+      "calibrated_point_formula_knn_distance": 0.5047438330170778,
+      "calibrated_point_shrinkage_mahalanobis": 0.5341555977229602,
+      "one_class_ensemble": 0.4530360531309298
+    }
+  },
+  "limitations": [
+    "AUROC evaluates temporal formula-family separation, not causal attribution to new physics.",
+    "The historical negative uncertainty is governed by the number of held-out source-law families, not by cloud replicates.",
+    "The 1901-1950 generator corpus is time-gated but not a complete bibliographically dated-source audit."
+  ]
+}

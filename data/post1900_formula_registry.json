@@ -1,0 +1,898 @@
+{
+  "status": "citation-anchored curated post-1900 formula-level benchmark registry",
+  "cutoff_policy": "first_valid_year > 1900; Planck 1900 is excluded",
+  "provenance_policy": "Every family has a named primary historical citation; formula-to-source fidelity is a manual bibliographic audit, not a claim of machine-verified transcription.",
+  "inference_unit": "source-law family",
+  "representation": "one-dimensional nondimensional reduction named in equation",
+  "reduction_notes": {
+    "special_relativity": "The relativistic physical interpretation is dated to 1905; Lorentz-factor mathematics has pre-1905 antecedents, making this an intentionally hard horizon case.",
+    "friedmann_expansion": "A standard matter-curvature-Lambda one-dimensional specialization of the Friedmann equation is sampled.",
+    "london_two_fluid_penetration": "The temperature dependence combines the 1934 two-fluid ansatz with London electrodynamics; it is not a literal transcription of one equation in the cited London paper.",
+    "bcs_superconducting_gap": "The standard closed-form interpolation to the BCS reduced gap is sampled rather than numerically solving the implicit gap equation.",
+    "neutrino_oscillation": "The standard two-flavour survival-probability reduction of the mixing framework is sampled.",
+    "integer_quantum_hall": "An ideal conductance staircase versus filling factor is sampled; plateau broadening and localization physics are omitted."
+  },
+  "claim_boundary": "Formula-level temporal transfer; not real-measurement discovery and not publication-year classification.",
+  "laws": [
+    {
+      "family_id": "richardson_dushman_emission",
+      "law_name": "Richardson thermionic-emission law",
+      "first_valid_year": 1901,
+      "domain": "statistical_physics",
+      "generator": "richardson_dushman",
+      "equation": "j(t) = t^2 exp(-a/t)",
+      "x_range": [
+        0.2,
+        2.0
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "power_times_inverse_temperature_exponential",
+      "citation": "O. W. Richardson, On the negative radiation from hot platinum, Proc. Cambridge Philos. Soc. 11, 286-295 (1901)."
+    },
+    {
+      "family_id": "radioactive_decay",
+      "law_name": "Rutherford-Soddy radioactive-decay law",
+      "first_valid_year": 1902,
+      "domain": "nuclear_physics",
+      "generator": "radioactive_decay",
+      "equation": "n(t) = exp(-lambda t)",
+      "x_range": [
+        0.0,
+        6.0
+      ],
+      "sampling": "linear",
+      "shape_class": "declared_dictionary_overlap",
+      "signature": "exponential_decay",
+      "citation": "E. Rutherford and F. Soddy, The cause and nature of radioactivity, Philos. Mag. 4, 370-396 (1902)."
+    },
+    {
+      "family_id": "special_relativity",
+      "law_name": "Lorentz factor in special relativity",
+      "first_valid_year": 1905,
+      "domain": "relativity",
+      "generator": "lorentz_gamma",
+      "equation": "gamma(beta) = (1-beta^2)^(-1/2)",
+      "x_range": [
+        0.02,
+        0.98
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "relativistic_divergence",
+      "citation": "A. Einstein, Zur Elektrodynamik bewegter Korper, Ann. Phys. 322, 891-921 (1905), doi:10.1002/andp.19053221004."
+    },
+    {
+      "family_id": "photoelectric_threshold",
+      "law_name": "Einstein photoelectric relation",
+      "first_valid_year": 1905,
+      "domain": "quantum_physics",
+      "generator": "photoelectric_threshold",
+      "equation": "k(x) = max(x-x0, 0)",
+      "x_range": [
+        0.2,
+        3.2
+      ],
+      "sampling": "linear",
+      "shape_class": "threshold_or_piecewise",
+      "signature": "thresholded_affine",
+      "citation": "A. Einstein, Uber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt, Ann. Phys. 322, 132-148 (1905), doi:10.1002/andp.19053220607."
+    },
+    {
+      "family_id": "brownian_diffusion",
+      "law_name": "Einstein mean-square displacement",
+      "first_valid_year": 1905,
+      "domain": "statistical_physics",
+      "generator": "brownian_msd",
+      "equation": "msd(t) = a t",
+      "x_range": [
+        0.05,
+        6.0
+      ],
+      "sampling": "linear",
+      "shape_class": "declared_dictionary_overlap",
+      "signature": "linear",
+      "citation": "A. Einstein, Uber die von der molekularkinetischen Theorie der Warme geforderte Bewegung von in ruhenden Flussigkeiten suspendierten Teilchen, Ann. Phys. 322, 549-560 (1905), doi:10.1002/andp.19053220806."
+    },
+    {
+      "family_id": "langevin_paramagnetism",
+      "law_name": "Langevin paramagnetism function",
+      "first_valid_year": 1905,
+      "domain": "statistical_physics",
+      "generator": "langevin_function",
+      "equation": "m(x) = coth(x)-1/x",
+      "x_range": [
+        0.05,
+        8.0
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "coth_minus_inverse",
+      "citation": "P. Langevin, Magnetisme et theorie des electrons, Ann. Chim. Phys. 5, 70-127 (1905)."
+    },
+    {
+      "family_id": "einstein_solid",
+      "law_name": "Einstein solid heat capacity",
+      "first_valid_year": 1907,
+      "domain": "condensed_matter",
+      "generator": "einstein_heat_capacity",
+      "equation": "c(x) = x^2 exp(x)/(exp(x)-1)^2",
+      "x_range": [
+        0.12,
+        10.0
+      ],
+      "sampling": "log",
+      "shape_class": "smooth_composite",
+      "signature": "einstein_oscillator_heat_capacity",
+      "citation": "A. Einstein, Die Plancksche Theorie der Strahlung und die Theorie der spezifischen Warme, Ann. Phys. 327, 180-190 (1907), doi:10.1002/andp.19063270110."
+    },
+    {
+      "family_id": "curie_weiss_susceptibility",
+      "law_name": "Curie-Weiss susceptibility",
+      "first_valid_year": 1907,
+      "domain": "condensed_matter",
+      "generator": "curie_weiss",
+      "equation": "chi(t) = 1/(t-1)",
+      "x_range": [
+        1.04,
+        5.0
+      ],
+      "sampling": "log",
+      "shape_class": "smooth_composite",
+      "signature": "shifted_inverse",
+      "citation": "P. Weiss, L'hypothese du champ moleculaire et la propriete ferromagnetique, J. Phys. Theor. Appl. 6, 661-690 (1907), doi:10.1051/jphystap:019070060066100."
+    },
+    {
+      "family_id": "hill_binding",
+      "law_name": "Hill cooperative-binding equation",
+      "first_valid_year": 1910,
+      "domain": "biophysics",
+      "generator": "hill_binding",
+      "equation": "theta(x) = x^n/(1+x^n)",
+      "x_range": [
+        0.04,
+        8.0
+      ],
+      "sampling": "log",
+      "shape_class": "smooth_composite",
+      "signature": "cooperative_sigmoid",
+      "citation": "A. V. Hill, The possible effects of the aggregation of the molecules of haemoglobin on its dissociation curves, J. Physiol. 40, iv-vii (1910)."
+    },
+    {
+      "family_id": "geiger_nuttall",
+      "law_name": "Geiger-Nuttall alpha-decay relation",
+      "first_valid_year": 1911,
+      "domain": "nuclear_physics",
+      "generator": "geiger_nuttall",
+      "equation": "lambda(e) = exp(a-b/sqrt(e))",
+      "x_range": [
+        0.2,
+        5.0
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "inverse_root_exponential",
+      "citation": "H. Geiger and J. M. Nuttall, The ranges of the alpha particles from various radioactive substances and a relation between range and period of transformation, Philos. Mag. 22, 613-621 (1911)."
+    },
+    {
+      "family_id": "rutherford_scattering",
+      "law_name": "Rutherford scattering angular law",
+      "first_valid_year": 1911,
+      "domain": "nuclear_physics",
+      "generator": "rutherford_scattering",
+      "equation": "i(theta) = sin(theta/2)^(-4)",
+      "x_range": [
+        0.22,
+        2.9
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "inverse_trigonometric_power",
+      "citation": "E. Rutherford, The scattering of alpha and beta particles by matter and the structure of the atom, Philos. Mag. 21, 669-688 (1911), doi:10.1080/14786440508637080."
+    },
+    {
+      "family_id": "child_langmuir_space_charge",
+      "law_name": "Child-Langmuir space-charge law",
+      "first_valid_year": 1911,
+      "domain": "electromagnetism",
+      "generator": "child_langmuir",
+      "equation": "j(v) = a v^(3/2)",
+      "x_range": [
+        0.05,
+        5.0
+      ],
+      "sampling": "linear",
+      "shape_class": "declared_dictionary_overlap",
+      "signature": "power_3_over_2",
+      "citation": "C. D. Child, Discharge from hot CaO, Phys. Rev. (Series I) 32, 492-511 (1911), doi:10.1103/PhysRevSeriesI.32.492."
+    },
+    {
+      "family_id": "debye_solid",
+      "law_name": "Debye heat-capacity law",
+      "first_valid_year": 1912,
+      "domain": "condensed_matter",
+      "generator": "debye_heat_capacity",
+      "equation": "c(t) = 9 t^3 integral_0^(1/t) u^4 exp(u)/(exp(u)-1)^2 du",
+      "x_range": [
+        0.04,
+        2.5
+      ],
+      "sampling": "log",
+      "shape_class": "special_function_or_integral",
+      "signature": "debye_integral",
+      "citation": "P. Debye, Zur Theorie der spezifischen Warmen, Ann. Phys. 344, 789-839 (1912), doi:10.1002/andp.19123441404."
+    },
+    {
+      "family_id": "bragg_diffraction",
+      "law_name": "Bragg diffraction law",
+      "first_valid_year": 1913,
+      "domain": "quantum_and_atomic",
+      "generator": "bragg_diffraction",
+      "equation": "theta(x) = arcsin(x)",
+      "x_range": [
+        0.03,
+        0.97
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "inverse_trigonometric",
+      "citation": "W. H. Bragg and W. L. Bragg, The reflection of X-rays by crystals, Proc. R. Soc. A 88, 428-438 (1913), doi:10.1098/rspa.1913.0040."
+    },
+    {
+      "family_id": "bohr_atom",
+      "law_name": "Bohr hydrogen energy levels",
+      "first_valid_year": 1913,
+      "domain": "quantum_and_atomic",
+      "generator": "bohr_energy",
+      "equation": "abs(e(n)) = a/n^2",
+      "x_range": [
+        1.0,
+        24.0
+      ],
+      "sampling": "linear",
+      "shape_class": "declared_dictionary_overlap",
+      "signature": "inverse_square",
+      "citation": "N. Bohr, On the constitution of atoms and molecules, Philos. Mag. 26, 1-25 (1913), doi:10.1080/14786441308634955."
+    },
+    {
+      "family_id": "moseley_xray",
+      "law_name": "Moseley X-ray frequency law",
+      "first_valid_year": 1913,
+      "domain": "quantum_and_atomic",
+      "generator": "moseley_law",
+      "equation": "nu(z) = a (z-b)^2",
+      "x_range": [
+        5.0,
+        82.0
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "shifted_quadratic",
+      "citation": "H. G. J. Moseley, The high-frequency spectra of the elements, Philos. Mag. 26, 1024-1034 (1913), doi:10.1080/14786441308635052."
+    },
+    {
+      "family_id": "langmuir_adsorption",
+      "law_name": "Langmuir adsorption isotherm",
+      "first_valid_year": 1918,
+      "domain": "surface_physics",
+      "generator": "langmuir_adsorption",
+      "equation": "theta(x) = x/(1+x)",
+      "x_range": [
+        0.03,
+        15.0
+      ],
+      "sampling": "log",
+      "shape_class": "smooth_composite",
+      "signature": "rational_saturation",
+      "citation": "I. Langmuir, The adsorption of gases on plane surfaces of glass, mica and platinum, J. Am. Chem. Soc. 40, 1361-1403 (1918), doi:10.1021/ja02242a004."
+    },
+    {
+      "family_id": "saha_ionization",
+      "law_name": "Saha ionization relation",
+      "first_valid_year": 1920,
+      "domain": "astrophysics",
+      "generator": "saha_ionization",
+      "equation": "r(t) = t^(3/2) exp(-a/t)",
+      "x_range": [
+        0.12,
+        3.5
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "power_times_inverse_temperature_exponential",
+      "citation": "M. N. Saha, Ionisation in the solar chromosphere, Nature 105, 232-233 (1920), doi:10.1038/105232b0."
+    },
+    {
+      "family_id": "friedmann_expansion",
+      "law_name": "Friedmann expansion equation",
+      "first_valid_year": 1922,
+      "domain": "cosmology",
+      "generator": "friedmann_expansion",
+      "equation": "h(z) = sqrt(omega_m (1+z)^3 + omega_k (1+z)^2 + omega_l)",
+      "x_range": [
+        0.0,
+        6.0
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "square_root_polynomial_sum",
+      "citation": "A. Friedmann, Uber die Krummung des Raumes, Z. Phys. 10, 377-386 (1922), doi:10.1007/BF01332580."
+    },
+    {
+      "family_id": "compton_scattering",
+      "law_name": "Compton wavelength shift",
+      "first_valid_year": 1923,
+      "domain": "quantum_and_atomic",
+      "generator": "compton_shift",
+      "equation": "delta(theta) = a (1-cos(theta))",
+      "x_range": [
+        0.0,
+        3.141592653589793
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "one_minus_cosine_half_cycle",
+      "citation": "A. H. Compton, A quantum theory of the scattering of X-rays by light elements, Phys. Rev. 21, 483-502 (1923), doi:10.1103/PhysRev.21.483."
+    },
+    {
+      "family_id": "debye_huckel_screening",
+      "law_name": "Debye-Huckel screened potential",
+      "first_valid_year": 1923,
+      "domain": "statistical_physics",
+      "generator": "debye_huckel",
+      "equation": "phi(r) = exp(-k r)/r",
+      "x_range": [
+        0.08,
+        8.0
+      ],
+      "sampling": "log",
+      "shape_class": "smooth_composite",
+      "signature": "screened_inverse",
+      "citation": "P. Debye and E. Huckel, Zur Theorie der Elektrolyte. I, Phys. Z. 24, 185-206 (1923)."
+    },
+    {
+      "family_id": "de_broglie_matter_wave",
+      "law_name": "de Broglie wavelength",
+      "first_valid_year": 1924,
+      "domain": "quantum_and_atomic",
+      "generator": "de_broglie",
+      "equation": "lambda(p) = a/p",
+      "x_range": [
+        0.08,
+        8.0
+      ],
+      "sampling": "log",
+      "shape_class": "declared_dictionary_overlap",
+      "signature": "inverse",
+      "citation": "L. de Broglie, Recherches sur la theorie des quanta, doctoral thesis, University of Paris (1924)."
+    },
+    {
+      "family_id": "bose_einstein_statistics",
+      "law_name": "Bose-Einstein occupation",
+      "first_valid_year": 1924,
+      "domain": "quantum_statistics",
+      "generator": "bose_einstein",
+      "equation": "n(x) = 1/(exp(x)-1)",
+      "x_range": [
+        0.1,
+        7.0
+      ],
+      "sampling": "log",
+      "shape_class": "smooth_composite",
+      "signature": "bose_occupation",
+      "citation": "S. N. Bose, Plancks Gesetz und Lichtquantenhypothese, Z. Phys. 26, 178-181 (1924), doi:10.1007/BF01327326."
+    },
+    {
+      "family_id": "fermi_dirac_statistics",
+      "law_name": "Fermi-Dirac occupation",
+      "first_valid_year": 1926,
+      "domain": "quantum_statistics",
+      "generator": "fermi_dirac",
+      "equation": "n(x) = 1/(exp(x)+1)",
+      "x_range": [
+        -7.0,
+        7.0
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "fermi_sigmoid",
+      "citation": "E. Fermi, Zur Quantelung des idealen einatomigen Gases, Z. Phys. 36, 902-912 (1926), doi:10.1007/BF01400221."
+    },
+    {
+      "family_id": "brillouin_paramagnetism",
+      "law_name": "Brillouin magnetization function",
+      "first_valid_year": 1927,
+      "domain": "quantum_statistics",
+      "generator": "brillouin_function",
+      "equation": "b_j(x) = ((2j+1)/(2j))coth((2j+1)x/(2j))-(1/(2j))coth(x/(2j))",
+      "x_range": [
+        0.05,
+        10.0
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "brillouin_coth_difference",
+      "citation": "L. Brillouin, Les moments de rotation et le magnetisme dans la mecanique ondulatoire, J. Phys. Radium 8, 74-84 (1927), doi:10.1051/jphysrad:0192700802007400."
+    },
+    {
+      "family_id": "gamow_tunnelling",
+      "law_name": "Gamow barrier-penetration factor",
+      "first_valid_year": 1928,
+      "domain": "nuclear_physics",
+      "generator": "gamow_factor",
+      "equation": "p(e) = exp(-a/sqrt(e))",
+      "x_range": [
+        0.08,
+        6.0
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "inverse_root_exponential",
+      "citation": "G. Gamow, Zur Quantentheorie des Atomkernes, Z. Phys. 51, 204-212 (1928), doi:10.1007/BF01343196."
+    },
+    {
+      "family_id": "fowler_nordheim_emission",
+      "law_name": "Fowler-Nordheim field-emission law",
+      "first_valid_year": 1928,
+      "domain": "quantum_transport",
+      "generator": "fowler_nordheim",
+      "equation": "j(f) = f^2 exp(-a/f)",
+      "x_range": [
+        0.18,
+        5.0
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "power_times_inverse_field_exponential",
+      "citation": "R. H. Fowler and L. Nordheim, Electron emission in intense electric fields, Proc. R. Soc. A 119, 173-181 (1928), doi:10.1098/rspa.1928.0091."
+    },
+    {
+      "family_id": "hubble_relation",
+      "law_name": "Hubble distance-velocity relation",
+      "first_valid_year": 1929,
+      "domain": "cosmology",
+      "generator": "hubble_law",
+      "equation": "v(d) = h d",
+      "x_range": [
+        0.05,
+        6.0
+      ],
+      "sampling": "linear",
+      "shape_class": "declared_dictionary_overlap",
+      "signature": "linear",
+      "citation": "E. Hubble, A relation between distance and radial velocity among extra-galactic nebulae, Proc. Natl. Acad. Sci. USA 15, 168-173 (1929), doi:10.1073/pnas.15.3.168."
+    },
+    {
+      "family_id": "bethe_stopping",
+      "law_name": "Bethe charged-particle stopping relation",
+      "first_valid_year": 1930,
+      "domain": "nuclear_physics",
+      "generator": "bethe_stopping",
+      "equation": "s(beta) = log(1+a beta^2/(1-beta^2))/beta^2-beta^2",
+      "x_range": [
+        0.08,
+        0.96
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "relativistic_log_over_square",
+      "citation": "H. Bethe, Zur Theorie des Durchgangs schneller Korpuskularstrahlen durch Materie, Ann. Phys. 397, 325-400 (1930), doi:10.1002/andp.19303970303."
+    },
+    {
+      "family_id": "bloch_spin_wave",
+      "law_name": "Bloch T^(3/2) magnetization law",
+      "first_valid_year": 1930,
+      "domain": "condensed_matter",
+      "generator": "bloch_law",
+      "equation": "m(t) = 1-a t^(3/2)",
+      "x_range": [
+        0.02,
+        1.0
+      ],
+      "sampling": "linear",
+      "shape_class": "declared_dictionary_overlap",
+      "signature": "offset_power_3_over_2",
+      "citation": "F. Bloch, Zur Theorie des Ferromagnetismus, Z. Phys. 61, 206-219 (1930), doi:10.1007/BF01339661."
+    },
+    {
+      "family_id": "london_two_fluid_penetration",
+      "law_name": "Two-fluid/London penetration-depth relation",
+      "first_valid_year": 1935,
+      "domain": "condensed_matter",
+      "generator": "london_penetration",
+      "equation": "lambda(t) = (1-t^4)^(-1/2)",
+      "x_range": [
+        0.04,
+        0.985
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "critical_inverse_square_root",
+      "citation": "F. London and H. London, The electromagnetic equations of the supraconductor, Proc. R. Soc. A 149, 71-88 (1935), doi:10.1098/rspa.1935.0048; sampled with the contemporary two-fluid temperature law."
+    },
+    {
+      "family_id": "breit_wigner_resonance",
+      "law_name": "Breit-Wigner resonance profile",
+      "first_valid_year": 1936,
+      "domain": "nuclear_physics",
+      "generator": "breit_wigner",
+      "equation": "sigma(e) = a/((e-e0)^2+gamma^2)",
+      "x_range": [
+        -4.0,
+        4.0
+      ],
+      "sampling": "linear",
+      "shape_class": "nonmonotone_or_oscillatory",
+      "signature": "lorentzian_resonance",
+      "citation": "G. Breit and E. Wigner, Capture of slow neutrons, Phys. Rev. 49, 519-531 (1936), doi:10.1103/PhysRev.49.519."
+    },
+    {
+      "family_id": "rabi_oscillation",
+      "law_name": "Rabi transition probability",
+      "first_valid_year": 1937,
+      "domain": "quantum_dynamics",
+      "generator": "rabi_oscillation",
+      "equation": "p(t) = sin^2(omega t/2)",
+      "x_range": [
+        0.0,
+        18.84955592153876
+      ],
+      "sampling": "linear",
+      "shape_class": "nonmonotone_or_oscillatory",
+      "signature": "sinusoidal_probability",
+      "citation": "I. I. Rabi, Space quantization in a gyrating magnetic field, Phys. Rev. 51, 652-654 (1937), doi:10.1103/PhysRev.51.652."
+    },
+    {
+      "family_id": "avrami_kinetics",
+      "law_name": "Avrami transformation kinetics",
+      "first_valid_year": 1939,
+      "domain": "materials_physics",
+      "generator": "avrami_kinetics",
+      "equation": "x(t) = 1-exp(-k t^n)",
+      "x_range": [
+        0.0,
+        3.5
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "stretched_exponential_saturation",
+      "citation": "M. Avrami, Kinetics of phase change. I, J. Chem. Phys. 7, 1103-1112 (1939), doi:10.1063/1.1750380."
+    },
+    {
+      "family_id": "kramers_escape",
+      "law_name": "Kramers activated escape rate",
+      "first_valid_year": 1940,
+      "domain": "statistical_physics",
+      "generator": "kramers_escape",
+      "equation": "r(t) = a exp(-b/t)",
+      "x_range": [
+        0.12,
+        3.0
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "inverse_temperature_exponential",
+      "citation": "H. A. Kramers, Brownian motion in a field of force and the diffusion model of chemical reactions, Physica 7, 284-304 (1940), doi:10.1016/S0031-8914(40)90098-2."
+    },
+    {
+      "family_id": "kolmogorov_turbulence",
+      "law_name": "Kolmogorov inertial-range spectrum",
+      "first_valid_year": 1941,
+      "domain": "fluid_dynamics",
+      "generator": "kolmogorov_spectrum",
+      "equation": "e(k) = a k^(-5/3)",
+      "x_range": [
+        0.08,
+        20.0
+      ],
+      "sampling": "log",
+      "shape_class": "declared_dictionary_overlap",
+      "signature": "power_minus_5_over_3",
+      "citation": "A. N. Kolmogorov, The local structure of turbulence in incompressible viscous fluid for very large Reynolds numbers, Dokl. Akad. Nauk SSSR 30, 301-305 (1941)."
+    },
+    {
+      "family_id": "ising_spontaneous_magnetization",
+      "law_name": "Yang exact 2D-Ising spontaneous magnetization",
+      "first_valid_year": 1952,
+      "domain": "statistical_physics",
+      "generator": "ising_magnetization",
+      "equation": "m(t) = max(1-sinh(2 k_c/t)^(-4),0)^(1/8)",
+      "x_range": [
+        0.18,
+        1.3
+      ],
+      "sampling": "linear",
+      "shape_class": "threshold_or_piecewise",
+      "signature": "critical_special_function",
+      "citation": "C. N. Yang, The spontaneous magnetization of a two-dimensional Ising model, Phys. Rev. 85, 808-816 (1952), doi:10.1103/PhysRev.85.808."
+    },
+    {
+      "family_id": "shockley_diode",
+      "law_name": "Shockley ideal-diode equation",
+      "first_valid_year": 1949,
+      "domain": "semiconductor_physics",
+      "generator": "shockley_diode",
+      "equation": "i(v) = exp(v)-1",
+      "x_range": [
+        -2.0,
+        5.5
+      ],
+      "sampling": "linear",
+      "shape_class": "declared_dictionary_overlap",
+      "signature": "offset_exponential",
+      "citation": "W. Shockley, The theory of p-n junctions in semiconductors and p-n junction transistors, Bell Syst. Tech. J. 28, 435-489 (1949), doi:10.1002/j.1538-7305.1949.tb03645.x."
+    },
+    {
+      "family_id": "ginzburg_landau_order",
+      "law_name": "Ginzburg-Landau mean-field order parameter",
+      "first_valid_year": 1950,
+      "domain": "condensed_matter",
+      "generator": "ginzburg_landau",
+      "equation": "psi(t) = sqrt(max(1-t,0))",
+      "x_range": [
+        0.05,
+        1.35
+      ],
+      "sampling": "linear",
+      "shape_class": "threshold_or_piecewise",
+      "signature": "critical_square_root_threshold",
+      "citation": "V. L. Ginzburg and L. D. Landau, On the theory of superconductivity, Zh. Eksp. Teor. Fiz. 20, 1064-1082 (1950)."
+    },
+    {
+      "family_id": "salpeter_initial_mass",
+      "law_name": "Salpeter stellar initial-mass function",
+      "first_valid_year": 1955,
+      "domain": "astrophysics",
+      "generator": "salpeter_imf",
+      "equation": "phi(m) = a m^(-2.35)",
+      "x_range": [
+        0.1,
+        30.0
+      ],
+      "sampling": "log",
+      "shape_class": "declared_dictionary_overlap",
+      "signature": "power_minus_2_35",
+      "citation": "E. E. Salpeter, The luminosity function and stellar evolution, Astrophys. J. 121, 161-167 (1955), doi:10.1086/145971."
+    },
+    {
+      "family_id": "williams_landel_ferry",
+      "law_name": "Williams-Landel-Ferry shift factor",
+      "first_valid_year": 1955,
+      "domain": "materials_physics",
+      "generator": "wlf_shift",
+      "equation": "log10(a_t) = -c1 dt/(c2+dt)",
+      "x_range": [
+        -20.0,
+        100.0
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "rational_log_shift",
+      "citation": "M. L. Williams, R. F. Landel and J. D. Ferry, The temperature dependence of relaxation mechanisms in amorphous polymers and other glass-forming liquids, J. Am. Chem. Soc. 77, 3701-3707 (1955), doi:10.1021/ja01619a008."
+    },
+    {
+      "family_id": "bcs_superconducting_gap",
+      "law_name": "BCS superconducting gap curve",
+      "first_valid_year": 1957,
+      "domain": "condensed_matter",
+      "generator": "bcs_gap",
+      "equation": "delta(t) ~= tanh(1.74 sqrt(1/t-1)) below tc; zero above",
+      "x_range": [
+        0.05,
+        1.25
+      ],
+      "sampling": "linear",
+      "shape_class": "threshold_or_piecewise",
+      "signature": "bcs_gap_interpolation",
+      "citation": "J. Bardeen, L. N. Cooper and J. R. Schrieffer, Theory of superconductivity, Phys. Rev. 108, 1175-1204 (1957), doi:10.1103/PhysRev.108.1175; the sampled closed form is the standard reduced-temperature interpolation."
+    },
+    {
+      "family_id": "josephson_current_phase",
+      "law_name": "Josephson current-phase relation",
+      "first_valid_year": 1962,
+      "domain": "condensed_matter",
+      "generator": "josephson_relation",
+      "equation": "i(phi) = i_c sin(phi)",
+      "x_range": [
+        -6.283185307179586,
+        6.283185307179586
+      ],
+      "sampling": "linear",
+      "shape_class": "nonmonotone_or_oscillatory",
+      "signature": "sine",
+      "citation": "B. D. Josephson, Possible new effects in superconductive tunnelling, Phys. Lett. 1, 251-253 (1962), doi:10.1016/0031-9163(62)91369-0."
+    },
+    {
+      "family_id": "neutrino_oscillation",
+      "law_name": "Two-flavour neutrino survival probability",
+      "first_valid_year": 1962,
+      "domain": "particle_physics",
+      "generator": "neutrino_oscillation",
+      "equation": "p(e) = 1-a sin^2(b/e)",
+      "x_range": [
+        0.18,
+        6.0
+      ],
+      "sampling": "linear",
+      "shape_class": "nonmonotone_or_oscillatory",
+      "signature": "inverse_argument_oscillation",
+      "citation": "Z. Maki, M. Nakagawa and S. Sakata, Remarks on the unified model of elementary particles, Prog. Theor. Phys. 28, 870-880 (1962), doi:10.1143/PTP.28.870."
+    },
+    {
+      "family_id": "kondo_resistivity",
+      "law_name": "Kondo logarithmic resistivity",
+      "first_valid_year": 1964,
+      "domain": "condensed_matter",
+      "generator": "kondo_resistivity",
+      "equation": "rho(t) = rho0+c log(t0/t)",
+      "x_range": [
+        0.05,
+        3.0
+      ],
+      "sampling": "log",
+      "shape_class": "smooth_composite",
+      "signature": "logarithmic",
+      "citation": "J. Kondo, Resistance minimum in dilute magnetic alloys, Prog. Theor. Phys. 32, 37-49 (1964), doi:10.1143/PTP.32.37."
+    },
+    {
+      "family_id": "mott_variable_range_hopping",
+      "law_name": "Mott variable-range hopping",
+      "first_valid_year": 1968,
+      "domain": "condensed_matter",
+      "generator": "mott_vrh",
+      "equation": "sigma(t) = exp(-(t0/t)^(1/4))",
+      "x_range": [
+        0.02,
+        3.0
+      ],
+      "sampling": "log",
+      "shape_class": "smooth_composite",
+      "signature": "stretched_inverse_temperature_exponential",
+      "citation": "N. F. Mott, Conduction in non-crystalline materials, Philos. Mag. 19, 835-852 (1969); see also J. Non-Cryst. Solids 1, 1-17 (1968), doi:10.1016/0022-3093(68)90002-1."
+    },
+    {
+      "family_id": "nauenberg_white_dwarf",
+      "law_name": "Nauenberg white-dwarf mass-radius relation",
+      "first_valid_year": 1972,
+      "domain": "astrophysics",
+      "generator": "white_dwarf_mass_radius",
+      "equation": "r(m) = sqrt(m^(-2/3)-m^(2/3))",
+      "x_range": [
+        0.08,
+        0.985
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "relativistic_mass_radius_turnover",
+      "citation": "M. Nauenberg, Analytic approximations to the mass-radius relation and energy of zero-temperature stars, Astrophys. J. 175, 417-430 (1972), doi:10.1086/151568."
+    },
+    {
+      "family_id": "bkt_correlation_length",
+      "law_name": "Berezinskii-Kosterlitz-Thouless correlation length",
+      "first_valid_year": 1973,
+      "domain": "condensed_matter",
+      "generator": "bkt_correlation_length",
+      "equation": "xi(t) = exp(b/sqrt(t-1))",
+      "x_range": [
+        1.08,
+        3.5
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "signature": "essential_singularity",
+      "citation": "J. M. Kosterlitz and D. J. Thouless, Ordering, metastability and phase transitions in two-dimensional systems, J. Phys. C 6, 1181-1203 (1973), doi:10.1088/0022-3719/6/7/010."
+    },
+    {
+      "family_id": "qcd_asymptotic_freedom",
+      "law_name": "One-loop QCD running coupling",
+      "first_valid_year": 1973,
+      "domain": "particle_physics",
+      "generator": "qcd_running",
+      "equation": "alpha(q) = a/log(q^2)",
+      "x_range": [
+        1.12,
+        30.0
+      ],
+      "sampling": "log",
+      "shape_class": "smooth_composite",
+      "signature": "inverse_logarithm",
+      "citation": "D. J. Gross and F. Wilczek, Ultraviolet behavior of non-Abelian gauge theories, Phys. Rev. Lett. 30, 1343-1346 (1973), doi:10.1103/PhysRevLett.30.1343."
+    },
+    {
+      "family_id": "hawking_temperature",
+      "law_name": "Hawking black-hole temperature",
+      "first_valid_year": 1974,
+      "domain": "gravitation",
+      "generator": "hawking_temperature",
+      "equation": "t(m) = a/m",
+      "x_range": [
+        0.08,
+        20.0
+      ],
+      "sampling": "log",
+      "shape_class": "declared_dictionary_overlap",
+      "signature": "inverse",
+      "citation": "S. W. Hawking, Black hole explosions?, Nature 248, 30-31 (1974), doi:10.1038/248030a0."
+    },
+    {
+      "family_id": "press_schechter_mass_function",
+      "law_name": "Press-Schechter multiplicity function",
+      "first_valid_year": 1974,
+      "domain": "cosmology",
+      "generator": "press_schechter",
+      "equation": "f(nu) = a nu exp(-nu^2/2)",
+      "x_range": [
+        0.03,
+        5.0
+      ],
+      "sampling": "linear",
+      "shape_class": "nonmonotone_or_oscillatory",
+      "signature": "gaussian_weighted_power",
+      "citation": "W. H. Press and P. Schechter, Formation of galaxies and clusters of galaxies by self-similar gravitational condensation, Astrophys. J. 187, 425-438 (1974), doi:10.1086/152650."
+    },
+    {
+      "family_id": "schechter_luminosity",
+      "law_name": "Schechter galaxy luminosity function",
+      "first_valid_year": 1976,
+      "domain": "astrophysics",
+      "generator": "schechter_function",
+      "equation": "phi(x) = a x^alpha exp(-x)",
+      "x_range": [
+        0.03,
+        8.0
+      ],
+      "sampling": "log",
+      "shape_class": "nonmonotone_or_oscillatory",
+      "signature": "power_times_exponential_cutoff",
+      "citation": "P. Schechter, An analytic expression for the luminosity function for galaxies, Astrophys. J. 203, 297-306 (1976), doi:10.1086/154079."
+    },
+    {
+      "family_id": "tully_fisher_relation",
+      "law_name": "Tully-Fisher luminosity-velocity law",
+      "first_valid_year": 1977,
+      "domain": "astrophysics",
+      "generator": "tully_fisher",
+      "equation": "l(v) = a v^4",
+      "x_range": [
+        0.08,
+        6.0
+      ],
+      "sampling": "linear",
+      "shape_class": "declared_dictionary_overlap",
+      "signature": "power_4",
+      "citation": "R. B. Tully and J. R. Fisher, A new method of determining distances to galaxies, Astron. Astrophys. 54, 661-673 (1977)."
+    },
+    {
+      "family_id": "integer_quantum_hall",
+      "law_name": "Integer quantum-Hall conductance staircase",
+      "first_valid_year": 1980,
+      "domain": "condensed_matter",
+      "generator": "quantum_hall_steps",
+      "equation": "g(x) = floor(x)",
+      "x_range": [
+        0.05,
+        8.95
+      ],
+      "sampling": "linear",
+      "shape_class": "threshold_or_piecewise",
+      "signature": "integer_staircase",
+      "citation": "K. v. Klitzing, G. Dorda and M. Pepper, New method for high-accuracy determination of the fine-structure constant based on quantized Hall resistance, Phys. Rev. Lett. 45, 494-497 (1980), doi:10.1103/PhysRevLett.45.494."
+    },
+    {
+      "family_id": "navarro_frenk_white",
+      "law_name": "Navarro-Frenk-White density profile",
+      "first_valid_year": 1996,
+      "domain": "cosmology",
+      "generator": "nfw_profile",
+      "equation": "rho(x) = a/(x(1+x)^2)",
+      "x_range": [
+        0.03,
+        30.0
+      ],
+      "sampling": "log",
+      "shape_class": "smooth_composite",
+      "signature": "double_power_rational",
+      "citation": "J. F. Navarro, C. S. Frenk and S. D. M. White, The structure of cold dark matter halos, Astrophys. J. 462, 563-575 (1996), doi:10.1086/177173."
+    }
+  ]
+}

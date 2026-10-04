@@ -1,0 +1,88 @@
+{
+  "status": "completed classical-only source-audited pre-1900 sanity training",
+  "variant": "zero_units",
+  "checkpoint": "encoder_pre1900_strict_zero_units.pt",
+  "checkpoint_sha256": "9ca8e661427a8bf538eea3c3acf9f9c34f2dcf867d5fe545c10cf7e29cf0df84",
+  "data": "pre1900_audited_pointclouds.npz",
+  "data_sha256": "6c6d1c81ca9cb8cbf13c1a5ed16d014f773f3c1e7cd02bdd5eba8b6658d49124",
+  "device": "cuda",
+  "training_records": 205,
+  "training_families": 40,
+  "optimization": {
+    "steps": 1000,
+    "batch": 32,
+    "subsample": 64,
+    "d_model": 128,
+    "n_isab": 3,
+    "seed": 20260905
+  },
+  "history": [
+    {
+      "step": 1,
+      "contrastive": 4.065336227416992,
+      "signature": 0.7008041143417358,
+      "total": 4.415738105773926
+    },
+    {
+      "step": 100,
+      "contrastive": 2.640807628631592,
+      "signature": 0.6702704429626465,
+      "total": 2.975942850112915
+    },
+    {
+      "step": 200,
+      "contrastive": 2.176649570465088,
+      "signature": 0.6429420709609985,
+      "total": 2.4981205463409424
+    },
+    {
+      "step": 300,
+      "contrastive": 1.9780595302581787,
+      "signature": 0.5945796966552734,
+      "total": 2.2753493785858154
+    },
+    {
+      "step": 400,
+      "contrastive": 1.7687523365020752,
+      "signature": 0.5665725469589233,
+      "total": 2.0520386695861816
+    },
+    {
+      "step": 500,
+      "contrastive": 1.8582439422607422,
+      "signature": 0.5261461138725281,
+      "total": 2.121316909790039
+    },
+    {
+      "step": 600,
+      "contrastive": 1.8744778633117676,
+      "signature": 0.5186589956283569,
+      "total": 2.133807420730591
+    },
+    {
+      "step": 700,
+      "contrastive": 1.7145683765411377,
+      "signature": 0.5327327251434326,
+      "total": 1.980934739112854
+    },
+    {
+      "step": 800,
+      "contrastive": 1.4292488098144531,
+      "signature": 0.5114082098007202,
+      "total": 1.684952974319458
+    },
+    {
+      "step": 900,
+      "contrastive": 1.628025770187378,
+      "signature": 0.48013871908187866,
+      "total": 1.8680951595306396
+    },
+    {
+      "step": 1000,
+      "contrastive": 1.6089158058166504,
+      "signature": 0.4546932578086853,
+      "total": 1.8362624645233154
+    }
+  ],
+  "claim_boundary": "No breakdown examples were used, but the small audited corpus makes this a sanity experiment, not evidence for a foundation-scale pre-1900 representation."
+}

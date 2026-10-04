@@ -1,0 +1,69 @@
+{
+  "status": "PASS",
+  "scope": "offline structural, citation-field and leakage audit; not line-by-line historical source verification",
+  "families": 55,
+  "records": 440,
+  "strict_post1900": true,
+  "year_range": [
+    1901,
+    1996
+  ],
+  "primary_citation_present": 55,
+  "citation_year_matches_declared_year": 55,
+  "citations_with_doi": 45,
+  "citations_without_doi": 10,
+  "family_identifier_overlap_with_pre1900_archive": [],
+  "declared_dictionary_overlap_hard_cases": [
+    "radioactive_decay",
+    "brownian_diffusion",
+    "child_langmuir_space_charge",
+    "bohr_atom",
+    "de_broglie_matter_wave",
+    "hubble_relation",
+    "bloch_spin_wave",
+    "kolmogorov_turbulence",
+    "shockley_diode",
+    "salpeter_initial_mass",
+    "hawking_temperature",
+    "tully_fisher_relation"
+  ],
+  "duplicated_functional_signatures": {
+    "power_times_inverse_temperature_exponential": [
+      "richardson_dushman_emission",
+      "saha_ionization"
+    ],
+    "linear": [
+      "brownian_diffusion",
+      "hubble_relation"
+    ],
+    "inverse_root_exponential": [
+      "geiger_nuttall",
+      "gamow_tunnelling"
+    ],
+    "inverse": [
+      "de_broglie_matter_wave",
+      "hawking_temperature"
+    ]
+  },
+  "special_reduction_notes": {
+    "special_relativity": "The relativistic physical interpretation is dated to 1905; Lorentz-factor mathematics has pre-1905 antecedents, making this an intentionally hard horizon case.",
+    "friedmann_expansion": "A standard matter-curvature-Lambda one-dimensional specialization of the Friedmann equation is sampled.",
+    "london_two_fluid_penetration": "The temperature dependence combines the 1934 two-fluid ansatz with London electrodynamics; it is not a literal transcription of one equation in the cited London paper.",
+    "bcs_superconducting_gap": "The standard closed-form interpolation to the BCS reduced gap is sampled rather than numerically solving the implicit gap equation.",
+    "neutrino_oscillation": "The standard two-flavour survival-probability reduction of the mixing framework is sampled.",
+    "integer_quantum_hall": "An ideal conductance staircase versus filling factor is sampled; plateau broadening and localization physics are omitted."
+  },
+  "numeric_checks": {
+    "all_finite": true,
+    "monotone_x": true,
+    "at_least_95pct_unique_x_per_record": true,
+    "nonconstant_y": true
+  },
+  "hashes": {
+    "builder": "61bcb286e350aecd2df7743e320004b3de2debe4c9e43303c5daf4475777b2e6",
+    "registry": "d6670ee4034be3f286f6626d593207eb7a4d5d61a15eda3998952240f9c8d7c6",
+    "archive": "12cfb0c5c2d35245d0a4162a2f23126b272a89032d8912ef2bef672cbea26be0",
+    "records": "43386dc527ce730e44d3b74e6c1a9a9cccf985c597e671d5d41f4c2bf3bf956d"
+  },
+  "claim_boundary": "Formula-level temporal transfer; not real-measurement discovery and not publication-year classification."
+}

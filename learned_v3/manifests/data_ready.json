@@ -1,0 +1,76 @@
+{
+  "schema_version": "2.0",
+  "status": "PASS",
+  "frozen_date": "2026-09-07",
+  "remote_base": "/root/autodl-tmp/epoch_horizons/v2",
+  "artifacts": {
+    "pointcloud_manifest": {
+      "path": "../EPOCH_POINTCLOUD_FREEZE_V2/manifest.json",
+      "sha256": "c94eb58d3ff61f8496a2042ac7161a1841e2ecf5811fe6b0c021fbc0365ceff4"
+    },
+    "pointcloud_view_manifest": {
+      "path": "../EPOCH_POINTCLOUD_VIEWS_V2/manifest.json",
+      "sha256": "d34d70363bb40e720d268bbaf82410af3bcf944fc9ef89f529d6415066cd4fe9"
+    },
+    "pointcloud_formula_manifest": {
+      "path": "../EPOCH_HORIZON_DATA_V2/pointcloud_formula_manifest.json",
+      "sha256": "d6591c6c595db15198c7b4305baf78fced78c39d662df2e5949a30ff6e5b11de"
+    },
+    "training_view_manifest": {
+      "path": "../EPOCH_TRAINING_VIEWS_V2/manifest.json",
+      "sha256": "0e2b88f6878307ee0a7b045181bcebd60ea99c08a6f1fc78e8d3f481098aed69"
+    },
+    "symbolic_pretrain_manifest": {
+      "path": "../EPOCH_SYMBOLIC_PRETRAIN_V2/manifest.json",
+      "sha256": "5a279445f66f96701d45f81fbc617c31e5067cae8e9c7ac1c85ce3dd5c6da121"
+    },
+    "symbolic_pretrain_audit": {
+      "path": "../EPOCH_SYMBOLIC_PRETRAIN_V2/audit_report.json",
+      "sha256": "88e734ed5ad8c6776bdc15dd4ea0a60cc26572d840e6fb995aa486083a50f99e"
+    },
+    "symbolic_direct_manifest": {
+      "path": "../EPOCH_SYMBOLIC_DIRECT_V2/manifest.json",
+      "sha256": "80debc4a83e32903b19bd66c650e2c04806c56576233a109a393579f36c2dfd3"
+    },
+    "symbolic_chain_manifest": {
+      "path": "../EPOCH_SYMBOLIC_CHAIN_CORE_V2/manifest.json",
+      "sha256": "0707ed2727bdf15b46efec8e41ce579d66b9282b444bfdb5dc1018c7f3254909"
+    },
+    "symbolic_chain_audit": {
+      "path": "../EPOCH_SYMBOLIC_CHAIN_CORE_V2/audit_report.json",
+      "sha256": "99858948d3b3e8b97e85bd21a4bd43147df71c80d4c4e46debb6a61ed87c5756"
+    },
+    "formula_graph_manifest": {
+      "path": "../EPOCH_FORMULA_GRAPHS_V2/manifest.json",
+      "sha256": "1d7b88e7fae765cc9c21d1c5bb646fbb9c755ba5bb9c89f039276c8155701592"
+    },
+    "temporal_benchmark_manifest": {
+      "path": "../EPOCH_TEMPORAL_BENCHMARKS_V2/manifest.json",
+      "sha256": "dcdaba8142626f82ce2fb2a3252ab4253c7d601c4c934864ce51fefd19aa9bdf"
+    },
+    "evaluation_asset_manifest": {
+      "path": "../EPOCH_EVALUATION_ASSETS_V2/manifest.json",
+      "sha256": "b61fae95e846e10c1132f5b1b6e4fc9c50962fa8706739d71ed7e4fa03c8bc45"
+    },
+    "train_pre1900_config": {
+      "path": "../EPOCH_RUN_CONFIGS_V2/train_pre1900.json",
+      "sha256": "a0d97c2c70432276719689b6a2eff4079430eacc845c34407d5a8ff4fdb044d0"
+    },
+    "train_pre1950_config": {
+      "path": "../EPOCH_RUN_CONFIGS_V2/train_pre1950_joint.json",
+      "sha256": "ac43432bb53d4a1c64374ae32ddb0814cce9f9eae7cbf154e34d6d485663259b"
+    },
+    "test_both_config": {
+      "path": "../EPOCH_RUN_CONFIGS_V2/test_both.json",
+      "sha256": "e764b4635e90c711dc4c3fe5ffe477662cf6d7d2c8aa57a112fcfadab164d23f"
+    },
+    "remote_readiness_report": {
+      "path": "readiness_report.json",
+      "sha256": "351161968f70328d833c6da28777443104647e59cf220918b520e40d9a573bc0"
+    },
+    "training_handoff": {
+      "path": "training_handoff.json",
+      "sha256": "a80e21959c38c9b6234367d42bed934d1cf18c77f82f32a31a78c4fea7d697b1"
+    }
+  }
+}

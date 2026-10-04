@@ -1,0 +1,52 @@
+{
+  "status": "PASS",
+  "seed": 20260907,
+  "array_copy_policy": "none; filter immutable shards by formula_index",
+  "promotion_rule": "freeze all pre1900_temporal_eval results before using the pre1950_joint view",
+  "views": {
+    "pre1900_temporal_eval": {
+      "purpose": "train through 1899; all strict-difference pre-1950 formulas are temporal test only",
+      "counts": {
+        "clouds:calibration": 45632,
+        "clouds:internal_test": 127296,
+        "clouds:temporal_test": 96064,
+        "clouds:train": 1605888,
+        "formulas:calibration": 1051,
+        "formulas:internal_test": 1981,
+        "formulas:temporal_test": 1501,
+        "formulas:train": 15072
+      }
+    },
+    "pre1950_joint": {
+      "purpose": "after temporal results are frozen, jointly train a knowledge-through-1950 model",
+      "pre1950_group_split": "deterministic 80/10/10 by leakage_group_id hash",
+      "counts": {
+        "clouds:calibration": 54144,
+        "clouds:internal_test": 136000,
+        "clouds:train": 1684736,
+        "formulas:calibration": 1184,
+        "formulas:internal_test": 2117,
+        "formulas:train": 16304
+      }
+    }
+  },
+  "audits": {
+    "formula_indices_unique_and_complete": true,
+    "all_requested_clouds_present": true,
+    "phase_a_pre1950_training_leakage": 0,
+    "phase_b_pre1950_group_crossings": 0,
+    "pre1950_groups": 561
+  },
+  "artifacts": {
+    "formula_assignments": {
+      "file": "formula_assignments.jsonl.gz",
+      "rows": 19605,
+      "uncompressed_content_sha256": "09cdc9bc4658dc539172b442ca2a77febdc9d580ea0d024888ddd23152ab6197"
+    },
+    "pre1950_group_assignments": {
+      "file": "pre1950_group_assignments.jsonl.gz",
+      "rows": 561,
+      "uncompressed_content_sha256": "79c7c7eca1a58724c3eb208137f342b2f6c6763c2d8179213760d25a9ab6a0ef"
+    }
+  }
+}

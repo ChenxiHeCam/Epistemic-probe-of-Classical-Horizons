@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+output/
+
+# LaTeX build products (paper/build.py regenerates them)
+paper/*.aux
+paper/*.log
+paper/*.bbl
+paper/*.blg
+paper/*.out
+paper/*.toc
+paper/*.synctex.gz

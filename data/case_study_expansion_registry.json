@@ -1,0 +1,287 @@
+{
+  "status": "post-score source-screened development expansion",
+  "selection_timing": "selected after the original 55-family benchmark was scored",
+  "claim_boundary": "formula/simulator routing audit; not an enlarged primary AUROC and not real-measurement discovery",
+  "cases": [
+    {
+      "family_id": "franck_hertz_excitation",
+      "short_name": "Franck--Hertz",
+      "law_name": "Franck--Hertz discrete-excitation current structure",
+      "first_valid_year": 1914,
+      "domain": "atomic_physics",
+      "generator": "franck_hertz",
+      "equation": "I(V) = smooth baseline with instrument-broadened losses near V = n DeltaV",
+      "x_range": [
+        0.0,
+        30.0
+      ],
+      "sampling": "linear",
+      "shape_class": "repeated_thresholds",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "incumbent": "smooth continuous-loss baseline",
+      "reduction_status": "stylized instrument-convolved mechanism simulator; not digitized historical data",
+      "citation": "J. Franck and G. Hertz, Verh. Dtsch. Phys. Ges. 16, 457 and 512 (1914).",
+      "source_url": "https://onlinelibrary.wiley.com/doi/10.1002/phbl.19670230702"
+    },
+    {
+      "family_id": "bec_condensate_fraction",
+      "short_name": "BEC fraction",
+      "law_name": "Ideal Bose--Einstein condensate fraction",
+      "first_valid_year": 1925,
+      "domain": "quantum_statistics",
+      "generator": "bec_fraction",
+      "equation": "N0/N = max(1-(T/Tc)^(3/2), 0)",
+      "x_range": [
+        0.05,
+        1.35
+      ],
+      "sampling": "linear",
+      "shape_class": "threshold_or_piecewise",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "incumbent": "no macroscopic condensate fraction",
+      "reduction_status": "homogeneous ideal-gas formula stress test; not a trapped-gas measurement",
+      "citation": "A. Einstein, Quantentheorie des einatomigen idealen Gases, Zweite Abhandlung (1925); experimental anchor M. H. Anderson et al., Science 269, 198 (1995).",
+      "source_url": "https://www.science.org/doi/10.1126/science.269.5221.198"
+    },
+    {
+      "family_id": "cherenkov_threshold",
+      "short_name": "Cherenkov threshold",
+      "law_name": "Frank--Tamm Cherenkov threshold factor",
+      "first_valid_year": 1937,
+      "domain": "electrodynamics",
+      "generator": "cherenkov_threshold",
+      "equation": "Y(beta) proportional to max(1-1/(n^2 beta^2), 0)",
+      "x_range": [
+        0.4,
+        0.999
+      ],
+      "sampling": "linear",
+      "shape_class": "threshold_or_piecewise",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "incumbent": "zero yield below the admitted radiation mechanism",
+      "reduction_status": "fixed-frequency nondispersive threshold factor",
+      "citation": "I. Frank and I. Tamm, Coherent visible radiation of fast electrons passing through matter, C. R. Acad. Sci. USSR 14, 109--114 (1937).",
+      "source_url": "https://cds.cern.ch/record/485596"
+    },
+    {
+      "family_id": "casimir_parallel_plates",
+      "short_name": "Casimir plates",
+      "law_name": "Casimir pressure between parallel conducting plates",
+      "first_valid_year": 1948,
+      "domain": "quantum_field_theory",
+      "generator": "casimir_pressure",
+      "equation": "P(a) proportional to -a^(-4)",
+      "x_range": [
+        0.2,
+        3.0
+      ],
+      "sampling": "log",
+      "shape_class": "declared_dictionary_overlap",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "incumbent": "zero force under the declared no-vacuum-force null",
+      "reduction_status": "ideal perfect-conductor zero-temperature formula",
+      "citation": "H. B. G. Casimir, Proc. K. Ned. Akad. Wet. 51, 793--795 (1948).",
+      "source_url": "https://dwc.knaw.nl/DL/publications/PU00018547.pdf"
+    },
+    {
+      "family_id": "parity_beta_asymmetry",
+      "short_name": "Parity asymmetry",
+      "law_name": "Polarized beta-decay angular asymmetry",
+      "first_valid_year": 1957,
+      "domain": "weak_interactions",
+      "generator": "parity_asymmetry",
+      "equation": "W(theta) = 1 + A P cos(theta)",
+      "x_range": [
+        0.0,
+        3.141592653589793
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "incumbent": "fore--aft symmetric angular distribution",
+      "reduction_status": "ideal acceptance-free angular law; not Wu event-level data",
+      "citation": "C. S. Wu et al., Phys. Rev. 105, 1413--1415 (1957).",
+      "source_url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.105.1413"
+    },
+    {
+      "family_id": "anderson_localized_envelope",
+      "short_name": "Anderson envelope",
+      "law_name": "Idealized Anderson-localized state envelope",
+      "first_valid_year": 1958,
+      "domain": "condensed_matter",
+      "generator": "anderson_envelope",
+      "equation": "|psi(x)|^2 proportional to exp(-2|x|/xi)",
+      "x_range": [
+        -5.0,
+        5.0
+      ],
+      "sampling": "linear",
+      "shape_class": "nonmonotone_or_oscillatory",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "incumbent": "extended-state comparator",
+      "reduction_status": "phenomenological localized-envelope simulator, not a mobility-edge solution",
+      "citation": "P. W. Anderson, Phys. Rev. 109, 1492--1505 (1958).",
+      "source_url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.109.1492"
+    },
+    {
+      "family_id": "pound_rebka_redshift",
+      "short_name": "Pound--Rebka",
+      "law_name": "Weak-field gravitational redshift",
+      "first_valid_year": 1960,
+      "domain": "gravitation",
+      "generator": "pound_rebka",
+      "equation": "Delta nu/nu = g h/c^2",
+      "x_range": [
+        0.0,
+        30.0
+      ],
+      "sampling": "linear",
+      "shape_class": "declared_dictionary_overlap",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "incumbent": "zero frequency shift",
+      "reduction_status": "dimensionless weak-field law with rescaled coefficient",
+      "citation": "R. V. Pound and G. A. Rebka Jr., Phys. Rev. Lett. 4, 337--341 (1960).",
+      "source_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.4.337"
+    },
+    {
+      "family_id": "fano_asymmetric_resonance",
+      "short_name": "Fano resonance",
+      "law_name": "Fano asymmetric resonance profile",
+      "first_valid_year": 1961,
+      "domain": "atomic_physics",
+      "generator": "fano_profile",
+      "equation": "I(epsilon) proportional to (q+epsilon)^2/(1+epsilon^2)",
+      "x_range": [
+        -5.0,
+        5.0
+      ],
+      "sampling": "linear",
+      "shape_class": "nonmonotone_or_oscillatory",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "incumbent": "symmetric Lorentzian comparator",
+      "reduction_status": "canonical Fano profile",
+      "citation": "U. Fano, Phys. Rev. 124, 1866--1878 (1961).",
+      "source_url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.124.1866"
+    },
+    {
+      "family_id": "aspect_polarization_correlation",
+      "short_name": "Bell--Aspect",
+      "law_name": "Quantum polarization correlation in a Bell test",
+      "first_valid_year": 1982,
+      "domain": "quantum_foundations",
+      "generator": "aspect_correlation",
+      "equation": "E(theta) = -V cos(2 theta)",
+      "x_range": [
+        0.0,
+        3.141592653589793
+      ],
+      "sampling": "linear",
+      "shape_class": "nonmonotone_or_oscillatory",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "incumbent": "local-bound-limited sinusoidal visibility comparator",
+      "reduction_status": "ideal correlation curve; inequality inference requires trial counts",
+      "citation": "A. Aspect, J. Dalibard and G. Roger, Phys. Rev. Lett. 49, 1804--1807 (1982).",
+      "source_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.49.1804"
+    },
+    {
+      "family_id": "accelerating_universe_residual",
+      "short_name": "Cosmic acceleration",
+      "law_name": "Flat LambdaCDM distance-modulus residual over Einstein--de Sitter",
+      "first_valid_year": 1998,
+      "domain": "cosmology",
+      "generator": "accelerating_universe",
+      "equation": "Delta mu(z) = 5 log10[dL(0.3,0.7)/dL(1,0)]",
+      "x_range": [
+        0.01,
+        1.2
+      ],
+      "sampling": "linear",
+      "shape_class": "smooth_composite",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "incumbent": "zero residual under the declared Omega_M=1, Omega_Lambda=0 curve",
+      "reduction_status": "ideal homogeneous-cosmology curve; real-data inference needs covariance and selection effects",
+      "citation": "A. G. Riess et al., Astron. J. 116, 1009--1038 (1998).",
+      "source_url": "https://arxiv.org/abs/astro-ph/9805201"
+    },
+    {
+      "family_id": "gw150914_leading_chirp",
+      "short_name": "GW chirp",
+      "law_name": "Leading inspiral gravitational-wave chirp",
+      "first_valid_year": 2016,
+      "domain": "gravitation",
+      "generator": "gw_chirp",
+      "equation": "f(tau) proportional to tau^(-3/8)",
+      "x_range": [
+        0.08,
+        8.0
+      ],
+      "sampling": "log",
+      "shape_class": "declared_dictionary_overlap",
+      "eligible_components": [
+        "learned",
+        "data_anchored",
+        "theory_conditioned"
+      ],
+      "incumbent": "stationary-frequency comparator",
+      "reduction_status": "leading-order chirp reduction; not detector strain or a full GR waveform",
+      "citation": "B. P. Abbott et al., Phys. Rev. Lett. 116, 061102 (2016).",
+      "source_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.116.061102"
+    }
+  ],
+  "theory_only_not_encoded_as_pointclouds": [
+    {
+      "case_id": "lamb_shift",
+      "year": 1947,
+      "reason_not_pointcloud": "the decisive historical object is a sparse nonzero level splitting/degeneracy test",
+      "route": "theory_conditioned",
+      "source_url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.72.241"
+    },
+    {
+      "case_id": "electron_anomalous_magnetic_moment",
+      "year": 1948,
+      "reason_not_pointcloud": "the decisive object is a coefficient/scalar departure from Dirac g=2",
+      "route": "theory_conditioned",
+      "source_url": "https://journals.aps.org/pr/abstract/10.1103/PhysRev.73.416"
+    }
+  ]
+}

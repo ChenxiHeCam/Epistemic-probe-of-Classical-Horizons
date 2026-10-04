@@ -1,0 +1,87 @@
+{
+  "status": "retrospective physically dimensioned distractor control; not a historical-theory benchmark",
+  "question": "Does admitting a dimensionally valid but mechanism-irrelevant physical form erase the old-horizon mismatch?",
+  "selection_warning": "Distractors were designed after the canonical cases were known; p-values diagnose fit under the stated null and are not prospective model-selection evidence.",
+  "cases": [
+    {
+      "case": "FIRAS",
+      "distractor": "fermionic occupation spectrum",
+      "statistic": 274234.6381214327,
+      "pvalue": 0.000999000999000999,
+      "bootstrap_valid": 1000,
+      "parameters": {
+        "log_amplitude": 3.9621208340581933,
+        "inverse_temperature_scale": 0.5498615975144986
+      },
+      "dimension_audit": "x and inverse-temperature scale form a dimensionless exponent; amplitude supplies radiance/x^3",
+      "assumptions": "Same radiance and wavenumber dimensions as the Planck fit, but uses a Fermi-Dirac +1 denominator for photons.",
+      "remains_rejected_5pct": true,
+      "bh_qvalue": 0.000999000999000999,
+      "remains_rejected_fdr5": true
+    },
+    {
+      "case": "Bertozzi",
+      "distractor": "relativistic relation with proton rest energy",
+      "statistic": 9897.30974525628,
+      "pvalue": 0.000999000999000999,
+      "bootstrap_valid": 1000,
+      "parameters": {
+        "fixed_rest_energy_MeV": 938.27208816
+      },
+      "dimension_audit": "kinetic energy/rest energy is dimensionless; output beta^2 is dimensionless",
+      "assumptions": "Input and rest energy are both MeV and beta squared is dimensionless; the proton scale is physically inapplicable to the electron beam.",
+      "remains_rejected_5pct": true,
+      "bh_qvalue": 0.000999000999000999,
+      "remains_rejected_fdr5": true
+    },
+    {
+      "case": "specific_heat_Cu",
+      "distractor": "Einstein oscillator plus electronic term",
+      "statistic": 6540.36868072648,
+      "pvalue": 0.000999000999000999,
+      "bootstrap_valid": 1000,
+      "parameters": {
+        "plateau_J_per_kg_K": 276.0408535105575,
+        "einstein_temperature_K": 158.24592696529433,
+        "gamma_J_per_kg_K2": 0.054376459764242574
+      },
+      "dimension_audit": "theta/T is dimensionless; plateau and gamma*T both have heat-capacity units",
+      "assumptions": "All terms have heat-capacity units; an Einstein oscillator is a physical quantum solid model but lacks the Debye acoustic-mode continuum.",
+      "remains_rejected_5pct": true,
+      "bh_qvalue": 0.000999000999000999,
+      "remains_rejected_fdr5": true
+    },
+    {
+      "case": "Onnes",
+      "distractor": "Arrhenius activated resistance",
+      "statistic": 8889.670080298229,
+      "pvalue": 0.000999000999000999,
+      "bootstrap_valid": 1000,
+      "parameters": {
+        "log_R0_ohm": -10.383239732432267,
+        "activation_temperature_K": 4.613781982500704
+      },
+      "dimension_audit": "activation temperature/T is dimensionless; R0 supplies resistance units",
+      "assumptions": "R0 carries ohms and the activation scale carries kelvin; the response is continuous and cannot encode a superconducting transition.",
+      "remains_rejected_5pct": true,
+      "bh_qvalue": 0.000999000999000999,
+      "remains_rejected_fdr5": true
+    },
+    {
+      "case": "Millikan",
+      "distractor": "Compton-recoil energy scale",
+      "statistic": 3742.2045473060525,
+      "pvalue": 0.000999000999000999,
+      "bootstrap_valid": 1000,
+      "parameters": {
+        "offset_V": 1.3549897736953362,
+        "physical_constants": "2019 SI exact h, e; CODATA electron mass"
+      },
+      "dimension_audit": "(h nu)^2/(m_e c^2 e) is a voltage; fitted offset is a voltage",
+      "assumptions": "The recoil energy divided by charge has volts and the offset has volts; this post-1900 mechanism is irrelevant to the photoelectric stopping-potential slope.",
+      "remains_rejected_5pct": true,
+      "bh_qvalue": 0.000999000999000999,
+      "remains_rejected_fdr5": true
+    }
+  ]
+}

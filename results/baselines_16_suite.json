@@ -1,0 +1,222 @@
+{
+  "source": "casestudies/baselines_ablation.py (imported unchanged; 16 phenomena, RandomState(3), 220 points)",
+  "generated_by": "engine/benchmark_suite_scores.py",
+  "n_phenomena": 16,
+  "n_classical": 8,
+  "n_later": 8,
+  "note": "The three 'ratio_*' conditions score the extrapolation-residual ratio alone (one of the two statistics of the four-form component); RESET and CUSUM are computed on the same classical fit.",
+  "bootstrap": "class-stratified, 3000 resamples, RandomState(0) (same procedure as ensemble_engine.ci); added here, not printed by the original",
+  "printed_by_baselines_ablation": [
+    "=== BASELINES vs OUR METHOD, and ORACLE ABLATION (AUROC needs-new vs classical, 16 phenomena) ===",
+    "  method                                         AUROC",
+    "  OUR breakdown-ratio (classical law GIVEN)      1.000",
+    "  OUR breakdown-ratio (law AUTO-selected)        1.000",
+    "  OUR breakdown (law + regime BOTH unknown)      0.969",
+    "  BASELINE Ramsey RESET F-test                   0.734",
+    "  BASELINE CUSUM change-point                    0.672"
+  ],
+  "methods": {
+    "ratio_law_given": {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "n": 16
+    },
+    "ratio_law_auto": {
+      "auroc": 1.0,
+      "ci95": [
+        1.0,
+        1.0
+      ],
+      "n": 16
+    },
+    "ratio_law_and_interior_auto": {
+      "auroc": 0.96875,
+      "ci95": [
+        0.859375,
+        1.0
+      ],
+      "n": 16
+    },
+    "reset": {
+      "auroc": 0.734375,
+      "ci95": [
+        0.421875,
+        1.0
+      ],
+      "n": 16
+    },
+    "cusum": {
+      "auroc": 0.671875,
+      "ci95": [
+        0.34375,
+        0.90625
+      ],
+      "n": 16
+    }
+  },
+  "phenomena": [
+    {
+      "name": "Ohm",
+      "label": 0,
+      "label_name": "classical",
+      "ratio_law_given": 0.00013753287036104406,
+      "ratio_law_auto": 0.00013753287036104406,
+      "ratio_law_and_interior_auto": 0.0003074184143712278,
+      "reset": -1.0585570412765205e-14,
+      "cusum": 2.756811962229252
+    },
+    {
+      "name": "KE v^2",
+      "label": 0,
+      "label_name": "classical",
+      "ratio_law_given": 0.009467185255771015,
+      "ratio_law_auto": 0.002060765772952202,
+      "ratio_law_and_interior_auto": 0.17399678937094812,
+      "reset": 0.039767863888224175,
+      "cusum": 6.132760432944742
+    },
+    {
+      "name": "Kepler a^1.5",
+      "label": 0,
+      "label_name": "classical",
+      "ratio_law_given": 0.0035425586673159793,
+      "ratio_law_auto": 0.0035425586673159793,
+      "ratio_law_and_interior_auto": 0.019053662501139122,
+      "reset": 0.005035464492985243,
+      "cusum": 6.101200767868309
+    },
+    {
+      "name": "Coulomb 1/r^2",
+      "label": 0,
+      "label_name": "classical",
+      "ratio_law_given": 0.061623991306648154,
+      "ratio_law_auto": 0.061623991306648154,
+      "ratio_law_and_interior_auto": 2039.4777348439186,
+      "reset": 7.971404791355354e-05,
+      "cusum": 2.967781956556216
+    },
+    {
+      "name": "Stefan T^4",
+      "label": 0,
+      "label_name": "classical",
+      "ratio_law_given": 0.0018986452862353612,
+      "ratio_law_auto": 0.0018986452862353612,
+      "ratio_law_and_interior_auto": 0.6361045582004854,
+      "reset": 0.1718617186545868,
+      "cusum": 5.6588620689477285
+    },
+    {
+      "name": "RC discharge",
+      "label": 0,
+      "label_name": "classical",
+      "ratio_law_given": 6.883382752675947e-09,
+      "ratio_law_auto": 6.883382752675947e-09,
+      "ratio_law_and_interior_auto": 6.883382752675947e-09,
+      "reset": -1.6276274701259579e-18,
+      "cusum": 1.0297612617515665e-06
+    },
+    {
+      "name": "Newton cooling",
+      "label": 0,
+      "label_name": "classical",
+      "ratio_law_given": 1.1102230243786381e-09,
+      "ratio_law_auto": 1.1102230243786381e-09,
+      "ratio_law_and_interior_auto": 1.1102230243786381e-09,
+      "reset": 4.751654358792188e-18,
+      "cusum": 9.6154881310882e-07
+    },
+    {
+      "name": "pendulum sqrt",
+      "label": 0,
+      "label_name": "classical",
+      "ratio_law_given": 0.002150605111251059,
+      "ratio_law_auto": 0.00015542017730679953,
+      "ratio_law_and_interior_auto": 0.003070080234947421,
+      "reset": 0.0004444675782320005,
+      "cusum": 5.3668383326473235
+    },
+    {
+      "name": "blackbody",
+      "label": 1,
+      "label_name": "later",
+      "ratio_law_given": 41.67228980998788,
+      "ratio_law_auto": 413.9130945871664,
+      "ratio_law_and_interior_auto": 4215.624006257067,
+      "reset": 1128.6812639810298,
+      "cusum": 6.7101147069778895
+    },
+    {
+      "name": "Planck osc-E",
+      "label": 1,
+      "label_name": "later",
+      "ratio_law_given": 244.12888662369724,
+      "ratio_law_auto": 9704.949028458142,
+      "ratio_law_and_interior_auto": 9704.949028458142,
+      "reset": 4711.760916934143,
+      "cusum": 6.522667573896623
+    },
+    {
+      "name": "rel KE",
+      "label": 1,
+      "label_name": "later",
+      "ratio_law_given": 234.60270370622266,
+      "ratio_law_auto": 649.6441183469932,
+      "ratio_law_and_interior_auto": 649.6441183469932,
+      "reset": 1307.7605610284513,
+      "cusum": 4.377704124180518
+    },
+    {
+      "name": "rel momentum",
+      "label": 1,
+      "label_name": "later",
+      "ratio_law_given": 66.08068659049826,
+      "ratio_law_auto": 3802.4722451628527,
+      "ratio_law_and_interior_auto": 3802.4722451628527,
+      "reset": 552.1516851338175,
+      "cusum": 4.668928397862681
+    },
+    {
+      "name": "rel energy",
+      "label": 1,
+      "label_name": "later",
+      "ratio_law_given": 2.219013364219296,
+      "ratio_law_auto": 13931.633088736247,
+      "ratio_law_and_interior_auto": 13931.633088736247,
+      "reset": 0.0,
+      "cusum": 4.85814123882135
+    },
+    {
+      "name": "tunneling",
+      "label": 1,
+      "label_name": "later",
+      "ratio_law_given": 1.4070363356893676,
+      "ratio_law_auto": 1.4070363356893676,
+      "ratio_law_and_interior_auto": 1.4070363356893676,
+      "reset": 2.5056214479443505e-05,
+      "cusum": 2.8390795115418057
+    },
+    {
+      "name": "Fermi step",
+      "label": 1,
+      "label_name": "later",
+      "ratio_law_given": 2913.151114185407,
+      "ratio_law_auto": 48681.57230103868,
+      "ratio_law_and_interior_auto": 48681.57230103868,
+      "reset": 374.0322370269098,
+      "cusum": 7.103760914169767
+    },
+    {
+      "name": "specific heat",
+      "label": 1,
+      "label_name": "later",
+      "ratio_law_given": 96.45325265072425,
+      "ratio_law_auto": 349.33842034228246,
+      "ratio_law_and_interior_auto": 21330.884259792947,
+      "reset": 0.0,
+      "cusum": 4.798390381334015
+    }
+  ]
+}

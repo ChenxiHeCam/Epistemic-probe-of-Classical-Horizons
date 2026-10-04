@@ -1,0 +1,50 @@
+{
+  "status": "checkpoint audit; training corpus failed period-purity audit",
+  "benchmark": {
+    "n": 192,
+    "breakdown_families": [
+      "saturation",
+      "step",
+      "kink",
+      "smooth_rolloff",
+      "smooth_crossover",
+      "threshold",
+      "turnover",
+      "oscillation",
+      "resonance",
+      "discontinuous_drop",
+      "log_correction",
+      "bounded_growth"
+    ],
+    "classical_families": [
+      "linear",
+      "quadratic",
+      "power_1p5",
+      "inverse",
+      "inverse_square",
+      "exponential_decay",
+      "exponential_growth",
+      "square_root",
+      "power_2p5",
+      "affine_decline",
+      "quartic",
+      "offset_inverse"
+    ]
+  },
+  "one_class_auroc": {
+    "pretrained_knn_zero_metadata": 0.49739583333333337,
+    "random_encoder_knn_zero_metadata": 0.3182508680555556,
+    "pretrained_knn_unit_reference_zero_unit_test": 0.49652777777777773,
+    "pretrained_shrinkage_mahalanobis_zero_metadata": 0.5291883680555557
+  },
+  "leave_one_deformation_family_out_auroc": {
+    "saturation": 0.521225,
+    "step": 0.635525,
+    "kink": 0.407225,
+    "splice": 0.6997,
+    "rolloff": 0.73545,
+    "crossover": 0.63455
+  },
+  "leave_one_out_mean": 0.6056125,
+  "metadata_note": "The checkpoint was trained with SI metadata, but the legacy evaluation passes zero metadata. Synthetic test functions do not have audited SI dimensions, so a valid with-vs-without-units test cannot be claimed."
+}

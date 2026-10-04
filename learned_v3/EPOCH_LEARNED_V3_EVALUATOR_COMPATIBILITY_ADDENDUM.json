@@ -1,0 +1,28 @@
+{
+  "schema_version": "3.0-runtime-compatibility-addendum",
+  "frozen_at": "2026-09-07T15:46:56.8893338+08:00",
+  "status": "frozen_after_evaluator_start_failed_and_before_any_temporal_score_was_produced",
+  "failure": {
+    "stage": "construction of pre-cutoff point-formula memory before query scoring",
+    "exception": "AttributeError: module 'torch' has no attribute 'flatnonzero'",
+    "result_files_present_at_failure": 0,
+    "temporal_scores_produced": false
+  },
+  "change": {
+    "file": "evaluate_epoch_horizon_v3.py",
+    "old_sha256": "cd41f713180cd6146b8d2da22373f437a41661da78e4dfbd631335654aad6d8c",
+    "new_sha256": "831f45cbb919e148337d88265fc66a61915e5b8bd5bcecc28fa80b80bd804288",
+    "old_expression": "torch.flatnonzero(counts > 0)",
+    "new_expression": "torch.nonzero(counts > 0, as_tuple=False).flatten()",
+    "reason": "NumPy exposes flatnonzero, but the preregistered PyTorch 2.14 runtime does not. The replacement is the public PyTorch operation returning the same one-dimensional indices in row-major order."
+  },
+  "unchanged": [
+    "checkpoint and model weights",
+    "data and all train/calibration/test splits",
+    "four score components and equal-weight combination",
+    "top-k, calibration CDFs and aggregation hierarchy",
+    "AUROC comparisons, grouped bootstrap, seed and checkpoint rule",
+    "Phase A to Phase B gate"
+  ],
+  "restart_rule": "Remove only the supervisor failure markers, upload the patched evaluator, pin the new evaluator hash in both supervisors, and rerun Phase A evaluation from its already frozen epoch-30 checkpoint."
+}
